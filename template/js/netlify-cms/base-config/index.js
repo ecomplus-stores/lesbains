@@ -919,6 +919,7 @@ export default options => {
       getWidgets(options),
       {
         name: 'apx_products',
+        
         label: '[alpix.dev] - Produtos',
         description: 'Conteúdo específico das páginas de produto',
         folder: `${options.baseDir}content/apx_products`,
