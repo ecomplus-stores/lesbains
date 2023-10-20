@@ -325,8 +325,8 @@ const bannerFields = [
 ]
 
 
-export default ({options, state}) => {
-  console.log('custom cms config', options)
+export default options => {
+  console.log('cms',options)
   options.sections = getSections(options).concat([
     {
       label: '[ALPIX] - Banner responsivo',
@@ -947,16 +947,16 @@ export default ({options, state}) => {
             widget:"list",
             required:false,
             fields: [
-              {
-                label: 'Grid da Personalização',
-                name: 'title',
-                widget: 'select',
-                options: state.grids
-                  .map(({ grid_id, title }) => ({
-                    label: title,
-                    value: grid_id
-                  }))
-              },  
+              // {
+              //   label: 'Grid da Personalização',
+              //   name: 'title',
+              //   widget: 'select',
+              //   options: state.grids
+              //     .map(({ grid_id, title }) => ({
+              //       label: title,
+              //       value: grid_id
+              //     }))
+              // },  
               {
                 label: "Mais de uma opção poderá ser selecionada?",
                 name:"multi_option",
@@ -1033,7 +1033,7 @@ export default ({options, state}) => {
                 required: false,
                 widget: 'select',
                 multiple: true,
-                options: state.routes
+                options: options.state.routes
                   .filter(({ sku }) => typeof sku === 'string')
                   .map(({ sku }) => ({
                     label: sku,
@@ -1046,17 +1046,17 @@ export default ({options, state}) => {
                 widget:"list",
                 required:false,
                 fields: [
-                  {
-                    label: 'Grid da Personalização',
-                    hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione.",
-                    name: 'title',
-                    widget: 'select',
-                    options: state.grids
-                      .map(({ grid_id, title }) => ({
-                        label: title,
-                        value: grid_id
-                      }))
-                  },  
+                  // {
+                  //   label: 'Grid da Personalização',
+                  //   hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione.",
+                  //   name: 'title',
+                  //   widget: 'select',
+                  //   options: state.grids
+                  //     .map(({ grid_id, title }) => ({
+                  //       label: title,
+                  //       value: grid_id
+                  //     }))
+                  // },  
                   {
                     label: "Mais de uma opção poderá ser selecionada?",
                     name:"multi_option",
