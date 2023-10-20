@@ -929,6 +929,11 @@ export default (options,state) => {
         slug: '{{slug}}',
         fields: [
           {
+            label: "Identificador",
+            name: "title",
+            widget: "string"          
+          }, 
+          {
             label: 'Identificador [SKU] [Categoria] ou [default]',
             name: 'identificador',
             widget: 'select',
