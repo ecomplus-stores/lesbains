@@ -929,16 +929,24 @@ export default (options,state) => {
         slug: '{{slug}}',
         fields: [
           {
-            label: 'Tipo',
-            required: true,
-            name: 'type',
-            widget: 'select',
-            options: ["category","product"]
-          },
-          {
             label: 'Identificador [SKU] [Categoria] ou [default]',
-            name: 'title',
-            widget: 'string'
+            name: 'identificador',
+            widget: 'select',
+                multiple: true,
+                options: [
+                  ...options.state.routes
+                  .filter(({ sku }) => typeof sku === 'string')
+                  .map(({ sku }) => ({
+                    label: 'Produto - ' + sku,
+                    value: sku
+                  })),
+                  ...options.state.routes
+                  .filter(el => el.resource === 'categories')
+                  .map((el) => ({
+                    label: 'Categoria - ' + el.name,
+                    value: 'cat_'+el._id
+                  }))
+                ]                
           },              
           {
             label:"Personalização",
@@ -977,38 +985,44 @@ export default (options,state) => {
                   {
                     label: "Descrição",
                     name: "description",
-                    widget: "string"          
+                    widget: "string",
+                    required:false,          
                   }, 
                   {
                     label: 'Imagem ou ícone',
                     name: 'img',
-                    widget: 'image'
+                    widget: 'image',
+                    required:false,
                   },     
                   {
                     label: "Tipo de Custo",
                     name:"type",
                     widget: "select",
-                    options: ["Fixo","%"] 
+                    options: ["Fixo","%"],
+                    required:false, 
                   },
                   {
                     label: "Valor (Percentual ou Fixo em R$)",
                     name: "value",
                     widget: "number",
                     min:0,
-                    value_type:"float"
+                    value_type:"float",
+                    required:false,
                   },
                   {
                     label: "Exibir campo digitável?",
                     name:"input_type",
                     widget: "select",
-                    options: ["Não","text","number"] 
+                    options: ["Não","text","number"],
+                    required:false, 
                   },
                   {
                     label: "Quantidade máxima de caracteres ou de valor númerico",
                     name: "input_type_max",
                     widget: "number",
                     min:0,
-                    value_type:"float"
+                    value_type:"float",
+                    required:false,
                   },
                   {
                     label: "Campo digitável é obrigatório?",
