@@ -94,6 +94,16 @@
               "input_type": "text",
               "input_type_max": 255,
               "img": "/img/uploads/rectangle-37-2-.png"
+            },
+            {
+              "input_type_required": false,
+              "title": "Texto na Tampa",
+              "description": "texto na tampa da caixa",
+              "img": "/img/uploads/rectangle-37-2-.png",
+              "input_type": "text",
+              "input_type_max": 255,
+              "type": "Fixo",
+              "value": 0
             }
           ]
         }
