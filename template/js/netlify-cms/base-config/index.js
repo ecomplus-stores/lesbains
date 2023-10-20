@@ -947,16 +947,16 @@ export default (options,state) => {
             widget:"list",
             required:false,
             fields: [
-              // {
-              //   label: 'Grid da Personalização',
-              //   name: 'title',
-              //   widget: 'select',
-              //   options: state.grids
-              //     .map(({ grid_id, title }) => ({
-              //       label: title,
-              //       value: grid_id
-              //     }))
-              // },  
+              {
+                label: 'Grid da Personalização',
+                name: 'title',
+                widget: 'select',
+                options: window.storefront.data.grids
+                  .map(({ grid_id, title }) => ({
+                    label: title,
+                    value: grid_id
+                  }))
+              },  
               {
                 label: "Mais de uma opção poderá ser selecionada?",
                 name:"multi_option",
@@ -1012,7 +1012,7 @@ export default (options,state) => {
                   },
                   {
                     label: "Campo digitável é obrigatório?",
-                    name:"input_type",
+                    name:"input_type_required",
                     widget: 'boolean',
                     default: false
                   },
@@ -1046,17 +1046,17 @@ export default (options,state) => {
                 widget:"list",
                 required:false,
                 fields: [
-                  // {
-                  //   label: 'Grid da Personalização',
-                  //   hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione.",
-                  //   name: 'title',
-                  //   widget: 'select',
-                  //   options: state.grids
-                  //     .map(({ grid_id, title }) => ({
-                  //       label: title,
-                  //       value: grid_id
-                  //     }))
-                  // },  
+                  {
+                    label: 'Grid da Personalização',
+                    hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione.",
+                    name: 'title',
+                    widget: 'select',
+                    options: window.storefront.data.grids
+                    .map(({ grid_id, title }) => ({
+                      label: title,
+                      value: grid_id
+                    }))
+                  },  
                   {
                     label: "Mais de uma opção poderá ser selecionada?",
                     name:"multi_option",
@@ -1112,7 +1112,7 @@ export default (options,state) => {
                       },
                       {
                         label: "Campo digitável é obrigatório?",
-                        name:"input_type",
+                        name:"input_type_required",
                         widget: 'boolean',
                         default: false
                       },
