@@ -1,0 +1,22 @@
+{
+  "customizations": [
+    {
+      "multi_option": false,
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Nenhuma (Sem Grau)",
+          "img": "/img/uploads/group-25-1-.svg",
+          "type": null
+        }
+      ],
+      "title": "necessidade_de_visao"
+    }
+  ],
+  "upselling": [],
+  "title": "DEFAULT",
+  "identificador": [
+    "cat_64c023b55e606903707336d1",
+    "cat_64c024595e6069037073385e"
+  ]
+}
