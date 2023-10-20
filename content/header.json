@@ -1,30 +1,29 @@
 {
   "marketing_stripe": {
-    "text": "Aproveite nossos descontos de até 50%!",
-    "link": "/promotion"
+    "text": "FRETE GRÁTIS PARA COMPRAS ACIMA DE r$ 159 PARA TODO O BRASIL",
+    "link": "",
+    "background": "#0a313f",
+    "color": "#ffffff"
   },
   "contacts_stripe": {
-    "pages": [
-      {
-        "title": "Sobre nós",
-        "link": "/pages/sobre-nos"
-      },
-      {
-        "title": "Esta loja é um PWA",
-        "link": "/posts/esta-loja-e-um-pwa"
-      }
-    ],
-    "phone_wpp": true,
-    "socials": true
+    "pages": [],
+    "phone_wpp": false,
+    "socials": false
   },
   "categories_list": {
-    "featured": [],
-    "random": 6,
+    "featured": [
+      "/novidades?Novidades",
+      "/oculos-de-sol?Óculos de Sol",
+      "/oculos-de-grau?Óculos de Grau",
+      "/lentes-de-grau?Lentes de Grau",
+      "/personalize?Personalize"
+    ],
+    "random": 0,
     "full_width": false
   },
   "centralized_logo": false,
   "desktop_megamenu": false,
   "search_input": true,
-  "alphabetical_order_submenu": false,
-  "full_width_submenu": false
+  "alphabetical_order_submenu": true,
+  "full_width_submenu": true
 }
