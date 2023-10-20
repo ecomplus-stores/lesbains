@@ -8,12 +8,98 @@
           "title": "Nenhuma (Sem Grau)",
           "img": "/img/uploads/group-25-1-.svg",
           "type": null
+        },
+        {
+          "input_type_required": false,
+          "title": "Miopia",
+          "description": "teste teste teste",
+          "type": "Fixo",
+          "value": 100
+        },
+        {
+          "input_type_required": false,
+          "title": "Astigmatismo",
+          "description": "teste 2 teste 2",
+          "type": "%",
+          "value": 10
         }
       ],
       "title": "necessidade_de_visao"
+    },
+    {
+      "multi_option": false,
+      "title": "lentes",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Preta",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. ",
+          "img": "/img/uploads/rectangle-37.png",
+          "type": "Fixo",
+          "value": 100
+        },
+        {
+          "input_type_required": false,
+          "title": "Marrom",
+          "description": "Nullam malesuada erat ut turpis. ",
+          "img": "/img/uploads/rectangle-37-1-.png",
+          "type": "Fixo",
+          "value": 150
+        },
+        {
+          "input_type_required": false,
+          "title": "Verde (Polarizada)",
+          "description": "Suspendisse urna nibh viverra non semper suscipit posuere a pede.",
+          "img": "/img/uploads/rectangle-37-2-.png",
+          "type": "Fixo",
+          "value": 300
+        }
+      ]
+    },
+    {
+      "multi_option": false,
+      "title": "grau_das_lentes",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "-0.5 até +0.5",
+          "description": "Donec nec justo eget felis facilisis fermentum. "
+        },
+        {
+          "input_type_required": false,
+          "title": "-2.0 até +2.0",
+          "type": "Fixo",
+          "value": 103
+        }
+      ]
     }
   ],
-  "upselling": [],
+  "upselling": [
+    {
+      "upselling_skus": [
+        "CAIXA",
+        "EMB_CASE2"
+      ],
+      "customizations": [
+        {
+          "multi_option": true,
+          "title": "gravacao",
+          "list": [
+            {
+              "input_type_required": false,
+              "title": "Cartão Presente",
+              "description": "Cartão presente que vai junto da embalagem",
+              "type": "Fixo",
+              "value": 5,
+              "input_type": "text",
+              "input_type_max": 255,
+              "img": "/img/uploads/rectangle-37-2-.png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "title": "DEFAULT",
   "identificador": [
     "cat_64c023b55e606903707336d1",
