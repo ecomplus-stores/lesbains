@@ -325,7 +325,7 @@ const bannerFields = [
 ]
 
 
-export default options => {
+export default ({options, state}) => {
   options.sections = getSections(options).concat([
     {
       label: '[ALPIX] - Banner responsivo',
