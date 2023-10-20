@@ -942,19 +942,125 @@ export default options => {
           {
             label:"Personalização",
             name:"customizations",
+            hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione.",
             widget:"list",
             required:false,
             fields: [
               {
-                label: "Item",
-                name: "item",
-                widget: "object",
+                label: 'Grid da Personalização',
+                name: 'title',
+                widget: 'select',
+                options: state.grids
+                  .map(({ grid_id, title }) => ({
+                    label: title,
+                    value: grid_id
+                  }))
+              },  
+              {
+                label: "Mais de uma opção poderá ser selecionada?",
+                name:"multi_option",
+                widget: 'boolean',
+                default: false
+              },
+              {
+                label:"Opções",
+                name:"list",
+                widget:"list",
                 required:false,
                 fields: [
                   {
-                    label: "ID do grid",
+                    label: "Nome da opção",
                     name: "title",
                     widget: "string"          
+                  }, 
+                  {
+                    label: "Descrição",
+                    name: "description",
+                    widget: "string"          
+                  }, 
+                  {
+                    label: 'Imagem ou ícone',
+                    name: 'img',
+                    widget: 'image'
+                  },     
+                  {
+                    label: "Tipo de Custo",
+                    name:"type",
+                    widget: "select",
+                    options: ["Fixo","%"] 
+                  },
+                  {
+                    label: "Valor (Percentual ou Fixo em R$)",
+                    name: "value",
+                    widget: "number",
+                    min:0,
+                    value_type:"float"
+                  },
+                  {
+                    label: "Exibir campo digitável?",
+                    name:"input_type",
+                    widget: "select",
+                    options: ["Não","text","number"] 
+                  },
+                  {
+                    label: "Quantidade máxima de caracteres ou de valor númerico",
+                    name: "input_type_max",
+                    widget: "number",
+                    min:0,
+                    value_type:"float"
+                  },
+                  {
+                    label: "Campo digitável é obrigatório?",
+                    name:"input_type",
+                    widget: 'boolean',
+                    default: false
+                  },
+                ]
+              }, 
+            ]
+          },
+          {
+            label:"Upselling",
+            name:"upselling",
+            widget:"list",
+            required:false,
+            fields: [
+              {
+                label: 'Produtos',
+                hint:"Exiba opções de produtos para adicionar juntamente ao carrinho na finalização da personalização. Os itens de customização serão aplicados ao produto de upselling. Somente uma das opções poderá ser escolhida, então caso tenha por exemplo um Estojo, selecione as variações do estojo para exibição.",
+                name: 'upselling_skus',
+                required: false,
+                widget: 'select',
+                multiple: true,
+                options: state.routes
+                  .filter(({ sku }) => typeof sku === 'string')
+                  .map(({ sku }) => ({
+                    label: sku,
+                    value: sku
+                  }))
+              }, 
+              {
+                label:"Personalização",
+                name:"customizations",
+                widget:"list",
+                required:false,
+                fields: [
+                  {
+                    label: 'Grid da Personalização',
+                    hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione.",
+                    name: 'title',
+                    widget: 'select',
+                    options: state.grids
+                      .map(({ grid_id, title }) => ({
+                        label: title,
+                        value: grid_id
+                      }))
+                  },  
+                  {
+                    label: "Mais de uma opção poderá ser selecionada?",
+                    name:"multi_option",
+                    widget: 'boolean',
+                    default: false
                   },
                   {
                     label:"Opções",
@@ -963,41 +1069,56 @@ export default options => {
                     required:false,
                     fields: [
                       {
-                        label: "Opção",
-                        name: "option",
-                        widget: "object",
-                        required:false,
-                        fields: [
-                          {
-                            label: "Nome da opção",
-                            name: "title",
-                            widget: "string"          
-                          }, 
-                          {
-                            label: 'Imagem ou ícone',
-                            name: 'img',
-                            widget: 'image'
-                          },     
-                          {
-                            label: "Tipo de Custo",
-                            name:"type",
-                            widget: "select",
-                            options: ["Fixo","%"] 
-                          },
-                          {
-                            label: "Valor (Percentual ou Fixo em R$)",
-                            name: "value",
-                            widget: "number",
-                            min:0,
-                            value_type:"float"
-                          }, 
-                                                                            
-                        ]
-                      } 
+                        label: "Nome da opção",
+                        name: "title",
+                        widget: "string"          
+                      }, 
+                      {
+                        label: "Descrição",
+                        name: "description",
+                        widget: "string"          
+                      }, 
+                      {
+                        label: 'Imagem ou ícone',
+                        name: 'img',
+                        widget: 'image'
+                      },     
+                      {
+                        label: "Tipo de Custo",
+                        name:"type",
+                        widget: "select",
+                        options: ["Fixo","%"] 
+                      },
+                      {
+                        label: "Valor (Percentual ou Fixo em R$)",
+                        name: "value",
+                        widget: "number",
+                        min:0,
+                        value_type:"float"
+                      },
+                      {
+                        label: "Exibir campo digitável?",
+                        name:"input_type",
+                        widget: "select",
+                        options: ["Não","text","number"] 
+                      },
+                      {
+                        label: "Quantidade máxima de caracteres ou de valor númerico",
+                        name: "input_type_max",
+                        widget: "number",
+                        min:0,
+                        value_type:"float"
+                      },
+                      {
+                        label: "Campo digitável é obrigatório?",
+                        name:"input_type",
+                        widget: 'boolean',
+                        default: false
+                      },
                     ]
-                  },                                                  
+                  }, 
                 ]
-              } 
+              },
             ]
           },
           {
