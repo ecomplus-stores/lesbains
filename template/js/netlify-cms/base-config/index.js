@@ -921,7 +921,7 @@ export default (options,state) => {
       {
         name: 'apx_products',
         
-        label: '[alpix.dev] - Produtos',
+        label: '[alpix.dev] - Informações de Produtos',
         description: 'Conteúdo específico das páginas de produto',
         folder: `${options.baseDir}content/apx_products`,
         extension: 'json',
@@ -929,7 +929,8 @@ export default (options,state) => {
         slug: '{{slug}}',
         fields: [
           {
-            label: "Identificador",
+            label: "Título do Registro",
+            hint:"Campo apenas informativo.",
             name: "title",
             widget: "string"          
           }, 
@@ -1096,38 +1097,44 @@ export default (options,state) => {
                       {
                         label: "Descrição",
                         name: "description",
-                        widget: "string"          
+                        widget: "string",
+                        required:false,             
                       }, 
                       {
                         label: 'Imagem ou ícone',
                         name: 'img',
-                        widget: 'image'
+                        widget: 'image',
+                        required:false,   
                       },     
                       {
                         label: "Tipo de Custo",
                         name:"type",
                         widget: "select",
-                        options: ["Fixo","%"] 
+                        options: ["Fixo","%"] ,
+                        required:false,   
                       },
                       {
                         label: "Valor (Percentual ou Fixo em R$)",
                         name: "value",
                         widget: "number",
                         min:0,
-                        value_type:"float"
+                        value_type:"float",
+                        required:false,   
                       },
                       {
                         label: "Exibir campo digitável?",
                         name:"input_type",
                         widget: "select",
-                        options: ["Não","text","number"] 
+                        options: ["Não","text","number"],
+                        required:false,    
                       },
                       {
                         label: "Quantidade máxima de caracteres ou de valor númerico",
                         name: "input_type_max",
                         widget: "number",
                         min:0,
-                        value_type:"float"
+                        value_type:"float",
+                        required:false,   
                       },
                       {
                         label: "Campo digitável é obrigatório?",
