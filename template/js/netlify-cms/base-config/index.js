@@ -974,9 +974,27 @@ export default (options,state) => {
               {
                 label: "Mais de uma opção poderá ser selecionada?",
                 name:"multi_option",
+                hint:"Ativar apenas para campos de gravação/texto",
                 widget: 'boolean',
                 default: false
               },
+              {
+                label: '[Condição] - Exibir quando a opção da grade...',
+                hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
+                name: 'condition_grid',
+                widget: 'select',
+                options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+                .map(({ grid_id, title }) => ({
+                  label: title,
+                  value: grid_id
+                }))]
+              },  
+              {
+                label: "[Condição] - Tiver o valor de...",
+                hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
+                name: "condition_value",
+                widget: "string"          
+              }, 
               {
                 label:"Opções",
                 name:"list",
@@ -1080,9 +1098,27 @@ export default (options,state) => {
                   {
                     label: "Mais de uma opção poderá ser selecionada?",
                     name:"multi_option",
+                    hint:"Ativar apenas para campos de gravação/texto",
                     widget: 'boolean',
                     default: false
                   },
+                  {
+                    label: '[Condição] - Exibir quando a opção da grade...',
+                    hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
+                    name: 'condition_grid',
+                    widget: 'select',
+                    options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+                    .map(({ grid_id, title }) => ({
+                      label: title,
+                      value: grid_id
+                    }))]
+                  },  
+                  {
+                    label: "[Condição] - Tiver o valor de...",
+                    hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
+                    name: "condition_value",
+                    widget: "string"          
+                  }, 
                   {
                     label:"Opções",
                     name:"list",
