@@ -979,22 +979,30 @@ export default (options,state) => {
                 default: false
               },
               {
-                label: '[Condição] - Exibir quando a opção da grade...',
+                label: 'Condições',
                 hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-                name: 'condition_grid',
-                widget: 'select',
-                options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
-                .map(({ grid_id, title }) => ({
-                  label: title,
-                  value: grid_id
-                }))]
-              },  
-              {
-                label: "[Condição] - Tiver o valor de...",
-                hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
-                name: "condition_value",
-                widget: "string"          
-              }, 
+                name: 'conditions',
+                widget: 'object',
+                fields: [
+                  {
+                    label: 'Exibir quando a opção da grade...',
+                    
+                    name: 'condition_grid',
+                    widget: 'select',
+                    options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+                    .map(({ grid_id, title }) => ({
+                      label: title,
+                      value: grid_id
+                    }))]
+                  },  
+                  {
+                    label: "Tiver o valor de...",
+                    hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
+                    name: "condition_value",
+                    widget: "string"          
+                  }, 
+                ]
+              },
               {
                 label:"Opções",
                 name:"list",
@@ -1103,22 +1111,30 @@ export default (options,state) => {
                     default: false
                   },
                   {
-                    label: '[Condição] - Exibir quando a opção da grade...',
+                    label: 'Condições',
                     hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-                    name: 'condition_grid',
-                    widget: 'select',
-                    options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
-                    .map(({ grid_id, title }) => ({
-                      label: title,
-                      value: grid_id
-                    }))]
-                  },  
-                  {
-                    label: "[Condição] - Tiver o valor de...",
-                    hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
-                    name: "condition_value",
-                    widget: "string"          
-                  }, 
+                    name: 'conditions',
+                    widget: 'object',
+                    fields: [
+                      {
+                        label: 'Exibir quando a opção da grade...',
+                        
+                        name: 'condition_grid',
+                        widget: 'select',
+                        options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+                        .map(({ grid_id, title }) => ({
+                          label: title,
+                          value: grid_id
+                        }))]
+                      },  
+                      {
+                        label: "Tiver o valor de...",
+                        hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
+                        name: "condition_value",
+                        widget: "string"          
+                      }, 
+                    ]
+                  },
                   {
                     label:"Opções",
                     name:"list",
