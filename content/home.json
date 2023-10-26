@@ -68,6 +68,22 @@
       "description": "Descubra nossa variedade de óculos de grau para uma visão clara e elegante",
       "list": "description_last",
       "carrossel_md": "Sim"
+    },
+    {
+      "type": "apx_banners-grid",
+      "banners": [
+        {
+          "mask_opacity": 3,
+          "mask_opacity_m": 0,
+          "img": "/img/uploads/rectangle-7-3-.png",
+          "title": "Você sempre no estilo",
+          "content_order": "inside_image",
+          "content_position": "bottom_center",
+          "link": "/teste"
+        }
+      ],
+      "container": "container-fluid",
+      "padding": "px-1"
     }
   ]
 }
