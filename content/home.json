@@ -103,6 +103,23 @@
       ],
       "container": "container-fluid",
       "padding": "px-1"
+    },
+    {
+      "description_color": "#000000",
+      "container": "container_90",
+      "btn_text_2": "Ver Catálogo",
+      "img": "/img/uploads/rectangle-5-4-.png",
+      "mask_opacity_m": 0,
+      "content_order": "left_image",
+      "content_position": "center_left",
+      "btn_text": "Compre",
+      "padding": "px-5",
+      "btn_text_color": "#ffffff",
+      "mask_opacity": 0,
+      "title": "Designs icônicos e qualidade excepcional",
+      "type": "apx_responsive-banner",
+      "title_color": "#000000",
+      "description": "Explore nossa coleção exclusiva e econtre o par de óculos que reflete sua personalidade"
     }
   ]
 }
