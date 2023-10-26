@@ -89,6 +89,16 @@
           "content_position": "bottom_center",
           "content_order": "inside_image",
           "link": "/teste2"
+        },
+        {
+          "mask_opacity": 0,
+          "mask_opacity_m": 0,
+          "img": "/img/uploads/rectangle-7-5-.png",
+          "link": "/teste3",
+          "title": "Designs icônicos e qualidade excepcional 2",
+          "title_color": "#ffffff",
+          "content_position": "bottom_center",
+          "content_order": "inside_image"
         }
       ],
       "container": "container-fluid",
