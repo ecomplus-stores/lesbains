@@ -36,6 +36,38 @@
       "padding_bottom": "0",
       "type": "apx_banner-slider",
       "margin_bottom": "0"
+    },
+    {
+      "carrossel_sm": "Sim",
+      "container": "container_90",
+      "products": [
+        "65308be22cd6b6595980c29b",
+        "653093562cd6b6595980c76c",
+        "6530935b2cd6b6595980c774",
+        "6530a7852cd6b6595980d3b1"
+      ],
+      "margin_top": "0",
+      "carrossel_dots_md": "Sim",
+      "carrossel_arrows_md": "Não",
+      "padding_top": "0",
+      "padding_bottom_m": "0",
+      "carrossel_dots_sm": "Sim",
+      "carrossel_arrows_sm": "Não",
+      "padding_sm": "px-1",
+      "bg_img": "/img/uploads/pexels-fabio-partenheimer-712395-1.png",
+      "margin_bottom_m": "0",
+      "num_col_md": "3",
+      "padding": "px-md-1",
+      "num_col_sm": "1",
+      "margin_top_m": "0",
+      "padding_top_m": "0",
+      "title": "Mais Vendidos",
+      "padding_bottom": "0",
+      "type": "apx_productList_A",
+      "margin_bottom": "0",
+      "description": "Descubra nossa variedade de óculos de grau para uma visão clara e elegante",
+      "list": "description_last",
+      "carrossel_md": "Sim"
     }
   ]
 }
