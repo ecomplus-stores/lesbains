@@ -1,4 +1,16 @@
 {
+  "background":"#EAE0DF",
+  "color":"#000000",
+  "topbar_1": {
+    "color":"#ffffff",
+    "background":"#0A313F",
+    "list": [
+      {
+        "title": "FRETE GRÁTIS PARA TODO O BRASIL",
+        "url": "/"
+      }
+    ]
+  },
   "links": [
     {
       "title": "Novidades",
@@ -24,5 +36,19 @@
       "title": "Personalize",
       "url": "/"
     }
-  ]
+  ],
+  "topbar_2": {
+    "color":"#ffffff",
+    "background":"#701630",
+    "list": [
+      {
+        "title": "FRETE GRÁTIS PARA TODO O BRASIL",
+        "url": "/"
+      },
+      {
+        "title": "FRETE GRÁTIS PARA TODO O BRASIL 2",
+        "url": "/"
+      }
+    ]
+  }
 }

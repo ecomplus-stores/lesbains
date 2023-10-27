@@ -108,6 +108,7 @@
       "description_color": "#000000",
       "container": "container_90",
       "btn_text_2": "Ver Catálogo",
+      "btn_background": "#000000",          
       "img": "/img/uploads/rectangle-5-4-.png",
       "mask_opacity_m": 0,
       "content_order": "left_image",

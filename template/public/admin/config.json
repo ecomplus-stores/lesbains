@@ -19,6 +19,43 @@
           "file": "content/apx_header.json",
           "fields": [
             {
+              "label": "Tarja Topo (Acima)",
+              "name": "topbar_1",
+              "widget": "object",
+              "required":false,
+              "fields": [
+                {
+                  "label": "Cor do Texto",
+                  "name": "color",
+                  "widget": "color"          
+                },
+                {
+                  "label": "Cor do Fundo",
+                  "name": "background",
+                  "widget": "color"          
+                },
+                {
+                  "label": "Itens",
+                  "name": "topbar_1",
+                  "widget": "list",
+                  "required":false,
+                  "fields": [
+                    {
+                      "label": "Texto ou HTML",
+                      "name": "title",
+                      "widget": "string"          
+                    },
+                    {
+                      "label": "URL",
+                      "name": "url",
+                      "widget": "string"          
+                    }
+                  ]
+                }
+              ]
+            },
+            
+            {
               "label": "Links do Menu",
               "name": "links",
               "widget": "list",
@@ -94,7 +131,43 @@
                 }
                        
               ]
-            }
+            },
+            {
+              "label": "Tarja Topo (Abaixo)",
+              "name": "topbar_2",
+              "widget": "object",
+              "required":false,
+              "fields": [
+                {
+                  "label": "Cor do Texto",
+                  "name": "color",
+                  "widget": "color"          
+                },
+                {
+                  "label": "Cor do Fundo",
+                  "name": "background",
+                  "widget": "color"          
+                },
+                {
+                  "label": "Itens",
+                  "name": "topbar_1",
+                  "widget": "list",
+                  "required":false,
+                  "fields": [
+                    {
+                      "label": "Texto ou HTML",
+                      "name": "title",
+                      "widget": "string"          
+                    },
+                    {
+                      "label": "URL",
+                      "name": "url",
+                      "widget": "string"          
+                    }
+                  ]
+                }
+              ]
+            },
           ]
         },
         {
