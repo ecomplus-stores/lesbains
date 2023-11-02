@@ -986,7 +986,7 @@ export default (options,state) => {
                 fields: [
                   {
                     label: 'Exibir quando a opção da grade...',
-                    
+                    required:false,
                     name: 'condition_grid',
                     widget: 'select',
                     options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
@@ -999,7 +999,8 @@ export default (options,state) => {
                     label: "Tiver o valor de...",
                     hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
                     name: "condition_value",
-                    widget: "string"          
+                    widget: "string",
+                    required:false,          
                   }, 
                 ]
               },
@@ -1118,7 +1119,7 @@ export default (options,state) => {
                     fields: [
                       {
                         label: 'Exibir quando a opção da grade...',
-                        
+                        required:false,
                         name: 'condition_grid',
                         widget: 'select',
                         options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
@@ -1131,7 +1132,8 @@ export default (options,state) => {
                         label: "Tiver o valor de...",
                         hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
                         name: "condition_value",
-                        widget: "string"          
+                        widget: "string"   ,
+                        required:false,       
                       }, 
                     ]
                   },
