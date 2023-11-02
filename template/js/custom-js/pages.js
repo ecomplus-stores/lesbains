@@ -63,3 +63,7 @@ window.addEventListener('load', function () {
     window.imageResize();
     window.initSliders();
 }, false);
+
+if($('#page-products').length > 0){
+    window.mainProductGallery = [];
+}

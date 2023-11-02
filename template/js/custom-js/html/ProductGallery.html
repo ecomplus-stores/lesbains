@@ -1,6 +1,6 @@
-<section class="gallery">
-  <div class="gallery__thumbs">
-    <div
+
+<section class="apx_gallery">
+    <!-- <div
       v-if="videoSrc"
       class="gallery__item gallery__item--video"
       :class="{ 'gallery__item--selected': localPictures.length === activeIndex }"
@@ -8,93 +8,22 @@
     >
       <i class="i-play"></i>
       <span>{{ i19video }}</span>
-    </div>
+    </div> -->
 
     <div
       v-for="(picture, i) in localPictures"
       :key="'img-' + i"
-      class="gallery__item"
-      :class="{ 'gallery__item--selected': i === activeIndex }"
-      @click="activeIndex = i"
+      class="apx_gallery__item"   
+      
+      @click="openZoom(i)"
     >
-      <a-picture
-        v-if="i < 4"
-        class="gallery__thumb"
-        :src="getImg(picture, null, 'small')"
+    
+      <a-picture        
+        class="apx_gallery__thumb"
+        :src="i == 0 ? getImg(picture, null, 'zoom') : getImg(picture, null, 'big')"
       />
-    </div>
-
-    <button
-      v-if="localPictures.length > 4"
-      type="button"
-      class="gallery__open btn btn-dark"
-      :style="zoomLinkStyle"
-      :title="i19openGallery"
-      @click.prevent="openZoom(4)"
-    >
-      +{{ localPictures.length - 4 }}
-    </button>
   </div>
   
-  <div class="gallery__stage">
-    <div
-      class="glide"
-      ref="glide"
-    >
-      <div
-        class="glide__track"
-        data-glide-el="track"
-      >
-        <ul class="glide__slides">
-          <li
-            v-for="(picture, i) in localPictures"
-            class="glide__slide"
-            :key="'slide-' + i"
-          >
-            <div @click="openZoom(i)">
-              <slot v-if="i === 0 && !isSliderMoved">
-                <a-picture
-                  v-if="!elFirstPicture"
-                  class="gallery__big-image"
-                  :style="zoomLinkStyle"
-                  :src="getImg(picture, null, 'zoom')"
-                />
-                <div
-                  v-else
-                  ref="firstPicture"
-                  class="gallery__big-image"
-                  :style="zoomLinkStyle"
-                ></div>
-              </slot>
-
-              <a-picture
-                v-else
-                class="gallery__big-image"
-                :src="getImg(picture, null, 'zoom')"
-              />
-            </div>
-          </li>
-
-          <li
-            v-if="videoSrc"
-            class="glide__slide"
-            :key="'slide-' + localPictures.length"
-          >
-            <div
-              class="embed-responsive"
-              :class="`embed-responsive-${videoAspectRatio}`"
-            >
-              <iframe
-                class="embed-responsive-item"
-                :src="videoSrc"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
   <div
     v-once

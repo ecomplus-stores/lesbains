@@ -73,6 +73,7 @@ const sanitizeProductBody = body => {
   return product
 }
 
+
 export default {
   name: 'TheProduct',
 
@@ -293,12 +294,15 @@ export default {
       return this.body.kit_composition && this.body.kit_composition.length
     },
 
-    productToGallery () {
-      console.log('aiai')
+    productToGallery() {
       if (this.variationImages.length) {
+        window.mainProductGallery = [...this.variationImages]
+        this.variationImagesKey = Math.random().toString()
+        console.log('update',window.mainProductGallery)
         return {
           ...this.body,
           pictures: this.variationImages
+          //...this.body.pictures
         }
       }
       return this.body
@@ -447,8 +451,9 @@ export default {
           return _id === variation.picture_id
         })
 
-        console.log('body', this.body)
-        console.log('customBody', this.variantGalleryImages)
+        window.mainProductGallery = [...this.variationImages]
+        // console.log(this.variantGalleryImages)
+        // window.mainProductGallery = [...this.variantGalleryImages]
 
         this.currentGalleyImg = pictureIndex + 1
       }
@@ -457,6 +462,7 @@ export default {
     
 
     handleGridOption ({ gridId, gridIndex, optionText }) {
+      //alert('aa')
       if (gridIndex === 0) {
         const variation = this.body.variations.find(variation => {
           return getSpecTextValue(variation, gridId) === optionText
@@ -686,7 +692,7 @@ export default {
 
   created () {
     this.cms_customizations = [...($('[data-customizations]').length > 0 && $('[data-customizations]').attr('data-customizations') != '' ? JSON.parse($('[data-customizations]').attr('data-customizations')) : [])]
-    
+    console.log('customizations',this.cms_customizations)
     const presetQntToBuy = () => {
       this.qntToBuy = this.body.min_quantity || 1
     }
@@ -704,7 +710,7 @@ export default {
   },
 
   mounted () {
-    
+    window.mainProductGallery = [...this.body.pictures]
     //console.log(this.body.customizations)
     if (this.$refs.sticky && !this.isWithoutPrice) {
       let isBodyPaddingSet = false

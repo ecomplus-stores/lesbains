@@ -8,35 +8,37 @@ const breadcrumbs = opt.breadcrumbs && opt.breadcrumbs.length
 
 if (Array.isArray(breadcrumbs) && breadcrumbs.length) {
   %>
-  <div class="container">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb my-2 my-sm-3<%= breadcrumbs.length < 2 ? ' d-none d-md-flex' : '' %>">
-        <li class="breadcrumb-item d-none d-md-block">
-          <a href="/">
-            <i class="i-home"></i>
-          </a>
-        </li>
-        <% breadcrumbs.forEach(({ name, link }, index) => { %>
-          <% if (index < breadcrumbs.length - 1) { %>
-            <li
-              <% if (index === breadcrumbs.length - 2) { %>
-                class="breadcrumb-item"
-              <% } else { %>
-                class="breadcrumb-item d-none d-md-block"
-              <% } %>
-            >
-              <a href="<%= link %>">
+  <div class="bg_f8f8f8 py-1">
+    <div class="container_90">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-1 <%= breadcrumbs.length < 2 ? ' d-none d-md-flex' : '' %>">
+          <li class="breadcrumb-item d-none d-md-block">
+            <a href="/">
+              Página Inicial
+            </a>
+          </li>
+          <% breadcrumbs.forEach(({ name, link }, index) => { %>
+            <% if (index < breadcrumbs.length - 1) { %>
+              <li
+                <% if (index === breadcrumbs.length - 2) { %>
+                  class="breadcrumb-item"
+                <% } else { %>
+                  class="breadcrumb-item d-none d-md-block"
+                <% } %>
+              >
+                <a href="<%= link %>">
+                  <%= name %>
+                </a>
+              </li>
+            <% } else { %>
+              <li class="breadcrumb-item d-none d-md-block active" aria-current="page">
                 <%= name %>
-              </a>
-            </li>
-          <% } else { %>
-            <li class="breadcrumb-item d-none d-md-block active" aria-current="page">
-              <%= name %>
-            </li>
-          <% } %>
-        <% }) %>
-      </ol>
-    </nav>
+              </li>
+            <% } %>
+          <% }) %>
+        </ol>
+      </nav>
+    </div>
   </div>
 
   <script type="application/ld+json"><%-

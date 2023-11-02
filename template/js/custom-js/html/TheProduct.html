@@ -47,36 +47,61 @@
           </button>
         </div>
       </div>
-
+      
       <div class="customizations_body px-md-3">
         <div class="step px-md-3"
         v-for="(item, index) in cms_customizations"
         :key="index"
         :class="cms_customizations_step == index + 1  ? 'current' : ''"
         > 
+        <p>{{JSON.stringify(item)}}</p>
         <div class="option_title text-center mb-5">
           <small>Selecione a opção para</small>
-          <h4>{{body.customizations.find(el => el.grid_id == item.item.title).label}}</h4>
+          <h4>{{body.customizations.find(el => el.grid_id == item.title).label}}</h4>
         </div>
-        <div class="option_options">
-          
-          <div class="option mb-md-5 mb-5 mx-3"
-          v-for="(item_,index_) in item.item.list"
-          :key="index_"
-          >
-          <div class="row justify-content-between align-items-center">
-            <button 
-            :class="current_customization[index] && current_customization[index][item.item.title].title == item_.option.title ? 'active' : ''"
-            @click="setDeepCustomizationOption(index,item.item.title,item_.option)" type="button">{{item_.option.title}}</button>
-            <strong>
-              {{item_.option.value > 0 ? '+' + item_.option.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
-            </strong>
-          </div>
-          <p class="mt-3">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </p>
-          </div>
-        </div>  
+          <div class="option_options">            
+            <div class="option mb-md-5 mb-5 mx-3"
+            v-for="(item_,index_) in item.list"
+            :key="index_"
+            >
+            <div>
+              <p>XX - {{JSON.stringify(item_)}}</p>
+              <button 
+              :class="current_customization[index] && current_customization[index][item.title].title == item_.title ? 'active' : ''"
+              @click="setDeepCustomizationOption(index,item.title,item_.title)" type="button">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-1" v-if="item_.img">
+                      <img :src="item_.img" alt="">
+                  </div>
+                  <div class="col">
+                    <div class="row justify-content-between align-items-center">
+                      <div class="col">
+                        {{item_.title}}
+                      </div>
+                      <div class="col-auto">
+                        <strong v-if="item_.type == 'Fixo'">
+                          {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                        </strong>
+                        <strong v-else>
+                          {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+              </button>
+              
+            </div>
+            
+            </div>
+          </div>  
         </div>
         <div class="step last px-3"
           v-if="cms_customizations_step > cms_customizations.length"
@@ -87,7 +112,7 @@
             <h4>Confirme sua personalização</h4>
           </div>
 
-          <div class=""
+          <!-- <div class=""
             :class="'selected_option ' + (current_customization.length == index_ + 1 ? 'mb-3' : 'mb-5')"
             v-for="(item_, index_) in current_customization"  
             :key="index_"
@@ -101,8 +126,8 @@
                 <b>{{item_[Object.keys(item_)[0]].value > 0 ? '+' + item_[Object.keys(item_)[0]].value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}</b>
               </div>
             </div>
-          </div>
-          
+          </div> -->
+<!--           
           <div class="subtotal pt-3">
             <div class="row justify-content-between align-items-center">
               <div class="col-auto">
@@ -125,7 +150,7 @@
             >
               Editar minhas escolhas
             </button>
-          </div>
+          </div> -->
         </div>
         
       </div>
@@ -150,6 +175,7 @@
               :can-add-to-cart="canAddToCart && body.available && isInStock"
               :current-slide.sync="currentGalleyImg"
               :is-s-s-r="isSSR"
+              
             >
               <slot name="first-picture"/>
             </product-gallery>
