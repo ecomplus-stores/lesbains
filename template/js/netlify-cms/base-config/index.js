@@ -919,7 +919,7 @@ export default (options,state) => {
       getExtraPages(options),
       getWidgets(options),
       {
-        name: 'apx_products',        
+        name: 'apx_products_content',        
         label: '[alpix.dev] - Produtos - Abas de Conteúdo',
         description: 'Configure as opções disponíveis para personalização e sugestões de produtos.',
         folder: `${options.baseDir}content/apx_products_content`,
