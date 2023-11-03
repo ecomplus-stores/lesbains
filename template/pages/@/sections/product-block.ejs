@@ -203,19 +203,23 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
     <%
     const current_lib = []
     const apx_products = _.cms('apx_products')
-    if (Array.isArray(apx_products) && apx_products.length) {      
+    if (Array.isArray(apx_products) && apx_products.length > 0) {      
+      console.log(apx_products)
       apx_products.forEach(item => { 
+        console.log(item)
         const lib = (_.cms(`apx_products/${item}`))
         if(current_lib.length == 0 && lib.identificador.find(el => el == _.state.sku)){
           current_lib.push(lib)
           return
         }
-        _.state.categories.forEach(cat => {
-          if(current_lib.length == 0 && lib.identificador.find(el => el == 'cat_'+ cat._id)){
-            current_lib.push(lib)
-            return
-          }
-        })
+        if(_.state.categories && _.state.categories.length > 0){
+          _.state.categories.forEach(cat => {
+            if(current_lib.length == 0 && lib.identificador.find(el => el == 'cat_'+ cat._id)){
+              current_lib.push(lib)
+              return
+            }
+          })
+        }
       })
       console.log(current_lib[0])
     }
