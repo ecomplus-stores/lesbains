@@ -919,10 +919,63 @@ export default (options,state) => {
       getExtraPages(options),
       getWidgets(options),
       {
-        name: 'apx_products',
-        
-        label: '[alpix.dev] - Informações de Produtos',
-        description: 'Conteúdo específico das páginas de produto',
+        name: 'apx_products',        
+        label: '[alpix.dev] - Produtos - Abas de Conteúdo',
+        description: 'Configure as opções disponíveis para personalização e sugestões de produtos.',
+        folder: `${options.baseDir}content/apx_products_content`,
+        extension: 'json',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          {
+            label: "Título do Registro",
+            hint:"Campo apenas informativo.",
+            name: "title",
+            widget: "string"          
+          }, 
+          {
+            label: 'Identificador [SKU] [Categoria] ou [default]',
+            name: 'identificador',
+            widget: 'select',
+                multiple: true,
+                options: [
+                  ...options.state.routes
+                  .filter(({ sku }) => typeof sku === 'string')
+                  .map(({ sku }) => ({
+                    label: 'Produto - ' + sku,
+                    value: sku
+                  })),
+                  ...options.state.routes
+                  .filter(el => el.resource === 'categories')
+                  .map((el) => ({
+                    label: 'Categoria - ' + el.name,
+                    value: 'cat_'+el._id
+                  }))
+                ]                
+          }, 
+          {
+            label:"Abas de Conteúdo",
+            name:"list",
+            widget:"list",
+            required:false,
+            fields: [
+              {
+                label: "Título",
+                name: "title",
+                widget: "string"          
+              }, 
+              {
+                label: "Conteúdo",
+                name: "content",
+                widget: "markdown",
+                required:false,          
+              }              
+        ]
+      },
+      {
+        name: 'apx_products',        
+        label: '[alpix.dev] - Produtos - Personalização e Upselling',
+        description: 'Configure as opções disponíveis para personalização e sugestões de produtos.',
         folder: `${options.baseDir}content/apx_products`,
         extension: 'json',
         create: true,
