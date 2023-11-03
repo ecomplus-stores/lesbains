@@ -221,7 +221,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
     }
        
     %>
-    <div data-customizations="<%= JSON.stringify(current_lib[0].customizations) %>"></div>
+    <div data-customizations="<%= current_lib && current_lib[0] && current_lib[0].customizations ? JSON.stringify(current_lib[0].customizations) : '' %>"></div>
 </div>
 
 <%
