@@ -970,6 +970,8 @@ export default (options,state) => {
                 widget: "markdown",
                 required:false,          
               }              
+            ]
+          },
         ]
       },
       {
