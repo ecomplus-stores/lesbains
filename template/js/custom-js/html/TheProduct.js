@@ -377,26 +377,21 @@ export default {
       this.cms_customizations_step++
     },
     totalWithCustomization(){
-      // let variationId
-      // if (this.hasVariations) {
-      //   if (this.selectedVariationId) {
-      //     variationId = this.selectedVariationId
-      //   } else {
-      //     return
-      //   }
-      // }
-      // console.log(variationId)
-
-      let price = this.body.price
-      //console.log('current',this.current_customization)
-      for (const item of this.current_customization) {
-        
-        const value = Object.values(item)[0].value;
-        price += value;
+      let variationId
+      if (this.hasVariations) {
+        if (this.selectedVariationId) {
+          variationId = this.selectedVariationId
+        } else {
+          return
+        }
       }
-      console.log(this.body.price, price)
-      //console.log(this.body)
-      return price.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) 
+
+      let price = variationId ? this.body.variations.find(el => el._id == variationId).price : this.body.price
+      for (const item of this.current_customization) {
+        const value = Object.values(item)[0].value;
+        price += (value || 0);
+      }
+     return price.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) 
     },
     setCustomizationOption (customization, text) {
       
@@ -505,7 +500,7 @@ export default {
             label: customizationFromBody.label,
             add_to_price: {
               type: (Object.values(item)[0].type == "Fixo" ? 'fixed' : 'percent'),
-              addition: Object.values(item)[0].value
+              addition: Object.values(item)[0].value || 0
             },
             option:  {text:Object.values(item)[0].title}
           })
@@ -519,8 +514,8 @@ export default {
         this.customizationPanel = true;
         //alert('Selecione as opções para prosseguir')
       }else{
-        // console.log('customCustomizations',customCustomizations)
-        // console.log('add', { ...product, customizations : customCustomizations })
+         console.log('customCustomizations',customCustomizations)
+         console.log('add', { ...product, customizations : customCustomizations })
         this.$emit('buy', { product, variationId, customizations : customCustomizations })
         if (this.canAddToCart) {
           this.current_customization = []

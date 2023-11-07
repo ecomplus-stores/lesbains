@@ -1143,6 +1143,20 @@ export default (options,state) => {
             required:false,
             fields: [
               {
+                label: "Título do Passo",
+                hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
+                name: "step_title",
+                widget: "string",
+                required:false,          
+              }, 
+              {
+                label: "Descrição do Passo",
+                hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
+                name: "step_description",
+                widget: "string",
+                required:false,          
+              }, 
+              {
                 label: 'Produtos',
                 hint:"Exiba opções de produtos para adicionar juntamente ao carrinho na finalização da personalização. Os itens de customização serão aplicados ao produto de upselling. Somente uma das opções poderá ser escolhida, então caso tenha por exemplo um Estojo, selecione as variações do estojo para exibição.",
                 name: 'upselling_skus',

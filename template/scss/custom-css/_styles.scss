@@ -6,6 +6,7 @@
     --f21: 21.88px;
     --f17: 17.5px;
     --f14: 14px;
+    --f12: 12px;
     --f11: 11.2px;
     --ffamily: "Futura";
     --banner_spacer: 2rem;
@@ -18,7 +19,8 @@
         --f21: 17.5px;
         --f17: 14px;
         --f14: 12.6px;
-        --f11: 10.08px
+        --f12: 11.02px;
+        --f11: 10.08px;
     } 
 }
 
@@ -624,41 +626,89 @@ header#header{
             left: 0;
             width: 100%;
             .option_title{
-                small{
-                    font-size: var(--f-size-7);
-                    color: #848484;
-                }
                 h4{
-                    font-family: var(--f-family-1);
-                    text-transform: var(--f-family-transform);
-                    font-size: var(--f-size-5);
+                    text-transform: uppercase;
+                    font-size: var(--f17);
+                    font-weight: bold;
+                }
+                p{
+                    font-size: var(--f14);
+                    font-weight: 400;
+                    line-height: initial;
                 }
             }
+            .selected_option,
             .option_options{
-                .option{
+                //.option{
                     button{
-                        background: #f2f2f2;
-                        border: 0;
-                        border-radius: 30px;
-                        display: flex;
-                        font-weight: 700;
-                        height: 32px;
-                        padding: 0 1rem;
-                        align-items: center;                 
+                        box-shadow: 0px 0px 15px rgba(0,0,0,.025);
+                        padding: 1rem;
+                        border: 1px solid #f2f2f2;
+                        border-radius:0;
+                        background: #fff;
+                        transition: all .2s;
                     }
                     button:hover{
-                        background: #1e1e1e;
-                        color: #fff;
+                        background: #f8f8f8;
                     }
-                    p{
-                        color: #848484;
+                    button.active{
+                        background: #f8f8f8;
+                        border: #000;
                     }
-                }
+                    .option_title{
+                        font-size: var(--f14);
+                        font-weight: bold;
+                        display: block;
+                        text-align: left;
+                    }
+                    .option_price{
+                        font-size: var(--f12);
+                        font-weight: 300;
+                        display: block;
+                        text-align: right;
+                    }
+                    .option_description{
+                        text-align: left;
+                        display: block;
+                        font-weight: normal;
+                        line-height: initial;
+                        font-size: var(--f14);
+                    }
+                    .option_image{
+                        max-width: 100%;
+                    }
+                    // button{
+                    //     background: #f2f2f2;
+                    //     border: 0;
+                    //     border-radius: 30px;
+                    //     display: flex;
+                    //     font-weight: 700;
+                    //     height: 32px;
+                    //     padding: 0 1rem;
+                    //     align-items: center;                 
+                    // }
+                    // button:hover{
+                    //     background: #1e1e1e;
+                    //     color: #fff;
+                    // }
+                    // p{
+                    //     color: #848484;
+                    // }
+                //}
             }
             .selected_option{
+                box-shadow: 0px 0px 15px rgba(0,0,0,.025);
+                padding: 1rem;
+                border: 1px solid #f2f2f2;
+                border-radius:0;
+                background: #fff;
+                transition: all .2s;
                 small{
                     display: block;
                 }
+                .option_title{}
+                .option_description{}
+                .option_price{}
                 b{
                     font-weight: normal;
                 }
@@ -813,6 +863,16 @@ header#header{
             .prices__value{
                 font-size: var(--f27);
                 font-weight: 500;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                gap: 10px;
+                small{
+                    font-size: var(--f17);    
+                    margin-bottom: 2px;                
+                    font-weight: 500;
+
+                }
             }
             .prices__installments{
                 font-size: var(--f14);
