@@ -85,8 +85,8 @@
   "upselling": [
     {
       "upselling_skus": [
-        "CAIXA",
-        "EMB_CASE2"
+        "ZZL4539",
+        "WAU1553"
       ],
       "customizations": [
         {
@@ -115,7 +115,9 @@
             }
           ]
         }
-      ]
+      ],
+      "step_title": "Escolha o Estojo",
+      "step_description": "Selecione uma opção de estojo para acompanhar seu óculos"
     }
   ],
   "title": "DEFAULT",
