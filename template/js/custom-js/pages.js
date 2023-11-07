@@ -66,4 +66,6 @@ window.addEventListener('load', function () {
 
 if($('#page-products').length > 0){
     window.mainProductGallery = [];
+    window.mainProductGallery_ = [];    
+    $('#sticker').css('--header-vh', $('header#header').innerHeight() + 'px')
 }

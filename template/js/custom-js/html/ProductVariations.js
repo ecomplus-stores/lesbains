@@ -74,7 +74,16 @@ import {
           ? `background:linear-gradient(to right bottom, ${rgbs[0]} 50%, ${rgbs[1]} 50%)`
           : `background:${rgbs[0]}`
       },
-  
+      getVariantImage (optionText){
+        let hasImg = this.product.variations.find(el => el.name.includes(optionText))
+        if(window.mainProductGallery_.length > 0 && hasImg && hasImg.picture_id){
+          let inGalleryPictureId = window.mainProductGallery_.find(el_ => el_._id == hasImg.picture_id)
+          if(inGalleryPictureId && inGalleryPictureId.normal.url){
+            return inGalleryPictureId.normal.url
+          }
+        }
+        return false;
+      },
       getSpecValue (optionText, grid) {
         const { variations } = this.product
         let values

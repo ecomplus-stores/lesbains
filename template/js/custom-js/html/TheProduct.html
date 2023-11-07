@@ -27,8 +27,11 @@
     class="custom_back" 
     v-if="cms_customizations_step > 1"
     @click="customizationStepBack"
-    >
-    <-
+    >      
+      <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.8672 21.0938L5.27344 13.5L12.8672 5.90625M6.32813 13.5L21.7266 13.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+  
     </button>
       <button type="button"
       class="custom_close" 
@@ -36,14 +39,14 @@
       >
       </button>
       <div class="customizations_header mt-4 mb-5 px-5"
-        v-if="cms_customizations_step < cms_customizations.length + 1"
+        v-if="cms_customizations_step < (cms_customizations.length + cms_upselling.length) + 1"
       >
         <div class="button_cover"
-        v-for="(item, index) in cms_customizations"
+        v-for="index in (cms_customizations.length + cms_upselling.length)"
         :key="index">
           <button
-          :class="cms_customizations_step == index + 1  ? 'active' : ''">
-            {{index + 1}}
+          :class="cms_customizations_step == index   ? 'active' : ''">
+            {{index }}
           </button>
         </div>
       </div>
@@ -54,7 +57,7 @@
         :key="index"
         :class="cms_customizations_step == index + 1  ? 'current' : ''"
         > 
-        <p>{{JSON.stringify(item)}}</p>
+        <p v-if="1 != 1">{{JSON.stringify(item)}}</p>
         <div class="option_title text-center mb-5">
           <small>Selecione a opção para</small>
           <h4>{{body.customizations.find(el => el.grid_id == item.title).label}}</h4>
@@ -65,7 +68,7 @@
             :key="index_"
             >
             <div>
-              <p>XX - {{JSON.stringify(item_)}}</p>
+              <p v-if="1 != 1">XX - {{JSON.stringify(item_)}}</p>
               <button 
               :class="current_customization[index] && current_customization[index][item.title].title == item_.title ? 'active' : ''"
               @click="setDeepCustomizationOption(index,item.title,item_.title)" type="button">
@@ -300,122 +303,122 @@
                 >
               </div>
             </slot>
-            <slot name="prices">
-              <p class="product__prices mt-3 pt-3">
-                <a-prices
-                  :product="ghostProductForPrices"
-                  :is-literal="true"
-                  :is-big="true"
-                  @fix-price="price => fixedPrice = price"
-                />
-                <slot
-                  name="discount-tag"
-                  v-bind="{ discount }"
-                  v-if="1 != 1"
-                >
-                  <span
-                    v-if="discount > 0"
-                    class="product__discount"
+
+            <div class="align-items-center justify-content-between d-flex py-3 box">
+              <slot name="prices">
+                <p class="product__prices col-md col-12 m-0">
+                  <a-prices
+                    :product="ghostProductForPrices"
+                    :is-literal="true"
+                    :is-big="true"
+                    @fix-price="price => fixedPrice = price"
+                  />
+                  <slot
+                    name="discount-tag"
+                    v-bind="{ discount }"
+                    v-if="1 != 1"
                   >
-                    {{ i19discountOf }}
-                    <strong>{{ discount }}%</strong>
+                    <span
+                      v-if="discount > 0"
+                      class="product__discount"
+                    >
+                      {{ i19discountOf }}
+                      <strong>{{ discount }}%</strong>
+                    </span>
+                  </slot>
+                </p>
+              </slot>
+
+              <div
+                v-if="isKit"
+                class="product__kit"
+              >
+                <slot
+                  name="kit"
+                  v-bind="{ kitItems }"
+                >
+                  <transition enter-active-class="animated fadeInUp">
+                    <quantity-selector
+                      v-if="kitItems.length"
+                      :items="kitItems"
+                      :min="body.min_quantity"
+                      :max="body.quantity"
+                      :slug="body.slug"
+                      :kit-product-id="body._id"
+                      :kit-name="name"
+                      :kit-price="fixedPrice"
+                      @buy="d => $emit('buy', d)"
+                    >
+                      <template #buy-button-content>
+                        <slot name="buy-button-content"/>
+                      </template>
+                    </quantity-selector>
+                  </transition>
+
+                  <span
+                    v-if="!kitItems.length"
+                    class="product__kit-loading spinner-border"
+                    role="status"
+                  >
+                    <span class="sr-only">Loading...</span>
                   </span>
                 </slot>
-              </p>
-            </slot>
+              </div>
 
-            <div
-              v-if="isKit"
-              class="product__kit"
-            >
-              <slot
-                name="kit"
-                v-bind="{ kitItems }"
-              >
-                <transition enter-active-class="animated fadeInUp">
-                  <quantity-selector
-                    v-if="kitItems.length"
-                    :items="kitItems"
+              <template v-else>
+                <div
+                  v-if="!isVariationInStock"
+                  class="product__out-of-stock"
+                >
+                  <slot name="out-of-stock">
+                    {{ i19outOfStock }}
+                  </slot>
+                </div>
+
+                <div
+                  v-else-if="hasBuyButton"
+                  class="product__buy mt-3 pt-3 mt-md-0 pt-md-0 col-md col-12 "
+                  ref="buy"
+                >
+                  <component
+                    :is="hasQuantitySelector ? 'quantity-selector' : 'div'"
+                    :items="hasQuantitySelector ? [{ _id: body._id, quantity: body.min_quantity || 1 }] : null"
                     :min="body.min_quantity"
                     :max="body.quantity"
-                    :slug="body.slug"
-                    :kit-product-id="body._id"
-                    :kit-name="name"
-                    :kit-price="fixedPrice"
-                    @buy="d => $emit('buy', d)"
+                    :has-buy-button="false"
+                    @set-quantity="({ quantity }) => qntToBuy = quantity"
                   >
-                    <template #buy-button-content>
-                      <slot name="buy-button-content"/>
-                    </template>
-                  </quantity-selector>
-                </transition>
-
-                <span
-                  v-if="!kitItems.length"
-                  class="product__kit-loading spinner-border"
-                  role="status"
-                >
-                  <span class="sr-only">Loading...</span>
-                </span>
-              </slot>
-            </div>
-
-            <template v-else>
-              <div
-                v-if="!isVariationInStock"
-                class="product__out-of-stock"
-              >
-                <slot name="out-of-stock">
-                  {{ i19outOfStock }}
-                </slot>
-              </div>
-
-              <div
-                v-else-if="hasBuyButton"
-                class="product__buy mt-3 pt-3"
-                ref="buy"
-              >
-                <component
-                  :is="hasQuantitySelector ? 'quantity-selector' : 'div'"
-                  :items="hasQuantitySelector ? [{ _id: body._id, quantity: body.min_quantity || 1 }] : null"
-                  :min="body.min_quantity"
-                  :max="body.quantity"
-                  :has-buy-button="false"
-                  @set-quantity="({ quantity }) => qntToBuy = quantity"
-                >
-                  <span @click="buy">
-                    <slot
-                      name="buy"
-                      v-bind="{ hasClickedBuy, isOnCart }"
-                    >
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        :disabled="hasClickedBuy && !isOnCart"
+                    <span @click="buy">
+                      <slot
+                        name="buy"
+                        v-bind="{ hasClickedBuy, isOnCart }"
                       >
-                        <slot name="buy-button-content">
-                          Adicionar ao Carrinho
-                        </slot>
-                      </button>
-                      
-                    </slot>
-                  </span>
-                  <a :href='"https://wa.me/5511993243195?text=Olá! Quero comprar o produto *" + body.name + "* com lentes multifocais. Poderiam me ajudar?"' id="multifocais">
-                    Precisa de Lentes Multifocais? <u>Clique Aqui</u>
-                  </a>
-                </component>
-              </div>
+                        <button
+                          type="button"
+                          class="btn btn-lg btn-primary"
+                          :disabled="hasClickedBuy && !isOnCart"
+                        >
+                          <slot name="buy-button-content">
+                            Adicionar ao Carrinho
+                          </slot>
+                        </button>
+                        
+                      </slot>
+                    </span>                
+                  </component>
+                </div>
 
-              <p
-                class="product__short-stock"
-                v-if="isLowQuantity && 1 != 1"
-              >
-                <i class="i-forward mr-1"></i>
-                {{ i19only }}
-                <strong>{{ productQuantity }}</strong>
-                {{ i19unitsInStock }}
-              </p>
-            </template>
+                <p
+                  class="product__short-stock"
+                  v-if="isLowQuantity && 1 != 1"
+                >
+                  <i class="i-forward mr-1"></i>
+                  {{ i19only }}
+                  <strong>{{ productQuantity }}</strong>
+                  {{ i19unitsInStock }}
+                </p>
+              </template>
+            </div>
 
             <slot name="sale-timer">
               <div

@@ -1027,6 +1027,20 @@ export default (options,state) => {
                   }))
               },  
               {
+                label: "Título do Passo",
+                hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
+                name: "step_title",
+                widget: "string",
+                required:false,          
+              }, 
+              {
+                label: "Descrição do Passo",
+                hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
+                name: "step_description",
+                widget: "string",
+                required:false,          
+              }, 
+              {
                 label: "Mais de uma opção poderá ser selecionada?",
                 name:"multi_option",
                 hint:"Ativar apenas para campos de gravação/texto",
@@ -1159,6 +1173,20 @@ export default (options,state) => {
                       value: grid_id
                     }))
                   },  
+                  {
+                    label: "Título do Passo",
+                    hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
+                    name: "step_title",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
+                    label: "Descrição do Passo",
+                    hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
+                    name: "step_description",
+                    widget: "string",
+                    required:false,          
+                  }, 
                   {
                     label: "Mais de uma opção poderá ser selecionada?",
                     name:"multi_option",

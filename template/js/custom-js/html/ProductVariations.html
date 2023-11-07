@@ -36,11 +36,17 @@
         :class="[
           selectedOptions[grid] === optionText ? 'variations__option--selected' : null, 
           `variations__option--${optionText}`, 
-          filteredGrids[grid].includes(optionText) ? null : 'disabled'
+          filteredGrids[grid].includes(optionText) ? null : 'disabled',
+          getVariantImage(optionText) ? 'with-image' : ''
         ]"
         :style="grid === 'colors' ? getColorOptionBg(optionText) : null"
         @click="selectOption(optionText, grid, index)"
-      >
+      > 
+        <img 
+          v-if="getVariantImage(optionText)"
+          :src="getVariantImage(optionText)"
+        />
+        
         {{ optionText }}
       </button>
     </template>

@@ -165,6 +165,7 @@ export default {
       kitItems: [],
       currentTimer: null,
       cms_customizations : [],
+      cms_upselling : [],
       cms_customizations_step : 1,
       current_customization : [],
       customizationPanel : false,
@@ -691,7 +692,9 @@ export default {
   },
 
   created () {
-    this.cms_customizations = [...($('[data-customizations]').length > 0 && $('[data-customizations]').attr('data-customizations') != '' ? JSON.parse($('[data-customizations]').attr('data-customizations')) : [])]
+    //this.cms_customizations = [...($('[data-customizations]').length > 0 && $('[data-customizations]').attr('data-customizations') != '' ? JSON.parse($('[data-customizations]').attr('data-customizations')) : [])]
+    this.cms_customizations = window.apx_lib.customizations ? window.apx_lib.customizations : [];
+    this.cms_upselling = window.apx_lib.upselling ? window.apx_lib.upselling : []
     console.log('customizations',this.cms_customizations)
     const presetQntToBuy = () => {
       this.qntToBuy = this.body.min_quantity || 1
@@ -710,6 +713,7 @@ export default {
   },
 
   mounted () {
+    window.mainProductGallery_ = [...this.body.pictures] 
     window.mainProductGallery = [...this.body.pictures]
     //console.log(this.body.customizations)
     if (this.$refs.sticky && !this.isWithoutPrice) {

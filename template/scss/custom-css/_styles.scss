@@ -529,8 +529,8 @@ header#header{
     position: absolute;
     top: 1rem;
     right: 1rem;
-    height: 25px;
-    width: 25px;
+    height: 27px;
+    width: 27px;
     background: transparent;
     border: 0;
     padding: 0;
@@ -542,9 +542,9 @@ header#header{
 .custom_close:before,
 .custom_close:after{
     content: "";
-    height: 100%;
+    height: 18px;
     width: 1px;
-    background: #1e1e1e;
+    background: #131313;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -785,5 +785,58 @@ header#header{
             font-size: var(--f17);
             i{display: none;}
         }
+        .variations__option{
+            border-radius: 0;
+
+        }
+        .variations__option.with-image{
+            padding: 0;
+            img{
+                height: 77px;
+            }
+        }
+    }
+
+    .product__prices{
+        .prices--big > span:last-child{flex: 0 0 100%;}
+        .prices--big{
+            display: flex;    
+            flex-wrap: wrap;        
+            align-items: center;
+            gap: .25rem 1rem;
+            .prices__compare{
+                font-size: var(--f17);
+                color: #585858;
+                font-weight: 300;
+                small{display: none;}
+            }
+            .prices__value{
+                font-size: var(--f27);
+                font-weight: 500;
+            }
+            .prices__installments{
+                font-size: var(--f14);
+                *{font-weight:300}
+            }
+        }
+    }
+    .box{background:#f8f8f8}
+    .product__buy{
+        margin-bottom:0!important;
+        .btn-primary{
+            border-radius: 0;
+            padding: 0.7rem 2.1rem;
+            width: 100%;
+            span{
+                color: #fff;
+                font-size:var(--f17);
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+    #sticker{
+        position: sticky;
+        top: var(--header-vh);
     }
 }
