@@ -173,6 +173,8 @@ export default {
       variationImages: [],      
       variantGalleryImages:[],
       upsellingProducts:[],
+      pickedUpsellProduct:null,
+      upsellCustomizations:[]
     }
   },
 
@@ -371,6 +373,21 @@ export default {
     customizationStepBack(){
       this.cms_customizations_step--
     },
+    chooseUpsellProduct(sku){
+      this.pickedUpsellProduct = {...this.upsellingProducts.find(el => el.sku == sku || el.skus.includes(sku))}
+      console.log(this.pickedUpsellProduct)
+    },
+    setUpsellCustomization(key, obj, value){
+      if(!this.upsellCustomizations[key]){
+        this.upsellCustomizations[key] = []
+      }
+      this.upsellCustomizations[key][obj.title] = {value:value, params:obj}
+      console.log(this.upsellCustomizations)
+    },
+    setStep(step){
+      this.cms_customizations_step = step
+      console.log(this.cms_customizations.length, this.cms_upselling.length, this.cms_customizations_step)
+    },
     setDeepCustomizationOption(index,grid_id,item){
 
       this.current_customization[index] = {[grid_id] : item}
@@ -507,23 +524,105 @@ export default {
           })
         }
       }
-      
-      
-      
 
-      if(this.cms_customizations && option != "customized"){
-        this.customizationPanel = true;
-        //alert('Selecione as opções para prosseguir')
-      }else{
-         this.$emit('buy', { product, variationId, customizations : customCustomizations })
-        if (this.canAddToCart) {
-          this.current_customization = []
-          this.customizationPanel = false
-          this.cms_customizations_step = 1
-          ecomCart.addProduct({ ...product, customizations : customCustomizations }, variationId, this.qntToBuy)          
+      let upsellProductAdd = this.pickedUpsellProduct
+      let upsellProductCustomizations = []
+      let kitId = genRandomObjectId()
+      if(upsellProductAdd){
+        let kit_product = {
+          _id: kitId,
+          name: product.name,
+          composition:[
+            {
+              quantity: 1,
+              variation_id: upsellProductAdd.variation_id,
+              _id: upsellProductAdd._id
+            },
+            {
+              quantity: 1,
+              variation_id: variationId,
+              _id: product._id
+            }
+          ]
         }
-        this.isOnCart = true
+        console.log('this.upsellCustomizations', this.upsellCustomizations)
+        Object.keys(this.upsellCustomizations).forEach( key => {
+          let customizationPrice = 0;
+          let customizationContent = ""
+          let customization = this.upsellCustomizations[key]
+          console.log('customization',customization)
+          Object.keys(this.upsellCustomizations[key]).forEach( key_ => {
+            let customization_ = this.upsellCustomizations[key][key_]
+            if(customization_.params.value > 0){
+              if(customization_.type == "Fixo"){
+                customizationPrice+= customization_.params.value
+              }else{
+                customizationPrice+= (upsellProductAdd.price * (customization_.params.value / 100))
+              }
+              customizationContent+= `${customization_.params.title}: ${customization_.value}\n`
+            }
+          });
+          console.log('upsellProductAdd.customizations',upsellProductAdd.customizations, key)
+          
+          let customizationFromBody = upsellProductAdd.customizations.find(el => el.grid_id == key)
+          upsellProductCustomizations.push({
+            _id: customizationFromBody._id,
+            label: customizationFromBody.label,
+            add_to_price: {
+              type: 'fixed',
+              addition: customizationPrice
+            },
+            option:  {text:customizationContent}
+          })
+        })
+        console.log('upsellProductCustomizations',upsellProductCustomizations)
+        upsellProductAdd.customizations = upsellProductCustomizations
+        upsellProductAdd.kit_product = kit_product
+        product.kit_product = kit_product
+
+        if (this.canAddToCart) {
+          ecomCart.addProduct(upsellProductAdd)
+        }
+
+        if(this.cms_customizations && option != "customized"){
+          this.customizationPanel = true;
+          //alert('Selecione as opções para prosseguir')
+        }else{
+          product.customizations = customCustomizations
+
+          console.log('aaa', product, upsellProductAdd)
+          if (this.canAddToCart) {
+            this.current_customization = []
+            this.customizationPanel = false
+            this.cms_customizations_step = 1
+            ecomCart.addProduct({ ...product }, variationId, 1)          
+          }
+          //this.$emit('buy', { product, variationId, customizations : customCustomizations })
+          this.$emit('buy', [product, upsellProductAdd])
+          this.isOnCart = true
+        }
+
+      }else{
+        
+
+        if(this.cms_customizations && option != "customized"){
+          this.customizationPanel = true;
+          //alert('Selecione as opções para prosseguir')
+        }else{
+          this.$emit('buy', { product, variationId, customizations : customCustomizations })
+          if (this.canAddToCart) {
+            this.current_customization = []
+            this.customizationPanel = false
+            this.cms_customizations_step = 1
+            this.pickedUpsellProduct = null
+            ecomCart.addProduct({ ...product, customizations : customCustomizations }, variationId, this.qntToBuy)          
+          }
+          this.isOnCart = true
+        }
       }
+      
+      
+      
 
         // this.$emit('buy', { product, variationId, customizations })
         // if (this.canAddToCart) {
@@ -706,32 +805,49 @@ export default {
             .then(() => {
               ecomSearch.getItems().forEach(product => {
                 const quantity = 1
-                const addUpsellItem = variationId => {
-                  const item = ecomCart.parseProduct(product, variationId, quantity)
-                  if (quantity) {
-                    item.min_quantity = item.max_quantity = quantity
-                  } else {
-                    item.quantity = 0
+                
+                store({
+                  url: `/products/${product._id}.json`,
+                  axiosConfig: {
+                    timeout: 6000
                   }
-                  this.upsellingProducts.push({
-                    ...item,
-                    _id: genRandomObjectId()
-                  })
-                  console.log('adicionou', item)
-                }
-                console.log('variations',product.variations)
-                if (product.variations && product.variations.length > 0) {
-                  product.variations.forEach(variation => {
-                    variation._id = genRandomObjectId()
-                    addUpsellItem(variation._id)
-                  })
-                  console.log('teste b')
-                } else {
-                  console.log('teste a')
-                  addUpsellItem()
-                }
-                console.log('upsell product', product)
-                console.log('this.upsellingProducts',this.upsellingProducts)
+                })
+                .then(({ data }) => {
+                  this.hasLoadError = false
+                  //console.log('data',data)
+                  
+                  product.customizations = data.customizations
+                  const addUpsellItem = variationId => {
+                    const item = ecomCart.parseProduct(product, variationId, quantity)
+                    if (quantity) {
+                      item.min_quantity = item.max_quantity = quantity
+                    } else {
+                      item.quantity = 0
+                    }
+                    
+                    this.upsellingProducts.push({
+                      ...item,
+                      _id: genRandomObjectId()
+                    })
+                    console.log('adicionou', item)
+                  }
+                  console.log('variations',product.variations)
+                  if (product.variations && product.variations.length > 0) {
+                    product.variations.forEach(variation => {
+                      variation._id = genRandomObjectId()
+                      addUpsellItem(variation._id)
+                    })
+                    console.log('teste b')
+                  } else {
+                    console.log('teste a')
+                    addUpsellItem()
+                  }
+                  console.log('upsell product', product)
+                  console.log('this.upsellingProducts',this.upsellingProducts)
+                })
+                .catch(err => {
+                  console.error(err)
+                })    
               })
             })
             .catch(console.error)

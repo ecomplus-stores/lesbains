@@ -90,12 +90,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="row mt-3" v-if="item_.description">
-                  <div class="col-12">
-                    <p class="option_description">
-                      {{item_.description}}
-                    </p>
-                  </div>
+                <div class="mt-3" v-if="item_.description">
+                  <p class="option_description">
+                    {{item_.description}}
+                  </p>                  
                 </div>
               </button>
               
@@ -121,6 +119,8 @@
               <div v-if="upsellProduct(item_)">
                 <button 
                   type="button"
+                  @click="chooseUpsellProduct(item_)"
+                  :class="pickedUpsellProduct && pickedUpsellProduct.sku == item_ ? 'active' : ''"
                 >
                   <div class="row justify-content-between align-items-start">
                     <div class="col-2 pr-0" v-if="upsellProduct(item_).picture">
@@ -141,21 +141,49 @@
                           </strong>
                         </div>
                       </div>
-                      <div class="row mt-3" v-if="upsellProduct(item_).short_description">
-                        {{upsellProduct(item_).short_description}}
+                      <div class="mt-3" v-if="upsellProduct(item_).short_description">
+                        <p class="option_description">
+                          {{upsellProduct(item_).short_description}}
+                        </p>
                       </div>
                     </div>
                   </div>
                 </button>
               </div>
           </div>
-          <p>{{JSON.stringify(item.customizations)}}</p>
           <div v-if="item.customizations">
             <div class="option_options upselling_customizations">
               <div v-for="(item_, index_) in item.customizations" :key="index_">
-                <div v-for="(item__, index__) in item_.list">
-                  <strong v-if="item__.step_title">{{item__.step_title}}</strong>
-                  <p v-if="item__.stepdescription">{{item__.stepdescription}}</p>
+                <strong class="upselling_customizations-title" v-if="item_.step_title">{{item_.step_title}}</strong>
+                <p class="upselling_customizations-description" v-if="item_.step_description">{{item_.step_description}}</p>
+                <div v-for="(item__, index__) in item_.list" :key="index__">                  
+                  <div class="option mb-md-4 mb-4">
+                    <div v-if="item__.input_type != 'Não'" class="button_box_style">
+                      <div class="row justify-content-between align-items-start">
+                        <div class="col">
+                          <div class="row justify-content-between align-items-start">
+                            <div class="col">
+                              <div class="option_title">{{item__.title}}</div>
+                            </div>
+                            <div class="col-auto">
+                              <strong v-if="item__.type == 'Fixo'" class="option_price">
+                                {{item__.value > 0 ? '+' + item__.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                              </strong>
+                              <strong v-else class="option_price">
+                                {{item__.value > 0 ? '+' + (ghostProductForPrices.price * (item__.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                              </strong>
+                            </div>
+                          </div>                          
+                        </div>                        
+                      </div>
+                      <div class="mt-3" v-if="item__.description">
+                        <p class="option_description">{{item__.description}}</p>
+                      </div>
+                      <div class="mt-3 input_digitable">
+                        <input :value="upsellCustomizations[item_.title] && upsellCustomizations[item_.title][item__.title] && upsellCustomizations[item_.title][item__.title].value" @keyup="setUpsellCustomization(item_.title, item__, $event.target.value)" :type="item__.input_type" :max="item__.input_type_max" :required="input_type_required ? true : false"/>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -165,6 +193,12 @@
             <div v-else>
 
             </div> -->
+          </div>
+          <div class="customization_functions d-flex flex-column">
+            <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+              Avançar
+            </button>
+            
           </div>
         </div>
         <!--
