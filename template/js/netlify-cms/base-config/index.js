@@ -1020,6 +1020,7 @@ export default (options,state) => {
                 label: 'Grid da Personalização',
                 name: 'title',
                 widget: 'select',
+                hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione. Personalizações do tipo texto/gravação devem ter somente uma opção cadastrada por bloco",
                 options: window.storefront.data.grids
                   .map(({ grid_id, title }) => ({
                     label: title,
@@ -1040,13 +1041,13 @@ export default (options,state) => {
                 widget: "string",
                 required:false,          
               }, 
-              {
-                label: "Mais de uma opção poderá ser selecionada?",
-                name:"multi_option",
-                hint:"Ativar apenas para campos de gravação/texto",
-                widget: 'boolean',
-                default: false
-              },
+              // {
+              //   label: "Mais de uma opção poderá ser selecionada?",
+              //   name:"multi_option",
+              //   hint:"Ativar apenas para campos de gravação/texto",
+              //   widget: 'boolean',
+              //   default: false
+              // },
               {
                 label: 'Condições',
                 hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
@@ -1178,7 +1179,7 @@ export default (options,state) => {
                 fields: [
                   {
                     label: 'Grid da Personalização',
-                    hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione.",
+                    hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione. Personalizações do tipo texto/gravação devem ter somente uma opção cadastrada por bloco",
                     name: 'title',
                     widget: 'select',
                     options: window.storefront.data.grids
@@ -1201,13 +1202,13 @@ export default (options,state) => {
                     widget: "string",
                     required:false,          
                   }, 
-                  {
-                    label: "Mais de uma opção poderá ser selecionada?",
-                    name:"multi_option",
-                    hint:"Ativar apenas para campos de gravação/texto",
-                    widget: 'boolean',
-                    default: false
-                  },
+                  // {
+                  //   label: "Mais de uma opção poderá ser selecionada?",
+                  //   name:"multi_option",
+                  //   hint:"Ativar apenas para campos de gravação/texto",
+                  //   widget: 'boolean',
+                  //   default: false
+                  // },
                   {
                     label: 'Condições',
                     hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",

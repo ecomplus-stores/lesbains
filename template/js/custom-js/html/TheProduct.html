@@ -39,10 +39,10 @@
       >
       </button>
       <div class="customizations_header mt-4 mb-5 px-5"
-        v-if="cms_customizations_step <= (cms_customizations.length + cms_upselling.length) + 1"
+        v-if="cms_customizations_step <= (cms_customizations.length + cms_upselling.length)"
       >
         <div class="button_cover"
-        v-for="index in (cms_customizations.length + cms_upselling.length + 1)"
+        v-for="index in (cms_customizations.length + cms_upselling.length )"
         :key="index">
           <button
           :class="cms_customizations_step == index   ? 'active' : ''">
@@ -104,9 +104,117 @@
             </div>
           </div>  
         </div>
+        <div class="step upsell px-md-3"
+        v-for="(item, index) in cms_upselling"
+        :key="index"
+        :class="cms_customizations_step == (cms_customizations.length + cms_upselling.length + index)  ? 'current' : ''"
+        > 
+        <div class="option_title text-center mb-5">
+          <h4>{{item.step_title}}</h4>
+          <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
+        </div>
+        <div class="option_options">
+          <div class="option mb-md-4 mb-4"
+            v-for="(item_,index_) in item.upselling_skus"
+            :key="index_"
+            >              
+              <div v-if="upsellProduct(item_)">
+                <button 
+                  type="button"
+                >
+                  <div class="row justify-content-between align-items-start">
+                    <div class="col-2 pr-0" v-if="upsellProduct(item_).picture">
+                      <img class="option_image"
+                        :src="upsellProduct(item_).picture && upsellProduct(item_).picture.normal && upsellProduct(item_).picture.normal.url"
+                      />
+                    </div>
+                    <div class="col">
+                      <div class="row justify-content-between align-items-start">
+                        <div class="col">
+                          <span class="option_title">
+                            {{ upsellProduct(item_).name }}
+                          </span>                          
+                        </div>
+                        <div class="col-auto">
+                          <strong class="option_price">
+                            {{ upsellProduct(item_).price > 0 ? upsellProduct(item_).price.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis' }}
+                          </strong>
+                        </div>
+                      </div>
+                      <div class="row mt-3" v-if="upsellProduct(item_).short_description">
+                        {{upsellProduct(item_).short_description}}
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+          </div>
+          <p>{{JSON.stringify(item.customizations)}}</p>
+          <div v-if="item.customizations">
+            <div class="option_options upselling_customizations">
+              <div v-for="(item_, index_) in item.customizations" :key="index_">
+                <div v-for="(item__, index__) in item_.list">
+                  <strong v-if="item__.step_title">{{item__.step_title}}</strong>
+                  <p v-if="item__.stepdescription">{{item__.stepdescription}}</p>
+                </div>
+              </div>
+            </div>
+            <!-- <div v-if="item_.customizations.multi_option" class="option multi">
+              
+            </div>
+            <div v-else>
+
+            </div> -->
+          </div>
+        </div>
+        <!--
+          <div class="option_options">            
+            <div class="option mb-md-4 mb-4"
+            v-for="(item_,index_) in item.list"
+            :key="index_"
+            >
+            <div>
+              <button 
+              :class="current_customization[index] && current_customization[index][item.title].title == item_.title ? 'active' : ''"
+              @click="setDeepCustomizationOption(index,item.title,item_)" class="w-100" type="button">
+                <div class="row justify-content-between align-items-start">
+                  <div class="col-2 pr-0" v-if="item_.img">
+                      <img class="option_image" :src="item_.img" alt="">
+                  </div>
+                  <div class="col">
+                    <div class="row justify-content-between align-items-start">
+                      <div class="col">
+                        <span class="option_title">{{item_.title}}</span>
+                      </div>
+                      <div class="col-auto">
+                        <strong v-if="item_.type == 'Fixo'" class="option_price">
+                          {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                        </strong>
+                        <strong v-else class="option_price">
+                          {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-3" v-if="item_.description">
+                  <div class="col-12">
+                    <p class="option_description">
+                      {{item_.description}}
+                    </p>
+                  </div>
+                </div>
+              </button>
+              
+            </div>
+            
+            </div>
+          </div>  
+          -->
+        </div>
         <div class="step last px-3"
-          v-if="cms_customizations_step > cms_customizations.length"
-            :class="cms_customizations_step > cms_customizations.length  ? 'current' : ''"
+          v-if="cms_customizations_step > cms_customizations.length + cms_upselling.length"
+            :class="cms_customizations_step > cms_customizations.length + cms_upselling.length  ? 'current' : ''"
         >
           <div class="option_title text-center mb-5 mt-5">
             <small></small>

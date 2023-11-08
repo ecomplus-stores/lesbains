@@ -171,7 +171,8 @@ export default {
       customizationPanel : false,
       variationImagesKey : null,
       variationImages: [],      
-      variantGalleryImages:[]
+      variantGalleryImages:[],
+      upsellingProducts:[],
     }
   },
 
@@ -514,9 +515,7 @@ export default {
         this.customizationPanel = true;
         //alert('Selecione as opções para prosseguir')
       }else{
-         console.log('customCustomizations',customCustomizations)
-         console.log('add', { ...product, customizations : customCustomizations })
-        this.$emit('buy', { product, variationId, customizations : customCustomizations })
+         this.$emit('buy', { product, variationId, customizations : customCustomizations })
         if (this.canAddToCart) {
           this.current_customization = []
           this.customizationPanel = false
@@ -541,6 +540,9 @@ export default {
       } else {
         this.buy()
       }
+    },
+    upsellProduct(sku){
+      return this.upsellingProducts.find(el => el.sku == sku || el.skus.includes(sku))
     }
   },
 
@@ -684,12 +686,59 @@ export default {
       }
       
     },
+    
   },
 
   created () {
     //this.cms_customizations = [...($('[data-customizations]').length > 0 && $('[data-customizations]').attr('data-customizations') != '' ? JSON.parse($('[data-customizations]').attr('data-customizations')) : [])]
     this.cms_customizations = window.apx_lib.customizations ? window.apx_lib.customizations : [];
     this.cms_upselling = window.apx_lib.upselling ? window.apx_lib.upselling : []
+    console.log('this.cms_upselling',this.cms_upselling)
+    if(this.cms_upselling){
+      this.cms_upselling.forEach(item => {
+        //console.log('upselling_item',item)
+        if(item.upselling_skus.length > 0){
+          const ecomSearch = new EcomSearch()
+          ecomSearch
+            .setPageSize(item.upselling_skus.length)
+            .setSkus([...item.upselling_skus])
+            .fetch(true)
+            .then(() => {
+              ecomSearch.getItems().forEach(product => {
+                const quantity = 1
+                const addUpsellItem = variationId => {
+                  const item = ecomCart.parseProduct(product, variationId, quantity)
+                  if (quantity) {
+                    item.min_quantity = item.max_quantity = quantity
+                  } else {
+                    item.quantity = 0
+                  }
+                  this.upsellingProducts.push({
+                    ...item,
+                    _id: genRandomObjectId()
+                  })
+                  console.log('adicionou', item)
+                }
+                console.log('variations',product.variations)
+                if (product.variations && product.variations.length > 0) {
+                  product.variations.forEach(variation => {
+                    variation._id = genRandomObjectId()
+                    addUpsellItem(variation._id)
+                  })
+                  console.log('teste b')
+                } else {
+                  console.log('teste a')
+                  addUpsellItem()
+                }
+                console.log('upsell product', product)
+                console.log('this.upsellingProducts',this.upsellingProducts)
+              })
+            })
+            .catch(console.error)
+        }
+      })
+      
+    }
     console.log('customizations',this.cms_customizations)
     const presetQntToBuy = () => {
       this.qntToBuy = this.body.min_quantity || 1

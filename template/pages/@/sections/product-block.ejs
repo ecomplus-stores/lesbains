@@ -225,7 +225,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
     <div data-customizations="<%= current_lib && current_lib[0] && current_lib[0].customizations ? JSON.stringify(current_lib[0].customizations) : '' %>"></div>
     <script>
       window.apx_lib = JSON.parse(<%- JSON.stringify(JSON.stringify(current_lib[0])) %>);
-      
+      window.apx_product = JSON.parse(<%- JSON.stringify(JSON.stringify(_.state)) %>);
     </script>
 </div>
 
