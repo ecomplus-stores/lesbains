@@ -531,7 +531,7 @@ export default {
       if(upsellProductAdd){
         let kit_product = {
           _id: kitId,
-          name: product.name,
+          name: 'Kit ' + product.name,
           composition:[
             {
               quantity: 1,
