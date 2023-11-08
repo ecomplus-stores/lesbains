@@ -113,7 +113,9 @@
               "type": "Fixo",
               "value": 0
             }
-          ]
+          ],
+          "step_title": "Gravação",
+          "step_description": "Para deixar ainda mais personalizado adicione uma gravação em seu porta óculos. Pode ser uma frase, nome..."
         }
       ],
       "step_title": "Escolha o Estojo",
