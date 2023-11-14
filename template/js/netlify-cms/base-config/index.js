@@ -919,6 +919,35 @@ export default (options,state) => {
       getExtraPages(options),
       getWidgets(options),
       {
+        name: 'apx_properties',        
+        label: '[alpix.dev] - Características',
+        description: 'Adicione imagens, ícones e/ou descrições nos filtros de características',
+        folder: `${options.baseDir}content/apx_properties`,
+        extension: 'json',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          {
+            label: "Nome da Característica",
+            hint:"Exatamente como cadastrado no painel E-com.plus",
+            name: "title",
+            widget: "string"          
+          }, 
+          {
+            label: "Descrição",
+            name: "description",
+            widget: "string",
+            required:false,          
+          }, 
+          {
+            label: 'Imagem ou ícone',
+            name: 'img',
+            widget: 'image',
+            required:false,
+          },   
+        ]
+      },
+      {
         name: 'apx_products_content',        
         label: '[alpix.dev] - Produtos - Abas de Conteúdo',
         description: 'Configure as opções disponíveis para personalização e sugestões de produtos.',
