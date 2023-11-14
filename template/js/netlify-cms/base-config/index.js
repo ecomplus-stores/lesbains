@@ -1041,7 +1041,42 @@ export default (options,state) => {
                 widget: "string",
                 required:false,          
               }, 
-             
+              
+              {
+                label: 'Upload',
+                hint:"",
+                name: 'upload',
+                widget: 'object',
+                fields: [
+                  {
+                    label: "Exibir campo para upload de arquivo?",
+                    name:"enable",
+                    widget: 'boolean',
+                    default: false
+                  },
+                  {
+                    label: "Título",
+                    hint:"",
+                    name: "title",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
+                    label: "Descrição",
+                    hint:"",
+                    name: "description",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
+                    label: "Texto do botão",
+                    hint:"",
+                    name: "button_text",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                ]
+              },
               // {
               //   label: 'Condições',
               //   hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
