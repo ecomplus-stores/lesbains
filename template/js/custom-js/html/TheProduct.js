@@ -174,7 +174,8 @@ export default {
       variantGalleryImages:[],
       upsellingProducts:[],
       pickedUpsellProduct:null,
-      upsellCustomizations:[]
+      upsellCustomizations:[],
+      textCustomizations:[]
     }
   },
 
@@ -384,12 +385,51 @@ export default {
       this.upsellCustomizations[key][obj.title] = {value:value, params:obj}
       console.log(this.upsellCustomizations)
     },
+    setTextCustomization(index, key, obj, value){
+      if(!this.textCustomizations[key]){
+        this.textCustomizations[key] = []
+      }
+      this.textCustomizations[key][obj.title] = {value:value, params:obj}
+      //console.log(this.textCustomizations)
+      let customizationContent = "";
+      let customizationPrice = 0;
+      let variationId
+      if (this.hasVariations) {
+        if (this.selectedVariationId) {
+          variationId = this.selectedVariationId
+        } else {
+          return
+        }
+      }
+      let product_price = variationId ? this.body.variations.find(el => el._id == variationId).price : this.body.price
+      
+      Object.keys(this.textCustomizations[key]).forEach(key_ => {
+        let customization_ = this.textCustomizations[key][key_]
+        if(customization_.params.value > 0){
+          if(customization_.params.type == "Fixo"){
+            customizationPrice+= customization_.params.value
+          }else{
+            customizationPrice+= (product_price * (customization_.params.value / 100))
+          }              
+        }
+        customizationContent+= `${customization_.params.title}: ${customization_.value}\n`
+      });
+      //console.log(obj, key)
+
+      this.current_customization[index] = {[key] : {
+        type: "Fixo",
+        value: customizationPrice,
+        title: customizationContent
+      }}
+
+      console.log(this.current_customization[index])
+    },
     setStep(step){
       this.cms_customizations_step = step
       console.log(this.cms_customizations.length, this.cms_upselling.length, this.cms_customizations_step)
     },
     setDeepCustomizationOption(index,grid_id,item){
-
+      console.log(item)
       this.current_customization[index] = {[grid_id] : item}
       //console.log(this.current_customization)
       this.cms_customizations_step++
@@ -532,7 +572,8 @@ export default {
       if(upsellProductAdd){
         let kit_product = {
           _id: kitId,
-          name: 'Kit ' + product.name,
+          //name: 'Kit ' + product.name,
+          name: 'Produto Combinado',
           composition:[
             {
               quantity: 1,
@@ -551,17 +592,17 @@ export default {
           let customizationPrice = 0;
           let customizationContent = ""
           let customization = this.upsellCustomizations[key]
-          console.log('customization',customization)
+          //console.log('customization',customization)
           Object.keys(this.upsellCustomizations[key]).forEach( key_ => {
             let customization_ = this.upsellCustomizations[key][key_]
             if(customization_.params.value > 0){
               if(customization_.params.type == "Fixo"){
                 customizationPrice+= customization_.params.value
-                console.log('y-----')
+                //console.log('y-----')
                 console.log(customization_,customizationPrice)
               }else{
                 customizationPrice+= (upsellProductAdd.price * (customization_.params.value / 100))
-                console.log('x-----')
+                //console.log('x-----')
                 console.log(customization_,customizationPrice)
               }              
             }
@@ -569,8 +610,8 @@ export default {
             //console.log('content',customizationContent + `${customization_.params.title}: ${customization_.value}\n`)
             customizationContent+= `${customization_.params.title}: ${customization_.value}\n`
           });
-          console.log('upsellProductAdd.customizations',upsellProductAdd.customizations, key)
-          console.log('customizationContent',customizationContent)
+          //console.log('upsellProductAdd.customizations',upsellProductAdd.customizations, key)
+          //console.log('customizationContent',customizationContent)
           let customizationFromBody = upsellProductAdd.customizations.find(el => el.grid_id == key)
           upsellProductCustomizations.push({
             _id: customizationFromBody._id,

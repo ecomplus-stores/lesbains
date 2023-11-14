@@ -1041,39 +1041,33 @@ export default (options,state) => {
                 widget: "string",
                 required:false,          
               }, 
+             
               // {
-              //   label: "Mais de uma opção poderá ser selecionada?",
-              //   name:"multi_option",
-              //   hint:"Ativar apenas para campos de gravação/texto",
-              //   widget: 'boolean',
-              //   default: false
+              //   label: 'Condições',
+              //   hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
+              //   name: 'conditions',
+              //   widget: 'object',
+              //   fields: [
+              //     {
+              //       label: 'Exibir quando a opção da grade...',
+              //       required:false,
+              //       name: 'condition_grid',
+              //       widget: 'select',
+              //       options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+              //       .map(({ grid_id, title }) => ({
+              //         label: title,
+              //         value: grid_id
+              //       }))]
+              //     },  
+              //     {
+              //       label: "Tiver o valor de...",
+              //       hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
+              //       name: "condition_value",
+              //       widget: "string",
+              //       required:false,          
+              //     }, 
+              //   ]
               // },
-              {
-                label: 'Condições',
-                hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-                name: 'conditions',
-                widget: 'object',
-                fields: [
-                  {
-                    label: 'Exibir quando a opção da grade...',
-                    required:false,
-                    name: 'condition_grid',
-                    widget: 'select',
-                    options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
-                    .map(({ grid_id, title }) => ({
-                      label: title,
-                      value: grid_id
-                    }))]
-                  },  
-                  {
-                    label: "Tiver o valor de...",
-                    hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
-                    name: "condition_value",
-                    widget: "string",
-                    required:false,          
-                  }, 
-                ]
-              },
               {
                 label:"Opções",
                 name:"list",
@@ -1179,7 +1173,7 @@ export default (options,state) => {
                 fields: [
                   {
                     label: 'Grid da Personalização',
-                    hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione. Personalizações do tipo texto/gravação devem ter somente uma opção cadastrada por bloco",
+                    hint:"Utilizar somente campos do tipo Gravação",
                     name: 'title',
                     widget: 'select',
                     options: window.storefront.data.grids
@@ -1202,39 +1196,33 @@ export default (options,state) => {
                     widget: "string",
                     required:false,          
                   }, 
+                 
                   // {
-                  //   label: "Mais de uma opção poderá ser selecionada?",
-                  //   name:"multi_option",
-                  //   hint:"Ativar apenas para campos de gravação/texto",
-                  //   widget: 'boolean',
-                  //   default: false
+                  //   label: 'Condições',
+                  //   hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
+                  //   name: 'conditions',
+                  //   widget: 'object',
+                  //   fields: [
+                  //     {
+                  //       label: 'Exibir quando a opção da grade...',
+                  //       required:false,
+                  //       name: 'condition_grid',
+                  //       widget: 'select',
+                  //       options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+                  //       .map(({ grid_id, title }) => ({
+                  //         label: title,
+                  //         value: grid_id
+                  //       }))]
+                  //     },  
+                  //     {
+                  //       label: "Tiver o valor de...",
+                  //       hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
+                  //       name: "condition_value",
+                  //       widget: "string"   ,
+                  //       required:false,       
+                  //     }, 
+                  //   ]
                   // },
-                  {
-                    label: 'Condições',
-                    hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-                    name: 'conditions',
-                    widget: 'object',
-                    fields: [
-                      {
-                        label: 'Exibir quando a opção da grade...',
-                        required:false,
-                        name: 'condition_grid',
-                        widget: 'select',
-                        options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
-                        .map(({ grid_id, title }) => ({
-                          label: title,
-                          value: grid_id
-                        }))]
-                      },  
-                      {
-                        label: "Tiver o valor de...",
-                        hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
-                        name: "condition_value",
-                        widget: "string"   ,
-                        required:false,       
-                      }, 
-                    ]
-                  },
                   {
                     label:"Opções",
                     name:"list",
@@ -1277,8 +1265,8 @@ export default (options,state) => {
                         label: "Exibir campo digitável?",
                         name:"input_type",
                         widget: "select",
-                        options: ["Não","text","number"],
-                        required:false,    
+                        options: ["text","number"],
+                        required:true,    
                       },
                       {
                         label: "Quantidade máxima de caracteres ou de valor númerico",
@@ -1299,62 +1287,7 @@ export default (options,state) => {
                 ]
               },
             ]
-          },
-          {
-            label: 'Seções',
-            name: 'sections',
-            required: false,
-            widget: 'list',
-            types: [  
-              {
-                label: 'Especificações',
-                name: 'specifications',
-                widget: 'object',
-                fields: [
-                {
-                  label: 'Exibir especificações',
-                  name: 'enabled',
-                  widget: 'boolean',
-                  default: true
-                },
-                {
-                  label: 'Título',
-                  name: 'title',
-                  widget: 'string',
-                  hint: '',
-                  required: false
-                },
-                {
-                  label: 'Descrição',
-                  name: 'description',
-                  widget: 'string',
-                  hint: '',
-                  required: false
-                },
-                {
-                  label: 'Texto CTA',
-                  name: 'cta_text',
-                  widget: 'string',
-                  hint: '',
-                  required: false
-                },
-                {
-                  label: 'Link CTA',
-                  name: 'cta_url',
-                  widget: 'string',
-                  hint: '',
-                  required: false
-                },
-                {
-                  label: 'Imagem',
-                  name: 'image',
-                  widget: 'image',
-                  required:false,          
-                }
-                ]
-              }
-            ].concat(options.sections)
-          }
+          }          
         ]
       }      
     ]

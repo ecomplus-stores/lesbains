@@ -67,5 +67,10 @@ window.addEventListener('load', function () {
 if($('#page-products').length > 0){
     window.mainProductGallery = [];
     window.mainProductGallery_ = [];    
-    $('#sticker').css('--header-vh', $('header#header').innerHeight() + 'px')
+    $('#sticker').css('--header-vh', $('header#header').innerHeight() + 'px');
+
+    $('[data-tab]').click(function(){
+        let tab = $(this).attr('data-tab');
+        $('._'+tab).toggleClass('visible')
+    })
 }

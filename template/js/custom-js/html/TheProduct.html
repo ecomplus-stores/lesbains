@@ -66,7 +66,32 @@
             v-for="(item_,index_) in item.list"
             :key="index_"
             >
-            <div>
+            <div v-if="item_.input_type && item_.input_type != 'Não'" class="button_box_style">
+              <div class="row justify-content-between align-items-start">
+                <div class="col">
+                  <div class="row justify-content-between align-items-start">
+                    <div class="col">
+                      <div class="option_title"><b>{{item_.title}}</b></div>
+                    </div>
+                    <div class="col-auto">
+                      <strong v-if="item_.type == 'Fixo'" class="option_price">
+                        {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                      </strong>
+                      <strong v-else class="option_price">
+                        {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                      </strong>
+                    </div>
+                  </div>                          
+                </div>                        
+              </div>
+              <div class="mt-3" v-if="item_.description">
+                <p class="option_description">{{item_.description}}</p>
+              </div>
+              <div class="mt-3 input_digitable">
+                <input @keyup="setTextCustomization(index,item.title, item_, $event.target.value)"  :type="item_.input_type" :max="item_.input_type_max" :required="item_.input_type_required ? true : false"/>
+              </div>              
+            </div>
+            <div v-else>
               <button 
               :class="current_customization[index] && current_customization[index][item.title].title == item_.title ? 'active' : ''"
               @click="setDeepCustomizationOption(index,item.title,item_)" class="w-100" type="button">
@@ -95,12 +120,21 @@
                     {{item_.description}}
                   </p>                  
                 </div>
-              </button>
-              
+              </button>              
             </div>
             
             </div>
           </div>  
+          <div class="customization_functions d-flex flex-column">
+            <hr></hr>
+            <div class="row">
+              <div class="col"><b>Subtotal</b></div>
+              <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
+            </div>
+            <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+              Avançar
+            </button>              
+          </div>
         </div>
         <div class="step upsell px-md-3"
         v-for="(item, index) in cms_upselling"
@@ -180,7 +214,7 @@
                         <p class="option_description">{{item__.description}}</p>
                       </div>
                       <div class="mt-3 input_digitable">
-                        <input :value="upsellCustomizations[item_.title] && upsellCustomizations[item_.title][item__.title] && upsellCustomizations[item_.title][item__.title].value" @keyup="setUpsellCustomization(item_.title, item__, $event.target.value)" :type="item__.input_type" :max="item__.input_type_max" :required="input_type_required ? true : false"/>
+                        <input :value="upsellCustomizations[item_.title] && upsellCustomizations[item_.title][item__.title] && upsellCustomizations[item_.title][item__.title].value" @keyup="setUpsellCustomization(item_.title, item__, $event.target.value)" :type="item__.input_type" :max="item__.input_type_max" :required="item__.input_type_required ? true : false"/>
                       </div>
                     </div>
                   </div>
@@ -440,7 +474,7 @@
             >
               <div
                 v-for="custom in body.customizations"
-                v-if="custom.custom_value"
+                v-if="custom.custom_value && 1 != 1"
                 :key="custom._id"
                 class="product__customization form-group"
                 :class="custom.grid_id ? `product__customization--${custom.grid_id}` : null"

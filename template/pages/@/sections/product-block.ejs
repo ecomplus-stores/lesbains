@@ -6,7 +6,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
 }
 %>
 
-<div id="product-block" class="product-block mb-4 mb-lg-5">
+<div id="product-block" class="product-block">
   <div class="container-fluid px-md-0">
     <section
       id="product"
@@ -23,7 +23,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
       </div>
 
       <div class="row">
-        <div class="col-12 col-md mb-4 pr-md-0">
+        <div class="col-12 col-md  pr-md-0">
           <!-- Picture(s) gallery will be inserted dynamically within `TheProduct` -->
           <!---->
           <div id="product-gallery"></div>
@@ -85,9 +85,25 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
             <% } %>
           <% } %> -->
           <!-- Custom additional code on bottom of images gallery -->
+          <div class="extra-content">
+            <%
+            // load page sections and render each one
+            const { sections } = _.state
+            if (Array.isArray(sections)) {
+              for (let i = 0; i < sections.length; i++) {
+                const opt = sections[i]
+                if (opt && opt.enabled !== false && opt.type != "product-block" && opt.type != "breadcrumbs" && opt.type != "product-description") {
+                  %>
+                  <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
+                  <%
+                }
+              }
+            }
+            %>   
+          </div>
         </div>
 
-        <div class="col-12 col-md-5 p-md-5">
+        <div class="col-12 col-md-5 pt-md-5 pl-md-5 pr-md-5">
           <div id="sticker">
             <h1 class="product__name">
               <%= _.ecomUtils.name(_.state) %>
@@ -100,7 +116,63 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                 <%= _.state.short_description %>
               </p>
             <% } %>
-            <hr class="mt-4 mb-2"></hr>
+            <hr class="mt-4 mb-0"></hr>
+            <div class="apx_tabs ">
+              <% if (_.state.body_html) { %>
+                <div class="item py-3">
+                  <button type="button" class="w-100 d-flex align-items-center justify-content-between" data-tab="details">
+                    Detalhes do Produto
+                    <span>                            
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    </span>
+                  </button>
+                </div>
+                
+              <% } %>
+              <%
+                const current_lib_ = []
+                const apx_products_ = _.cms('apx_products_content')
+                if (Array.isArray(apx_products_) && apx_products_.length > 0) {      
+                  apx_products_.forEach(item => { 
+                    const lib = (_.cms(`apx_products_content/${item}`))
+                    if(current_lib_.length == 0 && lib.identificador.find(el => el == _.state.sku)){
+                      current_lib_.push(lib)
+                      return
+                    }
+                    if(_.state.categories && _.state.categories.length > 0){
+                      _.state.categories.forEach(cat => {
+                        if(current_lib_.length == 0 && lib.identificador.find(el => el == 'cat_'+ cat._id)){
+                          current_lib_.push(lib)
+                          return
+                        }
+                      })
+                    }
+                  })
+                }
+                
+                if(current_lib_ && current_lib_[0] && current_lib_[0].list){
+                  Object.keys(current_lib_[0].list).forEach(key => {
+                    
+                    %>
+                      <div class="item py-3">
+                        <button type="button" class="w-100 d-flex align-items-center justify-content-between" data-tab="<%- key %>">
+                          <%= current_lib_[0].list[key].title %>
+                          <span>                            
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+  
+                          </span>
+                        </button>
+                      </div>
+                    <%
+                  })
+                }
+                %>
+            </div>
             <div id="product-actions">
               <div id="product-loading">
                 <% if (_.state.available && _.state.visible && _.ecomUtils.inStock(_.state)) { %>
@@ -156,6 +228,8 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                   </div>
                 <% } %>
 
+                
+
                 <div class="spinner-border m-4" role="status">
                   <span class="sr-only">Loading...</span>
                 </div>
@@ -186,6 +260,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                 </div>
               </div>
             </div>
+            
           </div>         
         </div>
       </div>
@@ -199,7 +274,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
       _, opt: {}, field: 'productBlockAppend'
     }) %>
   </div>
-  <div class="sections pb-1 pb-sm-2 pb-lg-4 mt-md-5 pt-5">
+  <!-- <div class="sections pb-1 pb-sm-2 pb-lg-4 mt-md-5 pt-5"> -->
     <%
     const current_lib = []
     const apx_products = _.cms('apx_products')
@@ -227,8 +302,51 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
       window.apx_lib = JSON.parse(<%- JSON.stringify(JSON.stringify(current_lib[0])) %>);
       window.apx_product = JSON.parse(<%- JSON.stringify(JSON.stringify(_.state)) %>);
     </script>
+  <!-- </div> -->
+<div class="apx_tabs_content">
+  <% if (_.state.body_html) { %>
+    <div class="_details content">
+      <div class="apx_backdrop" data-tab="details"></div>
+      <div class="container-fluid p-0">
+        <div class="heading py-3 px-4 position-relative">
+          Detalhes do Produto
+          <button type="button" class="apx_close" data-tab="details"></button>
+        </div>
+        <div class="py-3 px-4 markdown html-clearfix my-0">
+          <%- _.state.body_html.replace(
+            /<img ([^/>]+)?src=['"]([^'"]+)['"]([^/>]+)?\/?>/g,
+            '<img class="lozad" data-src="$2" $1 $3>'
+          ).replace(
+            /<img class="lozad" data-src="([^'"]+)"([^>]+)class=['"]([^'"]+)['"]([^/>]+)?>/g,
+            '<img class="lozad $3" data-src="$1" $2 $4>'
+          ) %>
+        </div>
+      </div>
+    </div>
+  <% } %>
+<%
+if(current_lib_ && current_lib_[0] && current_lib_[0].list){
+  Object.keys(current_lib_[0].list).forEach(key => {
+    %>
+      
+        <div class="_<%- key %> content">
+          <div class="apx_backdrop" data-tab="<%= key %>"></div>
+          <div class="container-fluid p-0">
+            <div class="heading py-3 px-4 position-relative">
+              <%= current_lib_[0].list[key].title %>
+              <button type="button" class="apx_close" data-tab="<%= key %>"></button>
+            </div>
+            <div class="py-3 px-4 markdown html-clearfix my-0">
+              <%- _.md.render(current_lib_[0].list[key].content) %>
+            </div>
+          </div>
+        </div>
+      
+    <%
+  })
+}
+%>
 </div>
-
 <%
 const productJsonLd = {
   '@context': 'http://schema.org',
