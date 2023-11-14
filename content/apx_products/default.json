@@ -80,6 +80,34 @@
         "condition_grid": "necessidade_de_visao",
         "condition_value": "Miopia,Astigmatismo"
       }
+    },
+    {
+      "title": "gravacao",
+      "step_title": "Gravação",
+      "step_description": "Adicione um texto personalizado nas astes da sua armação. Lembrando que as gravações \"internas\" não são visíveis quando estiver usando os óculos.",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Aste Esquerda - Interno",
+          "description": "",
+          "input_type": "text"
+        },
+        {
+          "input_type_required": false,
+          "title": "Aste Esquerda - Externo",
+          "input_type": "text"
+        },
+        {
+          "input_type_required": false,
+          "title": "Aste Direita - Interno",
+          "input_type": "text"
+        },
+        {
+          "input_type_required": false,
+          "title": "Aste Direita - Externo",
+          "input_type": "text"
+        }
+      ]
     }
   ],
   "upselling": [
