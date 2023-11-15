@@ -32,19 +32,7 @@ if (items && !items.length) {
   }
 }
 
-const productProperties = [];
-const apx_products = _.cms('apx_properties')
-if (Array.isArray(apx_products) && apx_products.length > 0) {      
-  apx_products.forEach(item => { 
-    const lib = (_.cms(`apx_properties/${item}`))
-    productProperties.push(lib)    
-  })
-}
-%>
-<script>
-  window.apx_properties = JSON.parse(<%- JSON.stringify(JSON.stringify(productProperties)) %>);
-  
-</script>
+
 <div class="category-retail">
   <%- await include('@/sections/inc/retail-grid', {
     _, opt: {

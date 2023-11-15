@@ -87,7 +87,11 @@ export default {
       isFavorite: false,
       selectedPicture:false,
       variationImagesKey: Math.random().toString(),
-      error: ''
+      apx_tags: [],
+      apx_productTags:{},
+      rng:Math.random().toString(),
+      error: '',
+      selectedColor:false
     }
   },
 
@@ -154,6 +158,23 @@ export default {
   },
 
   methods: {
+    getTags(){
+      console.log('aaa',this.apx_productTags)
+      return this.apx_productTags
+    },
+    setTags(){
+      let tags = [];
+      let terms = this.body.categories.map(item => 'cat_' + item._id)
+      terms.push(this.body.sku)
+      this.apx_tags.filter(el => terms.some(term => el.identificador.includes(term))).forEach(item => {
+        if(!this.apx_productTags[item.type]){
+          this.apx_productTags[item.type] = []
+
+        }
+        this.apx_productTags[item.type] = [...this.apx_productTags[item.type], item]
+      })
+      this.apx_productTags = {...this.apx_productTags}
+    },
     setListingItemImages(color){
       let variation = this.body.variations.find(el => el.specifications.colors.some(el => el.text === color))
       let variationImage = false;
@@ -162,9 +183,7 @@ export default {
       }
       this.selectedPicture = variationImage
       this.variationImagesKey = Math.random().toString()
-      //console.log(variationImage)
-            
-      
+      this.selectedColor = color
     },
     getHexColor(color){
       let hex = this.body.variations.find(el => el.specifications.colors.some(el => el.text === color))
@@ -262,6 +281,8 @@ export default {
     //window.productListColors(this.body._id)
   },
   mounted(){
+    this.apx_tags = [...window.apx_tags]
+    this.setTags()
     //window.productListColors(this.body._id)
   }
 }

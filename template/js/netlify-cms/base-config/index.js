@@ -951,7 +951,7 @@ export default (options,state) => {
             label: "Posição na lista",
             name:"type",
             widget: "select",
-            options: ["top_left","top_center","top_right","bottom_left","bottom_center","bottom_right"],
+            options: ["top_left","top_center","bottom_left","bottom_center","bottom_right"],
             required:false, 
           }, 
           {

@@ -27,10 +27,22 @@
 
       <slot name="body">
         <a-link
-          class="product-card__link"
+          class="product-card__link position-relative"
           :href="`/${body.slug}`"
           :title="name"
-        >
+        > 
+          
+          <div class="apx_tags" :key="rng" v-if="getTags()">
+            <div v-for="(item, index) in getTags()" :key="index" :class="index">
+              <div v-for="(item_, index_) in item">                
+                <span class="text_tag" v-if="!item_.img" :style="'--bg_:' + item_.background_color +'; --cl_:' + item_.color + ';--bd_:' + item_.border">
+                  {{item_.title}}
+                </span>
+              </div>
+              
+            </div>
+            
+          </div>
           <slot name="header"/>
 
           <div class="product-card__pictures">
@@ -157,7 +169,9 @@
             </template>  
           </div>  
           <div class="apx_listing_colors" v-if="body.variationsGrids && body.variationsGrids.colors">
-            <button v-for="color in body.variationsGrids.colors.slice(0,3)" @click="setListingItemImages(color)" type="button" :title="color">
+            <button v-for="color in body.variationsGrids.colors.slice(0,3)" @click="setListingItemImages(color)" type="button" :title="color"
+            :class="selectedColor == color ? 'selected' : ''"
+            >
               <span class="color" v-if="getHexColor(color) && getHexColor(color).specifications.colors && getHexColor(color).specifications.colors[0].value" :style="'background-color:' + getHexColor(color).specifications.colors[0].value"></span>
             </button>
             <span v-if="body.variationsGrids.colors.length > 3">+{{ body.variationsGrids.colors.length - 3}}</span>
