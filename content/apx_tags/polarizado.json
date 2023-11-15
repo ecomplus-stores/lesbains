@@ -1,0 +1,10 @@
+{
+  "identificador": [
+    "DPY5008"
+  ],
+  "type": "top_left",
+  "title": "Polarizado",
+  "description": "Texto explicativo aqui, não aparece na lista",
+  "color": "#000000",
+  "border": "#ff0000"
+}
