@@ -7,7 +7,7 @@ const themeCustom = _.settings.theme.custom || ''
 
 const productProperties = [];
 const productTags = [];
-if(['category','home','search','brand'].includes(_.pageName)){
+if(['categories','home','search','brand'].includes(_.pageName)){
   const apx_tags = _.cms('apx_tags')
   if (Array.isArray(apx_tags) && apx_tags.length > 0) {      
     apx_tags.forEach(item => { 

@@ -57,11 +57,20 @@ window.imageResize = function () {
         $(this).css('--height',h + 'px');
 
     });
+    $('.search-engine__retail').each(function(){
+        let h = $(this).find('.product-card__pictures').first().innerWidth() * .7;
+        $(this).css('--height',h + 'px');
+
+    });
 };
 
 window.addEventListener('load', function () {
     window.imageResize();
     window.initSliders();
+}, false);
+
+window.addEventListener('resize', function () {
+    window.imageResize();
 }, false);
 
 if($('#page-products').length > 0){
