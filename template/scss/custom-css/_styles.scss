@@ -1225,3 +1225,137 @@ header#header{
 .apx_close:before{
     rotate: -45deg;
 }
+
+.category-banner{margin:0}
+.page-title__head{
+    h1{font-size: var(--f42);text-transform: uppercase;margin: 1rem 0;}
+    .page-title__short-description{
+        font-size: var(--f21);
+        font-weight: 300;
+    }
+}
+
+.category-retail{
+    .search-engine__aside{
+        border: 0;
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        width: 100%;
+        z-index: 1;
+        max-width: 100%;
+        .card-header{
+            display: none;
+        }
+        .card-body{
+            padding: 0;
+            border: 0;
+            .search-engine__filter:not(:first-child){
+                margin-top: 2rem;
+                border-top: 1px solid #f2f2f2;
+                padding-top: 1rem;
+            }
+            .search-engine__filter > button{
+                font-size: var(--f17);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .search-engine__option{
+                padding: 0;
+                margin-top: .5rem;
+                input{}
+                label{
+                    border: 1px solid #f2f2f2;
+                    padding: .5rem 1rem;
+                    width: 100%;
+                    color: #848484;
+                    
+                }
+                .d-flex{flex-direction: row;text-align: left;justify-content: flex-start;flex-wrap: wrap;gap: 10px;}
+                .cms_ico{
+                    img{width: 40px;}
+                }
+                .cms_description{
+                    font-size: var(--f11);
+                    width: 100%;
+                    color: #848484;
+                }
+            }
+            .custom-control-input:checked~.custom-control-label{
+                background: #000;
+                color: #fff;
+                border-color: #000;
+                *{color: #fff;}
+            }
+            .custom-control-input:checked~.custom-control-label img{
+                filter: invert(1);
+            }
+            .custom-control-input:checked~.custom-control-label:after,
+            .custom-control-input:checked~.custom-control-label:before{
+                background: #fff;
+                background-color: #fff!important;
+                border: 0;
+                border-radius: 0!important;
+                content: "";
+                height: 12px;
+                left: auto;
+                opacity: 1!important;
+                position: absolute;
+                right: 1rem;
+                rotate: 45deg;
+                top: 0.8rem;
+                width: 1.5px;
+                z-index: 3;
+            }
+            .custom-control-input:checked~.custom-control-label:after{rotate: -45deg;}
+            
+        }
+        .card-footer{
+            background: transparent;
+            padding: 0;
+            border-top: 1px solid #f2f2f2;
+            padding-top: 1.5rem;
+            button{
+                font-size: var(--f14);
+                font-weight: 600;
+                color: #848484;
+                background: #f2f2f2;
+                border: 1px solid #ccc;
+                border-radius: 0;
+                padding: 0.8rem;
+            }
+            button:hover{
+                background: #000;
+                color:#fff
+            }
+        }
+    }
+}
+.retail-grid{margin-top: 2rem;}
+body .search-engine__nav{
+    background: transparent;
+    color: #000;
+    border-top: 1px solid #f2f2f2;
+    padding: 1.5rem 0 0 0;
+    margin-bottom: 1.5rem;
+    .search-engine__count{
+        font-weight: bold;
+        font-size:var(--f14);
+        color: #000;
+    }
+    .search-engine__toggles{
+        button{
+            background: transparent;
+            padding: 0;
+            text-transform: uppercase;
+            font-size: var(--f14);
+            color: #000;
+            border: 0;
+            font-weight: bold;
+            i{
+                font-size: calc(var(--f14) * .8);
+            }
+        }
+    }
+}
