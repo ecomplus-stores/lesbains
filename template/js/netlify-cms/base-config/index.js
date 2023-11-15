@@ -919,6 +919,55 @@ export default (options,state) => {
       getExtraPages(options),
       getWidgets(options),
       {
+        name: 'apx_tags',        
+        label: '[alpix.dev] - Produtos - Tags ',
+        description: 'Adicione tags ou selos nos produtos',
+        folder: `${options.baseDir}content/apx_tags`,
+        extension: 'json',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          {
+            label: 'Identificador [SKU] ou [Categoria]',
+            name: 'identificador',
+            widget: 'select',
+                multiple: true,
+                options: [
+                  ...options.state.routes
+                  .filter(({ sku }) => typeof sku === 'string')
+                  .map(({ sku }) => ({
+                    label: 'Produto - ' + sku,
+                    value: sku
+                  })),
+                  ...options.state.routes
+                  .filter(el => el.resource === 'categories')
+                  .map((el) => ({
+                    label: 'Categoria - ' + el.name,
+                    value: 'cat_'+el._id
+                  }))
+                ]                
+          }, 
+          {
+            label: "Nome da Característica",
+            hint:"Exatamente como cadastrado no painel E-com.plus",
+            name: "title",
+            widget: "string"          
+          }, 
+          {
+            label: "Descrição",
+            name: "description",
+            widget: "string",
+            required:false,          
+          }, 
+          {
+            label: 'Imagem ou ícone',
+            name: 'img',
+            widget: 'image',
+            required:false,
+          },   
+        ]
+      },
+      {
         name: 'apx_properties',        
         label: '[alpix.dev] - Características',
         description: 'Adicione imagens, ícones e/ou descrições nos filtros de características',

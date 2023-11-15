@@ -53,7 +53,7 @@ window.initSliders = function(){
 }
 window.imageResize = function () {
     $('.apx_product-list').each(function(){
-        let h = $(this).find('.product-card__pictures').first().innerWidth() * 1.28;
+        let h = $(this).find('.product-card__pictures').first().innerWidth() * .7;
         $(this).css('--height',h + 'px');
 
     });

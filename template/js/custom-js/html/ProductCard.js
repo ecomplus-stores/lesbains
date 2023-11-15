@@ -85,6 +85,8 @@ export default {
       isWaitingBuy: false,
       isHovered: false,
       isFavorite: false,
+      selectedPicture:false,
+      variationImagesKey: Math.random().toString(),
       error: ''
     }
   },
@@ -152,6 +154,22 @@ export default {
   },
 
   methods: {
+    setListingItemImages(color){
+      let variation = this.body.variations.find(el => el.specifications.colors.some(el => el.text === color))
+      let variationImage = false;
+      if (variation.picture_id) {
+        variationImage = this.body.pictures.find(el => el._id == variation.picture_id)
+      }
+      this.selectedPicture = variationImage
+      this.variationImagesKey = Math.random().toString()
+      //console.log(variationImage)
+            
+      
+    },
+    getHexColor(color){
+      let hex = this.body.variations.find(el => el.specifications.colors.some(el => el.text === color))
+      return hex      
+    },
     setBody (data) {
       this.body = Object.assign({}, data)
       //console.log(this.body)
@@ -241,9 +259,9 @@ export default {
       this.fetchItem()
     }
 
-    window.productListColors(this.body._id)
+    //window.productListColors(this.body._id)
   },
   mounted(){
-    window.productListColors(this.body._id)
+    //window.productListColors(this.body._id)
   }
 }
