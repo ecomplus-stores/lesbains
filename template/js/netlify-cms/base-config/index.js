@@ -946,6 +946,13 @@ export default (options,state) => {
                     value: 'cat_'+el._id
                   }))
                 ]                
+          },
+          {
+            label: "Posição na lista",
+            name:"type",
+            widget: "select",
+            options: ["top_left","top_center","top_right","bottom_left","bottom_center","bottom_right"],
+            required:false, 
           }, 
           {
             label: "Nome da Característica",
@@ -965,6 +972,24 @@ export default (options,state) => {
             widget: 'image',
             required:false,
           },   
+          {
+            label: 'Cor do texto',
+            required: false,
+            name: 'color',
+            widget: 'color'
+          },
+          {
+            label: 'Cor da borda',
+            required: false,
+            name: 'border',
+            widget: 'color'
+          },
+          {
+            label: 'Cor do fundo',
+            required: false,
+            name: 'background_color',
+            widget: 'color'
+          }
         ]
       },
       {
