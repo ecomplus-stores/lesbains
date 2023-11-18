@@ -48,7 +48,6 @@ if (opt.img) {
             <% } %>
           >
         <% }) %>
-        <% if (opt.sync_load) { %>
           <img
             src="<%= opt.img.replace('.webp', '.png') %>"
             alt="<%= opt.alt %>"
@@ -57,7 +56,7 @@ if (opt.img) {
               height="<%= height %>"
             <% } %>
           >
-        <% } %>
+        
       </picture>   
         
         <span
@@ -73,7 +72,7 @@ if (opt.img) {
           <h3 class="mb-md-5" style="--color:<%= opt.title_color %>;--color_m:<%= opt.title_color %>;"><%- opt.title %></h3>
         <% } %>    
         <% if (opt.description) {%>
-          <p class="mb-md-5" style="--color:<%= opt.description_color %>;--color_m:<%= opt.description_color %>;"><%- opt.description %></p>
+          <p class="mb-md-5 mb-md-0 mb-4 mt-4 mt-md-0" style="--color:<%= opt.description_color %>;--color_m:<%= opt.description_color %>;"><%- opt.description %></p>
         <% } %> 
 
           <div class="buttons d-flex align-items-center">

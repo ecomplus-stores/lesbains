@@ -638,7 +638,6 @@ export default {
         }else{
           product.customizations = customCustomizations
 
-          console.log('aaa', product, upsellProductAdd)
           if (this.canAddToCart) {
             this.current_customization = []
             this.customizationPanel = false

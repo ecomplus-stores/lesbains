@@ -83,3 +83,8 @@ if($('#page-products').length > 0){
         $('._'+tab).toggleClass('visible')
     })
 }
+
+$('body').on('click','#apx-footer .toggleLinks', function(){
+    $(this).closest('div').find('.links').toggle();
+    $(this).toggleClass('active');
+})

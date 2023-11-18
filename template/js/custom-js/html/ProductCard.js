@@ -159,7 +159,6 @@ export default {
 
   methods: {
     getTags(){
-      console.log('aaa',this.apx_productTags)
       return this.apx_productTags
     },
     setTags(){

@@ -30,10 +30,10 @@ if(['categories','home','search','brand'].includes(_.pageName)){
   window.apx_properties = JSON.parse(<%- JSON.stringify(JSON.stringify(productProperties)) %>);  
   window.apx_tags = JSON.parse(<%- JSON.stringify(JSON.stringify(productTags)) %>);  
 </script>
-<hr class="mt-5"></hr>
+<hr class="mt-5 d-md-block d-none"></hr>
 <footer class="" id="apx-footer">
   <div class="container_90 px-md-3">
-    <div class="row py-5 align-items-start">
+    <div class="row py-md-5 pt-5 pb-3 align-items-start">
       <div class="col-md-auto col-12">
         <div class="apx-newsletter">
           <div class="row align-items-center">
@@ -58,6 +58,68 @@ if(['categories','home','search','brand'].includes(_.pageName)){
             </button>
           </form>
           <p class="mt-3">Ao se inscrever você concorda com os <a href="/pages/politica-de-privacidade">termos de política e privacidade</a></p>
+          
+          <div class="col-12 d-md-none d-block">
+            <div class="footer__contacts mt-5">
+              <ul class="list-unstyled">
+                <% if (footer.contacts.phone_wpp) { %>
+                  <% if (contacts.whatsapp) { %>
+                    <li>
+                      <span class="footer__list-icon">                              
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9603 3.53441C12.3131 2.88693 11.5443 2.37385 10.698 2.0247C9.85178 1.67556 8.94482 1.49725 8.02937 1.50003C4.1875 1.50003 1.06 4.61191 1.05844 8.43753C1.05674 9.6557 1.37784 10.8526 1.98906 11.9063L1 15.5L4.69531 14.5353C5.71819 15.0895 6.86323 15.3795 8.02656 15.3791H8.02937C11.8709 15.3791 14.9981 12.2669 15 8.4416C15.0023 7.52927 14.8232 6.62559 14.473 5.78314C14.1229 4.94069 13.6086 4.17628 12.9603 3.53441ZM8.02937 14.2082H8.02687C6.98981 14.2085 5.97159 13.9309 5.07812 13.4044L4.86656 13.2794L2.67375 13.8519L3.25906 11.7241L3.12125 11.5053C2.54137 10.5873 2.23414 9.5234 2.23531 8.43753C2.23531 5.25847 4.83563 2.67191 8.03156 2.67191C9.56468 2.66917 11.0361 3.27551 12.1222 4.35757C13.2083 5.43963 13.8201 6.90879 13.8231 8.44191C13.8219 11.6213 11.2228 14.2082 8.02937 14.2082ZM11.2072 9.88972C11.0331 9.80285 10.1759 9.38347 10.0172 9.32566C9.85844 9.26785 9.74125 9.23878 9.62531 9.41253C9.50937 9.58628 9.17531 9.97503 9.07375 10.0922C8.97219 10.2094 8.87062 10.2222 8.69656 10.1353C8.5225 10.0485 7.96094 9.86566 7.29562 9.27503C6.77781 8.81534 6.42844 8.24785 6.32687 8.07441C6.22531 7.90097 6.31594 7.80691 6.40312 7.72066C6.48156 7.64285 6.57719 7.51816 6.66437 7.41691C6.75156 7.31566 6.78062 7.24316 6.83844 7.12753C6.89625 7.01191 6.8675 6.91066 6.82406 6.82409C6.78062 6.73753 6.43219 5.88409 6.28719 5.53691C6.14562 5.19878 6.00219 5.24472 5.89531 5.23941C5.79375 5.23441 5.67656 5.23316 5.56125 5.23316C5.4731 5.23545 5.38636 5.2559 5.30646 5.29321C5.22657 5.33052 5.15522 5.38391 5.09687 5.45003C4.93719 5.62378 4.48719 6.04378 4.48719 6.89628C4.48719 7.74878 5.11219 8.57378 5.19844 8.68941C5.28469 8.80503 6.42656 10.556 8.17375 11.3069C8.49818 11.4458 8.82968 11.5677 9.16687 11.6719C9.58406 11.8038 9.96375 11.7853 10.2637 11.7407C10.5984 11.691 11.295 11.3213 11.4397 10.9163C11.5844 10.5113 11.5847 10.1644 11.5412 10.0922C11.4978 10.02 11.3816 9.97628 11.2072 9.88972Z" fill="#701630"/>
+                          </svg>  
+                      </span>
+                      <a
+                        href="javascript:;"
+                        target="_blank"
+                        rel="noopener"
+                        class="whatsapp-link"
+                        data-tel="<%= contacts.whatsapp.replace(/\D/g, '') %>"
+                      >
+                        <%= contacts.whatsapp %>
+                      </a>
+                    </li>
+                  <% } %>
+                  <% if (contacts.phone) { %>
+                    <li>
+                      <span class="footer__list-icon">
+                        
+                      <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.0939 12.1874C13.5977 11.6874 12.3958 10.9577 11.8127 10.6636C11.0533 10.2811 10.9908 10.2499 10.3939 10.6933C9.9958 10.9893 9.73112 11.2536 9.26518 11.1543C8.79924 11.0549 7.78674 10.4946 6.90018 9.61082C6.01362 8.72707 5.4208 7.68519 5.32112 7.22082C5.22143 6.75644 5.49018 6.49488 5.7833 6.09582C6.19643 5.53332 6.16518 5.43957 5.81205 4.68019C5.53674 4.08957 4.7858 2.89894 4.28393 2.40519C3.74705 1.87488 3.74705 1.96863 3.40112 2.11238C3.11948 2.23088 2.84929 2.37491 2.59393 2.54269C2.09393 2.87488 1.81643 3.15082 1.62237 3.5655C1.4283 3.98019 1.34112 4.95238 2.3433 6.773C3.34549 8.59363 4.04862 9.52457 5.50393 10.9758C6.95924 12.4271 8.0783 13.2074 9.71424 14.1249C11.738 15.2583 12.5142 15.0374 12.9302 14.8436C13.3461 14.6499 13.6233 14.3749 13.9561 13.8749C14.1243 13.6199 14.2687 13.3501 14.3874 13.0686C14.5314 12.7239 14.6252 12.7239 14.0939 12.1874Z" stroke="#701630" stroke-miterlimit="10"/>
+                        </svg>
+  
+                      </span>
+                      <a
+                        href="tel:+<%= contacts.phone.replace(/\D/g, '') %>"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <%= contacts.phone %>
+                      </a>
+                    </li>
+                  <% } %>
+                <% } %>
+                <% if (footer.contacts.email) { %>
+                  <li>
+                    <span class="footer__list-icon">                            
+                      <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.25 3.5H2.75C2.05964 3.5 1.5 4.05964 1.5 4.75V12.25C1.5 12.9404 2.05964 13.5 2.75 13.5H13.25C13.9404 13.5 14.5 12.9404 14.5 12.25V4.75C14.5 4.05964 13.9404 3.5 13.25 3.5Z" stroke="#701630" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.5 5.5L8 9L12.5 5.5" stroke="#701630" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+  
+                    </span>
+                    <a href="mailto:<%= contacts.email %>" target="_blank" rel="noopener">                    
+                      <%= contacts.email %>
+                    </a>
+                  </li>
+                <% } %>
+                <li>
+                  <p>Segunda à Sexta, das 10h às 18h</p>
+                </li>
+              </ul>
+            </div>
+          </div>
           <% if (footer.contacts.socials) { %>
             <p class="footer__social">
               <%- await include('@/layout/inc/networks', { _, contacts }) %>
@@ -66,12 +128,14 @@ if(['categories','home','search','brand'].includes(_.pageName)){
         </div>
 
       </div>
+      
       <div class="col-md-auto col-12 offset-md-1 content mt-4 mt-md-0">
           <div class="row justify-content-between flex-nowrap">          
             <% if (apx_footer.links) { %>
                 <% apx_footer.links.filter(el => el.title == "Atendimento").forEach(({ title, list })=> { %>
                   <div class="col-12 col-md-auto">
-                    <h4><%= title %></h4>
+                    <h4><%= title %>
+                    <button class="d-md-none d-block toggleLinks"></button></h4>
                     <ul class="links">
                       <% list.forEach(({ item })=> { %>
                         <li>
@@ -82,7 +146,7 @@ if(['categories','home','search','brand'].includes(_.pageName)){
                       <% }) %>
                     </ul>
                     <% if(title == "Atendimento"){ %>
-                    <div class="footer__contacts mt-4">
+                    <div class="footer__contacts mt-4 d-md-block d-none">
                       <ul class="list-unstyled">
                         <% if (footer.contacts.phone_wpp) { %>
                           <% if (contacts.whatsapp) { %>
@@ -140,10 +204,11 @@ if(['categories','home','search','brand'].includes(_.pageName)){
                           <p>Segunda à Sexta, das 10h às 18h</p>
                         </li>
                       </ul>
-              
+                      
                       
                     </div>
                     <% } %>
+                    <hr class="d-md-none d-block divider"></hr>
                   </div>
                   
                 <% }) %>
@@ -153,8 +218,8 @@ if(['categories','home','search','brand'].includes(_.pageName)){
               
             <% if (apx_footer.links) { %>
               <% apx_footer.links.filter(el => el.title != "Atendimento").forEach(({ title, list })=> { %>
-                <div class="col-12 col-md-auto mb-4">
-                  <h4><%= title %></h4>
+                <div class="col-12 col-md-auto mb-md-4">
+                  <h4><%= title %><button class="d-md-none d-block toggleLinks"></button></h4>
                   <ul class="links">
                     <% list.forEach(({ item })=> { %>
                       <li>
@@ -164,6 +229,7 @@ if(['categories','home','search','brand'].includes(_.pageName)){
                       </li>
                     <% }) %>
                   </ul>
+                  <hr class="d-md-none d-block divider"></hr>
                   <% if(title == "Atendimento"){ %>
                   <div class="footer__contacts mt-4">
                     <ul class="list-unstyled">
@@ -227,7 +293,7 @@ if(['categories','home','search','brand'].includes(_.pageName)){
                         </li>
                       <% } %>
                     </ul>
-            
+                    <hr class="d-md-none d-block divider"></hr>
                     
                   </div>
                   <% } %>
