@@ -78,7 +78,7 @@ if($('#page-products').length > 0){
     window.mainProductGallery_ = [];    
     $('#sticker').css('--header-vh', $('header#header').innerHeight() + 'px');
 
-    $('[data-tab]').click(function(){
+    $('body').on('click','[data-tab]', function(){
         let tab = $(this).attr('data-tab');
         $('._'+tab).toggleClass('visible')
     })

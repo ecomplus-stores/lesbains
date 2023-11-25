@@ -125,41 +125,45 @@ header#header{
     display: flex;
     gap: 5px;
     justify-content: center;
+    margin-bottom: 20px;
     li{
         width: auto;
         display: block;
         margin: 0;
         button{
             font-size: 0;
-            background: transparent;
-            height: 14px;
-            width: 14px;
-            border-radius: 50%;
+            background: rgba(0,0,0,.3);
+            height: 2px;
+            width: 30px;
+            border-radius: 0;
             padding: 0;
-            border: 1px solid var(--red);
+            border: 0;
             position: relative;
             
         }
         button:before{
-            display:none
+            display:none;
         }
 
     }
     li.slick-active{
+        button{
+            background: #000;
+        }
         button:after{
-            content:"";
-            height: 9px;
-            width: 9px;
-            background: var(--red);
-            position: absolute;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
+            display: none;
         }
     }
 }
-
+.apx_gallery{
+    .slick-slider{
+        margin-bottom: 40px;
+        .slick-dots{
+            bottom: 0;
+            margin-bottom: -30px;
+        }
+    }
+}
 .apx_banner-slider{
     max-width:100%;
     height:auto!important;
@@ -772,12 +776,14 @@ header#header{
                 height: 100%;
             }
             .btn.btn-primary{
-                height: 56px;
+                height: 54px;
+                border-radius:0;
                 display: flex;
                 align-items: center;
                 font-weight: 600;
                 text-align: center;
                 justify-content: center;
+                text-transform: uppercase;
             }
             .btn-back{
                 border: 0;
@@ -838,25 +844,25 @@ header#header{
     li.active{font-weight:bold}
     
 }
-
-.apx_gallery{
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    .apx_gallery__item{
-        line-height:0; 
-        cursor:pointer;
-        picture{
-            width: 100%;
-            img{width: 100%;}
+@media(min-width:990px){
+    .apx_gallery .slicked{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        .apx_gallery__item{
+            line-height:0; 
+            cursor:pointer;
+            picture{
+                width: 100%;
+                img{width: 100%;}
+            }
+        }
+        .apx_gallery__item:not(:first-child){
+            flex: 0 0 calc(50% - 0.25rem);
+            height: auto!important;
         }
     }
-    .apx_gallery__item:not(:first-child){
-        flex: 0 0 calc(50% - 0.25rem);
-        height: auto!important;
-    }
 }
-
 #page-products{
     #product hr{
         border-color: #f2f2f2;
@@ -1635,6 +1641,55 @@ body .search-engine__nav{
                     width: 20px;
                 }
                 p{font-size: 14px;}
+            }
+        }
+    }
+
+    .gallery-container{padding: 0;}
+    #page-products{
+        #product-block{position: relative;z-index: 1;}
+        #product-actions{
+            .box{
+                
+                position: fixed;
+                bottom: 0;
+                z-index: 1000000;
+                left: 0;
+                width: 100%;
+                box-shadow: 0px -10px 10px rgba(0,0,0,.1);
+            }
+            .product__prices{
+                .prices--big{
+                    gap: 0.25rem .5rem;
+                    .prices__compare{font-size:12px;}
+                    .prices__value{margin:0;font-size: 18px;}
+                }
+            }
+            .product__buy{
+                padding-left: 0;
+                .btn-primary{
+                    padding: 0.5rem 0;
+                    border: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 42px;
+                }
+            }
+        }
+        #custom_customizations{
+            max-width: 100%;
+            .customization_functions{
+                .btn-primary{
+                    font-size: 14px;
+                    height: 46px;
+                }
+                padding-bottom: 1.5rem;
+            }
+            .step.current{
+                position: relative;
+                height: 80vh;
+                .option_options{overflow-y:auto}
             }
         }
     }

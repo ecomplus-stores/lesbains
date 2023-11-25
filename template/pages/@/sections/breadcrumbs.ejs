@@ -8,7 +8,7 @@ const breadcrumbs = opt.breadcrumbs && opt.breadcrumbs.length
 
 if (Array.isArray(breadcrumbs) && breadcrumbs.length) {
   %>
-  <div class="bg_f8f8f8 py-1">
+  <div class="bg_f8f8f8 py-1 d-none d-md-block">
     <div class="container_90">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb my-1 <%= breadcrumbs.length < 2 ? ' d-none d-md-flex' : '' %>">

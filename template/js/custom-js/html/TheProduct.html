@@ -38,7 +38,7 @@
       @click="closeCustomizations"
       >
       </button>
-      <div class="customizations_header mt-4 mb-5 px-5"
+      <div class="customizations_header mt-md-4 mt-0 mb-md-5 mb-5 px-5"
         v-if="cms_customizations_step <= (cms_customizations.length + cms_upselling.length)"
       >
         <div class="button_cover"
@@ -57,7 +57,7 @@
         :key="index"
         :class="cms_customizations_step == index + 1  ? 'current' : ''"
         > 
-        <div class="option_title text-center mb-5">
+        <div class="option_title text-center mb-4 mb-md-5">
           <h4>{{item.step_title || body.customizations.find(el => el.grid_id == item.title).label}}</h4>
           <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
         </div>
@@ -453,7 +453,7 @@
               name="variations"
               v-if="hasVariations"
             >
-              <div class="mt-3 pt-3">
+              <div class="mt-2 pt-3">
                 <product-variations
                   :product="body"
                   :selected-id.sync="selectedVariationId"
@@ -498,9 +498,37 @@
               </div>
             </slot>
 
+            <div>
+              <hr class="mt-4 mb-0"></hr>
+              
+              <div class="apx_tabs ">
+                <div class="item py-3" v-if="body.body_html">
+                  <button type="button" class="w-100 d-flex align-items-center justify-content-between" data-tab="details">
+                    Detalhes do Produto
+                    <span>                            
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    </span>
+                  </button>
+                </div>
+                <div class="item py-3" v-for="(item, key) in cms_currentLib.list">
+                  <button type="button" class="w-100 d-flex align-items-center justify-content-between" :data-tab="key">
+                    {{item.title}}
+                    <span>                            
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
             <div class="align-items-center justify-content-between d-flex py-3 box">
               <slot name="prices">
-                <p class="product__prices col-md col-12 m-0">
+                <p class="product__prices col-md col-7 m-0">
                   <a-prices
                     :product="ghostProductForPrices"
                     :is-literal="true"
@@ -571,7 +599,7 @@
 
                 <div
                   v-else-if="hasBuyButton"
-                  class="product__buy mt-3 pt-3 mt-md-0 pt-md-0 col-md col-12 "
+                  class="product__buy mt-md-0 pt-md-0 col-md col-5 "
                   ref="buy"
                 >
                   <component

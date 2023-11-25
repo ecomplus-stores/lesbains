@@ -21,9 +21,16 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
           https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/TheProduct.html
         -->
       </div>
-
+      <div class="product-info-block d-block d-md-none pt-3 text-center justify-content-between align-items-center">
+        <h1 class="product__name text-center">
+          <%= _.ecomUtils.name(_.state) %>
+        </h1>
+        <p class="product__sku">
+          COD: <%= _.state.sku %>
+        </p>
+      </div>
       <div class="row">
-        <div class="col-12 col-md  pr-md-0">
+        <div class="col-12 col-md  pr-md-0 gallery-container">
           <!-- Picture(s) gallery will be inserted dynamically within `TheProduct` -->
           <!---->
           <div id="product-gallery"></div>
@@ -85,7 +92,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
             <% } %>
           <% } %> -->
           <!-- Custom additional code on bottom of images gallery -->
-          <div class="extra-content">
+          <!-- <div class="extra-content">
             <%
             // load page sections and render each one
             const { sections } = _.state
@@ -100,25 +107,28 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
               }
             }
             %>   
-          </div>
+          </div> -->
         </div>
 
         <div class="col-12 col-md-5 pt-md-5 pl-md-5 pr-md-5">
           <div id="sticker">
-            <h1 class="product__name">
-              <%= _.ecomUtils.name(_.state) %>
-            </h1>
-            <p class="product__sku">
-              COD: <%= _.state.sku %>
-            </p>
+            <div class="product-info-block d-md-block d-none">
+              <h1 class="product__name ">
+                <%= _.ecomUtils.name(_.state) %>
+              </h1>
+              <p class="product__sku">
+                COD: <%= _.state.sku %>
+              </p>
+            </div>
             <% if (_.state.short_description) { %>
               <p class="product__info mt-3 lead">
                 <%= _.state.short_description %>
               </p>
             <% } %>
-            <hr class="mt-4 mb-0"></hr>
-            <div class="apx_tabs ">
-              <% if (_.state.body_html) { %>
+          
+             <hr class="mt-4 mb-0"></hr>
+            <!--<div class="apx_tabs "> -->
+              <!-- <% if (_.state.body_html) { %>
                 <div class="item py-3">
                   <button type="button" class="w-100 d-flex align-items-center justify-content-between" data-tab="details">
                     Detalhes do Produto
@@ -131,7 +141,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                   </button>
                 </div>
                 
-              <% } %>
+              <% } %> -->
               <%
                 const current_lib_ = []
                 const apx_products_ = _.cms('apx_products_content')
@@ -152,7 +162,11 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                     }
                   })
                 }
-                
+                %>
+                <script>
+                  window.apx_lib_content = JSON.parse(<%- JSON.stringify(JSON.stringify(current_lib_[0])) %>)
+                </script>
+                <!-- <%
                 if(current_lib_ && current_lib_[0] && current_lib_[0].list){
                   Object.keys(current_lib_[0].list).forEach(key => {
                     
@@ -171,8 +185,8 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                     <%
                   })
                 }
-                %>
-            </div>
+                %> -->
+            <!-- </div> -->
             <div id="product-actions">
               <div id="product-loading">
                 <% if (_.state.available && _.state.visible && _.ecomUtils.inStock(_.state)) { %>

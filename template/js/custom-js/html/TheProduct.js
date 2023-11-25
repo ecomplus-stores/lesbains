@@ -65,7 +65,7 @@ const getContextId = () => getContextBody()._id
 
 const sanitizeProductBody = body => {
   const product = Object.assign({}, body)
-  delete product.body_html
+  //delete product.body_html
   delete product.body_text
   delete product.specifications
   delete product.inventory_records
@@ -321,7 +321,7 @@ export default {
     setBody (data) {
       this.body = {
         ...data,
-        body_html: '',
+        //body_html: '',
         body_text: '',
         inventory_records: []
       }
@@ -839,6 +839,7 @@ export default {
   created () {
     //this.cms_customizations = [...($('[data-customizations]').length > 0 && $('[data-customizations]').attr('data-customizations') != '' ? JSON.parse($('[data-customizations]').attr('data-customizations')) : [])]
     this.cms_customizations = window.apx_lib.customizations ? window.apx_lib.customizations : [];
+    this.cms_currentLib = window.apx_lib_content ? window.apx_lib_content : [];
     this.cms_upselling = window.apx_lib.upselling ? window.apx_lib.upselling : []
     console.log('this.cms_upselling',this.cms_upselling)
     if(this.cms_upselling){
