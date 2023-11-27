@@ -36,45 +36,14 @@ if (slides && slides.length) {
   %>
 
   <div class="<%- className %> apx_banner-slider pb-5" style="<%- style %>">
-    <div class="glide" data-autoplay="<%= opt.autoplay %>">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides banner-slider__slides">
-          <% for (let i = 0; i < slides.length; i++) { %>
-            <li class="glide__slide">
+    <div data-autoplay="<%= opt.autoplay %>">
+      <div class="slick-me" data-carrossel_dots_md="Sim" data-carrossel_arrows_md="Não" >
+        <% for (let i = 0; i < slides.length; i++) { %>
+            <div class="slick-item">
               <%- await include('@/sections/inc/apx_banner', {
                 _, opt: { ...slides[i], height_auto: true, sync_load: i === 0 }
               }) %>
-            </li>
-          <% } %>
-        </ul>
-
-        <% if (slides.length > 1) { %>
-          <div class="glide__arrows d-none d-md-block" data-glide-el="controls">
-            <button
-              class="btn glide__arrow glide__arrow--left"
-              data-glide-dir="<"
-              aria-label="<%= _.dictionary('previous') %>"
-            >
-              <i class="i-chevron-left"></i>
-            </button>
-            <button
-              class="btn glide__arrow glide__arrow--right"
-              data-glide-dir=">"
-              aria-label="<%= _.dictionary('next') %>"
-            >
-              <i class="i-chevron-right"></i>
-            </button>
-          </div>
-
-          <div class="glide__bullets" data-glide-el="controls[nav]">
-            <% slides.forEach((_, index) => { %>
-              <button
-                class="glide__bullet"
-                data-glide-dir="=<%= index %>"
-                aria-label="<%= `${(index + 1)}° banner` %>"
-              ></button>
-            <% }) %>
-          </div>
+            </div>
         <% } %>
       </div>
     </div>

@@ -13,6 +13,7 @@
               <slot
                   name="nav"
                   v-bind="{ totalSearchResults, toggleFilters }"
+                  
               >
                   <div class="search-engine__count">
                   <strong>{{ totalSearchResults }}</strong>
@@ -32,20 +33,21 @@
                   >
                   <button
                       v-if="hasFilters"
-                      class="btn btn-light  d-flex d-md-none"
+                      class="btn btn-light  d-flex d-md-none align-items-center mr-2"
                       @click="toggleFilters(true)"
                       type="button"
                   >
-                      <i class="fas fa-filter mr-1"></i>
+                      
                       <span class="d-none d-md-inline">
                       {{ i19filterResults }}
                       </span>
                       <span class="d-md-none">
-                      {{ i19filter }}
+                      Filtrar
                       </span>
+                      <i class="fas fa-filter ml-1"></i>
                   </button>
       
-                  <div class="dropdown">
+                  <div class="dropdown d-flex">
                       <button
                       class="btn btn-light"
                       type="button"
@@ -56,7 +58,9 @@
                       >
                       
                       <!-- {{ i19sort }} -->
-                      Ordenar por
+                      <span class="d-md-inline d-none">Ordenar por</span>
+                      <span class="d-inline d-md-none">Ordenar</span>
+                      
                       <i class="fas fa-chevron-down ml-1"></i>
                       </button>
       
@@ -88,18 +92,20 @@
       <div class="col-md-2 col-12">       
           
           <aside
-              class="search-engine__aside card shadow"               
+              class="search-engine__aside card shadow"         
+              :class="isAsideVisible ? 'visible' : ''"      
                           >
+
               <slot name="filters">
-              <header class="card-header">
+              <header class="card-header d-md-none d-block">
                   {{ i19refineSearch }}
                   <button
                   type="button"
-                  class="close"
+                  class="apx_close"
                   :aria-label="i19closeFilters"
                   @click="toggleFilters"
                   >
-                  <span aria-hidden="true">&times;</span>
+                  
                   </button>
               </header>
       

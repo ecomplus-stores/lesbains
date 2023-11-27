@@ -81,7 +81,9 @@ if($('#page-products').length > 0){
     $('body').on('click','[data-tab]', function(){
         let tab = $(this).attr('data-tab');
         $('._'+tab).toggleClass('visible')
-    })
+    });
+
+    $('body').css('--header-vh-main', $('header#header').innerHeight() + 'px');
 }
 
 $('body').on('click','#apx-footer .toggleLinks', function(){
