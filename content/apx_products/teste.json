@@ -52,6 +52,13 @@
           "description": "Filtra a luz azul proveniente de telas e raios de sol.",
           "type": "Fixo",
           "value": 202
+        },
+        {
+          "input_type_required": false,
+          "title": "Transitions®",
+          "description": "Totalmente transparentes em ambientes internos e escuras ao ar livre, assim você terá óculos de sol e óculos e de grau em um só par. ",
+          "type": "Fixo",
+          "value": 1000
         }
       ]
     }
