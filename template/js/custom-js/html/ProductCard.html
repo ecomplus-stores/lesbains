@@ -9,6 +9,7 @@
   :data-sku="body.sku"
   
 >
+
   <transition :enter-active-class="transitionClass">
     <section v-if="!isLoading">
       <slot
@@ -26,14 +27,35 @@
 
       <slot name="body">
         <a-link
-          class="product-card__link"
+          class="product-card__link position-relative"
           :href="`/${body.slug}`"
           :title="name"
-        >
+        > 
+          
+          <div class="apx_tags" :key="rng" v-if="getTags()">
+            <div v-for="(item, index) in getTags()" :key="index" :class="index">
+              <div v-for="(item_, index_) in item">                
+                <span class="text_tag" v-if="!item_.img" :style="'--bg_:' + item_.background_color +'; --cl_:' + item_.color + ';--bd_:' + item_.border">
+                  {{item_.title}}
+                </span>
+              </div>
+              
+            </div>
+            
+          </div>
           <slot name="header"/>
 
           <div class="product-card__pictures">
-            <template v-if="body.pictures && body.pictures.length">
+            
+            <a-picture
+              v-if="selectedPicture"
+              class="product-card__picture"
+              :src="selectedPicture"
+              :can-calc-height="false"
+              :key="variationImagesKey"
+            />
+            
+            <template v-else="body.pictures && body.pictures.length">
               <a-picture
                 class="product-card__picture"
                 v-for="(picture, index) in body.pictures.slice(0, 1).reverse()"
@@ -54,101 +76,107 @@
       </slot>
 
       <div class="p-3">
-        <div class="d-flex justify-content-between align-items-center">
-          <slot name="title">
-            <component
-              :is="headingTag"
-              class="product-card__name"
-              v-html="name"
-            >
-              
-            </component>
-          </slot>
-
-          <slot name="rating">
-            <div
-              v-once
-              class="product-card__rating"
-              :data-sku="body.sku"
-              v-html="ratingHtml"
-            ></div>
-          </slot>
-    
-          <slot
-            name="unavailable"
-            v-if="!body.available || !body.visible"
-          >
-            <p class="badge badge-warning mt-auto">
-              {{ i19unavailable }}
-            </p>
-          </slot>
-    
-          <slot
-            name="out-of-stock"
-            v-else-if="!isInStock"
-          >
-            <p class="badge badge-dark mt-auto">
-              {{ i19outOfStock }}
-            </p>
-          </slot>
-    
-          <slot
-            name="without-price"
-            v-if="isWithoutPrice"
-          >
-            <p class="badge badge-info mt-auto">
-              {{ i19uponRequest }}
-            </p>
-          </slot>
-    
-          <template v-else>
-            <slot name="prices">
-              <a-prices
-                class="product-card__prices text-right justify-content-end align-items-center d-flex gap-1 flex-row"
-                :product="body"
-                :installments-option="installmentsOption"
-                :discount-option="discountOption"
-              />
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <slot name="title">
+              <component
+                :is="headingTag"
+                class="product-card__name"
+                v-html="name"
+              >
+                
+              </component>
             </slot>
-    
-            <div
-              @click="buy"
-              class="product-card__buy fade"
-              v-if="1 != 1"
+
+            <slot name="rating">
+              <div
+                v-once
+                class="product-card__rating"
+                :data-sku="body.sku"
+                v-html="ratingHtml"
+              ></div>
+            </slot>
+      
+            <slot
+              name="unavailable"
+              v-if="!body.available || !body.visible"
             >
-              <slot name="buy">
-                <div
-                  v-if="buyHtml"
-                  v-html="buyHtml"
-                ></div>
-    
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  :class="isSmall ? 'btn-sm': 'btn-block'"
-                  :disabled="isWaitingBuy"
-                >
-                  <span
-                    v-if="isWaitingBuy"
-                    class="product-card__buy-loading spinner-grow spinner-grow-sm"
-                    role="status"
-                  >
-                    <span class="sr-only">Loading...</span>
-                  </span>
-    
-                  <slot name="buy-button-content">
-                    <i class="i-shopping-bag mr-1"></i>
-                    {{ strBuy }}
-                  </slot>
-                </button>
+              <p class="badge badge-warning mt-auto">
+                {{ i19unavailable }}
+              </p>
+            </slot>
+      
+            <slot
+              name="out-of-stock"
+              v-else-if="!isInStock"
+            >
+              <p class="badge badge-dark mt-auto">
+                {{ i19outOfStock }}
+              </p>
+            </slot>
+      
+            <slot
+              name="without-price"
+              v-if="isWithoutPrice"
+            >
+              <p class="badge badge-info mt-auto">
+                {{ i19uponRequest }}
+              </p>
+            </slot>
+      
+            <template v-else>
+              <slot name="prices">
+                <a-prices
+                  class="product-card__prices text-right justify-content-end align-items-center d-flex gap-1 flex-row"
+                  :product="body"
+                  :installments-option="installmentsOption"
+                  :discount-option="discountOption"
+                />
               </slot>
-            </div>
-          </template>    
-        </div>
-        <div class="product-card_colors"
-        :data-product="JSON.stringify(body)">
-          
-        </div>
+      
+              <div
+                @click="buy"
+                class="product-card__buy fade"
+                v-if="1 != 1"
+              >
+                <slot name="buy">
+                  <div
+                    v-if="buyHtml"
+                    v-html="buyHtml"
+                  ></div>
+      
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    :class="isSmall ? 'btn-sm': 'btn-block'"
+                    :disabled="isWaitingBuy"
+                  >
+                    <span
+                      v-if="isWaitingBuy"
+                      class="product-card__buy-loading spinner-grow spinner-grow-sm"
+                      role="status"
+                    >
+                      <span class="sr-only">Loading...</span>
+                    </span>
+      
+                    <slot name="buy-button-content">
+                      <i class="i-shopping-bag mr-1"></i>
+                      {{ strBuy }}
+                    </slot>
+                  </button>
+                </slot>
+              </div>
+            </template>  
+          </div>  
+          <div class="apx_listing_colors" v-if="body.variationsGrids && body.variationsGrids.colors">
+            <button v-for="color in body.variationsGrids.colors.slice(0,3)" @click="setListingItemImages(color)" type="button" :title="color"
+            :class="selectedColor == color ? 'selected' : ''"
+            >
+              <span class="color" v-if="getHexColor(color) && getHexColor(color).specifications.colors && getHexColor(color).specifications.colors[0].value" :style="'background-color:' + getHexColor(color).specifications.colors[0].value"></span>
+            </button>
+            <span v-if="body.variationsGrids.colors.length > 3">+{{ body.variationsGrids.colors.length - 3}}</span>
+          </div>
+        </div>        
       </div>
         
       
@@ -158,11 +186,14 @@
           @click="toggleFavorite"
           :href="isLogged ? null : accountUrl"
         >
-          <i 
-            class="i-heart mr-1"
-            :class="isFavorite ? 'active' : null"
-          >
-          </i>
+          <span
+
+          :class="isFavorite ? 'active' : null">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.5 7.5C7.5 6.11929 8.61929 5 10 5H20C21.3807 5 22.5 6.11929 22.5 7.5V26.25L15 18.75L7.5 26.25V7.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+  
         </a>      
       </slot>
 

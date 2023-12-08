@@ -85,7 +85,13 @@ export default {
       isWaitingBuy: false,
       isHovered: false,
       isFavorite: false,
-      error: ''
+      selectedPicture:false,
+      variationImagesKey: Math.random().toString(),
+      apx_tags: [],
+      apx_productTags:{},
+      rng:Math.random().toString(),
+      error: '',
+      selectedColor:false
     }
   },
 
@@ -152,6 +158,36 @@ export default {
   },
 
   methods: {
+    getTags(){
+      return this.apx_productTags
+    },
+    setTags(){
+      let tags = [];
+      let terms = this.body.categories.map(item => 'cat_' + item._id)
+      terms.push(this.body.sku)
+      this.apx_tags.filter(el => terms.some(term => el.identificador.includes(term))).forEach(item => {
+        if(!this.apx_productTags[item.type]){
+          this.apx_productTags[item.type] = []
+
+        }
+        this.apx_productTags[item.type] = [...this.apx_productTags[item.type], item]
+      })
+      this.apx_productTags = {...this.apx_productTags}
+    },
+    setListingItemImages(color){
+      let variation = this.body.variations.find(el => el.specifications.colors.some(el => el.text === color))
+      let variationImage = false;
+      if (variation.picture_id) {
+        variationImage = this.body.pictures.find(el => el._id == variation.picture_id)
+      }
+      this.selectedPicture = variationImage
+      this.variationImagesKey = Math.random().toString()
+      this.selectedColor = color
+    },
+    getHexColor(color){
+      let hex = this.body.variations.find(el => el.specifications.colors.some(el => el.text === color))
+      return hex      
+    },
     setBody (data) {
       this.body = Object.assign({}, data)
       //console.log(this.body)
@@ -241,9 +277,11 @@ export default {
       this.fetchItem()
     }
 
-    window.productListColors(this.body._id)
+    //window.productListColors(this.body._id)
   },
   mounted(){
-    window.productListColors(this.body._id)
+    this.apx_tags = [...window.apx_tags]
+    this.setTags()
+    //window.productListColors(this.body._id)
   }
 }

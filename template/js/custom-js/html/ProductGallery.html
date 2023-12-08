@@ -9,19 +9,20 @@
       <i class="i-play"></i>
       <span>{{ i19video }}</span>
     </div> -->
-
-    <div
-      v-for="(picture, i) in localPictures"
-      :key="'img-' + i"
-      class="apx_gallery__item"   
+    <div class="slicked">
+      <div
+        v-for="(picture, i) in localPictures"
+        :key="'img-' + i"
+        class="apx_gallery__item"   
+        
+        @click="openZoom(i)"
+      >
       
-      @click="openZoom(i)"
-    >
-    
-      <a-picture        
-        class="apx_gallery__thumb"
-        :src="i == 0 ? getImg(picture, null, 'zoom') : getImg(picture, null, 'big')"
-      />
+        <a-picture        
+          class="apx_gallery__thumb"
+          :src="i == 0 ? getImg(picture, null, 'zoom') : getImg(picture, null, 'big')"
+        />
+      </div>
   </div>
   
 

@@ -24,7 +24,9 @@
           "value": 10
         }
       ],
-      "title": "necessidade_de_visao"
+      "title": "necessidade_de_visao",
+      "step_title": "Selecione sua necessidade de visão",
+      "step_description": "No passo abaixo você deve escolher se tem algum problema de visão. Dessa forma podemos indicar a lente correta para o seu caso."
     },
     {
       "multi_option": false,
@@ -54,7 +56,9 @@
           "type": "Fixo",
           "value": 300
         }
-      ]
+      ],
+      "step_title": "Escolha suas lentes",
+      "step_description": "Lentes de diversas cores e tipos. Escolha a opção ideal para combinar com a armação que já escolheu."
     },
     {
       "multi_option": false,
@@ -71,14 +75,46 @@
           "type": "Fixo",
           "value": 103
         }
+      ],
+      "conditions": {
+        "condition_grid": "necessidade_de_visao",
+        "condition_value": "Miopia,Astigmatismo"
+      }
+    },
+    {
+      "title": "gravacao",
+      "step_title": "Gravação",
+      "step_description": "Adicione um texto personalizado nas astes da sua armação. Lembrando que as gravações \"internas\" não são visíveis quando estiver usando os óculos.",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Aste Esquerda - Interno",
+          "description": "",
+          "input_type": "text"
+        },
+        {
+          "input_type_required": false,
+          "title": "Aste Esquerda - Externo",
+          "input_type": "text"
+        },
+        {
+          "input_type_required": false,
+          "title": "Aste Direita - Interno",
+          "input_type": "text"
+        },
+        {
+          "input_type_required": false,
+          "title": "Aste Direita - Externo",
+          "input_type": "text"
+        }
       ]
     }
   ],
   "upselling": [
     {
       "upselling_skus": [
-        "CAIXA",
-        "EMB_CASE2"
+        "ZZL4539",
+        "WAU1553"
       ],
       "customizations": [
         {
@@ -105,14 +141,17 @@
               "type": "Fixo",
               "value": 0
             }
-          ]
+          ],
+          "step_title": "Gravação",
+          "step_description": "Para deixar ainda mais personalizado adicione uma gravação em seu porta óculos. Pode ser uma frase, nome..."
         }
-      ]
+      ],
+      "step_title": "Escolha o Estojo",
+      "step_description": "Selecione uma opção de estojo para acompanhar seu óculos"
     }
   ],
   "title": "DEFAULT",
   "identificador": [
-    "cat_64c023b55e606903707336d1",
-    "cat_64c024595e6069037073385e"
+    "cat_655fc6152cd6b65959b759f3"
   ]
 }

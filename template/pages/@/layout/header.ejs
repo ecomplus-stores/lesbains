@@ -29,7 +29,7 @@ let marketingStripeStyle = ''
 <div id="overlay" class="fade"></div>
 <header class="header" id="header" style="--background:<%= apx_header.background %>;--color:<%= apx_header.color %>">
   <% if(apx_header?.topbar_1?.list?.length > 0){ %>
-    <div class="apx_topbar py-3" style="--color:<%= apx_header.topbar_1.color %>; --background:<%= apx_header.topbar_1.background %>;">
+    <div class="apx_topbar py-md-3 py-2" style="--color:<%= apx_header.topbar_1.color %>; --background:<%= apx_header.topbar_1.background %>;">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -51,14 +51,26 @@ let marketingStripeStyle = ''
       </div>           
     </div>
   <%  } %>
-  <div class="container-fluid px-md-5 px-0 py-3">    
-    <div class="row align-items-center py-md-4 py-3 px-0 px-md-0 ">
+  <div class="container-fluid px-md-5 px-md-0 px-3 py-3">    
+    <div class="row align-items-center py-md-4 py-1 px-0 px-md-0 ">
+      <div class="col d-block d-md-none">
+        <button type="button" class="menu-trigger" onclick="$('#apx-menu').toggleClass('visible');">                       
+          <span></span>
+          <span></span>
+          <b>MENU</b>
+        </button>
+      </div>
       <div class="col" id="apx-logo">
         <a href="/">
           <%- await include('@/layout/inc/logo', { _ }) %>
         </a>
       </div>
       <div class="col-12 col-md-auto" id="apx-menu">
+        <div class="d-block d-md-none">
+          <button type="button" class="apx_close" onclick="$('#apx-menu').toggleClass('visible');">                       
+
+          </button>
+        </div>
         <ul class="level_1">
           <% apx_header.links.forEach(({ url, title, image, list })=> {
             let mega = list && list[0].item.image ? 'max_menu' : '';
@@ -125,7 +137,7 @@ let marketingStripeStyle = ''
         </ul>        
       </div>      
       
-      <div class="col-md col-auto justify-content-end" id="apx-functions">       
+      <div class="col-md col justify-content-end" id="apx-functions">       
         <div
           class="header__buttons"
           role="group"
@@ -153,7 +165,7 @@ let marketingStripeStyle = ''
           
           <a
             id="user-button"
-            class="btn btn-lg d-md-block d-none"
+            class="btn btn-lg"
             role="button"
             href="/app/#/account/"
             title="<%= _.dictionary('myAccount') %>"
@@ -188,36 +200,7 @@ let marketingStripeStyle = ''
     </div>
 
 
-  </div>   
-  <% if(apx_header?.topbar_2?.list?.length > 0){ %>
-    <div class="apx_topbar py-3" style="--color:<%= apx_header.topbar_2.color %>; --background:<%= apx_header.topbar_2.background %>;">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="slick-me" data-carrossel_md="Sim" data-carrossel_sm="Sim" data-num_col_md="1" data-num_col_sm="1"  data-carrossel_dots_md="Não" data-carrossel_dots_sm="Não" data-carrossel_arrows_md="Não" data-carrossel_arrows_sm="Não" data-carrossel_autoplay_md="Sim" data-carrossel_autoplay_sm="Sim" >
-              <% apx_header.topbar_2.list.forEach(({ url, title })=> { %>
-                <div>
-                    <% if(url){ %> 
-                    <a href="<%= url %>"> 
-                    <% } %>
-                      <%= title %>
-                    <% if(url){ %> 
-                    </a>
-                    <% } %>
-                </div>
-              <% }) %>
-            </div>
-          </div>
-        </div>
-      </div>           
-    </div>
-  <%  } %>
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      
-    </div>
-  </div>
-  
+  </div>  
   <form
   class="header__search m-0 mt-lg-0"
   id="search-form"
@@ -251,7 +234,37 @@ let marketingStripeStyle = ''
       https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/InstantSearch.html
     -->
   </div>  
-</form>
+</form> 
+  <% if(apx_header?.topbar_2?.list?.length > 0){ %>
+    <div class="apx_topbar py-md-3 py-2" style="--color:<%= apx_header.topbar_2.color %>; --background:<%= apx_header.topbar_2.background %>;">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="slick-me" data-carrossel_md="Sim" data-carrossel_sm="Sim" data-num_col_md="1" data-num_col_sm="1"  data-carrossel_dots_md="Não" data-carrossel_dots_sm="Não" data-carrossel_arrows_md="Não" data-carrossel_arrows_sm="Não" data-carrossel_autoplay_md="Sim" data-carrossel_autoplay_sm="Sim" >
+              <% apx_header.topbar_2.list.forEach(({ url, title })=> { %>
+                <div>
+                    <% if(url){ %> 
+                    <a href="<%= url %>"> 
+                    <% } %>
+                      <%= title %>
+                    <% if(url){ %> 
+                    </a>
+                    <% } %>
+                </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+      </div>           
+    </div>
+  <%  } %>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      
+    </div>
+  </div>
+  
+  
 
 </header>
 <!--

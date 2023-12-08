@@ -919,6 +919,109 @@ export default (options,state) => {
       getExtraPages(options),
       getWidgets(options),
       {
+        name: 'apx_tags',        
+        label: '[alpix.dev] - Produtos - Tags ',
+        description: 'Adicione tags ou selos nos produtos',
+        folder: `${options.baseDir}content/apx_tags`,
+        extension: 'json',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          {
+            label: 'Identificador [SKU] ou [Categoria]',
+            name: 'identificador',
+            widget: 'select',
+                multiple: true,
+                options: [
+                  ...options.state.routes
+                  .filter(({ sku }) => typeof sku === 'string')
+                  .map(({ sku }) => ({
+                    label: 'Produto - ' + sku,
+                    value: sku
+                  })),
+                  ...options.state.routes
+                  .filter(el => el.resource === 'categories')
+                  .map((el) => ({
+                    label: 'Categoria - ' + el.name,
+                    value: 'cat_'+el._id
+                  }))
+                ]                
+          },
+          {
+            label: "Posição na lista",
+            name:"type",
+            widget: "select",
+            options: ["top_left","top_center","bottom_left","bottom_center","bottom_right"],
+            required:false, 
+          }, 
+          {
+            label: "Nome da Característica",
+            hint:"Exatamente como cadastrado no painel E-com.plus",
+            name: "title",
+            widget: "string"          
+          }, 
+          {
+            label: "Descrição",
+            name: "description",
+            widget: "string",
+            required:false,          
+          }, 
+          {
+            label: 'Imagem ou ícone',
+            name: 'img',
+            widget: 'image',
+            required:false,
+          },   
+          {
+            label: 'Cor do texto',
+            required: false,
+            name: 'color',
+            widget: 'color'
+          },
+          {
+            label: 'Cor da borda',
+            required: false,
+            name: 'border',
+            widget: 'color'
+          },
+          {
+            label: 'Cor do fundo',
+            required: false,
+            name: 'background_color',
+            widget: 'color'
+          }
+        ]
+      },
+      {
+        name: 'apx_properties',        
+        label: '[alpix.dev] - Características',
+        description: 'Adicione imagens, ícones e/ou descrições nos filtros de características',
+        folder: `${options.baseDir}content/apx_properties`,
+        extension: 'json',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          {
+            label: "Nome da Característica",
+            hint:"Exatamente como cadastrado no painel E-com.plus",
+            name: "title",
+            widget: "string"          
+          }, 
+          {
+            label: "Descrição",
+            name: "description",
+            widget: "string",
+            required:false,          
+          }, 
+          {
+            label: 'Imagem ou ícone',
+            name: 'img',
+            widget: 'image',
+            required:false,
+          },   
+        ]
+      },
+      {
         name: 'apx_products_content',        
         label: '[alpix.dev] - Produtos - Abas de Conteúdo',
         description: 'Configure as opções disponíveis para personalização e sugestões de produtos.',
@@ -1020,6 +1123,7 @@ export default (options,state) => {
                 label: 'Grid da Personalização',
                 name: 'title',
                 widget: 'select',
+                hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione. Personalizações do tipo texto/gravação devem ter somente uma opção cadastrada por bloco",
                 options: window.storefront.data.grids
                   .map(({ grid_id, title }) => ({
                     label: title,
@@ -1027,38 +1131,81 @@ export default (options,state) => {
                   }))
               },  
               {
-                label: "Mais de uma opção poderá ser selecionada?",
-                name:"multi_option",
-                hint:"Ativar apenas para campos de gravação/texto",
-                widget: 'boolean',
-                default: false
-              },
+                label: "Título do Passo",
+                hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
+                name: "step_title",
+                widget: "string",
+                required:false,          
+              }, 
               {
-                label: 'Condições',
-                hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-                name: 'conditions',
+                label: "Descrição do Passo",
+                hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
+                name: "step_description",
+                widget: "string",
+                required:false,          
+              }, 
+              
+              {
+                label: 'Upload',
+                hint:"",
+                name: 'upload',
                 widget: 'object',
                 fields: [
                   {
-                    label: 'Exibir quando a opção da grade...',
-                    required:false,
-                    name: 'condition_grid',
-                    widget: 'select',
-                    options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
-                    .map(({ grid_id, title }) => ({
-                      label: title,
-                      value: grid_id
-                    }))]
-                  },  
+                    label: "Exibir campo para upload de arquivo?",
+                    name:"enable",
+                    widget: 'boolean',
+                    default: false
+                  },
                   {
-                    label: "Tiver o valor de...",
-                    hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
-                    name: "condition_value",
+                    label: "Título",
+                    hint:"",
+                    name: "title",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
+                    label: "Descrição",
+                    hint:"",
+                    name: "description",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
+                    label: "Texto do botão",
+                    hint:"",
+                    name: "button_text",
                     widget: "string",
                     required:false,          
                   }, 
                 ]
               },
+              // {
+              //   label: 'Condições',
+              //   hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
+              //   name: 'conditions',
+              //   widget: 'object',
+              //   fields: [
+              //     {
+              //       label: 'Exibir quando a opção da grade...',
+              //       required:false,
+              //       name: 'condition_grid',
+              //       widget: 'select',
+              //       options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+              //       .map(({ grid_id, title }) => ({
+              //         label: title,
+              //         value: grid_id
+              //       }))]
+              //     },  
+              //     {
+              //       label: "Tiver o valor de...",
+              //       hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
+              //       name: "condition_value",
+              //       widget: "string",
+              //       required:false,          
+              //     }, 
+              //   ]
+              // },
               {
                 label:"Opções",
                 name:"list",
@@ -1129,6 +1276,20 @@ export default (options,state) => {
             required:false,
             fields: [
               {
+                label: "Título do Passo",
+                hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
+                name: "step_title",
+                widget: "string",
+                required:false,          
+              }, 
+              {
+                label: "Descrição do Passo",
+                hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
+                name: "step_description",
+                widget: "string",
+                required:false,          
+              }, 
+              {
                 label: 'Produtos',
                 hint:"Exiba opções de produtos para adicionar juntamente ao carrinho na finalização da personalização. Os itens de customização serão aplicados ao produto de upselling. Somente uma das opções poderá ser escolhida, então caso tenha por exemplo um Estojo, selecione as variações do estojo para exibição.",
                 name: 'upselling_skus',
@@ -1150,7 +1311,7 @@ export default (options,state) => {
                 fields: [
                   {
                     label: 'Grid da Personalização',
-                    hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione.",
+                    hint:"Utilizar somente campos do tipo Gravação",
                     name: 'title',
                     widget: 'select',
                     options: window.storefront.data.grids
@@ -1160,38 +1321,46 @@ export default (options,state) => {
                     }))
                   },  
                   {
-                    label: "Mais de uma opção poderá ser selecionada?",
-                    name:"multi_option",
-                    hint:"Ativar apenas para campos de gravação/texto",
-                    widget: 'boolean',
-                    default: false
-                  },
+                    label: "Título do Passo",
+                    hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
+                    name: "step_title",
+                    widget: "string",
+                    required:false,          
+                  }, 
                   {
-                    label: 'Condições',
-                    hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-                    name: 'conditions',
-                    widget: 'object',
-                    fields: [
-                      {
-                        label: 'Exibir quando a opção da grade...',
-                        required:false,
-                        name: 'condition_grid',
-                        widget: 'select',
-                        options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
-                        .map(({ grid_id, title }) => ({
-                          label: title,
-                          value: grid_id
-                        }))]
-                      },  
-                      {
-                        label: "Tiver o valor de...",
-                        hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
-                        name: "condition_value",
-                        widget: "string"   ,
-                        required:false,       
-                      }, 
-                    ]
-                  },
+                    label: "Descrição do Passo",
+                    hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
+                    name: "step_description",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                 
+                  // {
+                  //   label: 'Condições',
+                  //   hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
+                  //   name: 'conditions',
+                  //   widget: 'object',
+                  //   fields: [
+                  //     {
+                  //       label: 'Exibir quando a opção da grade...',
+                  //       required:false,
+                  //       name: 'condition_grid',
+                  //       widget: 'select',
+                  //       options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+                  //       .map(({ grid_id, title }) => ({
+                  //         label: title,
+                  //         value: grid_id
+                  //       }))]
+                  //     },  
+                  //     {
+                  //       label: "Tiver o valor de...",
+                  //       hint:"Digite o valor que o passo anterior deve ter para que essa personalização seja exibida",
+                  //       name: "condition_value",
+                  //       widget: "string"   ,
+                  //       required:false,       
+                  //     }, 
+                  //   ]
+                  // },
                   {
                     label:"Opções",
                     name:"list",
@@ -1234,8 +1403,8 @@ export default (options,state) => {
                         label: "Exibir campo digitável?",
                         name:"input_type",
                         widget: "select",
-                        options: ["Não","text","number"],
-                        required:false,    
+                        options: ["text","number"],
+                        required:true,    
                       },
                       {
                         label: "Quantidade máxima de caracteres ou de valor númerico",
@@ -1256,62 +1425,7 @@ export default (options,state) => {
                 ]
               },
             ]
-          },
-          {
-            label: 'Seções',
-            name: 'sections',
-            required: false,
-            widget: 'list',
-            types: [  
-              {
-                label: 'Especificações',
-                name: 'specifications',
-                widget: 'object',
-                fields: [
-                {
-                  label: 'Exibir especificações',
-                  name: 'enabled',
-                  widget: 'boolean',
-                  default: true
-                },
-                {
-                  label: 'Título',
-                  name: 'title',
-                  widget: 'string',
-                  hint: '',
-                  required: false
-                },
-                {
-                  label: 'Descrição',
-                  name: 'description',
-                  widget: 'string',
-                  hint: '',
-                  required: false
-                },
-                {
-                  label: 'Texto CTA',
-                  name: 'cta_text',
-                  widget: 'string',
-                  hint: '',
-                  required: false
-                },
-                {
-                  label: 'Link CTA',
-                  name: 'cta_url',
-                  widget: 'string',
-                  hint: '',
-                  required: false
-                },
-                {
-                  label: 'Imagem',
-                  name: 'image',
-                  widget: 'image',
-                  required:false,          
-                }
-                ]
-              }
-            ].concat(options.sections)
-          }
+          }          
         ]
       }      
     ]

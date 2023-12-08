@@ -65,7 +65,7 @@ const getContextId = () => getContextBody()._id
 
 const sanitizeProductBody = body => {
   const product = Object.assign({}, body)
-  delete product.body_html
+  //delete product.body_html
   delete product.body_text
   delete product.specifications
   delete product.inventory_records
@@ -165,12 +165,17 @@ export default {
       kitItems: [],
       currentTimer: null,
       cms_customizations : [],
+      cms_upselling : [],
       cms_customizations_step : 1,
       current_customization : [],
       customizationPanel : false,
       variationImagesKey : null,
       variationImages: [],      
-      variantGalleryImages:[]
+      variantGalleryImages:[],
+      upsellingProducts:[],
+      pickedUpsellProduct:null,
+      upsellCustomizations:[],
+      textCustomizations:[]
     }
   },
 
@@ -316,7 +321,7 @@ export default {
     setBody (data) {
       this.body = {
         ...data,
-        body_html: '',
+        //body_html: '',
         body_text: '',
         inventory_records: []
       }
@@ -369,33 +374,82 @@ export default {
     customizationStepBack(){
       this.cms_customizations_step--
     },
-    setDeepCustomizationOption(index,grid_id,item){
+    chooseUpsellProduct(sku){
+      this.pickedUpsellProduct = {...this.upsellingProducts.find(el => el.sku == sku || el.skus.includes(sku))}
+      console.log(this.pickedUpsellProduct)
+    },
+    setUpsellCustomization(key, obj, value){
+      if(!this.upsellCustomizations[key]){
+        this.upsellCustomizations[key] = []
+      }
+      this.upsellCustomizations[key][obj.title] = {value:value, params:obj}
+      console.log(this.upsellCustomizations)
+    },
+    setTextCustomization(index, key, obj, value){
+      if(!this.textCustomizations[key]){
+        this.textCustomizations[key] = []
+      }
+      this.textCustomizations[key][obj.title] = {value:value, params:obj}
+      //console.log(this.textCustomizations)
+      let customizationContent = "";
+      let customizationPrice = 0;
+      let variationId
+      if (this.hasVariations) {
+        if (this.selectedVariationId) {
+          variationId = this.selectedVariationId
+        } else {
+          return
+        }
+      }
+      let product_price = variationId ? this.body.variations.find(el => el._id == variationId).price : this.body.price
+      
+      Object.keys(this.textCustomizations[key]).forEach(key_ => {
+        let customization_ = this.textCustomizations[key][key_]
+        if(customization_.params.value > 0){
+          if(customization_.params.type == "Fixo"){
+            customizationPrice+= customization_.params.value
+          }else{
+            customizationPrice+= (product_price * (customization_.params.value / 100))
+          }              
+        }
+        customizationContent+= `${customization_.params.title}: ${customization_.value}\n`
+      });
+      //console.log(obj, key)
 
+      this.current_customization[index] = {[key] : {
+        type: "Fixo",
+        value: customizationPrice,
+        title: customizationContent
+      }}
+
+      console.log(this.current_customization[index])
+    },
+    setStep(step){
+      this.cms_customizations_step = step
+      console.log(this.cms_customizations.length, this.cms_upselling.length, this.cms_customizations_step)
+    },
+    setDeepCustomizationOption(index,grid_id,item){
+      console.log(item)
       this.current_customization[index] = {[grid_id] : item}
       //console.log(this.current_customization)
       this.cms_customizations_step++
     },
     totalWithCustomization(){
-      // let variationId
-      // if (this.hasVariations) {
-      //   if (this.selectedVariationId) {
-      //     variationId = this.selectedVariationId
-      //   } else {
-      //     return
-      //   }
-      // }
-      // console.log(variationId)
-
-      let price = this.body.price
-      //console.log('current',this.current_customization)
-      for (const item of this.current_customization) {
-        
-        const value = Object.values(item)[0].value;
-        price += value;
+      let variationId
+      if (this.hasVariations) {
+        if (this.selectedVariationId) {
+          variationId = this.selectedVariationId
+        } else {
+          return
+        }
       }
-      console.log(this.body.price, price)
-      //console.log(this.body)
-      return price.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) 
+
+      let price = variationId ? this.body.variations.find(el => el._id == variationId).price : this.body.price
+      for (const item of this.current_customization) {
+        const value = Object.values(item)[0].value;
+        price += (value || 0);
+      }
+     return price.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) 
     },
     setCustomizationOption (customization, text) {
       
@@ -503,32 +557,120 @@ export default {
             _id: customizationFromBody._id,
             label: customizationFromBody.label,
             add_to_price: {
-              type: (Object.values(item)[0].type == "Fixo" ? 'fixed' : 'percent'),
-              addition: Object.values(item)[0].value
+              type: (Object.values(item)[0].type == "Fixo" ? 'fixed' : 'percentage'),
+              addition: Object.values(item)[0].value || 0
             },
             option:  {text:Object.values(item)[0].title}
           })
         }
       }
-      
-      
-      
 
-      if(this.cms_customizations && option != "customized"){
-        this.customizationPanel = true;
-        //alert('Selecione as opções para prosseguir')
-      }else{
-        // console.log('customCustomizations',customCustomizations)
-        // console.log('add', { ...product, customizations : customCustomizations })
-        this.$emit('buy', { product, variationId, customizations : customCustomizations })
-        if (this.canAddToCart) {
-          this.current_customization = []
-          this.customizationPanel = false
-          this.cms_customizations_step = 1
-          ecomCart.addProduct({ ...product, customizations : customCustomizations }, variationId, this.qntToBuy)          
+      let upsellProductAdd = this.pickedUpsellProduct
+      let upsellProductCustomizations = []
+      //let kitId = genRandomObjectId()
+      let kitId = "654be9262cd6b659599dcf7d"
+      if(upsellProductAdd){
+        let kit_product = {
+          _id: kitId,
+          //name: 'Kit ' + product.name,
+          name: 'Produto Combinado',
+          composition:[
+            {
+              quantity: 1,
+              variation_id: upsellProductAdd.variation_id,
+              _id: upsellProductAdd._id
+            },
+            {
+              quantity: 1,
+              variation_id: variationId,
+              _id: product._id
+            }
+          ]
         }
-        this.isOnCart = true
+        console.log('this.upsellCustomizations', this.upsellCustomizations)
+        Object.keys(this.upsellCustomizations).forEach( key => {
+          let customizationPrice = 0;
+          let customizationContent = ""
+          let customization = this.upsellCustomizations[key]
+          //console.log('customization',customization)
+          Object.keys(this.upsellCustomizations[key]).forEach( key_ => {
+            let customization_ = this.upsellCustomizations[key][key_]
+            if(customization_.params.value > 0){
+              if(customization_.params.type == "Fixo"){
+                customizationPrice+= customization_.params.value
+                //console.log('y-----')
+                console.log(customization_,customizationPrice)
+              }else{
+                customizationPrice+= (upsellProductAdd.price * (customization_.params.value / 100))
+                //console.log('x-----')
+                console.log(customization_,customizationPrice)
+              }              
+            }
+            
+            //console.log('content',customizationContent + `${customization_.params.title}: ${customization_.value}\n`)
+            customizationContent+= `${customization_.params.title}: ${customization_.value}\n`
+          });
+          //console.log('upsellProductAdd.customizations',upsellProductAdd.customizations, key)
+          //console.log('customizationContent',customizationContent)
+          let customizationFromBody = upsellProductAdd.customizations.find(el => el.grid_id == key)
+          upsellProductCustomizations.push({
+            _id: customizationFromBody._id,
+            label: customizationFromBody.label,
+            add_to_price: {
+              type: 'fixed',
+              addition: customizationPrice
+            },
+            option:  {text:customizationContent}
+          })
+        })
+        console.log('upsellProductCustomizations',upsellProductCustomizations)
+        upsellProductAdd.customizations = upsellProductCustomizations
+        upsellProductAdd.kit_product = kit_product
+        product.kit_product = kit_product
+
+        //if (this.canAddToCart) {
+          ecomCart.addItem(upsellProductAdd)
+        //}
+
+        if(this.cms_customizations && option != "customized"){
+          this.customizationPanel = true;
+          //alert('Selecione as opções para prosseguir')
+        }else{
+          product.customizations = customCustomizations
+
+          if (this.canAddToCart) {
+            this.current_customization = []
+            this.customizationPanel = false
+            this.cms_customizations_step = 1
+            console.log(product)
+            ecomCart.addProduct({ ...product }, variationId, 1)          
+          }
+          //this.$emit('buy', { product, variationId, customizations : customCustomizations })
+          this.$emit('buy', [product, upsellProductAdd])
+          this.isOnCart = true
+        }
+
+      }else{
+        
+
+        if(this.cms_customizations && option != "customized"){
+          this.customizationPanel = true;
+          //alert('Selecione as opções para prosseguir')
+        }else{
+          this.$emit('buy', { product, variationId, customizations : customCustomizations })
+          if (this.canAddToCart) {
+            this.current_customization = []
+            this.customizationPanel = false
+            this.cms_customizations_step = 1
+            this.pickedUpsellProduct = null
+            ecomCart.addProduct({ ...product, customizations : customCustomizations }, variationId, this.qntToBuy)          
+          }
+          this.isOnCart = true
+        }
       }
+      
+      
+      
 
         // this.$emit('buy', { product, variationId, customizations })
         // if (this.canAddToCart) {
@@ -545,6 +687,9 @@ export default {
       } else {
         this.buy()
       }
+    },
+    upsellProduct(sku){
+      return this.upsellingProducts.find(el => el.sku == sku || el.skus.includes(sku))
     }
   },
 
@@ -688,10 +833,77 @@ export default {
       }
       
     },
+    
   },
 
   created () {
-    this.cms_customizations = [...($('[data-customizations]').length > 0 && $('[data-customizations]').attr('data-customizations') != '' ? JSON.parse($('[data-customizations]').attr('data-customizations')) : [])]
+    //this.cms_customizations = [...($('[data-customizations]').length > 0 && $('[data-customizations]').attr('data-customizations') != '' ? JSON.parse($('[data-customizations]').attr('data-customizations')) : [])]
+    this.cms_customizations = window.apx_lib.customizations ? window.apx_lib.customizations : [];
+    this.cms_currentLib = window.apx_lib_content ? window.apx_lib_content : [];
+    this.cms_upselling = window.apx_lib.upselling ? window.apx_lib.upselling : []
+    console.log('this.cms_upselling',this.cms_upselling)
+    if(this.cms_upselling){
+      this.cms_upselling.forEach(item => {
+        //console.log('upselling_item',item)
+        if(item.upselling_skus.length > 0){
+          const ecomSearch = new EcomSearch()
+          ecomSearch
+            .setPageSize(item.upselling_skus.length)
+            .setSkus([...item.upselling_skus])
+            .fetch(true)
+            .then(() => {
+              ecomSearch.getItems().forEach(product => {
+                const quantity = 1
+                
+                store({
+                  url: `/products/${product._id}.json`,
+                  axiosConfig: {
+                    timeout: 6000
+                  }
+                })
+                .then(({ data }) => {
+                  this.hasLoadError = false
+                  //console.log('data',data)
+                  
+                  product.customizations = data.customizations
+                  const addUpsellItem = variationId => {
+                    const item = ecomCart.parseProduct(product, variationId, quantity)
+                    if (quantity) {
+                      item.min_quantity = item.max_quantity = quantity
+                    } else {
+                      item.quantity = 0
+                    }
+                    
+                    this.upsellingProducts.push({
+                      ...item,
+                      _id: genRandomObjectId()
+                    })
+                    console.log('adicionou', item)
+                  }
+                  console.log('variations',product.variations)
+                  if (product.variations && product.variations.length > 0) {
+                    product.variations.forEach(variation => {
+                      variation._id = genRandomObjectId()
+                      addUpsellItem(variation._id)
+                    })
+                    console.log('teste b')
+                  } else {
+                    console.log('teste a')
+                    addUpsellItem()
+                  }
+                  console.log('upsell product', product)
+                  console.log('this.upsellingProducts',this.upsellingProducts)
+                })
+                .catch(err => {
+                  console.error(err)
+                })    
+              })
+            })
+            .catch(console.error)
+        }
+      })
+      
+    }
     console.log('customizations',this.cms_customizations)
     const presetQntToBuy = () => {
       this.qntToBuy = this.body.min_quantity || 1
@@ -710,6 +922,7 @@ export default {
   },
 
   mounted () {
+    window.mainProductGallery_ = [...this.body.pictures] 
     window.mainProductGallery = [...this.body.pictures]
     //console.log(this.body.customizations)
     if (this.$refs.sticky && !this.isWithoutPrice) {
