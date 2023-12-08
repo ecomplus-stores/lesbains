@@ -5,13 +5,8 @@
     "vendors~app-account~app-checkout": "chunk.6772779106de83c939af.js",
     "vendors~app-cart~app-checkout": "chunk.e510c5bd751808ed393d.js",
     "admin": [
-<<<<<<< HEAD
-      "admin.70ecb0e94fb954228fd5.js",
-      "admin.70ecb0e94fb954228fd5.js.map"
-=======
-      "admin.70bc310b943495b19ee9.js",
-      "admin.70bc310b943495b19ee9.js.map"
->>>>>>> c3c290ea0c519107d5dd9f7383c7ecff05ed86c2
+      "admin.10c74623e7063aa4a1ab.js",
+      "admin.10c74623e7063aa4a1ab.js.map"
     ],
     "app-account": "chunk.346fedc39c325c51d32c.js",
     "app-cart": "chunk.134656675ad469b690ca.js",
