@@ -1,0 +1,26 @@
+{
+  "customizations": [
+    {
+      "upload": {
+        "enable": false
+      },
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Monofocal",
+          "description": "Uma lente corrige a visão para longe ou perto. Lentes visão simples.",
+          "type": "Fixo",
+          "value": 80
+        }
+      ],
+      "title": "necessidade_de_visao",
+      "step_title": "Necessidade de Visão",
+      "step_description": "Cada lente corretiva é realizada utilizando a mais avançada tecnologia e gravada com a icônica assinatura Ray-Ban. Com base na sua receita, escolha sua lente entre as opções abaixo"
+    }
+  ],
+  "upselling": [],
+  "identificador": [
+    "DPY5008"
+  ],
+  "title": "TESTE"
+}
