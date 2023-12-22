@@ -127,7 +127,9 @@
         "enable": true,
         "title": "Envie aqui sua receita médica!",
         "description": "Tire ou selecione uma foto da sua receita médica, lembrando de deixar visível o CRM do médico e a data do exame.",
-        "button_text": "Clique aqui para enviar"
+        "button_text": "Clique aqui para enviar",
+        "img": "/img/uploads/icon_receita_medica.png",
+        "description_after": "Se quiser enviar depois, não se preocupe, você receberá as instruções por e-mail após finalizar o pedido. Envie sua receita para receita@lesbains.com.br"
       },
       "title_id": "receita_medica",
       "title": "Receita Médica",
