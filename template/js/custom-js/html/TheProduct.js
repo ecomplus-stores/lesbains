@@ -175,7 +175,8 @@ export default {
       upsellingProducts:[],
       pickedUpsellProduct:null,
       upsellCustomizations:[],
-      textCustomizations:[]
+      textCustomizations:[],
+      customizationLoading: false
     }
   },
 
@@ -490,6 +491,8 @@ export default {
     },
 
     setUploadCustomization (index,grid_id) {
+      this.customizationLoading = true
+      console.log(`this.customizationLoading`,this.customizationLoading)
       let fileInput = document.getElementById(grid_id + '_file')
       let file = fileInput.files[0];
 
@@ -515,7 +518,7 @@ export default {
             }
           }
           //console.log(this.current_customization)
-          this.cms_customizations_step++
+          //this.cms_customizations_step++
           // const index = this.customizations.findIndex(({ _id }) => _id === customization._id)
           // if (text) {
           //   if (index > -1) {
@@ -531,13 +534,18 @@ export default {
           // } else if (index > -1) {
           //   this.customizations.splice(index, 1)
           // }
+          this.customizationLoading = false
+          console.log('updated',this.current_customization[index].receita_medica)
         })
         
-        .catch(error => console.error('Erro:', error));
+        .catch(error => {
+          console.error('Erro:', error);
+          this.customizationLoading = false
+        });
       } else {
         console.error('Nenhum arquivo selecionado.');
+        this.customizationLoading = false
       }
-      
     },
 
 

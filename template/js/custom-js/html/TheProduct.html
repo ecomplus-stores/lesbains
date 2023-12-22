@@ -23,6 +23,8 @@
       :class="customizationPanel ? 'visible' : ''"
       v-if="cms_customizations"
     >
+    
+    <div class="lds-dual-ring" v-if="customizationLoading"></div>
     <button type="button"
     class="custom_back" 
     v-if="cms_customizations_step > 1"
@@ -125,9 +127,11 @@
             </div>
             
             </div>
-            <div v-if="item.upload.enable">
+            <div v-if="item.upload.enable" class="upload-option">
               <h3>{{item.upload.title}}</h3>
               <p>{{item.upload.description}}</p>
+              <div v-if="item.upload.img && !(current_customization[index] && current_customization[index][item.title_id])" class="text-center"><img :src="item.upload.img"/></div>
+              <div v-if="current_customization[index] && current_customization[index][item.title_id]" clss="text-center"><img :src="current_customization[index][item.title_id].title"/></div>
               <input type="file" :id="item.title_id + '_file'"/>
               <button type="button" @click="setUploadCustomization(index,item.title_id)">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,6 +139,7 @@
                   </svg> 
                   <span>{{item.upload.button_text}}</span>
               </button>
+              <p>{{item.upload.description_after}}</p>
             </div>
           </div>  
           <div class="customization_functions d-flex flex-column">
