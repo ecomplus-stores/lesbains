@@ -1119,6 +1119,14 @@ export default (options,state) => {
             widget:"list",
             required:false,
             fields: [
+              
+              {
+                label: "Título do Passo",
+                hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
+                name: "title",
+                widget: "string",
+                required:false,          
+              }, 
               {
                 label: 'Grid da Personalização',
                 name: 'title_id',
@@ -1130,13 +1138,6 @@ export default (options,state) => {
                     value: grid_id
                   }))
               },  
-              {
-                label: "Título do Passo",
-                hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
-                name: "title",
-                widget: "string",
-                required:false,          
-              }, 
               {
                 label: "Descrição do Passo",
                 hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
