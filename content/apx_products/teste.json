@@ -125,8 +125,8 @@
     {
       "upload": {
         "enable": true,
-        "title": "Envie sua receita",
-        "description": "Aqui a descrição",
+        "title": "Envie aqui sua receita médica!",
+        "description": "Tire ou selecione uma foto da sua receita médica, lembrando de deixar visível o CRM do médico e a data do exame.",
         "button_text": "Clique aqui para enviar"
       },
       "title_id": "receita_medica",

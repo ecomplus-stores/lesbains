@@ -489,6 +489,58 @@ export default {
       }
     },
 
+    setUploadCustomization (index,grid_id) {
+      let fileInput = document.getElementById(grid_id + '_file')
+      let file = fileInput.files[0];
+
+      if (file) {
+        let formData = new FormData();
+        formData.append('files', file);
+
+        fetch('http://localhost:1337/api/webhooks/file-upload', {
+          method: 'POST',
+          body: formData,
+        })
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          console.log(index, grid_id)
+          this.current_customization[index] = {[grid_id] : {
+            title : data.response.data.image[0].url,
+            type: "Fixo",
+            value: 0,
+            input_type_required:false,
+            description: "Arquivo enviado durante o processo de compra"
+            }
+          }
+          //console.log(this.current_customization)
+          this.cms_customizations_step++
+          // const index = this.customizations.findIndex(({ _id }) => _id === customization._id)
+          // if (text) {
+          //   if (index > -1) {
+          //     this.customizations[index].option = { text }
+          //   } else {
+          //     this.customizations.push({
+          //       _id: customization._id,
+          //       label: customization.label,
+          //       add_to_price: customization.add_to_price,
+          //       option: { text }
+          //     })
+          //   }
+          // } else if (index > -1) {
+          //   this.customizations.splice(index, 1)
+          // }
+        })
+        
+        .catch(error => console.error('Erro:', error));
+      } else {
+        console.error('Nenhum arquivo selecionado.');
+      }
+      
+    },
+
+
     showVariationPicture (variation) {
       if (variation.picture_id) {
 

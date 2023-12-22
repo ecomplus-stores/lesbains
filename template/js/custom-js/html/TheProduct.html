@@ -125,6 +125,17 @@
             </div>
             
             </div>
+            <div v-if="item.upload.enable">
+              <h3>{{item.upload.title}}</h3>
+              <p>{{item.upload.description}}</p>
+              <input type="file" :id="item.title_id + '_file'"/>
+              <button type="button" @click="setUploadCustomization(index,item.title_id)">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 11V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V11M12 3L12 15M12 3L16 7M12 3L8 7" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg> 
+                  <span>{{item.upload.button_text}}</span>
+              </button>
+            </div>
           </div>  
           <div class="customization_functions d-flex flex-column">
             <hr></hr>
@@ -146,6 +157,7 @@
           <h4>{{item.title}}</h4>
           <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
         </div>
+
         <div class="option_options">
           <div class="option mb-md-4 mb-4"
             v-for="(item_,index_) in item.upselling_skus"
@@ -186,6 +198,7 @@
                 </button>
               </div>
           </div>
+          
           <div v-if="item.customizations">
             <div class="option_options upselling_customizations">
               <div v-for="(item_, index_) in item.customizations" :key="index_">
@@ -304,7 +317,18 @@
                 <div class="row justify-content-between align-items-start">
                   <div class="col">
                     <small>{{body.customizations.find(el => el.grid_id == Object.keys(item_)[0]) ? body.customizations.find(el => el.grid_id == Object.keys(item_)[0]).label : 'Err.'}}</small>
-                    <span class="option_title">{{item_[Object.keys(item_)[0]].title}}</span>
+                    <span class="option_title">
+                      <a target="_blank" style="border-bottom: 1px solid #000;" :href="item_[Object.keys(item_)[0]].title" v-if="item_[Object.keys(item_)[0]].title.includes('http')">
+                        Abrir Arquivo 
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.33333 7.99998H10.6667M6 5.33331H4.66667C3.19391 5.33331 2 6.52722 2 7.99998C2 9.47274 3.19391 10.6666 4.66667 10.6666H6M10 10.6666H11.3333C12.8061 10.6666 14 9.47274 14 7.99998C14 6.52722 12.8061 5.33331 11.3333 5.33331L10 5.33331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>  
+                      </a>
+                      <span v-else>
+                        {{item_[Object.keys(item_)[0]].title}}  
+                      </span>
+                      
+                    </span>
                   </div>
                   <div class="col-auto">
                     <strong v-if="item_[Object.keys(item_)[0]].type == 'Fixo'" class="option_price">

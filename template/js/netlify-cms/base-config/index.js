@@ -1173,6 +1173,19 @@ export default (options,state) => {
                     required:false,          
                   }, 
                   {
+                    label: 'Imagem ou ícone',
+                    name: 'img',
+                    widget: 'image',
+                    required:false,
+                  },  
+                  {
+                    label: "Observação",
+                    hint:"",
+                    name: "description_after",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
                     label: "Texto do botão",
                     hint:"",
                     name: "button_text",
