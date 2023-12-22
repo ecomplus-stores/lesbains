@@ -61,33 +61,6 @@
           "value": 1000
         }
       ]
-    },
-    {
-      "upload": {
-        "enable": false
-      },
-      "title": "propriedade_da_lente",
-      "step_title": "Propriedade da Lente",
-      "list": [
-        {
-          "input_type_required": false,
-          "title": "Comfort",
-          "description": "Lente padrão",
-          "type": "Fixo",
-          "value": 0
-        },
-        {
-          "input_type_required": false,
-          "title": "Premium",
-          "type": "Fixo",
-          "value": 98
-        }
-      ],
-      "conditions": {
-        "condition_grid": null,
-        "condition_type": null,
-        "condition_value": ""
-      }
     }
   ],
   "upselling": [],
