@@ -1121,7 +1121,7 @@ export default (options,state) => {
             fields: [
               {
                 label: 'Grid da Personalização',
-                name: 'title',
+                name: 'title_id',
                 widget: 'select',
                 hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione. Personalizações do tipo texto/gravação devem ter somente uma opção cadastrada por bloco",
                 options: window.storefront.data.grids
@@ -1133,7 +1133,7 @@ export default (options,state) => {
               {
                 label: "Título do Passo",
                 hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
-                name: "step_title",
+                name: "title",
                 widget: "string",
                 required:false,          
               }, 

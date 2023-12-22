@@ -27,16 +27,16 @@
           "value": 0
         }
       ],
-      "title": "necessidade_de_visao",
-      "step_title": "Necessidade de Visão",
+      "title_id": "necessidade_de_visao",
+      "title": "Necessidade de Visão",
       "step_description": "Cada lente corretiva é realizada utilizando a mais avançada tecnologia e gravada com a icônica assinatura Ray-Ban. Com base na sua receita, escolha sua lente entre as opções abaixo"
     },
     {
       "upload": {
         "enable": false
       },
-      "title": "tipo_de_lente",
-      "step_title": "Escolha seu tipo de lente",
+      "title_id": "tipo_de_lente",
+      "title": "Escolha seu tipo de lente",
       "step_description": "Cada lente é realizada utilizando a mais avançada tecnologia e gravada com a icônica assinatura Ray-Ban. Escolha em função de suas atividades e estilo de vida diários.",
       "list": [
         {

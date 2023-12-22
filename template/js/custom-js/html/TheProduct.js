@@ -382,14 +382,14 @@ export default {
       if(!this.upsellCustomizations[key]){
         this.upsellCustomizations[key] = []
       }
-      this.upsellCustomizations[key][obj.title] = {value:value, params:obj}
+      this.upsellCustomizations[key][obj.title_id] = {value:value, params:obj}
       console.log(this.upsellCustomizations)
     },
     setTextCustomization(index, key, obj, value){
       if(!this.textCustomizations[key]){
         this.textCustomizations[key] = []
       }
-      this.textCustomizations[key][obj.title] = {value:value, params:obj}
+      this.textCustomizations[key][obj.title_id] = {value:value, params:obj}
       //console.log(this.textCustomizations)
       let customizationContent = "";
       let customizationPrice = 0;
@@ -412,7 +412,7 @@ export default {
             customizationPrice+= (product_price * (customization_.params.value / 100))
           }              
         }
-        customizationContent+= `${customization_.params.title}: ${customization_.value}\n`
+        customizationContent+= `${customization_.params.title_id}: ${customization_.value}\n`
       });
       //console.log(obj, key)
 
@@ -429,9 +429,9 @@ export default {
       console.log(this.cms_customizations.length, this.cms_upselling.length, this.cms_customizations_step)
     },
     setDeepCustomizationOption(index,grid_id,item){
-      console.log(item)
+      console.log(index, grid_id,item)
       this.current_customization[index] = {[grid_id] : item}
-      //console.log(this.current_customization)
+      console.log(this.current_customization)
       this.cms_customizations_step++
     },
     totalWithCustomization(){
@@ -550,6 +550,7 @@ export default {
       product.pictures = this.productToGallery.pictures
       //const customizations = [...this.customizations]
       let customCustomizations = []
+      console.log('current_customization',this.current_customization)
       for (const item of this.current_customization) {
         let customizationFromBody = this.body.customizations.find(el => el.grid_id == Object.keys(item)[0])
         if(customizationFromBody){        
@@ -564,7 +565,7 @@ export default {
           })
         }
       }
-
+      console.log('customCustomizations',customCustomizations)
       let upsellProductAdd = this.pickedUpsellProduct
       let upsellProductCustomizations = []
       //let kitId = genRandomObjectId()
@@ -608,7 +609,7 @@ export default {
             }
             
             //console.log('content',customizationContent + `${customization_.params.title}: ${customization_.value}\n`)
-            customizationContent+= `${customization_.params.title}: ${customization_.value}\n`
+            customizationContent+= `${customization_.params.title_id}: ${customization_.value}\n`
           });
           //console.log('upsellProductAdd.customizations',upsellProductAdd.customizations, key)
           //console.log('customizationContent',customizationContent)
@@ -837,6 +838,7 @@ export default {
   },
 
   created () {
+    
     //this.cms_customizations = [...($('[data-customizations]').length > 0 && $('[data-customizations]').attr('data-customizations') != '' ? JSON.parse($('[data-customizations]').attr('data-customizations')) : [])]
     this.cms_customizations = window.apx_lib.customizations ? window.apx_lib.customizations : [];
     this.cms_currentLib = window.apx_lib_content ? window.apx_lib_content : [];
@@ -922,6 +924,7 @@ export default {
   },
 
   mounted () {
+    console.log('product',this.body)
     window.mainProductGallery_ = [...this.body.pictures] 
     window.mainProductGallery = [...this.body.pictures]
     //console.log(this.body.customizations)
