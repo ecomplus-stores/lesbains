@@ -500,7 +500,7 @@ export default {
         let formData = new FormData();
         formData.append('files', file);
 
-        fetch('http://localhost:1337/api/webhooks/file-upload', {
+        fetch('https://storeboost.up.railway.app/api/webhooks/file-upload', {
           method: 'POST',
           body: formData,
         })
@@ -535,7 +535,7 @@ export default {
           //   this.customizations.splice(index, 1)
           // }
           this.customizationLoading = false
-          console.log('updated',this.current_customization[index].receita_medica)
+          console.log('updated',this.current_customization[index][])
         })
         
         .catch(error => {
