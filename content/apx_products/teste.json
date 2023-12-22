@@ -61,6 +61,82 @@
           "value": 1000
         }
       ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title_id": "propriedade_da_lente",
+      "title": "Propriedade da Lente (AR)",
+      "conditions": {
+        "condition_grid": "propriedade_da_lente",
+        "condition_type": "=",
+        "condition_value": "Antireflexo"
+      },
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort"
+        },
+        {
+          "input_type_required": false,
+          "title": "Comfort (Fina)",
+          "type": "Fixo",
+          "value": 10
+        },
+        {
+          "input_type_required": false,
+          "title": "Premium",
+          "type": "Fixo",
+          "value": 20
+        },
+        {
+          "input_type_required": false,
+          "title": "Premium (Fina)",
+          "type": "Fixo",
+          "value": 18
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title_id": "tratamento_da_lente",
+      "title": "Tratamento da Lente (AR)",
+      "conditions": {
+        "condition_grid": "tipo_de_lente",
+        "condition_type": "=",
+        "condition_value": "Antireflexo"
+      },
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antireflexo"
+        },
+        {
+          "input_type_required": false,
+          "title": "Antireflexo + Antirisco",
+          "type": "Fixo",
+          "value": 16
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": true,
+        "title": "Envie sua receita",
+        "description": "Aqui a descrição",
+        "button_text": "Clique aqui para enviar"
+      },
+      "title_id": "receita_medica",
+      "title": "Receita Médica",
+      "step_description": "Faça o envio de sua receita",
+      "conditions": {
+        "condition_grid": "necessidade_de_visao",
+        "condition_type": "!=",
+        "condition_value": "Convencional"
+      }
     }
   ],
   "upselling": [],
