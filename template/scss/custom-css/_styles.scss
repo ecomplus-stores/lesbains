@@ -63,6 +63,14 @@ header#header{
             font-weight:500;
         }
     }
+    .apx_topbar.first{
+        *{
+            color:var(--color);
+            font-size: calc(var(--f14) * .8);
+            text-align: center;
+            font-weight:500;
+        }
+    }
 
     #apx-menu{
         line-height: initial;
@@ -993,8 +1001,11 @@ header#header{
         }
         .variations__option.with-image{
             padding: 0;
+            width:25%;
+            overflow: hidden;
+            width: calc(25% - var(--spacer-2));
             img{
-                height: 77px;
+                width: 100%;
             }
         }
     }
@@ -1860,4 +1871,39 @@ body .search-engine__nav{
 .item-customizations.small.cart-item__customizations{
     text-overflow: ellipsis;
     word-break: break-all;
+}
+
+
+@media(min-width:1000px) and (max-width:1550px){
+    .header__logo {
+        max-height: 40px;
+        
+    }
+    header#header #apx-menu .level_1{
+        gap: 1.4rem;
+    }
+    header#header #apx-menu .level_1 li a {
+        font-size: calc(var(--f17) * .8);
+        text-transform: uppercase;
+    }
+
+    .row-header{
+        .apx-logo{}
+        #apx-functions{}
+        #apx-menu{}
+    }
+    header#header #apx-functions .header__buttons a, header#header #apx-functions .header__buttons button{
+        display: flex;
+        align-items: center;
+    }
+    header#header #apx-functions .header__buttons a img, header#header #apx-functions .header__buttons button img{
+        height: 24px;
+    }
+    header#header #apx-functions .header__buttons{gap:.5rem}
+    #page-products .variations__grid .variations__option.with-image{
+        width:25%;
+        overflow: hidden;
+        width: calc(25% - var(--spacer-2));
+        img{max-width: 100%;height: auto;}
+    }
 }

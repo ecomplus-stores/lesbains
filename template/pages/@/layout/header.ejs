@@ -29,7 +29,7 @@ let marketingStripeStyle = ''
 <div id="overlay" class="fade"></div>
 <header class="header" id="header" style="--background:<%= apx_header.background %>;--color:<%= apx_header.color %>">
   <% if(apx_header?.topbar_1?.list?.length > 0){ %>
-    <div class="apx_topbar py-md-3 py-2" style="--color:<%= apx_header.topbar_1.color %>; --background:<%= apx_header.topbar_1.background %>;">
+    <div class="apx_topbar first py-md-2 py-1" style="--color:<%= apx_header.topbar_1.color %>; --background:<%= apx_header.topbar_1.background %>;">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -52,20 +52,20 @@ let marketingStripeStyle = ''
     </div>
   <%  } %>
   <div class="container-fluid px-md-5 px-md-0 px-3 py-3">    
-    <div class="row align-items-center py-md-4 py-1 px-0 px-md-0 ">
-      <div class="col d-block d-md-none">
+    <div class="row row-header align-items-center py-md-4 py-1 px-0 px-md-0 ">
+      <div class="col col-logo d-block d-md-none">
         <button type="button" class="menu-trigger" onclick="$('#apx-menu').toggleClass('visible');">                       
           <span></span>
           <span></span>
           <b>MENU</b>
         </button>
       </div>
-      <div class="col" id="apx-logo">
+      <div class="col col-lg-2" id="apx-logo">
         <a href="/">
           <%- await include('@/layout/inc/logo', { _ }) %>
         </a>
       </div>
-      <div class="col-12 col-md-auto" id="apx-menu">
+      <div class="col-12 col-lg-8 col-md-auto" id="apx-menu">
         <div class="d-block d-md-none">
           <button type="button" class="apx_close" onclick="$('#apx-menu').toggleClass('visible');">                       
 
@@ -137,7 +137,7 @@ let marketingStripeStyle = ''
         </ul>        
       </div>      
       
-      <div class="col-md col justify-content-end" id="apx-functions">       
+      <div class="col-md col-lg-2 col justify-content-end" id="apx-functions">       
         <div
           class="header__buttons"
           role="group"
