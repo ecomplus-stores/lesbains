@@ -2,57 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
-      <loc>https://lesbains.netlify.app/oculos-de-sol-chat-noir-azul-claro</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://lesbains.netlify.app/relogio-nori-amarelo-e-preto</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://lesbains.netlify.app/oculos-de-sol-kariv-tartaruga</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://lesbains.netlify.app/produto-teste</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://lesbains.netlify.app/case-preto-premium</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
       <loc>https://lesbains.netlify.app/teste</loc>
       <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://lesbains.netlify.app/produto-combinado</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://lesbains.netlify.app/produto-teste-c621</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://lesbains.netlify.app/oculos-de-sol/oculos-de-sol-redondo-esmares</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
+      <priority>0.8</priority>
     </url>
   
     <url>
@@ -299,6 +251,54 @@
       <loc>https://lesbains.netlify.app/oculos-de-sol</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/oculos-de-sol-chat-noir-azul-claro</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/relogio-nori-amarelo-e-preto</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/oculos-de-sol-kariv-tartaruga</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/produto-teste</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/case-preto-premium</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/produto-combinado</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/produto-teste-c621</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/oculos-de-sol/oculos-de-sol-redondo-esmares</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
     </url>
   
     <url>
