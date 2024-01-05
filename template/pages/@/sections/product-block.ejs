@@ -164,7 +164,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                 }
                 %>
                 <script>
-                  window.apx_lib_content = JSON.parse(<%- JSON.stringify(JSON.stringify(current_lib_[0])) %>)
+                  window.apx_lib_content = JSON.parse(<%- JSON.stringify(JSON.stringify(current_lib_[0] || [])) %>)
                 </script>
                 <!-- <%
                 if(current_lib_ && current_lib_[0] && current_lib_[0].list){
@@ -341,7 +341,37 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
             /<img class="lozad" data-src="([^'"]+)"([^>]+)class=['"]([^'"]+)['"]([^/>]+)?>/g,
             '<img class="lozad $3" data-src="$1" $2 $4>'
           ) %>
+
+          
+            <% if (_.state.specifications) { %>
+              <hr></hr>
+              
+              <section id="product-specs" class="product-specs">
+                <div class="">
+                  <ul class="p-0 m-0">
+                    
+                      <% for (const gridId in _.state.specifications) {
+                        if (_.state.specifications[gridId]) {
+                          %>
+                          <li>
+                            <div class="text-muted">
+                              <%= _.ecomUtils.gridTitle(gridId, _.grids) %>
+                            </div>
+                            <div>
+                              <%= _.ecomUtils.specTextValue(_.state, gridId, _.grids) %>
+                            </div>
+                          </li>
+                          <%
+                        }
+                      } %>
+                    
+                  </ul>
+                </div>
+              </section>
+            <% } %>          
+          
         </div>
+        
       </div>
     </div>
   <% } %>
