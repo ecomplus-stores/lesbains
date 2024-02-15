@@ -108,6 +108,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
             }
             %>   
           </div> -->
+          <div id="sb-product-testimonials"></div>
         </div>
 
         <div class="col-12 col-md-5 pt-md-5 pl-md-5 pr-md-5">
@@ -119,6 +120,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
               <p class="product__sku">
                 COD: <%= _.state.sku %>
               </p>
+              <div id="sb-reviews-product-rating"></div>
             </div>
             <% if (_.state.short_description) { %>
               <p class="product__info mt-3 lead">
@@ -148,7 +150,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                 if (Array.isArray(apx_products_) && apx_products_.length > 0) {      
                   apx_products_.forEach(item => { 
                     const lib = (_.cms(`apx_products_content/${item}`))
-                    if(current_lib_.length == 0 && lib.identificador.find(el => el == _.state.sku)){
+                    if(current_lib_.length == 0 && (lib.identificador.find(el => el == _.state.sku) || lib.identificador.length == 0)){
                       current_lib_.push(lib)
                       return
                     }
@@ -322,6 +324,85 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
     <% } %>
     <script>
       window.apx_product = JSON.parse(<%- JSON.stringify(JSON.stringify(_.state)) %>);
+    </script>
+
+    
+    <script>
+      window.sbTestimonialData = {
+        filters: {
+          product_main_sku: `<%- _.state.sku %>`
+        },
+        pagination: {
+          page:1,
+          per_page:1
+        }
+      };
+      //STOREBOOST TESTIMONIAL SCRIPT
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const url = 'http://localhost:1337/api/data/get';
+        const config = window.sbTestimonialConfig || {
+          SB_productStarId : 'sb-reviews-product-rating',
+          SB_testimonialListId : 'sb-product-testimonials'
+        };
+        
+        const data = window.sbTestimonialData || {
+          pagination: {
+            page:1,
+            per_page:3
+          }
+        };
+
+        window.sbTestimonialData = data;
+
+        const headers = {
+          'Content-Type': 'application/json',
+          'app-id': '5',
+        };
+
+        const elStars = document.getElementById(config.SB_productStarId);
+        const elList = document.getElementById(config.SB_testimonialListId);
+        
+        if(elStars && elList){
+          fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(data),
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log('SB_Testimonials - OK');
+            })
+            .catch(error => {
+              console.error('SB_Testimonials - ERR');
+            });
+        }else{
+          console.error('SB_Testimonials - Set elements on DOM before any call');
+        }
+
+        const SB_testimonials = {
+          setProductStars: function(rating, el){
+            if(!el.childNodes.length){
+
+            }
+          },
+          loadMoreTestimonials: function(per_page, current_page){
+            window.sbTestimonialData.pagination.page++            
+            fetch(url, {
+              method: 'POST',
+              headers: headers,
+              body: JSON.stringify(window.sbTestimonialData),
+            })
+              .then(response => response.json())
+              .then(data => {
+                console.log('SB_Testimonials - Page ' + window.sbTestimonialData.pagination.page);
+              })
+              .catch(error => {
+                console.error('SB_Testimonials - ERR Page ' + window.sbTestimonialData.pagination.page);
+              });
+          }
+
+        }
+      })
     </script>
   <!-- </div> -->
 <div class="apx_tabs_content">
