@@ -1,22 +1,20 @@
 {
-  "identificador": [],
-  "title": "TESTE",
+  "identificador": [
+    "LIA9293"
+  ],
+  "title": "Conteúdo Padrão",
   "list": [
     {
-      "title": "Polarizado",
-      "content": "<!--StartFragment-->\n\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.\n\nDonec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.\n\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\nPraesent dapibus neque id cursus faucibus tortor neque egestas auguae eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi tincidunt quis accumsan porttitor facilisis luctus metus.\n\nPhasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam gravida non commodo a sodales sit amet nisi.\n\n<!--EndFragment-->"
-    },
-    {
       "title": "Embalagem",
-      "content": "<!--StartFragment-->\n\nDonec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.\n\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\nPraesent dapibus neque id cursus faucibus tortor neque egestas auguae eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi tincidunt quis accumsan porttitor facilisis luctus metus.\n\nPhasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam gravida non commodo a sodales sit amet nisi.\n\n<!--EndFragment-->"
+      "content": "Caixa para Proteção, Estojo de Couro Ecológico, Flanela de limpeza das lentes em microfibra"
     },
     {
-      "title": "Troca e Devolução",
-      "content": "<!--StartFragment-->\n\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\nPraesent dapibus neque id cursus faucibus tortor neque egestas auguae eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi tincidunt quis accumsan porttitor facilisis luctus metus.\n\nPhasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam gravida non commodo a sodales sit amet nisi.\n\n<!--EndFragment-->"
+      "title": "Envio e Devolução",
+      "content": "Envio de 1 a 3 dias, frete grátis em todas as encomendas acima de R$297. Se você recebeu um produto e não ficou satisfeito, ele não serviu ou se arrependeu da compra, é possível fazer a solicitação de devolução para estorno em até 7 (sete) dias corridos após o recebimento. Consulte nossa página de Devoluções para obter detalhes completos. Saiba mais aqui."
     },
     {
       "title": "Garantia",
-      "content": "<!--StartFragment-->\n\nMorbi in sem quis dui placerat ornare. Pellentesque odio nisi euismod in pharetra a ultricies in diam. Sed arcu. Cras consequat.\n\nPraesent dapibus neque id cursus faucibus tortor neque egestas auguae eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi tincidunt quis accumsan porttitor facilisis luctus metus.\n\nPhasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam gravida non commodo a sodales sit amet nisi.\n\n<!--EndFragment-->"
+      "content": "Nossos óculos de sol são garantidos contra defeitos de fabricação por 12 meses a partir da data de compra. A cobertura é apenas com comprovante de compra. A garantia não cobre danos causados por desgaste geral, abuso ou mau manuseio. Saiba mais aqui."
     }
   ]
 }
