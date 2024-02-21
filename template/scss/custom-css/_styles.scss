@@ -4,7 +4,8 @@
     --f42: 42.72px;
     --f27: 27.34px;
     --f21: 21.88px;
-    --f17: 17.5px;
+    // --f17: 17.5px;
+    --f17: 16.5px;
     --f14: 14px;
     --f12: 12px;
     --f11: 11.2px;
@@ -1874,7 +1875,7 @@ body .search-engine__nav{
 }
 
 
-@media(min-width:1000px) and (max-width:1550px){
+@media(min-width:1000px) and (max-width:1440px){
     .header__logo {
         max-height: 40px;
         
@@ -1927,5 +1928,16 @@ body .search-engine__nav{
         }
         li:nth-child(odd){background: #f8f8f8;}
         li::marker{display: none;}
+    }
+}
+
+.apx_tabs_content {
+    .content{
+        .html-clearfix{
+            *{
+                font-size: var(--f14)!important;
+                line-height: calc(var(--f14)* 1.6);
+            }
+        }
     }
 }

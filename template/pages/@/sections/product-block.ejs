@@ -150,7 +150,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                 if (Array.isArray(apx_products_) && apx_products_.length > 0) {      
                   apx_products_.forEach(item => { 
                     const lib = (_.cms(`apx_products_content/${item}`))
-                    if(current_lib_.length == 0 && (lib.identificador.find(el => el == _.state.sku) || lib.identificador.length == 0)){
+                    if(current_lib_.length == 0 && (lib.identificador.find(el => el == _.state.sku) || lib.identificador == 'default')){
                       current_lib_.push(lib)
                       return
                     }
@@ -450,7 +450,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                 </div>
               </section>
             <% } %>          
-          
+            <img src="/img/medidas2.jpg"/>
         </div>
         
       </div>

@@ -1042,6 +1042,8 @@ export default (options,state) => {
             widget: 'select',
                 multiple: true,
                 options: [
+                  {label: 'Default / Padrão / Todos os Produtos',
+                value: 'default'},
                   ...options.state.routes
                   .filter(({ sku }) => typeof sku === 'string')
                   .map(({ sku }) => ({
