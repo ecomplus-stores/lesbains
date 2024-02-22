@@ -1019,6 +1019,24 @@ export default (options,state) => {
             widget: 'image',
             required:false,
           },   
+          {
+            label: 'Cor 1',
+            name: 'color_1',
+            widget: 'color',
+            required:false,
+          },   
+          {
+            label: 'Cor 2',
+            name: 'color_2',
+            widget: 'color',
+            required:false,
+          },   
+          {
+            label: 'Cor 3',
+            name: 'color_3',
+            widget: 'color',
+            required:false,
+          },   
         ]
       },
       {

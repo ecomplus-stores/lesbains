@@ -14,27 +14,27 @@
   "links": [
     {
       "title": "Novidades",
-      "url": "/"
+      "url": "/novidades"
     },
     {
       "title": "Óculos de Sol",
-      "url": "/"
+      "url": "/oculos-de-sol"
     },
     {
       "title": "Óculos de Grau",
-      "url": "/"
+      "url": "/oculos-de-grau"
     },
     {
       "title": "Lentes de Grau",
-      "url": "/"
+      "url": "/lentes-de-grau"
     },
     {
       "title": "Relógios",
-      "url": "/"
+      "url": "/relogios"
     },
     {
       "title": "Personalize",
-      "url": "/"
+      "url": "/personalize"
     }
   ],
   "topbar_2": {

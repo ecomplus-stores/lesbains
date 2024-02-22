@@ -159,6 +159,9 @@
                             <span class="cms_ico d-flex align-items-center" v-if="getCMSPropInfo(opt.key) && getCMSPropInfo(opt.key).img">
                               <img :src="getCMSPropInfo(opt.key).img"/>
                             </span>
+                            <span v-else>
+                                {{ JSON.stringify(opt) }}
+                            </span>
                             {{ opt.key }}
                             <small v-if="!isSpec">
                                 ({{ opt.doc_count }})

@@ -1941,3 +1941,7 @@ body .search-engine__nav{
         }
     }
 }
+
+header.header {
+    .search-engine__aside{display:none!important}
+}
