@@ -11,58 +11,60 @@
         },
         {
           "input_type_required": false,
-          "title": "Miopia",
-          "description": "teste teste teste",
+          "title": "Visão Simples",
+          "description": "Lente para perto ou longe",
           "type": "Fixo",
-          "value": 100
+          "value": 0,
+          "input_type": "Não"
         },
         {
           "input_type_required": false,
-          "title": "Astigmatismo",
-          "description": "teste 2 teste 2",
-          "type": "%",
-          "value": 10
+          "title": "Multifocal",
+          "description": "Lente para perto e longe na mesma lente",
+          "type": "Fixo",
+          "value": 0
         }
       ],
-      "title": "necessidade_de_visao",
+      "title": "Necessidade de Visão",
       "step_title": "Selecione sua necessidade de visão",
-      "step_description": "No passo abaixo você deve escolher se tem algum problema de visão. Dessa forma podemos indicar a lente correta para o seu caso."
+      "step_description": "No passo abaixo você deve escolher se tem algum problema de visão. Dessa forma podemos indicar a lente correta para o seu caso.",
+      "title_id": "necessidade_de_visao",
+      "upload": {
+        "enable": true
+      }
     },
     {
-      "multi_option": false,
-      "title": "lentes",
+      "upload": {
+        "enable": true
+      },
+      "title_id": "tipo_de_lente",
+      "title": "Tipo da Lente",
       "list": [
         {
           "input_type_required": false,
-          "title": "Preta",
-          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. ",
-          "img": "/img/uploads/rectangle-37.png",
-          "type": "Fixo",
-          "value": 100
+          "title": "Lentes básicas",
+          "description": "Com ou sem tratamento antirreflexo"
         },
         {
           "input_type_required": false,
-          "title": "Marrom",
-          "description": "Nullam malesuada erat ut turpis. ",
-          "img": "/img/uploads/rectangle-37-1-.png",
-          "type": "Fixo",
-          "value": 150
+          "title": "Lentes premium",
+          "description": "Com tratamentos adicionais, como antirrisco, finas e proteção contra luz azul."
         },
         {
           "input_type_required": false,
-          "title": "Verde (Polarizada)",
-          "description": "Suspendisse urna nibh viverra non semper suscipit posuere a pede.",
-          "img": "/img/uploads/rectangle-37-2-.png",
-          "type": "Fixo",
-          "value": 300
+          "title": "Lentes fotossensíveis",
+          "description": "Se adaptam à luz ambiente"
+        },
+        {
+          "input_type_required": false,
+          "title": "Lentes solares com grau",
+          "description": "Para quem precisa de correção visual ao ar livre"
         }
-      ],
-      "step_title": "Escolha suas lentes",
-      "step_description": "Lentes de diversas cores e tipos. Escolha a opção ideal para combinar com a armação que já escolheu."
+      ]
     },
     {
       "multi_option": false,
-      "title": "grau_das_lentes",
+      "title": "Grau das Lentes",
       "list": [
         {
           "input_type_required": false,
@@ -79,35 +81,11 @@
       "conditions": {
         "condition_grid": "necessidade_de_visao",
         "condition_value": "Miopia,Astigmatismo"
+      },
+      "title_id": "grau_das_lentes",
+      "upload": {
+        "enable": true
       }
-    },
-    {
-      "title": "gravacao",
-      "step_title": "Gravação",
-      "step_description": "Adicione um texto personalizado nas astes da sua armação. Lembrando que as gravações \"internas\" não são visíveis quando estiver usando os óculos.",
-      "list": [
-        {
-          "input_type_required": false,
-          "title": "Aste Esquerda - Interno",
-          "description": "",
-          "input_type": "text"
-        },
-        {
-          "input_type_required": false,
-          "title": "Aste Esquerda - Externo",
-          "input_type": "text"
-        },
-        {
-          "input_type_required": false,
-          "title": "Aste Direita - Interno",
-          "input_type": "text"
-        },
-        {
-          "input_type_required": false,
-          "title": "Aste Direita - Externo",
-          "input_type": "text"
-        }
-      ]
     }
   ],
   "upselling": [
