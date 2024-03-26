@@ -30,12 +30,12 @@
       "step_description": "No passo abaixo você deve escolher se tem algum problema de visão. Dessa forma podemos indicar a lente correta para o seu caso.",
       "title_id": "necessidade_de_visao",
       "upload": {
-        "enable": true
+        "enable": false
       }
     },
     {
       "upload": {
-        "enable": true
+        "enable": false
       },
       "title_id": "tipo_de_lente",
       "title": "Tipo da Lente",
@@ -84,7 +84,7 @@
       },
       "title_id": "grau_das_lentes",
       "upload": {
-        "enable": true
+        "enable": false
       }
     }
   ],
