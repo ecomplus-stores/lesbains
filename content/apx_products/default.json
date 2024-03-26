@@ -42,23 +42,89 @@
       "list": [
         {
           "input_type_required": false,
-          "title": "Lentes básicas",
-          "description": "Com ou sem tratamento antirreflexo"
+          "title": "Antirreflexo",
+          "description": ""
         },
         {
           "input_type_required": false,
-          "title": "Lentes premium",
-          "description": "Com tratamentos adicionais, como antirrisco, finas e proteção contra luz azul."
+          "title": "Luz Azul",
+          "description": ""
         },
         {
           "input_type_required": false,
-          "title": "Lentes fotossensíveis",
-          "description": "Se adaptam à luz ambiente"
+          "title": "Fotossensível",
+          "description": ""
         },
         {
           "input_type_required": false,
-          "title": "Lentes solares com grau",
-          "description": "Para quem precisa de correção visual ao ar livre"
+          "title": "Solar com Grau",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "title_id": "propriedade_da_lente",
+      "conditions": {
+        "condition_grid": "tipo_de_lente",
+        "condition_type": "=",
+        "condition_value": "Antirreflexo"
+      },
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Monofocal",
+          "type": "Fixo",
+          "value": 59
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "type": "Fixo",
+          "value": 79
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo com Antirrisco",
+          "type": "Fixo",
+          "value": 359
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Fina",
+          "type": "Fixo",
+          "value": 149,
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Fina com Antirrisco",
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo Premium",
+          "type": "Fixo",
+          "value": 449
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo Premium com Antirrisco",
+          "type": "Fixo",
+          "value": 579
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo Premium + Fina"
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo Premium + Fina com Antirrisco",
+          "type": "Fixo",
+          "value": 969
         }
       ]
     },
