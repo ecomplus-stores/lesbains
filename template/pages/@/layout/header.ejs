@@ -33,13 +33,13 @@ let marketingStripeStyle = ''
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="slick-me">
+            <div class="slick-me" data-carrossel_md="Sim" data-carrossel_sm="Sim" data-num_col_md="1" data-num_col_sm="1"  data-carrossel_dots_md="Não" data-carrossel_dots_sm="Não" data-carrossel_arrows_md="Não" data-carrossel_arrows_sm="Não" data-carrossel_autoplay_md="Sim" data-carrossel_autoplay_sm="Sim" >
             <% apx_header.topbar_1.list.forEach(({ url, title })=> { %>
               <div>
                   <% if(url){ %> 
                   <a href="<%= url %>"> 
                   <% } %>
-                    <%= title %>
+                    <%- title %>
                   <% if(url){ %> 
                   </a>
                   <% } %>
@@ -246,7 +246,7 @@ let marketingStripeStyle = ''
                     <% if(url){ %> 
                     <a href="<%= url %>"> 
                     <% } %>
-                      <%= title %>
+                      <%- title %>
                     <% if(url){ %> 
                     </a>
                     <% } %>

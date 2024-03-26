@@ -6,7 +6,11 @@
     "background":"#0A313F",
     "list": [
       {
-        "title": "FRETE GRÁTIS PARA TODO O BRASIL",
+        "title": "<u>NOVIDADE!</u> COMPRE ÓCULOS DE GRAU ONLINE E RECEBA EM CASA!",
+        "url": "/"
+      },
+      {
+        "title": "PAGUE EM ATÉ <b>5x SEM JUROS</b>",
         "url": "/"
       }
     ]
@@ -42,11 +46,11 @@
     "background":"#701630",
     "list": [
       {
-        "title": "FRETE GRÁTIS PARA TODO O BRASIL",
+        "title": "<b>FRETE GRÁTIS</b> PARA PEDIDOS ACIMA DE R$ 297!",
         "url": "/"
       },
       {
-        "title": "FRETE GRÁTIS PARA TODO O BRASIL 2",
+        "title": "ENTREGA RÁPIDA PARA CIDADE DE SÃO PAULO! CONFIRA!",
         "url": "/"
       }
     ]
