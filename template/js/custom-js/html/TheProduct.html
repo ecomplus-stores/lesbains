@@ -4,6 +4,7 @@
   :data-sku="body.sku"
   :data-selected-variation="selectedVariationId"
 >
+
   <a-alert
     :can-show="hasLoadError"
     variant="danger"
@@ -48,64 +49,34 @@
         :key="index">
           <button
           :class="cms_customizations_step == index   ? 'active' : ''">
-            {{index }}
+            {{ index }}
           </button>
         </div>
       </div>
-      
+      <div>Customizations: {{body.customizations}}</div>
       <div class="customizations_body px-md-3">
         <div class="step px-md-3"
         v-for="(item, index) in cms_customizations"
-        :key="index"
+        :key="'main_'+index"
         :class="cms_customizations_step == index + 1  ? 'current' : ''"
         > 
-        <div class="option_title text-center mb-4 mb-md-5">
-          <h4>{{item.title || body.customizations.find(el => el.grid_id == item.title_id).label}}</h4>
-          <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
-        </div>
-          <div class="option_options">            
-            <div class="option mb-md-4 mb-4"
-            v-for="(item_,index_) in item.list"
-            :key="index_"
-            >
-            <div v-if="item_.input_type && item_.input_type != 'Não'" class="button_box_style">
-              <div class="row justify-content-between align-items-start">
-                <div class="col">
-                  <div class="row justify-content-between align-items-start">
-                    <div class="col">
-                      <div class="option_title"><b>{{item_.title}}</b></div>
-                    </div>
-                    <div class="col-auto">
-                      <strong v-if="item_.type == 'Fixo'" class="option_price">
-                        {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
-                      </strong>
-                      <strong v-else class="option_price">
-                        {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
-                      </strong>
-                    </div>
-                  </div>                          
-                </div>                        
-              </div>
-              <div class="mt-3" v-if="item_.description">
-                <p class="option_description">{{item_.description}}</p>
-              </div>
-              <div class="mt-3 input_digitable">
-                <input @keyup="setTextCustomization(index,item.title_id, item_, $event.target.value)"  :type="item_.input_type" :max="item_.input_type_max" :required="item_.input_type_required ? true : false"/>
-              </div>              
-            </div>
-            <div v-else>
-              
-              <button 
-              :class="current_customization[index] && current_customization[index][item.title_id].title == item_.title ? 'active' : ''"
-              @click="setDeepCustomizationOption(index,item.title_id,item_)" class="w-100" type="button">
+        
+        <div v-if="cms_customizations_step == index + 1 && (item.conditions ? hasCondition(item.conditions) : true)">
+          <div class="option_title text-center mb-4 mb-md-5">
+            <h4>{{item.title || body.customizations.find(el => el.grid_id == item.title_id).label}}</h4>
+            <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
+          </div>
+            <div class="option_options">            
+              <div class="option mb-md-4 mb-4"
+              v-for="(item_,index_) in item.list"
+              :key="'customizations_'+index_"
+              >
+              <div v-if="item_.input_type && item_.input_type != 'Não'" class="button_box_style">
                 <div class="row justify-content-between align-items-start">
-                  <div class="col-2 pr-0" v-if="item_.img">
-                      <img class="option_image" :src="item_.img" alt="">
-                  </div>
                   <div class="col">
                     <div class="row justify-content-between align-items-start">
                       <div class="col">
-                        <span class="option_title">{{item_.title}}</span>
+                        <div class="option_title"><b>{{item_.title}}</b></div>
                       </div>
                       <div class="col-auto">
                         <strong v-if="item_.type == 'Fixo'" class="option_price">
@@ -115,42 +86,75 @@
                           {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
                         </strong>
                       </div>
-                    </div>
-                  </div>
+                    </div>                          
+                  </div>                        
                 </div>
                 <div class="mt-3" v-if="item_.description">
-                  <p class="option_description">
-                    {{item_.description}}
-                  </p>                  
+                  <p class="option_description">{{item_.description}}</p>
                 </div>
+                <div class="mt-3 input_digitable">
+                  <input @keyup="setTextCustomization(index,item.title_id, item_, $event.target.value)"  :type="item_.input_type" :max="item_.input_type_max" :required="item_.input_type_required ? true : false"/>
+                </div>              
+              </div>
+              <div v-else>
+                
+                <button 
+                :class="current_customization[index] && current_customization[index][item.title_id].title == item_.title ? 'active' : ''"
+                @click="setDeepCustomizationOption(index,item.title_id,item_)" class="w-100" type="button">
+                  <div class="row justify-content-between align-items-start">
+                    <div class="col-2 pr-0" v-if="item_.img">
+                        <img class="option_image" :src="item_.img" alt="">
+                    </div>
+                    <div class="col">
+                      <div class="row justify-content-between align-items-start">
+                        <div class="col">
+                          <span class="option_title">{{item_.title}}</span>
+                        </div>
+                        <div class="col-auto">
+                          <strong v-if="item_.type == 'Fixo'" class="option_price">
+                            {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                          </strong>
+                          <strong v-else class="option_price">
+                            {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : 'Grátis'}}
+                          </strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-3" v-if="item_.description">
+                    <p class="option_description">
+                      {{item_.description}}
+                    </p>                  
+                  </div>
+                </button>              
+              </div>
+              
+              </div>
+              <div v-if="item.upload.enable" class="upload-option">
+                <h3>{{item.upload.title}}</h3>
+                <p>{{item.upload.description}}</p>
+                <div v-if="item.upload.img && !(current_customization[index] && current_customization[index][item.title_id])" class="text-center"><img :src="item.upload.img"/></div>
+                <div v-if="current_customization[index] && current_customization[index][item.title_id]" clss="text-center"><img :src="current_customization[index][item.title_id].title"/></div>
+                <input type="file" :id="item.title_id + '_file'"/>
+                <button type="button" @click="setUploadCustomization(index,item.title_id)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 11V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V11M12 3L12 15M12 3L16 7M12 3L8 7" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                    <span>{{item.upload.button_text}}</span>
+                </button>
+                <p>{{item.upload.description_after}}</p>
+              </div>
+            </div>  
+            <div class="customization_functions d-flex flex-column">
+              <hr></hr>
+              <div class="row">
+                <div class="col"><b>Subtotal</b></div>
+                <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
+              </div>
+              <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+                Avançar
               </button>              
             </div>
-            
-            </div>
-            <div v-if="item.upload.enable" class="upload-option">
-              <h3>{{item.upload.title}}</h3>
-              <p>{{item.upload.description}}</p>
-              <div v-if="item.upload.img && !(current_customization[index] && current_customization[index][item.title_id])" class="text-center"><img :src="item.upload.img"/></div>
-              <div v-if="current_customization[index] && current_customization[index][item.title_id]" clss="text-center"><img :src="current_customization[index][item.title_id].title"/></div>
-              <input type="file" :id="item.title_id + '_file'"/>
-              <button type="button" @click="setUploadCustomization(index,item.title_id)">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 11V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V11M12 3L12 15M12 3L16 7M12 3L8 7" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg> 
-                  <span>{{item.upload.button_text}}</span>
-              </button>
-              <p>{{item.upload.description_after}}</p>
-            </div>
-          </div>  
-          <div class="customization_functions d-flex flex-column">
-            <hr></hr>
-            <div class="row">
-              <div class="col"><b>Subtotal</b></div>
-              <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
-            </div>
-            <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
-              Avançar
-            </button>              
           </div>
         </div>
         <div class="step upsell px-md-3"
@@ -250,8 +254,7 @@
           <div class="customization_functions d-flex flex-column">
             <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
               Avançar
-            </button>
-            
+            </button>            
           </div>
         </div>
         <!--
@@ -299,6 +302,7 @@
           </div>  
           -->
         </div>
+        
         <div class="step last px-3"
           v-if="cms_customizations_step > cms_customizations.length + cms_upselling.length"
             :class="cms_customizations_step > cms_customizations.length + cms_upselling.length  ? 'current' : ''"

@@ -1176,7 +1176,8 @@ export default (options,state) => {
                     label: "Exibir campo para upload de arquivo?",
                     name:"enable",
                     widget: 'boolean',
-                    default: false
+                    default: false,
+                    required:false,     
                   },
                   {
                     label: "Título",

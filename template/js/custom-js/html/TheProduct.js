@@ -328,7 +328,7 @@ export default {
       }
       this.$emit('update:product', data)
     },
-
+    
     fetchProduct (isRetry = false) {
       const { productId } = this
       return store({
@@ -431,7 +431,14 @@ export default {
     },
     setDeepCustomizationOption(index,grid_id,item){
       //console.log(index, grid_id,item)
-      this.current_customization[index] = {[grid_id] : item}
+      //this.current_customization[index] = {[grid_id] : item}
+      let q = this.current_customization.find(el => el[grid_id])
+      if(q){
+        q = item
+      }else{
+        this.current_customization.push({[grid_id] : item})
+      }
+      
       //console.log(this.current_customization)
       this.cms_customizations_step++
     },
@@ -549,7 +556,30 @@ export default {
       }
     },
 
+    hasCondition(condition){
+      console.log(`current`,this.current_customization)
+      console.log(`condition`,condition)
+      let q;
+      
+      if(condition.condition_type == "="){
+        q = this.current_customization.find(el => {
+          return el[condition.condition_grid] && el[condition.condition_grid].title.trim().toLowerCase() == condition.condition_value.trim().toLowerCase()
+        })        
+      }
+      if(condition.condition_type == "!="){
+        q = this.current_customization.find(el => {
+           return el[condition.condition_grid] && el[condition.condition_grid].title.trim().toLowerCase() != condition.condition_value.trim().toLowerCase()
+        })        
+      }
 
+      if(q){
+        return true;        
+      }else{
+        this.setStep(this.cms_customizations_step + 1)
+        return false
+      }
+      
+    },
     showVariationPicture (variation) {
       if (variation.picture_id) {
 
@@ -800,7 +830,7 @@ export default {
         this.showVariationPicture(this.selectedVariation);
       }
     },
-
+    
     fixedPrice (price) {
       if (price > 0 && !this.isQuickview) {
         addIdleCallback(() => {

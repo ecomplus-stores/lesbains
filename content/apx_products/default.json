@@ -42,23 +42,332 @@
       "list": [
         {
           "input_type_required": false,
-          "title": "Lentes básicas",
-          "description": "Com ou sem tratamento antirreflexo"
+          "title": "Antirreflexo",
+          "description": ""
         },
         {
           "input_type_required": false,
-          "title": "Lentes premium",
-          "description": "Com tratamentos adicionais, como antirrisco, finas e proteção contra luz azul."
+          "title": "Luz Azul",
+          "description": ""
         },
         {
           "input_type_required": false,
-          "title": "Lentes fotossensíveis",
-          "description": "Se adaptam à luz ambiente"
+          "title": "Fotossensível",
+          "description": ""
         },
         {
           "input_type_required": false,
-          "title": "Lentes solares com grau",
-          "description": "Para quem precisa de correção visual ao ar livre"
+          "title": "Solar com Grau",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Solar com Grau",
+      "title_id": "propriedade_da_lente",
+      "conditions": {
+        "condition_grid": "tipo_de_lente",
+        "condition_type": "=",
+        "condition_value": "Solar com Grau"
+      },
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Solar com Grau",
+          "type": "Fixo",
+          "value": 389
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar com Grau e Antirreflexo",
+          "type": "Fixo",
+          "value": 699
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar com Grau, Antirreflexo e Antirrisco",
+          "type": "Fixo",
+          "value": 829
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar + Fina com",
+          "type": "Fixo",
+          "value": 599,
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar + Fina com Grau e Antirreflexo",
+          "type": "Fixo",
+          "value": 649,
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar + Fina com Grau, Antirreflexo e Antirrisco",
+          "description": "Lente mais fina que o convencional",
+          "value": 779
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar Premium com Grau",
+          "type": "Fixo",
+          "value": 599
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar Premium com Grau e Antirreflexo",
+          "type": "Fixo",
+          "value": 909
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar Premium com Grau, Antirreflexo e Antirrisco",
+          "type": "Fixo",
+          "value": 999
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar Premium + Fina com Grau",
+          "description": "Lente mais fina que o convencional",
+          "type": "Fixo",
+          "value": 949
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar Premium + Fina com Grau e Antirreflexo",
+          "description": "Lente mais fina que o convencional",
+          "type": "Fixo",
+          "value": 1259
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar Premium + Fina com Grau, Antirreflexo e Antirrisco",
+          "description": "Lente mais fina que o convencional",
+          "type": "Fixo",
+          "value": 1389
+        }
+              
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Fotossensível",
+      "title_id": "propriedade_da_lente",
+      "conditions": {
+        "condition_grid": "tipo_de_lente",
+        "condition_type": "=",
+        "condition_value": "Fotossensível"
+      },
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Fotossensível",
+          "type": "Fixo",
+          "value": 239
+        },
+        {
+          "input_type_required": false,
+          "title": "Fotossensível com Antirreflexo",
+          "type": "Fixo",
+          "value": 239
+        },
+        {
+          "input_type_required": false,
+          "title": "Fotossensível + Fina",
+          "type": "Fixo",
+          "value": 759,
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Fotossensível + Fina com Antirreflexo",
+          "type": "Fixo",
+          "value": 1359,
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Fotossensível + Fina com Antirreflexo e Antirrisco",
+          "description": "Lente mais fina que o convencional",
+          "value": 1489
+        },
+        {
+          "input_type_required": false,
+          "title": "Transitions",
+          "type": "Fixo",
+          "value": 5099
+        },
+        {
+          "input_type_required": false,
+          "title": "Transitions + Fina",
+          "description": "Lente mais fina que o convencional",
+          "type": "Fixo",
+          "value": 1719
+        },
+        {
+          "input_type_required": false,
+          "title": "Transitions com Antirreflexo e Antirrisco",
+          "type": "Fixo",
+          "value": 1849
+        }        
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "title_id": "propriedade_da_lente",
+      "conditions": {
+        "condition_grid": "tipo_de_lente",
+        "condition_type": "=",
+        "condition_value": "Luz Azul"
+      },
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Luz Azul com Antirreflexo",
+          "type": "Fixo",
+          "value": 139
+        },
+        {
+          "input_type_required": false,
+          "title": "Luz Azul com Antirreflexo e Antirrisco",
+          "type": "Fixo",
+          "value": 359
+        },
+        {
+          "input_type_required": false,
+          "title": "Luz Azul + Fina",
+          "type": "Fixo",
+          "value": 409,
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Lente Azul + Fina com Antirreflexo",
+          "type": "Fixo",
+          "value": 679,
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Lente Azul + Fina com Antirreflexo e Antirrisco",
+          "description": "Lente mais fina que o convencional",
+          "value": 809
+        },
+        {
+          "input_type_required": false,
+          "title": "Lente Azul Premium",
+          "type": "Fixo",
+          "value": 659
+        },
+        {
+          "input_type_required": false,
+          "title": "Lente Azul Premium com Antirreflexo",
+          "type": "Fixo",
+          "value": 969
+        },
+        {
+          "input_type_required": false,
+          "title": "Lente Azul Premium com Antirreflexo e Antirrisco",
+          "type": "Fixo",
+          "value": 1099
+        },
+        {
+          "input_type_required": false,
+          "title": "Lente Azul Premium + Fina",
+          "description": "Lente mais fina que o convencional",
+          "value": 839
+          
+        },
+        {
+          "input_type_required": false,
+          "title": "Lente Azul Premium + Fina com Antirreflexo",
+          "description": "Lente mais fina que o convencional",
+          "value": 1129
+          
+        },
+        {
+          "input_type_required": false,
+          "title": "Lente Azul Premium + Fina com Antirreflexo e Antirrisco",
+          "description": "Lente mais fina que o convencional",
+          "value": 1269
+          
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "title_id": "propriedade_da_lente",
+      "conditions": {
+        "condition_grid": "tipo_de_lente",
+        "condition_type": "=",
+        "condition_value": "Antirreflexo"
+      },
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Monofocal",
+          "type": "Fixo",
+          "value": 59
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "type": "Fixo",
+          "value": 79
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo com Antirrisco",
+          "type": "Fixo",
+          "value": 359
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Fina",
+          "type": "Fixo",
+          "value": 149,
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Fina com Antirrisco",
+          "description": "Lente mais fina que o convencional"
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo Premium",
+          "type": "Fixo",
+          "value": 449
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo Premium com Antirrisco",
+          "type": "Fixo",
+          "value": 579
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo Premium + Fina",
+          "value": 839
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo Premium + Fina com Antirrisco",
+          "type": "Fixo",
+          "value": 969
         }
       ]
     },
@@ -80,7 +389,8 @@
       ],
       "conditions": {
         "condition_grid": "necessidade_de_visao",
-        "condition_value": "Miopia,Astigmatismo"
+        "condition_type": "!=",
+        "condition_value": "Nenhuma (Sem Grau)"
       },
       "title_id": "grau_das_lentes",
       "upload": {
@@ -91,8 +401,8 @@
   "upselling": [
     {
       "upselling_skus": [
-        "ZZL4539",
-        "WAU1553"
+        "LIA9293",
+        "LBS0005"
       ],
       "customizations": [
         {
@@ -130,6 +440,6 @@
   ],
   "title": "DEFAULT",
   "identificador": [
-    "XXX"
+    "MR0003"
   ]
 }
