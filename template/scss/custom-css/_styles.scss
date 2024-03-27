@@ -1945,3 +1945,62 @@ body .search-engine__nav{
 header.header {
     .search-engine__aside{display:none!important}
 }
+
+#custom_customizations{
+    .current > div{
+        display: flex;
+        flex-direction: column;
+        height: calc(100dvh - 160px);
+        .option_options{
+            overflow-y: scroll;
+            margin: 0 -15px;
+            padding: 0 15px;
+            height: 100%;
+        }
+        /* width */
+        .option_options::-webkit-scrollbar {
+        width: 3px;
+        border-left:1px solid #888;
+        }
+
+        /* Track */
+        .option_options::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        }
+
+        /* Handle */
+        .option_options::-webkit-scrollbar-thumb {
+        background: #000;
+        border-radius: var(--borderRadius)!important;
+        }
+
+        /* Handle on hover */
+        .option_options::-webkit-scrollbar-thumb:hover {
+            background: #f2f2f2;
+        }
+        
+    }
+}
+
+/* width */
+html::-webkit-scrollbar {
+width: 10px;
+border-left:1px solid #888;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+/* Handle */
+html::-webkit-scrollbar-thumb {
+background: #888;
+border:3px solid #f1f1f1;
+border-radius: var(--borderRadius)!important;
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -931,6 +931,7 @@ export default {
   created () {
     
     //this.cms_customizations = [...($('[data-customizations]').length > 0 && $('[data-customizations]').attr('data-customizations') != '' ? JSON.parse($('[data-customizations]').attr('data-customizations')) : [])]
+    
     this.cms_customizations = window.apx_lib.customizations ? window.apx_lib.customizations : [];
     this.cms_currentLib = window.apx_lib_content ? window.apx_lib_content : [];
     this.cms_upselling = window.apx_lib.upselling ? window.apx_lib.upselling : []
