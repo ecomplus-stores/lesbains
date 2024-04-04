@@ -5,7 +5,8 @@
       "list": [
         {
           "input_type_required": false,
-          "title": "Nenhuma (Sem Grau)",
+          "title": "Nenhuma",
+          "description": "Somente armação",
           "img": "/img/uploads/nenhuma.svg",
           "type": null
         },
@@ -370,7 +371,7 @@
             "condition_type": "=",
             "condition_value": "Premium"
           }
-        }        
+        }      
       ],
      
       "list": [
@@ -397,7 +398,1039 @@
         }    
       ]
     },   
-    
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Fotossensível",
+      "step_description":"Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        }
+      ],      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Transition",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 270
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Fotossensível",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 520
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 100
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 200
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 600
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 730
+        }    
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Fotossensível",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Transition"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 1210
+        }     
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Transition"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 130
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "step_description":"Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        }
+      ],      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Premium",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 520
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 270
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 220
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 400
+        }    
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 180
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 310
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 440
+        }    
+      ]
+    },
+  {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+{
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 290
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 430
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description":"Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        }
+      ],      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Premium",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 370
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 100
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 280
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 360
+        }    
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 390
+        }     
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 130
+        }    
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 220
+        }    
+      ]
+    },
+
     {
       "upload": {
         "enable": false
@@ -416,31 +1449,1416 @@
       "list": [
         {
           "input_type_required": false,
-          "title": "MF Antirreflexo",
+          "title": "Antirreflexo",
           "img": "/img/uploads/antirreflexo.svg",
-          "description": ""
+          "description": "",
+          "type": "Fixo",
+          "value": 0
           
         },
         {
           "input_type_required": false,
-          "title": "MF Luz Azul",
+          "title": "Luz Azul",
           "img": "/img/uploads/luz-azul.svg",
-          "description": ""
+          "description": "",
+          "type": "Fixo",
+          "value": 100
         },
         {
           "input_type_required": false,
-          "title": "MF Fotossensível",
+          "title": "Fotossensível",
           "img": "/img/uploads/fotosenssivel.svg",
-          "description": ""
+          "description": "",
+          "type": "Fixo",
+          "value": 19
         },
         {
           "input_type_required": false,
-          "title": "MF Solar com Grau",
+          "title": "Solar com Grau",
           "img": "/img/uploads/solar-com-grau.svg",
-          "description": ""
+          "description": "",
+          "type": "Fixo",
+          "value": 349
         }
       ]
     },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Solar com Grau",
+      "step_description":"Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        }
+      ],      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Premium",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 999
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Solar com Grau",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 369
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 319
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 449
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 309
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 439
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Solar com Grau",
+      "title_id": "parametros_da_lente",
+      "step_description":"Selecione o parâmetro da lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }
+      ],      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 1199
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },
+{
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }           
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 419
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 549
+        }    
+      ]
+    },   
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },
+{
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }           
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 379
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 549
+        }    
+      ]
+    },   
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Fotossensível",
+      "step_description":"Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        }
+      ],      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Transition",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 399
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Fotossensível",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 449
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 409
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 539
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 409
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 539
+        }    
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Fotossensível",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Transition"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 1659
+        }     
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Transition"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+{
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 409
+        },
+
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 519
+        }    
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Fotossensível"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Transition"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+{
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 409
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 519
+        }    
+      ]
+    },
+
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "step_description":"Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        }
+      ],      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Premium",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 1999
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 420
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+{
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 250
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 409
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+{
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 369
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 499
+        }    
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 159
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 409
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 879
+        }    
+      ]
+    },
+  {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+{
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 399
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 539
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description":"Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        }
+      ],      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 550
+        },
+        {
+          "input_type_required": false,
+          "title": "Premium",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 1490
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 270
+        }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+             
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 130
+        }    
+      ]
+    },
+   
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description":"Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }
+      ],
+      
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 180
+        }     
+      ]
+    },
+{
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }     
+      ],
+     
+      "list": [
+
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 130
+        }    
+      ]
+    },
+
+    
     {
       "upload": {
         "enable": true,
@@ -458,7 +2876,7 @@
           "condition": {
             "condition_grid": "necessidade_de_visao",
             "condition_type": "!=",
-            "condition_value": "Nenhuma (Sem Grau)"
+            "condition_value": "Nenhuma"
           }
         }
       ]      

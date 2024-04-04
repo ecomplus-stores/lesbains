@@ -151,6 +151,7 @@ export default {
   data () {
     return {
       body: {},
+      isBackButtonPressed:false,
       fixedPrice: null,
       selectedVariationId: null,
       currentGalleyImg: 1,
@@ -373,6 +374,9 @@ export default {
       return ''
     },
     customizationStepBack(){
+      this.isBackButtonPressed = true
+      this.current_customization.pop()
+      console.log('voltou hein', this.current_customization)
       this.cms_customizations_step--
     },
     chooseUpsellProduct(sku){
@@ -592,9 +596,14 @@ export default {
       })
       
       if(!flag){
-        this.setStep(this.cms_customizations_step + 1)
+        if(this.isBackButtonPressed){
+          this.setStep(this.cms_customizations_step - 1)
+        }else{
+          this.setStep(this.cms_customizations_step + 1)
+        }        
         return false
       }else{
+        this.isBackButtonPressed = false
         return true
       }
       
