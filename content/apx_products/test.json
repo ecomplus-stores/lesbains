@@ -1,0 +1,32 @@
+{
+  "customizations": [
+    {
+      "upload": {
+        "enable": false
+      },
+      "list": [],
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "123"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "lentes",
+            "condition_type": "=",
+            "condition_value": "456"
+          }
+        }
+      ],
+      "title_id": "necessidade_de_visao"
+    }
+  ],
+  "upselling": [],
+  "title": "test",
+  "identificador": [
+    "LIA9293"
+  ]
+}
