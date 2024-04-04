@@ -1219,34 +1219,42 @@ export default (options,state) => {
                 label: 'Condições',
                 hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
                 name: 'conditions',
-                widget: 'object',
+                widget: 'list',
                 fields: [
                   {
-                    label: 'Exibir quando a opção da grade...',
-                    required:false,
-                    name: 'condition_grid',
-                    widget: 'select',
-                    options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
-                    .map(({ grid_id, title }) => ({
-                      label: title,
-                      value: grid_id
-                    }))]
-                  },  
-                  {
-                    label: "Tiver o valor",
-                    name:"condition_type",
-                    hint:">, <, >= e <= devem ser utilizados especificamente para valores numéricos.",
-                    widget: "select",
-                    options: ["=",">","<",">=","<=","!="],
-                    required:false, 
+                    label: 'Condições',
+                    hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
+                    name: 'condition',
+                    widget: 'object',
+                    fields: [
+                      {
+                        label: 'Exibir quando a opção da grade...',
+                        required:false,
+                        name: 'condition_grid',
+                        widget: 'select',
+                        options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+                        .map(({ grid_id, title }) => ({
+                          label: title,
+                          value: grid_id
+                        }))]
+                      },  
+                      {
+                        label: "Tiver o valor",
+                        name:"condition_type",
+                        hint:">, <, >= e <= devem ser utilizados especificamente para valores numéricos.",
+                        widget: "select",
+                        options: ["=",">","<",">=","<=","!="],
+                        required:false, 
+                      },
+                      {
+                        label: "De",
+                        hint:"Digite o valor que deverá ser comparado",
+                        name: "condition_value",
+                        widget: "string",
+                        required:false,          
+                      }, 
+                    ]
                   },
-                  {
-                    label: "De",
-                    hint:"Digite o valor que deverá ser comparado",
-                    name: "condition_value",
-                    widget: "string",
-                    required:false,          
-                  }, 
                 ]
               },
               {
