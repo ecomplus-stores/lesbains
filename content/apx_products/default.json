@@ -39,11 +39,15 @@
       "upload": {
         "enable": false
       },
-      "conditions": {
-        "condition_grid": "necessidade_de_visao",
-        "condition_type": "=",
-        "condition_value": "Visão Simples"
-      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        }
+      ],
       "title_id": "tipo_de_lente",
       "title": "Tipo da Lente",
       "list": [
@@ -87,12 +91,24 @@
         "enable": false
       },
       "title": "Solar com Grau",
+      "step_description":"Selecione a propriedade da sua lente",
       "title_id": "propriedade_da_lente",
-      "conditions": {
-        "condition_grid": "tipo_de_lente",
-        "condition_type": "=",
-        "condition_value": "Solar com Grau"
-      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        }
+      ],      
       "list": [
         {
           "input_type_required": false,
@@ -115,27 +131,169 @@
         "enable": false
       },
       "title": "Solar com Grau",
+      "step_description":"Selecione o parâmetro da sua lente",
       "title_id": "parametros_da_lente",
-      "conditions": {
-        "condition_grid": "propriedade_da_lente",
-        "condition_type": "=",
-        "condition_value": "Comfort"
-      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      
       "list": [
         {
           "input_type_required": false,
           "title": "Normal",
           "description":"Lorem ipsum",
           "type": "Fixo",
-          "value": 699
+          "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
           "description":"Lorem ipsum",
           "type": "Fixo",
-          "value": 520
+          "value": 209
         }     
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 309
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 439
+        }    
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },  
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }       
+      ],
+     
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Sem tratamento",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 149
+        },
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Antirrisco",
+          "description":"Lorem ipsum",
+          "type": "Fixo",
+          "value": 279
+        }    
       ]
     },
     {
@@ -144,11 +302,30 @@
       },
       "title": "Solar com Grau",
       "title_id": "parametros_da_lente",
-      "conditions": {
-        "condition_grid": "propriedade_da_lente",
-        "condition_type": "=",
-        "condition_value": "Premium"
-      },
+      "step_description":"Selecione o parâmetro da lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }
+      ],      
       "list": [
         {
           "input_type_required": false,
@@ -170,13 +347,32 @@
       "upload": {
         "enable": false
       },
-      "title": "Solar com Grau - Tratamento da Lente",
+      "title": "Tratamento da Lente",
       "title_id": "tratamento_da_lente",
-      "conditions": {
-        "condition_grid": "parametros_da_lente",
-        "condition_type": "=",
-        "condition_value": "Normal"
-      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Visão Simples"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }        
+      ],
+     
       "list": [
         {
           "input_type_required": false,
@@ -190,61 +386,31 @@
           "title": "Antirreflexo",
           "description":"Lorem ipsum",
           "type": "Fixo",
-          "value": 100
+          "value": 309
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
           "description":"Lorem ipsum",
           "type": "Fixo",
-          "value": 200
+          "value": 399
         }    
       ]
-    },
+    },   
+    
     {
       "upload": {
         "enable": false
       },
-      "title": "Solar com Grau - Tratamento da Lente",
-      "title_id": "tratamento_da_lente",
-      "conditions": {
-        "condition_grid": "parametros_da_lente",
-        "condition_type": "=",
-        "condition_value": "Fina"
-      },
-      "list": [
+      "conditions": [
         {
-          "input_type_required": false,
-          "title": "Sem tratamento",
-          "description":"Lorem ipsum",
-          "type": "Fixo",
-          "value": 0
-        },
-        {
-          "input_type_required": false,
-          "title": "Antirreflexo",
-          "description":"Lorem ipsum",
-          "type": "Fixo",
-          "value": 600
-        },
-        {
-          "input_type_required": false,
-          "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
-          "type": "Fixo",
-          "value": 730
-        }    
-      ]
-    },
-    {
-      "upload": {
-        "enable": false
-      },
-      "conditions": {
-        "condition_grid": "necessidade_de_visao",
-        "condition_type": "=",
-        "condition_value": "Multifocal"
-      },
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        }
+      ],
       "title_id": "tipo_de_lente",
       "title": "Tipo da Lente",
       "list": [
@@ -287,11 +453,15 @@
       "title_id": "receita_medica",
       "title": "Receita Médica",
       "step_description": "Faça o envio de sua receita",
-      "conditions": {
-        "condition_grid": "necessidade_de_visao",
-        "condition_type": "!=",
-        "condition_value": "Nenhuma (Sem Grau)"
-      }
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "!=",
+            "condition_value": "Nenhuma (Sem Grau)"
+          }
+        }
+      ]      
     }
     
     

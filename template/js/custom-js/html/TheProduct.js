@@ -507,24 +507,36 @@ export default {
       if (file) {
         let formData = new FormData();
         formData.append('files', file);
-
-        fetch('https://storeboost.up.railway.app/api/webhooks/file-upload', {
+        //fetch('http://localhost:1337/api/webhooks/file-upload', {
+        fetch('https://storeboost.alpix.dev/api/webhooks/file-upload', {
           method: 'POST',
           body: formData,
+          headers: {
+            'app-id': '7'
+          }
         })
         .then(response => {
           return response.json();
         })
         .then(data => {
-          //console.log(index, grid_id)
-          this.current_customization[index] = {[grid_id] : {
-            title : data.response.data.image[0].url,
-            type: "Fixo",
-            value: 0,
-            input_type_required:false,
-            description: "Arquivo enviado durante o processo de compra"
+            console.log(index, grid_id, data, this.current_customization)
+            let item = {
+              title : data.response.data.image[0].url,
+              type: "Fixo",
+              value: 0,
+              input_type_required:false,
+              description: "Arquivo enviado durante o processo de compra"
             }
-          }
+            let q = this.current_customization.find(el => el[grid_id])
+            if(q){
+              q = item
+            }else{
+              this.current_customization.push({[grid_id] : item})
+            }
+            
+            
+            console.log(this.current_customization)
+        
           ////console.log(this.current_customization)
           //this.cms_customizations_step++
           // const index = this.customizations.findIndex(({ _id }) => _id === customization._id)
@@ -556,27 +568,34 @@ export default {
       }
     },
 
-    hasCondition(condition){
-      console.log(`current`,this.current_customization)
-      console.log(`condition`,condition)
+    hasCondition(conditions){
       let q;
-      
-      if(condition.condition_type == "="){
-        q = this.current_customization.find(el => {
-          return el[condition.condition_grid] && el[condition.condition_grid].title.trim().toLowerCase() == condition.condition_value.trim().toLowerCase()
-        })        
-      }
-      if(condition.condition_type == "!="){
-        q = this.current_customization.find(el => {
-           return el[condition.condition_grid] && el[condition.condition_grid].title.trim().toLowerCase() != condition.condition_value.trim().toLowerCase()
-        })        
-      }
+      let flag = true;
+      let current_customization = this.current_customization
 
-      if(q){
-        return true;        
-      }else{
+      $.each(conditions, function(k,condition_obj){
+        let condition = condition_obj.condition;
+        if(condition.condition_type == "="){
+          q = current_customization.find(el => {
+            return el[condition.condition_grid] && el[condition.condition_grid].title.trim().toLowerCase() == condition.condition_value.trim().toLowerCase()
+          })        
+        }
+        if(condition.condition_type == "!="){
+          q = current_customization.find(el => {
+             return el[condition.condition_grid] && el[condition.condition_grid].title.trim().toLowerCase() != condition.condition_value.trim().toLowerCase()
+          })        
+        }
+  
+        if(!q){
+          flag = false
+        }
+      })
+      
+      if(!flag){
         this.setStep(this.cms_customizations_step + 1)
         return false
+      }else{
+        return true
       }
       
     },

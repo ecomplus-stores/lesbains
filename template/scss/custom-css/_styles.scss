@@ -1950,7 +1950,8 @@ header.header {
     .current > div{
         display: flex;
         flex-direction: column;
-        height: calc(100dvh - 160px);
+        height: calc(100dvh - 60px);
+        // height: 100dvh;
         .option_options{
             overflow-y: scroll;
             margin: 0 -15px;
@@ -1979,6 +1980,9 @@ header.header {
             background: #f2f2f2;
         }
         
+    }
+    .current.step.last > div{
+        height: 100dvh;
     }
 }
 

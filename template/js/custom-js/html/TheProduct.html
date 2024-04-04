@@ -42,7 +42,7 @@
       >
       </button>
       <div class="customizations_header mt-md-4 mt-0 mb-md-5 mb-5 px-5"
-        v-if="cms_customizations_step <= (cms_customizations.length + cms_upselling.length)"
+        v-if="1 != 1 && cms_customizations_step <= (cms_customizations.length + cms_upselling.length)"
       >
         <div class="button_cover"
         v-for="index in (cms_customizations.length + cms_upselling.length )"
@@ -62,7 +62,7 @@
         > 
         
         <div v-if="cms_customizations_step == index + 1 && (item.conditions ? hasCondition(item.conditions) : true)">
-          <div class="option_title text-center mb-4 mb-md-5">
+          <div class="option_title mt-5 text-center mb-4 mb-md-5">
             <h4>{{item.title || body.customizations.find(el => el.grid_id == item.title_id).label}}</h4>
             <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
           </div>
@@ -133,8 +133,10 @@
               <div v-if="item.upload.enable" class="upload-option">
                 <h3>{{item.upload.title}}</h3>
                 <p>{{item.upload.description}}</p>
-                <div v-if="item.upload.img && !(current_customization[index] && current_customization[index][item.title_id])" class="text-center"><img :src="item.upload.img"/></div>
-                <div v-if="current_customization[index] && current_customization[index][item.title_id]" clss="text-center"><img :src="current_customization[index][item.title_id].title"/></div>
+                <div v-if="item.upload.img && !current_customization.find(el => el[item.title_id])" class="text-center"><img :src="item.upload.img"/></div>
+                <div v-if="current_customization.find(el => el[item.title_id])" clss="text-center">
+                  <img :src="current_customization.find(el => el[item.title_id])[item.title_id].title"/>
+                </div>
                 <input type="file" :id="item.title_id + '_file'"/>
                 <button type="button" @click="setUploadCustomization(index,item.title_id)">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,7 +153,7 @@
                 <div class="col"><b>Subtotal</b></div>
                 <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
               </div>
-              <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+              <button v-if="item.upload.enable" type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
                 Avançar
               </button>              
             </div>
@@ -309,84 +311,87 @@
           v-if="cms_customizations_step > cms_customizations.length + cms_upselling.length"
             :class="cms_customizations_step > cms_customizations.length + cms_upselling.length  ? 'current' : ''"
         >
-          <div class="option_title text-center mb-5 mt-5">
-            <small></small>
-            <h4>Confira seu produto</h4>
-          </div>
-
-          <div class=""
-            :class="'selected_option ' + (current_customization.length == index_ + 1 ? 'mb-3' : 'mb-4')"
-            v-for="(item_, index_) in current_customization"  
-            :key="index_"
-          >
-          
-            <div class="row option_box justify-content-between align-items-start">
-              <div class="col-2 pr-0" v-if="item_[Object.keys(item_)[0]].img">
-                  <img class="option_image" :src="item_[Object.keys(item_)[0]].img" alt="">
-              </div>
-              <div class="col">
-                <div class="row justify-content-between align-items-start">
+          <div>
+            <div class="option_title text-center mb-5 mt-5">
+              <small></small>
+              <h4>Confira seu produto</h4>
+            </div>
+            <div class="option_options">
+              <div class=""
+                :class="'selected_option ' + (current_customization.length == index_ + 1 ? 'mb-3' : 'mb-4')"
+                v-for="(item_, index_) in current_customization"  
+                :key="index_"
+              >
+              
+                <div class="row option_box justify-content-between align-items-start">
+                  <div class="col-2 pr-0" v-if="item_[Object.keys(item_)[0]].img">
+                      <img class="option_image" :src="item_[Object.keys(item_)[0]].img" alt="">
+                  </div>
                   <div class="col">
-                    <small>{{body.customizations.find(el => el.grid_id == Object.keys(item_)[0]) ? body.customizations.find(el => el.grid_id == Object.keys(item_)[0]).label : 'Err.'}}</small>
-                    <span class="option_title">
-                      <a target="_blank" style="border-bottom: 1px solid #000;" :href="item_[Object.keys(item_)[0]].title" v-if="item_[Object.keys(item_)[0]].title.includes('http')">
-                        Abrir Arquivo 
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M5.33333 7.99998H10.6667M6 5.33331H4.66667C3.19391 5.33331 2 6.52722 2 7.99998C2 9.47274 3.19391 10.6666 4.66667 10.6666H6M10 10.6666H11.3333C12.8061 10.6666 14 9.47274 14 7.99998C14 6.52722 12.8061 5.33331 11.3333 5.33331L10 5.33331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>  
-                      </a>
-                      <span v-else>
-                        {{item_[Object.keys(item_)[0]].title}}  
-                      </span>
-                      
-                    </span>
+                    <div class="row justify-content-between align-items-start">
+                      <div class="col">
+                        <small>{{body.customizations.find(el => el.grid_id == Object.keys(item_)[0]) ? body.customizations.find(el => el.grid_id == Object.keys(item_)[0]).label : 'Err.'}}</small>
+                        <span class="option_title">
+                          <a target="_blank" style="border-bottom: 1px solid #000;" :href="item_[Object.keys(item_)[0]].title" v-if="item_[Object.keys(item_)[0]].title.includes('http')">
+                            Abrir Arquivo 
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.33333 7.99998H10.6667M6 5.33331H4.66667C3.19391 5.33331 2 6.52722 2 7.99998C2 9.47274 3.19391 10.6666 4.66667 10.6666H6M10 10.6666H11.3333C12.8061 10.6666 14 9.47274 14 7.99998C14 6.52722 12.8061 5.33331 11.3333 5.33331L10 5.33331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                          </a>
+                          <span v-else>
+                            {{item_[Object.keys(item_)[0]].title}}  
+                          </span>
+                          
+                        </span>
+                      </div>
+                      <div class="col-auto">
+                        <strong v-if="item_[Object.keys(item_)[0]].type == 'Fixo'" class="option_price">
+                          {{item_[Object.keys(item_)[0]].value > 0 ? '+' + item_[Object.keys(item_)[0]].value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                        </strong>
+                        <strong v-else class="option_price">
+                          {{item_[Object.keys(item_)[0]].value > 0 ? '+' + (ghostProductForPrices.price * (item_[Object.keys(item_)[0]].value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-3" v-if="item_.description">
+                  <div class="col-12">
+                    <p class="option_description">
+                      {{item_[Object.keys(item_)[0]].description}}
+                    </p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="customization_functions d-flex flex-column">
+              <div class="subtotal pt-3">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-auto">
+                    <b>Subtotal:</b>
                   </div>
                   <div class="col-auto">
-                    <strong v-if="item_[Object.keys(item_)[0]].type == 'Fixo'" class="option_price">
-                      {{item_[Object.keys(item_)[0]].value > 0 ? '+' + item_[Object.keys(item_)[0]].value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
-                    </strong>
-                    <strong v-else class="option_price">
-                      {{item_[Object.keys(item_)[0]].value > 0 ? '+' + (ghostProductForPrices.price * (item_[Object.keys(item_)[0]].value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
-                    </strong>
+                    <b>
+                      {{totalWithCustomization()}}
+                    </b>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row mt-3" v-if="item_.description">
-              <div class="col-12">
-                <p class="option_description">
-                  {{item_[Object.keys(item_)[0]].description}}
-                </p>
+              <div class="customization_functions d-flex flex-column">
+                <button type="button" class="btn btn-primary" @click="buy('customized')">
+                  Adicionar ao Carrinho
+                </button>
+                <button
+                  class="btn-back"
+                  @click="customizationStepBack"
+                >
+                  Editar minhas escolhas
+                </button>
               </div>
             </div>
-            
-          </div>
-       
-          <div class="subtotal pt-3">
-            <div class="row justify-content-between align-items-center">
-              <div class="col-auto">
-                <b>Subtotal:</b>
-              </div>
-              <div class="col-auto">
-                <b>
-                  {{totalWithCustomization()}}
-                </b>
-              </div>
-            </div>
-          </div>
-          <div class="customization_functions d-flex flex-column">
-            <button type="button" class="btn btn-primary" @click="buy('customized')">
-              Adicionar ao Carrinho
-            </button>
-            <button
-              class="btn-back"
-              @click="customizationStepBack"
-            >
-              Editar minhas escolhas
-            </button>
           </div>
         </div>
-        
       </div>
       
     </div>
