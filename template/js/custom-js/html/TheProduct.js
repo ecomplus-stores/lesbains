@@ -376,7 +376,6 @@ export default {
     customizationStepBack(){
       this.isBackButtonPressed = true
       this.current_customization.pop()
-      console.log('voltou hein', this.current_customization)
       this.cms_customizations_step--
     },
     chooseUpsellProduct(sku){
