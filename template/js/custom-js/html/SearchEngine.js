@@ -254,7 +254,10 @@ export default {
           this.countOpenRequests--
           this.isLoadingMore = false
         })
-      this.$emit('fetch', { ecomSearch, fetching })
+        this.$emit('fetch', { ecomSearch, fetching })
+        setTimeout(() => {
+          window.imageResize();
+        }, 100)
     },
 
     updateFilters () {
@@ -514,10 +517,18 @@ export default {
       }
     }
   },
-
+  mounted(){
+    this.fetchItems()
+    setTimeout(() => {
+      window.imageResize();
+    }, 100)
+  },
   created () {
     resetEcomSearch(this)
     this.handlePresetedOptions()
     this.fetchItems()
+    setTimeout(() => {
+      window.imageResize();
+    }, 100)
   }
 }

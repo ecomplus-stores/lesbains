@@ -77,6 +77,9 @@ import {
       },
       show () {
         this.$emit('update:is-visible', true)
+        setTimeout(() => {
+          window.imageResize();
+        }, 100)
       },
   
       setSearchTerm (term) {

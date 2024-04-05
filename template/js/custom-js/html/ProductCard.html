@@ -46,20 +46,19 @@
           <slot name="header"/>
 
           <div class="product-card__pictures">
-            
             <a-picture
               v-if="selectedPicture"
               class="product-card__picture"
               :src="selectedPicture"
               :can-calc-height="false"
               :key="variationImagesKey"
+              :containerBreakpoints="{zoom:null, big:400, normal:200}"
             />
-            
             <template v-else="body.pictures && body.pictures.length">
               <a-picture
                 class="product-card__picture"
                 v-for="(picture, index) in body.pictures.slice(0, 1).reverse()"
-                
+                :containerBreakpoints="{zoom:null, big:400, normal:200}"
                 :key="index"
                 :src="picture"
                 :can-calc-height="false"

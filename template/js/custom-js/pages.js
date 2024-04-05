@@ -60,7 +60,6 @@ window.imageResize = function () {
     $('.search-engine__retail').each(function(){
         let h = $(this).find('.product-card__pictures').first().innerWidth() * .7;
         $(this).css('--height',h + 'px');
-
     });
 };
 
@@ -89,4 +88,6 @@ if($('#page-products').length > 0){
 $('body').on('click','#apx-footer .toggleLinks', function(){
     $(this).closest('div').find('.links').toggle();
     $(this).toggleClass('active');
-})
+});
+
+

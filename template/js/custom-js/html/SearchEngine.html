@@ -113,20 +113,23 @@
                   class="card-body"
                   :key="searchFilterId"
               >
+                <div class="sticky">
                   <div
                   v-for="({ filter, options, isSpec }, i) in filters"
-                  v-if="options.length"
+                  v-if="['colors','gender','shape','categories'].includes(filter) && options.length"
                   :key="`filters-${filter}`"
                   class="search-engine__filter"
                   :class="`search-engine__filter--${filter}`"
                   >
-                  <template v-once>
+                  <template v-once
+                  >
+                    <!-- <p>{{ ['colors','gender','shape',''].includes(filter) }} - {{filter}}</p> -->
                       <button
                       class="btn"
                       type="button"
                       data-toggle="collapse"
                       :data-target="`#collapse-${filter}`"
-                      :aria-expanded="i < 5 ? 'true' : 'false'"
+                      :aria-expanded="i < 5 || 1 == 1 ? 'true' : 'false'"
                       :aria-controls="`collapse-${filter}`"
                       >
                       <!-- <i class="fas fa-chevron-down"></i>
@@ -136,8 +139,9 @@
       
                       <div
                       class="collapse"
-                      :class="i < 5 ? 'show' : null"
+                      :class="i < 5 || 1 == 1 ? 'show' : null"
                       :id="`collapse-${filter}`"
+                      
                       >
                       <div
                           class="search-engine__option custom-control custom-checkbox"
@@ -159,9 +163,9 @@
                             <span class="cms_ico d-flex align-items-center" v-if="getCMSPropInfo(opt.key) && getCMSPropInfo(opt.key).img">
                               <img :src="getCMSPropInfo(opt.key).img"/>
                             </span>
-                            <span v-else>
+                            <!-- <span v-else>
                                 {{ JSON.stringify(opt) }}
-                            </span>
+                            </span> -->
                             {{ opt.key }}
                             <small v-if="!isSpec">
                                 ({{ opt.doc_count }})
@@ -175,6 +179,7 @@
                       </div>
                   </template>
                   </div>
+                </div>
               </div>
       
               <footer class="card-footer"  v-if="hasSelectedOptions && isFilterable">
