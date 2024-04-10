@@ -1,7 +1,1027 @@
 {
   "hosting": {
     "redirects": [
-    ],
+      {
+          "destination": "/oculos-de-grau-gatinho-jaya",
+          "source": "/-oculos-jaya-nude",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-nurce",
+          "source": "/-oculos-nurce",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-nurce",
+          "source": "/-oculos-nurce-cinza",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-korin",
+          "source": "/oculos-coralie",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-korin",
+          "source": "/a-oculos-liz-azul",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-allaire",
+          "source": "/oculos-allaire-nude",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-azzy",
+          "source": "/oculos-azzy-vermelho",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-gare",
+          "source": "/-oculos-gare",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-emma",
+          "source": "/oculos-evan-infantil--------",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-lilou",
+          "source": "/oculos-lilou-infantil-",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-redondo-mayet",
+          "source": "/oculos-de-grau-mayet-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-retangular-derek",
+          "source": "/oculos-derek",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-retangular-salva",
+          "source": "/oculos-de-sol-salva-marmorizado",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-retangular-royet",
+          "source": "/oculos-royet-espelhado",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-can",
+          "source": "/oculos-de-sol-can-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-duban",
+          "source": "/oculos-de-sol-rosiers-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-pere",
+          "source": "/pere-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-bajo",
+          "source": "/oculos-de-sol-bajo-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-aviador-koh",
+          "source": "/oculos-de-sol-koh-azul",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-frost",
+          "source": "/oculos-frost",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-ross",
+          "source": "/oculos-ross",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-perrot",
+          "source": "/oculos-perrot-infantil-",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-benoit",
+          "source": "/oculos-benoit-infantil-",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-blanche",
+          "source": "/armacao-de-grau-blanche-lilas-e-rosa",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-tarida",
+          "source": "/oculos-de-sol-tarida-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-redondo-bertone",
+          "source": "/-oculos-bertone",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-galanis",
+          "source": "/oculos-galanis-degrade",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-didier",
+          "source": "/oculos-de-sol-infantil-clover-rosa",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-lilac",
+          "source": "/oculos-lilac",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-janvier",
+          "source": "/oculos-janvier-nude",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-chastain",
+          "source": "/oculos-chastel-branco",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-moulin",
+          "source": "/oculos-moulin-vermelho",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-hexagonal-lun",
+          "source": "/oculos-benoit-infantil------",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-chiaperini",
+          "source": "/oculos-chiaperini-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-allaire",
+          "source": "/oculos-allaire-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-cercs",
+          "source": "/oculos-de-sol-cercs",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-jondal",
+          "source": "/oculos-rouen-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-polarizado-quadrado-ferzo",
+          "source": "/oculos-ferzo",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-chevalier",
+          "source": "/oculos-de-sol-polarizado-chevalier",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-sorrento",
+          "source": "/pi7kkzcz8-oculos-de-sol-sorrento-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-polarizado-quadrado-ferzo",
+          "source": "/59yz9nird-oculos-ferzo",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-lafeline",
+          "source": "/lafeline-vermelho",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-retangular-trilla",
+          "source": "/trilla-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-lafeline",
+          "source": "/oculos-de-sol-lafeline-branco",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-esportivo-ribera",
+          "source": "/oculos-de-sol-fiv-verde",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-bosca",
+          "source": "/oculos-de-sol-bosca-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-auber",
+          "source": "/oculos-de-sol-auber-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-retangular-vougelas",
+          "source": "/oculos-vougelas-azul",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-fuzzy",
+          "source": "/-oculos-fuzzy",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-oak",
+          "source": "/cinza-oculos-oak",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-cimies",
+          "source": "/oculos-de-sol-cimies-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-mollis",
+          "source": "/oculos-marfa",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-chastain",
+          "source": "/oculos-chastel",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-chastain",
+          "source": "/oculos-chastain-branco",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-grillet",
+          "source": "/oculos-grillet",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-azzy",
+          "source": "/oculos-azzy-azul",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-perrot",
+          "source": "/oculos-perrot-infantil--",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-emma",
+          "source": "/oculos-evan-infantil------",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-moll",
+          "source": "/oculos-de-sol-infantil-mutley-laranja",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-polarizado-aviador-bizot",
+          "source": "/oculos-de-sol-montaigne-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-polarizado-redondo-ledru",
+          "source": "/oculos-de-sol-polarizado-penn-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-gil",
+          "source": "/oculos-de-sol-gil-cinza",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-biarritz",
+          "source": "/oculos-biarritz---",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-pere",
+          "source": "/pere-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-esportivo-agassi",
+          "source": "/oculos-agassi-vermelho",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-polarizado-redondo-gaeta",
+          "source": "/oculos-de-sol-polarizado-gaeta",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-jondal",
+          "source": "/oculos-rouen-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-esmares",
+          "source": "/oculos-esmares-",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-gotic",
+          "source": "/oculos-de-sol-gotic-preto",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-emma",
+          "source": "/none-180391819",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-montpellier",
+          "source": "/oculos-montpellier2",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-fele",
+          "source": "/oculos-de-sol-fele-rosa",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-calvi",
+          "source": "/oculos-de-grau-calvi-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-bergen",
+          "source": "/-oculos-bergen",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-retangular-forino",
+          "source": "/oculos-de-grau-forino-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-vogel",
+          "source": "/oculos-vogel-vermelho",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-evan",
+          "source": "/oculos-evan-infantil-",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-lilou",
+          "source": "/oculos-lilou-infantil---",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-berry",
+          "source": "/oculos-berry-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-redondo-bovary",
+          "source": "/oculos-clipon-bovary-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-rimini",
+          "source": "/oculos-de-grau-rimini-azul",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-brindas",
+          "source": "/qg3x1nn7r-oculos-lelis",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-rogi",
+          "source": "/oculos-rogi",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-serbie",
+          "source": "/oculos-le-belle",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-milan",
+          "source": "/-oculos-milan-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-founier",
+          "source": "/-oculos-fournier",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-founier",
+          "source": "/-oculos-fournier-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-chastain",
+          "source": "/-oculos-chastain-marsala",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-anzio",
+          "source": "/oculos-de-grau-anzio-azul",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-redondo-aspi",
+          "source": "/oculos-aspi-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-esportivo-aida",
+          "source": "/oculos-aida-cinza",
+          "type": 301
+      },
+      {
+          "destination": "/sem-nome",
+          "source": "/oculos-amouretti-rosa",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-montor",
+          "source": "/oculos-montor--",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-retangular-neyret",
+          "source": "/tartaruga-oculos-neyret",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-montpellier",
+          "source": "/oculos-montpellier-",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-redondo-mat-s",
+          "source": "/oculos-de-sol-mates-azul",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-niel",
+          "source": "/oculos-verzus",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-fortia",
+          "source": "/oculos-de-sol-fortia-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-vaise",
+          "source": "/red-oculos-vaise",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-slate",
+          "source": "/oculos-slate3",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-azzy",
+          "source": "/oculos-azzy-branco",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-angelle",
+          "source": "/oculos-angelle-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-retangular-bachut",
+          "source": "/joculos-bachut",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-moll",
+          "source": "/-oculos-de-sol-infantil-mutley-azul",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-chiaperini",
+          "source": "/oculos-chiaperini-vermelho",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-janvier",
+          "source": "/oculos-janvier-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-redondo-aspi",
+          "source": "/oculos-aspi-transparente",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-tangarelli",
+          "source": "/oculos-tangarelli",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-redondo-aspi",
+          "source": "/oculos-aspi-caramelo",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-evan",
+          "source": "/oculos-evan-infantil---",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-lafeline",
+          "source": "/lafeline-bege",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-aviador-canetto",
+          "source": "/-oculos-canneto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-fuzzy",
+          "source": "/rosa-oculos-fuzzy",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-dunnas",
+          "source": "/oculos-dunnas",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-retangular-reig",
+          "source": "/oculos-de-sol-reig-les-bains-quadrado-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-sivina",
+          "source": "/oculos-sivina--",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-fuzzy",
+          "source": "/oculos-fuzzy",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-evan",
+          "source": "/oculos-evan-infantil----",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-lalo",
+          "source": "/oculos-goofy-infantil-vinho",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-perrot",
+          "source": "/oculos-perrot-infantil----",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-aviador-boul",
+          "source": "/oculos-chase-infantil-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-aviador-ben",
+          "source": "/oculos-ben",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-lalo",
+          "source": "/-oculos-goofi-infantil",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-lilou",
+          "source": "/oculos-lilou-infantil--",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-angelle",
+          "source": "/-oculos-angelle-azul",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-founier",
+          "source": "/oculos-fournier-azul",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-poullin",
+          "source": "/tartaruga-oculos-poullin",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-jaya",
+          "source": "/oculos-jaya-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-galanis",
+          "source": "/oculos-galanis",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-pearson",
+          "source": "/oculos-pearson-cinza",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-saviano",
+          "source": "/oculos-de-grau-saviano-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-gefen",
+          "source": "/oculos-de-sol-gefen-rosa",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-clip-on-hexagonal-faure",
+          "source": "/oculos-clipon-faure",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-esportivo-mermoz",
+          "source": "/oculos-de-sol-fusion-transparente",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-esportivo-aida",
+          "source": "/oculos-de-sol-aida-les-bains-mascara-rosa-e-espelhado",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-sorrento",
+          "source": "/oculos-de-sol-sorrento-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-lafeline",
+          "source": "/oculos-lafeline-rosa",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-esportivo-agassi",
+          "source": "/espelhado-oculos-agassi",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-aviador-tache",
+          "source": "/oculos-de-sol-tache-MG0723-C6",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-esmares",
+          "source": "/oculos-esmares--",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-bajo",
+          "source": "/oculos-de-dol-nomaa-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-carter",
+          "source": "/oculos-carter",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-evan",
+          "source": "/oculos-evan-infantil--",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-blanche",
+          "source": "/oculos-blanche",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-terme",
+          "source": "/oculos-terme",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-chastain",
+          "source": "/-oculos-chastain-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-baquis",
+          "source": "/oculos-de-sol-baquis-mostarda",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-biarritz",
+          "source": "/oculos-biarritz-",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-cubi",
+          "source": "/oculos-de-sol-cubi-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-hexagonal-caudalie",
+          "source": "/oculos-caudalie-dourado",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-clip-on-hexagonal-faure",
+          "source": "/preto-oculos-clipon-faure",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-tomp",
+          "source": "/oculos-tomb",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-elegant",
+          "source": "/oculos-elegant-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-jaya",
+          "source": "/-oculos-jaya-rosa",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-mahon",
+          "source": "/oculos-desrosier",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-redondo-fey",
+          "source": "/vermelho-oculos-fey",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-angri",
+          "source": "/oculos-de-grau-angri-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-gare",
+          "source": "/oculos-gare",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-vauban",
+          "source": "/oculos-vauban-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-retangular-daro",
+          "source": "/oculos-de-sol-daro-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-polarizado-aviador-doree",
+          "source": "/oculos-de-sol-jamill-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-can",
+          "source": "/oculos-de-sol-can-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-esportivo-murray",
+          "source": "/oculos-murray-branco",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-hexagonal-salvia",
+          "source": "/oculos-salvia",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-call",
+          "source": "/oculos-de-sol-call-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-montpellier",
+          "source": "/oculos-montpellier---",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-polarizado-aviador-lachaise",
+          "source": "/oculos-de-sol-gaulle-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-aviador-robbe",
+          "source": "/oculos-robbe-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-esmares",
+          "source": "/none-172174983",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-allaire",
+          "source": "/oculos-allaire",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-benoit",
+          "source": "/oculos-benoit-infantil-----",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-moll",
+          "source": "/-oculos-de-sol-infantil-mutley-mostarda",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-lilou",
+          "source": "/oculos-lilou-infantil",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-emma",
+          "source": "/none-180390566",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-lune",
+          "source": "/oculos-lune",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-limonest",
+          "source": "/oculos-limonest",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-elegant",
+          "source": "/oculos-elegant4",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-mayore",
+          "source": "/oculos-mayore",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-perrot",
+          "source": "/oculos-perrot-infantil",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-aviador-ben",
+          "source": "/-oculos-ben-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-lune",
+          "source": "/oculos-lune-transparente",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-chastain",
+          "source": "/oculos-chastain-nude",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-milan",
+          "source": "/oculos-milan-vermelho",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-berry",
+          "source": "/oculos-berry",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-florence",
+          "source": "/oculos-florence",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-mouraria",
+          "source": "/oculos-mouraria3",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-redondo-trachel",
+          "source": "/oculos-clipon-trachel",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-quadrado-perrot",
+          "source": "/oculos-perrot-infantil-----",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-redondo-emma",
+          "source": "/oculos-evan-infantil-------",
+          "type": 301
+      },
+      {
+          "destination": "/culos-de-sol-infantil-polarizado-aviador-boul",
+          "source": "/oculos-chase-infantil-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-quadrado-grillet",
+          "source": "/oculos-grillet-translucido",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-gatinho-chastain",
+          "source": "/oculos-chastel-marrom",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-retangular-vougelas",
+          "source": "/oculos-vougelas",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-clip-on-hexagonal-mazer",
+          "source": "/preto-oculos-clipon-maze",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-esmares",
+          "source": "/oculos-esmares---",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-mila",
+          "source": "/oculos-de-sol-bcn-verde",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-moters",
+          "source": "/moters-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-kariv",
+          "source": "/oculos-de-sol-kariv-tartaruga",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-quadrado-corbas",
+          "source": "/oculos-corbas",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-gatinho-oliva",
+          "source": "/oculos-de-sol-oliva-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-grau-redondo-bonnel",
+          "source": "/oculos-bonnel-preto",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-fele",
+          "source": "/oculos-de-sol-fele-mostarda",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-redondo-fele",
+          "source": "/oculos-de-sol-fele-cinza",
+          "type": 301
+      },
+      {
+          "destination": "/oculos-de-sol-esportivo-kuerten",
+          "source": "/oculos-kuerten-verde",
+          "type": 301
+      }
+  ],
     "public": "dist",
     "ignore": [
       "firebase.json",
