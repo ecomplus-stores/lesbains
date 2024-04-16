@@ -176,6 +176,11 @@
               <span class="cms_ico color" v-if="getCMSPropInfo(color) && getCMSPropInfo(color).img">
                 <img :src="getCMSPropInfo(color).img"/>
               </span>
+              <span class="cms_ico color" v-else-if="getCMSPropInfo(color) && (getCMSPropInfo(color).color_1 || getCMSPropInfo(color).color_2 || getCMSPropInfo(color).color_3)">
+                <span v-if="getCMSPropInfo(color).color_1" :style="'background-color:' + getCMSPropInfo(color).color_1"></span>
+                <span v-if="getCMSPropInfo(color).color_2" :style="'background-color:' + getCMSPropInfo(color).color_2"></span>
+                <span v-if="getCMSPropInfo(color).color_3" :style="'background-color:' + getCMSPropInfo(color).color_3"></span>
+              </span>
               <span class="color" v-else-if="getHexColor(color) && getHexColor(color).specifications.colors && getHexColor(color).specifications.colors[0].value" :style="'background-color:' + getHexColor(color).specifications.colors[0].value"></span>
             </button>
             <span v-if="body.variationsGrids.colors.length > 3">+{{ body.variationsGrids.colors.length - 3}}</span>

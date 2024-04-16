@@ -186,12 +186,11 @@ export default {
       this.selectedColor = color
     },
     getCMSPropInfo(color){
-      console.log(color)
-      console.log(window.apx_properties.find(el => el.title.trim() == color.trim()))
       return window.apx_properties.find(el => el.title.trim() == color.trim())
     },
     getHexColor(color){
-      let hex = this.body.variations.find(el => el.specifications.colors.some(el => el.text === color))
+      console.log(this.body.variations)
+      let hex = this.body.variations.find(el => el.specifications.colors.some(el => el.text.trim().toLowerCase() === color.trim().toLowerCase()))
       return hex      
     },
     setBody (data) {

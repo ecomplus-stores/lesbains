@@ -163,6 +163,11 @@
                             <span class="cms_ico d-flex align-items-center" v-if="getCMSPropInfo(opt.key) && getCMSPropInfo(opt.key).img">
                               <img :src="getCMSPropInfo(opt.key).img"/>
                             </span>
+                            <span class="cms_ico colors d-flex align-items-center" v-else-if="getCMSPropInfo(opt.key) && (getCMSPropInfo(opt.key).color_1 || getCMSPropInfo(opt.key).color_2 || getCMSPropInfo(opt.key).color_3)">
+                                <span v-if="getCMSPropInfo(opt.key).color_1" :style="'background-color:' + getCMSPropInfo(opt.key).color_1"></span>
+                                <span v-if="getCMSPropInfo(opt.key).color_2" :style="'background-color:' + getCMSPropInfo(opt.key).color_2"></span>
+                                <span v-if="getCMSPropInfo(opt.key).color_3" :style="'background-color:' + getCMSPropInfo(opt.key).color_3"></span>
+                              </span>
                             <!-- <span v-else>
                                 {{ JSON.stringify(opt) }}
                             </span> -->
