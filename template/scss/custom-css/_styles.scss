@@ -1948,6 +1948,10 @@ header{z-index:3;
 
 
 @media(min-width:1000px) and (max-width:1440px){
+    :root{
+        --f42:34px;
+    }
+    .lead{font-size:1.2rem}
     .header__logo {
         max-height: 40px;
         
