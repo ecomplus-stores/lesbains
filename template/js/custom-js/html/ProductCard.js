@@ -224,6 +224,9 @@ export default {
           })
       }
     },
+    isMobile(){
+      return window.innerWidth < 990 
+    },
 
     toggleFavorite () {
       if (this.isLogged) {

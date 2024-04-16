@@ -74,7 +74,7 @@
         </a-link>
       </slot>
 
-      <div class="p-3">
+      <div class="p-md-3 p-2">
         <div class="d-flex justify-content-between align-items-start">
           <div>
             <slot name="title">
@@ -170,7 +170,7 @@
             </template>  
           </div>  
           <div class="apx_listing_colors" v-if="body.variationsGrids && body.variationsGrids.colors">
-            <button v-for="color in body.variationsGrids.colors.slice(0,3)" @click="setListingItemImages(color)" type="button" :title="color"
+            <button v-for="color in body.variationsGrids.colors.slice(0,isMobile() ? 1 : 3)" @click="setListingItemImages(color)" type="button" :title="color"
             :class="selectedColor == color ? 'selected' : ''"
             >
               <span class="cms_ico color" v-if="getCMSPropInfo(color) && getCMSPropInfo(color).img">
@@ -183,7 +183,7 @@
               </span>
               <span class="color" v-else-if="getHexColor(color) && getHexColor(color).specifications.colors && getHexColor(color).specifications.colors[0].value" :style="'background-color:' + getHexColor(color).specifications.colors[0].value"></span>
             </button>
-            <span v-if="body.variationsGrids.colors.length > 3">+{{ body.variationsGrids.colors.length - 3}}</span>
+            <span v-if="body.variationsGrids.colors.length > 3">+{{ body.variationsGrids.colors.length - (isMobile() ? 1 : 3)}}</span>
           </div>
         </div>        
       </div>

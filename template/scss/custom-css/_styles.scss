@@ -2349,4 +2349,29 @@ body{
         overflow-y: auto;
     }
     header#header #apx-menu{align-items: flex-start;justify-content: flex-start;padding-top: 5rem;}
+
+    .product-card .apx_listing_colors{
+        gap:3px
+    }
+    .product-card section > .p-3{
+        padding: .5rem;
+        .product-card__name{
+            font-size: calc(var(--f17) * .9);
+        }
+    }
+    .product-card section > .p-3 > div{
+        gap: 1rem;
+    }
+    .product-card .apx_listing_colors{
+        margin-top: .4rem;
+        align-items: center;
+        button{
+            height: 11px;
+            width: 11px;
+        }
+        button.selected{border-width: 1.5px;}
+        span{font-size:var(--f11)}
+    }
+    .page--categories .product-card .apx_listing_colors{margin-top: .25rem;}
+    
 }
