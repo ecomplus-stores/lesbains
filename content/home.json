@@ -21,6 +21,7 @@
           "btn_text_color": "#ffffff",
           "mask_opacity": 5,
           "title": "",
+          "link": "https://lesbains.netlify.app/oculos-de-sol",
           "end": "",
           "title_color": "#ffffff",
           "description": "",
@@ -43,7 +44,6 @@
       "container": "container_90",
       "products": [
         "65b8163c2cd6b6595918eb6b"
-      
       ],
       "margin_top": "0",
       "carrossel_dots_md": "Sim",
