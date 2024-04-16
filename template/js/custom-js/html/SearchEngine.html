@@ -323,6 +323,7 @@
                       v-for="product in suggestedItems"
                       :key="product._id"
                   >
+                    <article class="product-item">
                       <slot
                       name="product-card"
                       v-bind="{ product }"
@@ -333,6 +334,7 @@
                           :product="product"
                       />
                       </slot>
+                    </article>
                   </div>
                   </div>
               </article>

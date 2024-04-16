@@ -78,13 +78,15 @@
         <div class="d-flex justify-content-between align-items-start">
           <div>
             <slot name="title">
+              <span>
               <component
                 :is="headingTag"
                 class="product-card__name"
                 v-html="name"
-              >
-                
+              >     
+              
               </component>
+              </span>           
             </slot>
 
             <slot name="rating">
@@ -171,7 +173,10 @@
             <button v-for="color in body.variationsGrids.colors.slice(0,3)" @click="setListingItemImages(color)" type="button" :title="color"
             :class="selectedColor == color ? 'selected' : ''"
             >
-              <span class="color" v-if="getHexColor(color) && getHexColor(color).specifications.colors && getHexColor(color).specifications.colors[0].value" :style="'background-color:' + getHexColor(color).specifications.colors[0].value"></span>
+              <span class="cms_ico color" v-if="getCMSPropInfo(color) && getCMSPropInfo(color).img">
+                <img :src="getCMSPropInfo(color).img"/>
+              </span>
+              <span class="color" v-else-if="getHexColor(color) && getHexColor(color).specifications.colors && getHexColor(color).specifications.colors[0].value" :style="'background-color:' + getHexColor(color).specifications.colors[0].value"></span>
             </button>
             <span v-if="body.variationsGrids.colors.length > 3">+{{ body.variationsGrids.colors.length - 3}}</span>
           </div>

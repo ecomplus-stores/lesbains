@@ -118,17 +118,18 @@ export default {
     },
 
     name () {
-      let small_text = ['Óculos Solar','Óculos de Grau'];
+      //let small_text = ['Óculos Solar','Óculos de Grau'];
       let title = getName(this.body);
-      let small_title = "";
-      for(let i = 0; i <  small_text.length; i++){
-        if(title.includes(small_text[i])){
-          title = title.replace(small_text[i],'');
-          small_title = "<small>"+ small_text[i] +"</small>"
-        }
-      }
+      // let small_title = "";
+      // for(let i = 0; i <  small_text.length; i++){
+      //   if(title.includes(small_text[i])){
+      //     title = title.replace(small_text[i],'');
+      //     small_title = "<small>"+ small_text[i] +"</small>"
+      //   }
+      // }
       //console.log(title, small_text, small_title)
-      return (small_title + title)
+      //return (small_title + title)
+      return title
     },
 
     strBuy () {
@@ -183,6 +184,11 @@ export default {
       this.selectedPicture = variationImage
       this.variationImagesKey = Math.random().toString()
       this.selectedColor = color
+    },
+    getCMSPropInfo(color){
+      console.log(color)
+      console.log(window.apx_properties.find(el => el.title.trim() == color.trim()))
+      return window.apx_properties.find(el => el.title.trim() == color.trim())
     },
     getHexColor(color){
       let hex = this.body.variations.find(el => el.specifications.colors.some(el => el.text === color))

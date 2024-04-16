@@ -1535,7 +1535,7 @@ body .search-engine__nav{
     }
     .prices{
         text-align: left;justify-content: flex-start; align-items: flex-start;
-        gap: .5rem;
+        gap: 3px;
         *{text-align: left;justify-content: flex-start;align-items: flex-start;}
     }
     .apx_listing_colors{
@@ -1549,11 +1549,14 @@ body .search-engine__nav{
             height: 16px;
             width: 16px;
             border-radius: 50%;
+            line-height: 0;
             .color{
                 display: block;
                 height: 100%;
                 width: 100%;
                 border-radius: 50%;
+                line-height: 0;
+                img{border-radius: 50%;width: 100%;height: 100%;}
             }
         }
         button.selected{
@@ -2219,4 +2222,30 @@ body{
 
 .instagram_2{
     background-image: linear-gradient(to right top, #701630, #87343a, #9c4f46, #b06b55, #c38766, #b38d5f, #a2915f, #909565, #5d7f5e, #326659, #134b50, #0a313f)!important;
+}
+
+.page--categories{
+    .product-card section > .p-3{
+        padding: .5rem;
+        .product-card__name{
+            font-size: calc(var(--f17) * .9);
+        }
+    }
+    .product-card section > .p-3 > div{
+        gap: 1rem;
+    }
+    .product-card .apx_listing_colors{
+        margin-top: .4rem;
+        button{
+            height: 13px;
+            width: 13px;
+        }
+        button.selected{border-width: 1.5px;}
+    }
+}
+.product-item{
+    .prices__installments{
+        font-size: var(--f11);
+        line-height: initial;
+    }
 }
