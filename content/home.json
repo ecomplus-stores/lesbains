@@ -73,13 +73,15 @@
       "type": "apx_banners-grid",
       "banners": [
         {
-          "mask_opacity": 3,
-          "mask_opacity_m": 0,
           "img": "/img/uploads/mini-banner-feminino-627x770.jpg",
-          "title": "",
+          "mobile_img": "/img/uploads/mini-banner-feminino-627x770.jpg",
+          "mask_opacity_m": 0,
           "content_order": "inside_image",
+          "link_url": "https://lesbains.netlify.app/oculos-de-sol/feminino",
           "content_position": "bottom_center",
-          "link": "/teste"
+          "mask_opacity": 3,
+          "title": "",
+          "link": "https://lesbains.netlify.app/oculos-de-sol/feminino"
         },
         {
           "mask_opacity": 0,
