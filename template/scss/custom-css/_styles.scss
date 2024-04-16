@@ -1932,11 +1932,11 @@ header{z-index:3;
     .search-engine__retail{
         .product-item{
             .product-card{
-                .p-3 {padding: .5rem 0;}
-                .p-3 > .d-flex{
-                    flex-direction: column;
+                .p-md-3 {padding: .5rem;}
+                .p-md-3 > .d-flex{
+                    flex-direction: row;
                     gap: 1rem;
-                    padding: .5rem .25rem;
+                    
                 }
             }
         }
@@ -2373,5 +2373,6 @@ body{
         span{font-size:var(--f11)}
     }
     .page--categories .product-card .apx_listing_colors{margin-top: .25rem;}
+    
     
 }
