@@ -1085,6 +1085,13 @@ export default {
         obs.observe()
       }
       setStickyBuyObserver()
+      setTimeout(() => {
+        const { $ } = window
+        $('.variations > div:nth-child(1) button:not(.disabled)').first().click()
+        setTimeout(() => {
+          $('.variations > div:nth-child(2) button:not(.disabled)').first().click()
+        }, 200)
+      }, 200)
     }
     if (this.isOnSale) {
       const promotionDate = new Date(this.body.price_effective_date.end)

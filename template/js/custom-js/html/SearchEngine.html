@@ -116,7 +116,7 @@
                 <div class="sticky">
                   <div
                   v-for="({ filter, options, isSpec }, i) in filters"
-                  v-if="['colors','gender','shape','categories'].includes(filter) && options.length"
+                  v-if="['colors','shape','categories'].includes(filter) && options.length"
                   :key="`filters-${filter}`"
                   class="search-engine__filter"
                   :class="`search-engine__filter--${filter}`"

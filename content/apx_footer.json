@@ -5,38 +5,32 @@
       "list": [
         {
           "item": {
-            "title": "Ajuda",
-            "url": "/"
-          }
-        },
-        {
-          "item": {
-            "title": "Rastrear Pedidos",
-            "url": "/"
+            "title": "Fale Conosco",
+            "url": "/pages/contato"
           }
         },
         {
           "item": {
             "title": "Termos e Condições",
-            "url": "/"
+            "url": "/pages/termos"
           }
         },
         {
           "item": {
-            "title": "Política de Garantia",
-            "url": "/"
+            "title": "Política de Privacidade",
+            "url": "/pages/privacidade"
           }
         },
         {
           "item": {
-            "title": "Política de Devolução",
-            "url": "/"
+            "title": "Política de Entrega",
+            "url": "/pages/entrega"
           }
         },
         {
           "item": {
             "title": "Perguntas Frequentes",
-            "url": "/"
+            "url": "/pages/faq"
           }
         }
       ]
@@ -47,13 +41,13 @@
         {
           "item": {
             "title": "A LES BAINS",
-            "url": "/"
+            "url": "/pages/sobre-nos"
           }
         },
         {
           "item": {
             "title": "Manifesto da Marca",
-            "url": "/"
+            "url": "/pages/manifesto"
           }
         }
       ]
@@ -64,45 +58,33 @@
         {
           "item": {
             "title": "Novidades",
-            "url": "/"
+            "url": "/novidades"
           }
         },
         {
           "item": {
             "title": "Óculos de Sol",
-            "url": "/"
+            "url": "/oculos-de-sol"
           }
         },
         {
           "item": {
             "title": "Óculos de Grau",
-            "url": "/"
+            "url": "/oculos-de-grau"
           }
         },
         {
           "item": {
             "title": "Personalize",
-            "url": "/"
+            "url": "/personalize"
           }
         },
         {
           "item": {
             "title": "Lentes de Grau",
-            "url": "/"
+            "url": "/lentes-de-grau"
           }
-        },
-        {
-          "item": {
-            "title": "Cartão Presente",
-            "url": "/"
-          }
-        },
-        {
-          "item": {
-            "title": "Polarizada",
-            "url": "/"
-          }
-        }
+        }        
       ]
     }
   ]

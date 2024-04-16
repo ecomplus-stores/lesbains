@@ -4,6 +4,7 @@ const networksWithColors = [
   ['facebook', '#3b5998'],
   ['youtube', '#ff0000'],
   ['instagram', '#e1306c'],
+  ['instagram_2', '#e1306c'],
   ['twitter', '#1da1f2'],
   ['tiktok', '#000000'],
   ['pinterest', '#bd081c'],
@@ -18,8 +19,9 @@ networksWithColors.forEach(([network, color]) => { %>
       rel="noopener"
       aria-label="<%= network %>"
       style="color: <%= color %>"
+      class="<%= network %>"
     >
-      <i class="i-<%= network %>"></i>
+      <i class="i-<%= network.replace('_2','') %>"></i>
     </a>
   <% } %>
 <% }) %>

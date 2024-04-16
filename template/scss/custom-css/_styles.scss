@@ -495,9 +495,12 @@ header#header{
             align-items: center;
             justify-content: space-between;
             padding:0 0 .5rem 0;
+            input:hover,
+            input:active{border: 0;box-shadow: 0px 0px 0px;outline: 0;}
             input{
                 border: 0;
                 font-size: var(--f17);
+                width: 100%;
             }
             button{
                 padding: 0;
@@ -963,6 +966,11 @@ header#header{
         .apx_gallery__item:not(:first-child){
             flex: 0 0 calc(50% - 0.25rem);
             height: auto!important;
+        }
+        .apx_gallery__item:nth-child(even):last-child{
+            width: 100%;
+            flex: 0 0 100%;
+            picture{height: auto!important;}
         }
     }
 }
@@ -1589,7 +1597,58 @@ body .search-engine__nav{
     box-shadow: 0px 0px 0px;
 }
 
-
+#apx-menu .level_1>li button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+header{z-index:3;
+.container-fluid{z-index:5;position: relative;}}
+@media(min-width:990px){
+    #apx-menu .level_1>li {
+        position: relative;
+        padding: 2rem 0;
+        margin: -2rem 0;
+    }
+}
+#apx-menu{
+    .level_1 > li{position: relative;}
+    .level_2{
+        left: 0;
+        background: #fff;
+        box-shadow: 0 4px 4px rgba(0,0,0,.25);
+        display: flex;
+        gap: 3rem;
+        
+        list-style-type: none;
+        margin-top: 2rem;
+        min-width: 300px;
+        opacity: 0;
+        padding: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        transition: all .2s;
+        ul{
+            list-style: none;
+            padding: 2rem;
+            max-width: unset;
+            white-space: nowrap;
+            display: flex;
+            gap: .5rem;
+            flex-wrap: wrap;
+            max-height: 80dvh;
+            overflow-y: auto;
+            a{transition: all .2s;}
+            a:hover{padding-left:1rem}
+        }
+    }
+}
+#apx-menu .level_1>li:hover .level_2 {
+    margin-top: 0;
+    opacity: 1;
+    pointer-events: all;
+}
 @media(max-width:990px){
     header#header{
         #user-button,
@@ -1654,8 +1713,9 @@ body .search-engine__nav{
                     text-align: center;
                 }
             }
-        }
+        }        
     }
+    
     #apx-menu.visible{
         left: 0;
         // transition: left .2s;
@@ -2155,4 +2215,8 @@ body{
             }
         }
     }
+}
+
+.instagram_2{
+    background-image: linear-gradient(to right top, #701630, #87343a, #9c4f46, #b06b55, #c38766, #b38d5f, #a2915f, #909565, #5d7f5e, #326659, #134b50, #0a313f)!important;
 }

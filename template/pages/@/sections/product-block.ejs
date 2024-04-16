@@ -424,9 +424,22 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
           ) %>
 
           
+          
+        </div>
+        
+      </div>
+    </div>
+  <% } %>
+  <% if (_.state.specifications) { %>
+    <div class="_properties content">
+      <div class="apx_backdrop" data-tab="properties"></div>
+      <div class="container-fluid p-0">
+        <div class="heading py-3 px-4 position-relative">
+          Características
+          <button type="button" class="apx_close" data-tab="properties"></button>
+        </div>
+        <div class="py-3 px-4 markdown html-clearfix my-0">
             <% if (_.state.specifications) { %>
-              <hr></hr>
-              
               <section id="product-specs" class="product-specs">
                 <div class="">
                   <ul class="p-0 m-0">

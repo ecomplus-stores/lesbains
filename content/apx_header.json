@@ -1,5 +1,5 @@
 {
-  "background":"#EAE0DF",
+  "background":"#ffffff",
   "color":"#000000",
   "topbar_1": {
     "color":"#000000",
@@ -43,7 +43,7 @@
   ],
   "topbar_2": {
     "color":"#ffffff",
-    "background":"#701630",
+    "background":"#000000",
     "list": [
       {
         "title": "<b>FRETE GRÁTIS</b> PARA PEDIDOS ACIMA DE R$ 297!",

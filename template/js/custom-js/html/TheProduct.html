@@ -555,6 +555,17 @@
                     </span>
                   </button>
                 </div>
+                <div class="item py-3" v-if="body.specifications">
+                  <button type="button" class="w-100 d-flex align-items-center justify-content-between" data-tab="properties">
+                    Características
+                    <span>                            
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    </span>
+                  </button>
+                </div>
                 <div class="item py-3" v-for="(item, key) in cms_currentLib.list">
                   <button type="button" class="w-100 d-flex align-items-center justify-content-between" :data-tab="key">
                     {{item.title}}
