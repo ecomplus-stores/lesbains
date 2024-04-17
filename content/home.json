@@ -96,14 +96,16 @@
           "link": "https://lesbains.netlify.app/novidades"
         },
         {
-          "mask_opacity": 0,
-          "mask_opacity_m": 0,
           "img": "/img/uploads/mini-banner-masculino-627x770.jpg",
-          "link": "/teste3",
-          "title": "",
-          "title_color": "#ffffff",
+          "mobile_img": "/img/uploads/mini-banner-masculino-627x770.jpg",
+          "mask_opacity_m": 0,
+          "content_order": "inside_image",
+          "link_url": "https://lesbains.netlify.app/oculos-de-sol/masculino",
           "content_position": "bottom_center",
-          "content_order": "inside_image"
+          "mask_opacity": 0,
+          "title": "",
+          "link": "https://lesbains.netlify.app/oculos-de-sol/masculino",
+          "title_color": "#ffffff"
         }
       ],
       "container": "container-fluid",
