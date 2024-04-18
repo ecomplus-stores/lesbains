@@ -1,9 +1,9 @@
 {
-  "background":"#ffffff",
-  "color":"#000000",
+  "background": "#ffffff",
+  "color": "#000000",
   "topbar_1": {
-    "color":"#fff",
-    "background":"#611f31",
+    "color": "#fff",
+    "background": "#611f31",
     "list": [
       {
         "title": "<u>NOVIDADE!</u> COMPRE ÓCULOS DE GRAU ONLINE E RECEBA EM CASA!",
@@ -18,7 +18,24 @@
   "links": [
     {
       "title": "Novidades",
-      "url": "/novidades"
+      "url": "/novidades",
+      "list": [
+        {
+          "item": {
+            "title": "Explorar",
+            "list": [
+              {
+                "item": {
+                  "title": "Novos Óculos de Sol",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/",
+            "image": "/img/uploads/captura-de-tela-2024-04-18-171309.png"
+          }
+        }
+      ]
     },
     {
       "title": "Óculos de Sol",
@@ -42,8 +59,8 @@
     }
   ],
   "topbar_2": {
-    "color":"#ffffff",
-    "background":"#000000",
+    "color": "#ffffff",
+    "background": "#000000",
     "list": [
       {
         "title": "<b>FRETE GRÁTIS</b> PARA PEDIDOS ACIMA DE R$ 297!",
