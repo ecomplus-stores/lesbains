@@ -124,6 +124,7 @@
       "mask_opacity_m": 0,
       "content_order": "left_image",
       "padding_sm": "px-5",
+      "btn_url": "https://lesbains.netlify.app/colecao-luxury",
       "content_position": "center_left",
       "btn_text": "Compre",
       "padding": "px-5",
@@ -132,8 +133,9 @@
       "mask_opacity": 0,
       "title": "Designs icônicos e qualidade excepcional",
       "type": "apx_responsive-banner",
+      "link": "https://lesbains.netlify.app/colecao-luxury",
       "title_color": "#000000",
-      "description": "Explore nossa coleção exclusiva e encontre o par de óculos que reflete sua personalidade"
+      "description": "Explore nossa coleção exclusiva e encontre óculos esculpidos em acetato italiano unindo luxo e atitude."
     }
   ]
 }
