@@ -66,11 +66,18 @@ window.imageResize = function () {
 window.addEventListener('load', function () {
     window.imageResize();
     window.initSliders();
+    headerHeight();
+    
 }, false);
 
 window.addEventListener('resize', function () {
     window.imageResize();
+    headerHeight();
 }, false);
+
+function headerHeight(){
+    $("header#header").css("--header-vh", ($("header#header .apx_topbar.first").innerHeight() + $("header#header > .container-fluid").innerHeight()) + "px");
+}
 
 if($('#page-products').length > 0){
     window.mainProductGallery = [];
@@ -89,5 +96,7 @@ $('body').on('click','#apx-footer .toggleLinks', function(){
     $(this).closest('div').find('.links').toggle();
     $(this).toggleClass('active');
 });
+
+
 
 

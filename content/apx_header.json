@@ -29,6 +29,62 @@
                   "title": "Novos Óculos de Sol",
                   "url": "/"
                 }
+              },
+              {
+                "item": {
+                  "title": "Novos Óculos de Grau",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"            
+          }
+        },
+        {
+          "item": {
+            "title": "Formatos",
+            "list": [
+              {
+                "item": {
+                  "title": "Redondo",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Quadrado",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Gatinho",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Aviador",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Retangular",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Esportivo",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Hexagonal",
+                  "url": "/"
+                }
               }
             ],
             "url": "/",
@@ -39,19 +95,363 @@
     },
     {
       "title": "Óculos de Sol",
-      "url": "/oculos-de-sol"
+      "url": "/oculos-de-sol",
+      "list": [
+        {
+          "item": {
+            "title": "Comprar",
+            "list": [
+              {
+                "item": {
+                  "title": "Feminino",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Masculino",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Infantil",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Acessórios",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"            
+          }
+        },
+        {
+          "item": {
+            "title": "Explorar",
+            "list": [
+              {
+                "item": {
+                  "title": "Óculos de Sol",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Novidades",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"            
+          }
+        },
+        {
+          "item": {
+            "title": "Formatos",
+            "list": [
+              {
+                "item": {
+                  "title": "Redondo",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Quadrado",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Gatinho",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Aviador",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Retangular",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Esportivo",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Hexagonal",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"                        
+          }
+        },
+        {
+          "item": {
+            "title": "Tipo de Lente",
+            "list": [
+              {
+                "item": {
+                  "title": "Polarizada",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "UVA/UVB 400",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Fotossensível",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Solar com Grau",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Veja todos os tipos",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/",
+            "image": "/img/uploads/captura-de-tela-2024-04-18-171309.png"       
+          }
+        }
+      ]
     },
     {
       "title": "Óculos de Grau",
-      "url": "/oculos-de-grau"
+      "url": "/oculos-de-grau",
+      "list": [
+        {
+          "item": {
+            "title": "Comprar",
+            "list": [
+              {
+                "item": {
+                  "title": "Feminino",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Masculino",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Infantil",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Acessórios",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"            
+          }
+        },
+        {
+          "item": {
+            "title": "Explorar",
+            "list": [
+              {
+                "item": {
+                  "title": "Óculos de Grau",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Novidades",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"            
+          }
+        },
+        {
+          "item": {
+            "title": "Formatos",
+            "list": [
+              {
+                "item": {
+                  "title": "Redondo",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Quadrado",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Gatinho",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Aviador",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Retangular",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Esportivo",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Hexagonal",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"                        
+          }
+        },
+        {
+          "item": {
+            "title": "Tipo de Lente",
+            "list": [
+              {
+                "item": {
+                  "title": "Antirreflexo",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Luz Azul",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Multifocal",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Veja todos os tipos",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/",
+            "image": "/img/uploads/captura-de-tela-2024-04-18-171309.png"       
+          }
+        }
+      ]
     },
     {
       "title": "Lentes de Grau",
-      "url": "/lentes-de-grau"
+      "url": "/lentes-de-grau",
+      "list": [
+        {
+          "item": {
+            "title": "LES BAINS com Lentes de Grau",
+            "list": [
+              {
+                "item": {
+                  "title": "Saiba mais",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Veja todas as lentes",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"            
+          }
+        },
+        {
+          "item": {
+            "title": "Comprar",
+            "list": [
+              {
+                "item": {
+                  "title": "Óculos de Sol com Grau",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Óculos com Grau",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"            
+          }
+        }
+      ]
     },
     {
       "title": "Relógios",
-      "url": "/relogios"
+      "url": "/relogios",
+      "list": [
+        {
+          "item": {
+            "title": "Comprar",
+            "list": [
+              {
+                "item": {
+                  "title": "Feminino",
+                  "url": "/"
+                }
+              },
+              {
+                "item": {
+                  "title": "Masculino",
+                  "url": "/"
+                }
+              }
+            ],
+            "url": "/"            
+          }
+        }        
+      ]
     },
     {
       "title": "Personalize",
