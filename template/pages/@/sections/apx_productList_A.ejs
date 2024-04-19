@@ -30,6 +30,23 @@
       data-carrossel_dots_sm="<%= opt.carrossel_dots_sm %>"
       data-carrossel_arrows_sm="<%= opt.carrossel_arrows_sm %>"
      >
+     <% if (opt.bg_img || opt.bg_img_mobile) { %>
+     <div class="list_bg  <%= opt.bg_img ? 'md-visible' : 'md-hidden' %> <%= opt.bg_img_mobile ? 'd-visible' : 'd-hidden' %>">
+        <picture class="<%= opt.bg_img ? 'd-md-block' : 'd-md-none' %> <%= opt.bg_img_mobile ? 'd-block' : 'd-none' %>">
+            <source
+                srcset="<%= opt.bg_img_mobile %>"
+                type="image/webp"
+                media="(max-width: 399.98px)"
+            >
+            <source
+                srcset="<%= opt.bg_img  %>"
+                type="image/webp"
+                media="(min-width: 400px)"
+            >
+            <img loading="lazy" src="<%= opt.bg_img %>"/>
+        </picture>
+     </div>
+     <% } %>
      <div class="<%= opt.container %> <%= opt.padding_sm %> <%= opt.padding_md %> pb-5">
         <%
             if(opt.title){

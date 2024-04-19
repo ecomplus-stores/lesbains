@@ -663,7 +663,7 @@
                     :has-buy-button="false"
                     @set-quantity="({ quantity }) => qntToBuy = quantity"
                   >
-                    <span @click="buy">
+                    <span @click="buy('normal')">
                       <slot
                         name="buy"
                         v-bind="{ hasClickedBuy, isOnCart }"

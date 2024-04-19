@@ -113,10 +113,11 @@
                   class="card-body"
                   :key="searchFilterId"
               >
+              <!-- v-if="!['colors','shape','categories'].includes(filter) && options.length" -->
                 <div class="sticky">
                   <div
                   v-for="({ filter, options, isSpec }, i) in filters"
-                  v-if="['colors','shape','categories'].includes(filter) && options.length"
+                  v-if="!['Brands','largura_ponte','largura_lentes','comprimento_hastes','altura_lentes','largura_armacao'].includes(filter) && options.length"
                   :key="`filters-${filter}`"
                   class="search-engine__filter"
                   :class="`search-engine__filter--${filter}`"
@@ -126,20 +127,22 @@
                     <!-- <p>{{ ['colors','gender','shape',''].includes(filter) }} - {{filter}}</p> -->
                       <button
                       class="btn"
+                      :class="i > 3 ? 'collapsed' : null"
                       type="button"
                       data-toggle="collapse"
                       :data-target="`#collapse-${filter}`"
-                      :aria-expanded="i < 5 || 1 == 1 ? 'true' : 'false'"
+                      :aria-expanded="i < 3  ? 'true' : 'false'"
                       :aria-controls="`collapse-${filter}`"
                       >
                       <!-- <i class="fas fa-chevron-down"></i>
                       <i class="fas fa-chevron-up"></i> -->
                       {{ getFilterLabel(filter) }}
+                      <i class="toggleStatus"></i>
                       </button>
       
                       <div
                       class="collapse"
-                      :class="i < 5 || 1 == 1 ? 'show' : null"
+                      :class="i < 3 ? 'show' : null"
                       :id="`collapse-${filter}`"
                       
                       >
@@ -172,7 +175,7 @@
                                 {{ JSON.stringify(opt) }}
                             </span> -->
                             {{ opt.key }}
-                            <small v-if="!isSpec">
+                            <small v-if="!isSpec" class="d-none">
                                 ({{ opt.doc_count }})
                             </small>
                             <p class="cms_description m-0" v-if="getCMSPropInfo(opt.key) && getCMSPropInfo(opt.key).description">

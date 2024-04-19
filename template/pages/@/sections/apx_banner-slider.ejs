@@ -35,7 +35,17 @@ if (slides && slides.length) {
   }
   %>
 
-  <div class="<%- className %> apx_banner-slider pb-5" style="<%- style %>">
+  <div class="<%- className %> apx_banner-slider 
+    pb-<%= opt.padding_bottom_m %>
+    pb-md-<%= opt.padding_bottom %>
+    pt-<%= opt.padding_top_m %>
+    pt-md-<%= opt.padding_top %>
+    mb-<%= opt.margin_bttom_m %>
+    mb-md-<%= opt.margin_bttom %>
+    mt-<%= opt.margin_top_m %>
+    mt-md-<%= opt.margin_top %>
+    
+    " style="<%- style %>">
     <div data-autoplay="<%= opt.autoplay %>">
       <div class="slick-me" data-carrossel_dots_md="Sim" data-carrossel_arrows_md="Não" >
         <% for (let i = 0; i < slides.length; i++) { %>

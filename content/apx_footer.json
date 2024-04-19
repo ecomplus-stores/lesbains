@@ -11,8 +11,8 @@
         },
         {
           "item": {
-            "title": "Termos e Condições",
-            "url": "/pages/termos"
+            "title": "Perguntas Frequentes",
+            "url": "/pages/faq"
           }
         },
         {
@@ -29,10 +29,17 @@
         },
         {
           "item": {
-            "title": "Perguntas Frequentes",
-            "url": "/pages/faq"
+            "title": "Política de Garantia",
+            "url": "/pages/politica-de-garantia"
+          }
+        },
+        {
+          "item": {
+            "title": "Rastrear Pedido (Correios)",
+            "url": "https://rastreamento.correios.com.br/app/index.php"
           }
         }
+        
       ]
     },
     {
@@ -46,10 +53,11 @@
         },
         {
           "item": {
-            "title": "Manifesto da Marca",
-            "url": "/pages/manifesto"
+            "title": "Termos e Condições",
+            "url": "/pages/termos-e-condicoes"
           }
         }
+        
       ]
     },
     {

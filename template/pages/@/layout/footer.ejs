@@ -2,6 +2,7 @@
 // load footer options and contacts from content
 const footer = _.cms('footer') || {}
 const apx_footer = _.cms('apx_footer') || {}
+const apx_whatsapp = _.cms('apx_whatsapp') || {}
 const contacts = _.cms('contacts') || {}
 const themeCustom = _.settings.theme.custom || ''
 
@@ -30,6 +31,12 @@ if(['categories','home','search','brand'].includes(_.pageName)){
   window.apx_properties = JSON.parse(<%- JSON.stringify(JSON.stringify(productProperties)) %>);  
   window.apx_tags = JSON.parse(<%- JSON.stringify(JSON.stringify(productTags)) %>);  
 </script>
+
+<% if(apx_whatsapp && apx_whatsapp.number) { %>
+  <a href="https://wa.me/<%= apx_whatsapp.number %>" target="_blank" id="whatsapp_btn">
+    <img src="<%= apx_whatsapp.image ? 'apx_whatsapp.image' : '/img/whatsapp_ico_apx.svg' %>" style="height:60px"/>
+  </a>
+<% } %>
 <hr class="mt-5 d-md-block d-none"></hr>
 <footer class="" id="apx-footer">
   <div class="container_90 px-md-3">

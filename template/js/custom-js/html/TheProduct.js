@@ -655,6 +655,7 @@ export default {
       this.customizationPanel = false
     },
     buy (option) {
+      //alert(`saravaaa`)
       this.hasClickedBuy = true
       const product = sanitizeProductBody(this.body)
       let variationId
@@ -771,9 +772,10 @@ export default {
 
       }else{
         
-
-        if(this.cms_customizations && option != "customized"){
+        if(this.cms_customizations.length > 0 && option != "customized"){
           this.customizationPanel = true;
+          console.log(this.cms_customizations)
+          console.log(option)
           //alert('Selecione as opções para prosseguir')
         }else{
           this.$emit('buy', { product, variationId, customizations : customCustomizations })

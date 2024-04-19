@@ -25,6 +25,12 @@ module.exports = () => ({
     //   './html/QuantitySelector.html': path.resolve(__dirname, 'template/js/custom-js/html/QuantitySelector.html'),   
     //   './js/QuantitySelector.js': path.resolve(__dirname, 'template/js/custom-js/html/QuantitySelector.js'),   
     //   './html/CartQuickview.html': path.resolve(__dirname, 'template/js/custom-js/html/CartQuickview.html'),   
+    './html/TheCart.html': path.resolve(__dirname, 'template/js/custom-js/html/TheCart.html'),   
+    './html/EcCheckout.html': path.resolve(__dirname, 'template/js/custom-js/html/EcCheckout.html'),   
+    './js/EcCheckout.js': path.resolve(__dirname, 'template/js/custom-js/html/EcCheckout.js'),   
+    './html/PaymentMethods.html': path.resolve(__dirname, 'template/js/custom-js/html/PaymentMethods.html'),   
+    './App.vue': path.resolve(__dirname, 'template/js/custom-js/html/App.vue'),   
+   
     }
   }
 })

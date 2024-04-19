@@ -1,11 +1,12 @@
 <div class="cart">
   <transition-group enter-active-class="animated fadeInDown">
     <div
-      class="row"
+      class="row justify-content-center"
       v-if="cart.items.length"
       key="list"
     >
-      <div class="col-md-7 col-lg-8">
+      <div class="col-md-6 cart-divider">
+        
         <div class="cart__list">
           <slot
             name="list"
@@ -46,10 +47,13 @@
         </slot>
       </div>
 
-      <div class="col-md-5 col-lg-4 mt-3 mt-md-0">
+      <div class="col-md-4 mt-3 mt-md-0">
         <div class="cart__info">
           <slot name="info">
-            <div class="cart__summary-row">
+            <div
+              class="cart__summary-row"
+              :data-subtotal="cart.subtotal.toFixed(2)"
+            >
               <span>Subtotal</span>
               <div>{{ formatMoney(cart.subtotal) }}</div>
             </div>
@@ -59,6 +63,7 @@
                 <div
                   class="cart__summary-row mt-1"
                   v-if="amount.discount"
+                  :data-discount="amount.discount.toFixed(2)"
                 >
                   <span>
                     <i class="i-tag mr-1"></i>
@@ -76,7 +81,10 @@
                 @select-service="selectShippingService"
               />
 
-              <div class="cart__summary-row cart__total">
+              <div
+                class="cart__summary-row cart__total"
+                :data-total="(amount.total || cart.subtotal).toFixed(2)"
+              >
                 <span>Total</span>
                 <a-prices
                   :product="{ price: amount.total || cart.subtotal }"
@@ -84,13 +92,6 @@
                   :is-literal="true"
                   :is-amount-total="true"
                 />
-              </div>
-              <div class="bazicash_amount text-right mb-3 d-flex align-items-center justify-content-end" style="flex-wrap:wrap">
-                <i style="background-image:url(/img/uploads/bcash.png)"class="bcash_icon"></i>
-                Você ganhará&nbsp;
-                <b>{{(amount.total - amount.freight).toFixed(0)}}</b>&nbsp;Bazicash!
-                <br>
-                <div style="width:100%"><a style="font-size:12px;" target="_blank" href="/pages/o-que-e-bazicash"><u>O que é isso?</u></a></div>
               </div>
             </template>
 
@@ -101,9 +102,6 @@
                 role="button"
                 :href="checkoutUrl"
               >
-                <span class="mr-1">
-                  <i class="i-shopping-bag"></i>
-                </span>
                 {{ i19checkout }}
               </a>
 
