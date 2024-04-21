@@ -62,7 +62,7 @@
                 </div>
                 
 
-                <div class="mb-5">
+                <div class="mb-md-5 mb-4">
                   <h3>
                     Endereço de entrega
                   </h3>
@@ -75,9 +75,10 @@
                     @show-form="isAddrForm => isEditingAddr = isAddrForm"
                   />
                 </div>
+                
                 <div
                   v-if="shippingAddress"
-                  class="checkout__shipping mb-5"
+                  class="checkout__shipping mb-md-5 mb-4"
                 >
                   <h3>
                     Forma de envio
@@ -85,7 +86,7 @@
                   
                   <transition-group enter-active-class="animated fadeInDown">
                     <div
-                      v-if="shippingService && !editShippingService && !skipShippingApps.length"
+                      v-if="1 != 1 && hippingService && !editShippingService && !skipShippingApps.length"
                       key="shipping"
                     >
                       <div class="checkout__shipping-method">
@@ -140,7 +141,7 @@
                 </div> -->
               </div>
 
-              <div class="mb-5">
+              <div class="mb-md-5 mb-4">
                 <h3>Observações</h3>
                 <div class="checkout__notes">
                   <div class="form-group">
@@ -156,6 +157,18 @@
                   </div>
                 </div>
               </div>
+              <div class="mb-md-5 mb-4">
+                <discount-applier
+                  
+                  class="checkout__discount mt-4"
+                  :amount="amount"
+                  :coupon-code.sync="localDiscountCoupon"
+                  @set-discount-rule="discountRule => $emit('set-discount-rule', discountRule)"
+                  :modules-payload="modulesPayload"
+                  :customer="customer"
+                  is-attention-wanted
+                />
+              </div>
             </div>
 
             <div class="checkout__col col-md-12 pt-0"
@@ -170,8 +183,8 @@
                   leave-active-class="animated fadeOutRight fast position-absolute"
                 >
                   <div
-                    v-if="enabledCheckoutStep >= 2"
-                    :class="shownCheckoutStep !== 2 ? 'd-none d-md-block' : null"
+                    
+                    :class="shownCheckoutStep !== 2 ? 'd-block d-md-block' : null"
                   >
                     <payment-methods
                       :key="paymentsListKey"
@@ -247,7 +260,7 @@
                 />
               </template>
 
-              <template v-if="enabledCheckoutStep > 1">
+              <template v-if="enabledCheckoutStep > 1 && 1 != 1">
                 <discount-applier
                   class="checkout__discount"
                   :amount="amount"
