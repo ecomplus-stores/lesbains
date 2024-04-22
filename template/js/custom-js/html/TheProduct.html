@@ -307,12 +307,12 @@
           </div>
         </div>
         
-        <div class="step last px-3"
+        <div class="step last px-md-3"
           v-if="cms_customizations_step > cms_customizations.length + cms_upselling.length"
             :class="cms_customizations_step > cms_customizations.length + cms_upselling.length  ? 'current' : ''"
         >
           <div>
-            <div class="option_title text-center mb-5 mt-5">
+            <div class="option_title text-center mb-md-5 mb-4 mt-5">
               <small></small>
               <h4>Confira seu produto</h4>
             </div>
@@ -652,7 +652,7 @@
 
                 <div
                   v-else-if="hasBuyButton"
-                  class="product__buy mt-md-0 pt-md-0 col-md col-5 "
+                  class="product__buy mt-md-0 pt-md-0 col-md-7 col-5 "
                   ref="buy"
                 >
                   <component

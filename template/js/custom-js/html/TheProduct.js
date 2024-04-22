@@ -653,6 +653,8 @@ export default {
 
     closeCustomizations() {
       this.customizationPanel = false
+      $('body').removeClass('customizationVisible');
+      this.hasClickedBuy = false;
     },
     buy (option) {
       //alert(`saravaaa`)
@@ -754,6 +756,7 @@ export default {
 
         if(this.cms_customizations && option != "customized"){
           this.customizationPanel = true;
+          $('body').addClass('customizationVisible');
           //alert('Selecione as opções para prosseguir')
         }else{
           product.customizations = customCustomizations
@@ -761,6 +764,8 @@ export default {
           if (this.canAddToCart) {
             this.current_customization = []
             this.customizationPanel = false
+            $('body').removeClass('customizationVisible');
+            this.hasClickedBuy = false;
             this.cms_customizations_step = 1
             //console.log(product)
             ecomCart.addProduct({ ...product }, variationId, 1)          
@@ -774,6 +779,7 @@ export default {
         
         if(this.cms_customizations.length > 0 && option != "customized"){
           this.customizationPanel = true;
+          $('body').addClass('customizationVisible');
           console.log(this.cms_customizations)
           console.log(option)
           //alert('Selecione as opções para prosseguir')
@@ -782,6 +788,8 @@ export default {
           if (this.canAddToCart) {
             this.current_customization = []
             this.customizationPanel = false
+            $('body').removeClass('customizationVisible');
+            this.hasClickedBuy = false;
             this.cms_customizations_step = 1
             this.pickedUpsellProduct = null
             ecomCart.addProduct({ ...product, customizations : customCustomizations }, variationId, this.qntToBuy)          

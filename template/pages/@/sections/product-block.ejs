@@ -268,7 +268,8 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                           <% const productWidget = _.widgets.find(item => item.pkg === '@ecomplus/widget-product') %>
                           <% buyText = productWidget && productWidget.options.buyText %>
                         <% } %>
-                        <%= buyText || _.dictionary('buy') %>
+                        <!-- <%= buyText || _.dictionary('buy') %> -->
+                        Adicionar ao Carrinho
                         
                       <% } %>
                     </div>

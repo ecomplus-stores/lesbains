@@ -897,7 +897,7 @@ header#header{
                 align-items: center;
                 border-bottom: 1px solid transparent;
                 display: flex;
-                font-size: var(--f-size-6);
+                font-size: var(--f14);
                 font-weight: 700;
                 gap: 5px;
                 text-decoration: none;
@@ -911,17 +911,7 @@ header#header{
             .btn-back:hover {
                 border-bottom-color: initial;
             }
-            .btn-back:before{
-                background: url("/assets/chevron_cta.svg");
-                background-position: 0 1px;
-                content: "";
-                display: block;
-                height: 16px;
-                width: 15px;
-                background-size: contain;
-                rotate: 180deg;
-                margin-top: 2px;
-            }
+            
             .customization_functions {
                 flex-direction: column;
                 gap: 1rem;
@@ -1059,7 +1049,7 @@ header#header{
         margin-bottom:0!important;
         .btn-primary{
             border-radius: 0;
-            padding: 0.7rem 2.1rem;
+            padding: 0.7rem 1.4rem;
             width: 100%;
             span{
                 color: #fff;
@@ -3429,4 +3419,41 @@ ul.app_contacts{
         #storefront-app .checkout__app .checkout__info .summary__amount{padding-bottom: 0;margin-bottom: 0;}
         
     }
+    #page-products .product__buy .btn-primary span{
+        line-height: initial;
+    font-size: 12px;
+    }
+    body.customizationVisible{
+        header.header{
+            z-index:1
+        }
+    }
+    #page-products #custom_customizations .customization_functions{padding-bottom: 0!important;}
+    #custom_customizations .current>div{
+        height: calc(100dvh - 45px)!important;
+    }
+    #cart-quickview .card-header .apx_close, #cart-quickview .card-header .close{
+        height: 20px;
+        width: 20px;
+    }
+    #cart-quickview .cart-item .cart-item__data .cart-item__prices, #cart-quickview .cart-item .cart-item__data .cart-item__quantity{
+        font-size: var(--f14);
+    }
+    .minicart__aside{
+        .minicart__btn-back{display: none;}
+    }
+}
+.minicart__aside{
+    .prices__installments{
+        font-size: var(--f14);
+        font-weight: normal!important;
+        *{font-size: var(--f14);font-weight: normal!important;}
+    }
+}
+#cart-quickview .cart-item .cart-item__data .cart-item__name{
+    width: calc(100% - 30px);
+}
+.text-muted{color: #666!important;}
+.minicart__btn-cart{
+    display: none!important;
 }
