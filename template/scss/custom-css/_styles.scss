@@ -3442,6 +3442,9 @@ ul.app_contacts{
     .minicart__aside{
         .minicart__btn-back{display: none;}
     }
+    #header .level_1 .level_2.max_menu>div>ul{height:auto;gap:1rem!important;
+    padding-top: 0;padding-bottom: 0;}
+    #apx-menu .level_1>li.open>.level_2 ul{margin-top: 0;}
 }
 .minicart__aside{
     .prices__installments{
