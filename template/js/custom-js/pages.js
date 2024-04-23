@@ -20,10 +20,10 @@ window.initSliders = function(){
             md.settings.arrows = oObj.attr('data-carrossel_arrows_md') == "Sim" ? true : false;
             md.settings.autoplay = oObj.attr('data-carrossel_autoplay_md') == "Sim" ? true : false;
             md.settings.autoplaySpeed = md.settings.autoplay ? 4000 : 0;
-            if(md.settings.arrows){
-                md.settings.prevArrow = '<button type="button" class="apx_arrow prev">' + pArrow + '</button>';
-                md.settings.nextArrow= '<button type="button" class="apx_arrow next">' + nArrow + '</button>';
-            }
+            // if(md.settings.arrows){
+            //     md.settings.prevArrow = '<button type="button" class="apx_arrow prev">' + pArrow + '</button>';
+            //     md.settings.nextArrow= '<button type="button" class="apx_arrow next">' + nArrow + '</button>';
+            // }
         }
         if(oObj.attr('data-carrossel_sm') == "Não"){
             sm.breakpoint = 800;
@@ -40,13 +40,72 @@ window.initSliders = function(){
             sm.settings.autoplay = oObj.attr('data-carrossel_autoplay_sm') == "Sim" ? true : false;
             sm.settings.autoplaySpeed = sm
             .settings.autoplay ? 4000 : 0;
-            if(sm.settings.arrows){
-                sm.settings.prevArrow = '<button type="button" class="apx_arrow prev">' + pArrow + '</button>';
-                sm.settings.nextArrow= '<button type="button" class="apx_arrow next">' + nArrow + '</button>';
-            }
+            // if(sm.settings.arrows){
+            //     sm.settings.prevArrow = '<button type="button" class="apx_arrow prev">' + pArrow + '</button>';
+            //     sm.settings.nextArrow= '<button type="button" class="apx_arrow next">' + nArrow + '</button>';
+            // }
         }
         $(this).slick({
             lazyLoad: 'ondemand',
+            prevArrow:
+            '<span class="prev"><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="16.5" y1="7.5" x2="1.5" y2="7.5" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 1L1 7L8.5 13" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+          nextArrow:
+            '<span class="next"><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="6.5" x2="15.5" y2="6.5" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 1L16 7L8.5 13" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+         
+            responsive: [md,sm]
+        });
+    });
+
+    $('.apx_product-list').each(function(){
+        let oObj = $(this);
+        let md = {};
+        let sm = {};        
+        if(oObj.attr('data-carrossel_md') == "Não"){
+            md.breakpoint = 9999;
+            md.settings = "unslick";
+        }else{
+            md.breakpoint = 9999;
+            md.settings = {};
+            md.settings.slidesToShow = oObj.attr('data-num_col_md');
+            //md.settings.slidesToScrol = oObj.attr('data-num_col_md');
+            md.settings.slidesToScroll = 1;
+            md.settings.infinite = true;
+            md.settings.dots = oObj.attr('data-carrossel_dots_md') == "Sim" ? true : false;
+            md.settings.arrows = oObj.attr('data-carrossel_arrows_md') == "Sim" ? true : false;
+            md.settings.autoplay = oObj.attr('data-carrossel_autoplay_md') == "Sim" ? true : false;
+            md.settings.autoplaySpeed = md.settings.autoplay ? 4000 : 0;
+            // if(md.settings.arrows){
+            //     md.settings.prevArrow = '<button type="button" class="apx_arrow prev">' + pArrow + '</button>';
+            //     md.settings.nextArrow= '<button type="button" class="apx_arrow next">' + nArrow + '</button>';
+            // }
+        }
+        if(oObj.attr('data-carrossel_sm') == "Não"){
+            sm.breakpoint = 800;
+            sm.settings = "unslick";
+        }else{
+            sm.breakpoint = 800;
+            sm.settings = {};
+            sm.settings.slidesToShow = oObj.attr('data-num_col_sm');
+            sm.settings.slidesToScroll = 1;
+            //sm.settings.slidesToScrol = oObj.attr('data-num_col_sm');
+            sm.settings.infinite = true;
+            sm.settings.dots = oObj.attr('data-carrossel_dots_sm') == "Sim" ? true : false;
+            sm.settings.arrows = oObj.attr('data-carrossel_arrows_sm') == "Sim" ? true : false;
+            sm.settings.autoplay = oObj.attr('data-carrossel_autoplay_sm') == "Sim" ? true : false;
+            sm.settings.autoplaySpeed = sm
+            .settings.autoplay ? 4000 : 0;
+            // if(sm.settings.arrows){
+            //     sm.settings.prevArrow = '<button type="button" class="apx_arrow prev">' + pArrow + '</button>';
+            //     sm.settings.nextArrow= '<button type="button" class="apx_arrow next">' + nArrow + '</button>';
+            // }
+        }
+        $(this).find('.row.list').slick({
+            lazyLoad: 'ondemand',
+            prevArrow:
+            '<span class="prev"><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="16.5" y1="7.5" x2="1.5" y2="7.5" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 1L1 7L8.5 13" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+          nextArrow:
+            '<span class="next"><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="6.5" x2="15.5" y2="6.5" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 1L16 7L8.5 13" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+         
             responsive: [md,sm]
         });
     });

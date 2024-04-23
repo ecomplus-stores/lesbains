@@ -1104,10 +1104,10 @@ header#header{
     .card-header{
         background: #fff;
         border-bottom: 1px solid #f2f2f2;
-        font-size: var(--f14);
+        font-size: var(--f17);
         padding: 1.3rem 1.5rem;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 600;
         .close{
             span{
                 display: none;
@@ -3459,4 +3459,39 @@ ul.app_contacts{
 .text-muted{color: #666!important;}
 .minicart__btn-cart{
     display: none!important;
+}
+
+.apx_product-list{
+    
+    .slick-slider{
+        .slick-arrow{
+            background: #fff;
+            position: absolute;
+            top: 40%;
+            left: 0;
+            height: 40px;
+            width: 40px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            translate: 0 -50%;
+            cursor: pointer;
+            transition: box-shadow .2s ease-in-out;
+        }
+        // .slick-arrow:hover{
+        //     box-shadow: 0px 4px 4px rgba(0,0,0,.25);
+            
+        // }
+        .slick-arrow.prev{}
+        .slick-arrow.next{left: auto;right: 0;}
+    }
+    
+}
+
+header .term-box-only{display: none!important;}
+.term-box-only h1{
+    font-size: var(--f42);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
 }

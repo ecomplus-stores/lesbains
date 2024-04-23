@@ -1,4 +1,48 @@
 <section class="search-engine">
+    <div class="row term-box-only" v-if="term">
+        <div class="col-12">
+            <template v-if="term">
+                <div
+                    v-if="hasEmptyResult"
+                    class="search-engine__no-results"
+                >
+                    <div class="lead mb-2">
+                    <span v-if="suggestedTerm">
+                        {{ i19didYouMean }}
+                        <a
+                        href="#"
+                        @click.prevent="$emit('update:term', suggestedTerm)"
+                        v-text="suggestedTerm"
+                        ></a>
+                        ?
+                    </span>
+                    {{ i19noResultsFor }}
+                    <em>{{ term }}</em>
+                    </div>
+                    <h4 v-if="popularItems.length">
+                    {{ i19popularProducts }}
+                    </h4>
+                </div>
+    
+                <div
+                    v-else
+                    class="search-engine__terms"
+                >
+                    <span
+                    v-if="noResultsTerm"
+                    class="d-none d-lg-inline"
+                    >
+                    {{ i19noResultsFor }}
+                    <s>{{ noResultsTerm }}</s>.
+                    </span>
+                    <span class="d-none d-md-inline">
+                    {{ i19searchingFor }}:
+                    </span>
+                    <h1>{{ term }}</h1>
+                </div>
+                </template>
+        </div>
+    </div>
   <div class="row">
     <div class="col-12">
       <transition
