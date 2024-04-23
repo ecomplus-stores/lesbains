@@ -35,7 +35,19 @@
         },
         {
           "item": {
-            "title": "Rastrear Pedido (Correios)",
+            "title": "Termos e Condições",
+            "url": "/pages/termos-e-condicoes"
+          }
+        },
+        {
+          "item": {
+            "title": "Rastrear Pedido",
+            "url": "https://rastreamento.correios.com.br/app/index.php"
+          }
+        },
+        {
+          "item": {
+            "title": "Rastreio de Devolução",
             "url": "https://rastreamento.correios.com.br/app/index.php"
           }
         }
@@ -53,8 +65,8 @@
         },
         {
           "item": {
-            "title": "Termos e Condições",
-            "url": "/pages/termos-e-condicoes"
+            "title": "Manifesto da Marca",
+            "url": "/pages/manifesto"
           }
         }
         
