@@ -164,16 +164,21 @@ export default {
     },
     setTags(){
       let tags = [];
-      let terms = this.body.categories.map(item => 'cat_' + item._id)
-      terms.push(this.body.sku)
-      this.apx_tags.filter(el => terms.some(term => el.identificador.includes(term))).forEach(item => {
-        if(!this.apx_productTags[item.type]){
-          this.apx_productTags[item.type] = []
+      
+      if(this.body.categories){
+        let terms = this.body.categories.map(item => 'cat_' + item._id)
+        terms.push(this.body.sku)
+        this.apx_tags.filter(el => terms.some(term => el.identificador.includes(term))).forEach(item => {
+          if(!this.apx_productTags[item.type]){
+            this.apx_productTags[item.type] = []
 
-        }
-        this.apx_productTags[item.type] = [...this.apx_productTags[item.type], item]
-      })
-      this.apx_productTags = {...this.apx_productTags}
+          }
+          this.apx_productTags[item.type] = [...this.apx_productTags[item.type], item]
+        })
+
+        this.apx_productTags = {...this.apx_productTags}
+      }
+
     },
     setListingItemImages(color){
       let variation = this.body.variations.find(el => el.specifications.colors.some(el => el.text === color))
