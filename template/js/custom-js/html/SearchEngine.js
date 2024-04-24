@@ -449,6 +449,7 @@ export default {
     },
 
     setFilterOption (filter, option, isSet) {
+      console.log(filter,option,isSet)
       const { selectedOptions } = this
       const optionsList = selectedOptions[filter]
       if (optionsList) {
@@ -490,7 +491,25 @@ export default {
       } else {
         this.scheduleFetch()
       }
-    }
+    },
+    getFiltersFromURL(url) {
+      const urlParams = new URLSearchParams(new URL(url).search);
+      const filtersParam = urlParams.get('filters');
+      console.log(`filtersParam`,filtersParam)
+      const validJsonString = filtersParam.replace(/'/g, '"');
+      if (filtersParam) {
+          try {
+              return JSON.parse(validJsonString);
+          } catch (error) {
+              console.error(error)
+              return null;
+          }
+      } else {
+          console.warn('O parâmetro "filters" não foi encontrado na URL.');
+          return null;
+      }
+  }
+
   },
 
   watch: {
@@ -521,7 +540,23 @@ export default {
     this.fetchItems()
     setTimeout(() => {
       window.imageResize();
+
     }, 100)
+    const url = window.location.href;
+    const filters = this.getFiltersFromURL(url);
+
+    setTimeout(() => {
+    if (filters) {      
+      for(let i = 0 ; i < filters.length; i++){     
+          for (const key in filters[i]) {
+            setTimeout(() => {
+              this.setFilterOption(key,filters[i][key],true);
+            }, 100)
+            
+          }
+        }
+    }
+    }, 500)
   },
   created () {
     resetEcomSearch(this)
@@ -530,5 +565,7 @@ export default {
     setTimeout(() => {
       window.imageResize();
     }, 100)
+
+    
   }
 }

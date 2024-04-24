@@ -33,13 +33,13 @@
               {
                 "item": {
                   "title": "Novos Óculos de Sol",
-                  "url": "/"
+                  "url": "/oculos-de-sol?filters=[{'novidades':'Sim'}]"
                 }
               },
               {
                 "item": {
                   "title": "Novos Óculos de Grau",
-                  "url": "/"
+                  "url": "/oculos-de-grau?filters=[{'novidades':'Sim'}]"
                 }
               }
             ],
@@ -53,49 +53,49 @@
               {
                 "item": {
                   "title": "Redondo",
-                  "url": "/"
+                  "url": "/novidades?filters=[{'shape':'Redondo'}]"
                 }
               },
               {
                 "item": {
                   "title": "Quadrado",
-                  "url": "/"
+                  "url": "/novidades?filters=[{'shape':'Quadrado'}]"
                 }
               },
               {
                 "item": {
                   "title": "Gatinho",
-                  "url": "/"
+                  "url": "/novidades?filters=[{'shape':'Gatinho'}]"
                 }
               },
               {
                 "item": {
                   "title": "Aviador",
-                  "url": "/"
+                  "url": "/novidades?filters=[{'shape':'Aviador'}]"
                 }
               },
               {
                 "item": {
                   "title": "Retangular",
-                  "url": "/"
+                  "url": "/novidades?filters=[{'shape':'Retangular'}]"
                 }
               },
               {
                 "item": {
                   "title": "Esportivo",
-                  "url": "/"
+                  "url": "/novidades?filters=[{'shape':'Esportivo'}]"
                 }
               },
               {
                 "item": {
                   "title": "Hexagonal",
-                  "url": "/"
+                  "url": "/novidades?filters=[{'shape':'Hexagonal'}]"
                 }
               },
               {
                 "item": {
                   "title": "Máscara",
-                  "url": "/"
+                  "url": "/novidades?filters=[{'shape':'Máscara'}]"
                 }
               }
             ],

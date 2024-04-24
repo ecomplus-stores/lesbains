@@ -186,7 +186,7 @@
       
                       <div
                       class="collapse"
-                      :class="i < 3 ? 'show' : null"
+                      :class="i < 3 || selectedOptions[filter].length > 0 ? 'show' : null"
                       :id="`collapse-${filter}`"
                       
                       >
@@ -204,6 +204,8 @@
                           >
                           <label
                           class="custom-control-label"
+                          :data-grid="filter"
+                          :data-option="opt.key"
                           :for="`${filter}-${index}`"
                           >
                           <div class="d-flex align-items-center flex-wrap">
