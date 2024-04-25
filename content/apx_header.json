@@ -499,6 +499,16 @@
         "title": "ENTREGA RÁPIDA PARA CIDADE DE SÃO PAULO! CONFIRA!",
         "url": "/"
       }
+    ],
+    "topbar_1": [
+      {
+        "title": "Entega rápida na cidade de São Paulo",
+        "url": "https://lesbains.netlify.app/pages/entrega"
+      },
+      {
+        "title": "Garantia de 12 meses.",
+        "url": "https://lesbains.netlify.app/pages/politica-de-garantia"
+      }
     ]
   }
 }
