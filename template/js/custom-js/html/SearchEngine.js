@@ -505,6 +505,7 @@ export default {
       
       if (filtersParam) {
         const validJsonString = filtersParam.replace(/'/g, '"');
+        
         try {
               return JSON.parse(validJsonString);
           } catch (error) {
@@ -551,18 +552,32 @@ export default {
     }, 100)
     const url = window.location.href;
     const filters = this.getFiltersFromURL(url);
-    
+    console.log(`filtersURL`,filters)
     setTimeout(() => {
     if (filters) {      
-      for(let i = 0 ; i < filters.length; i++){     
-          for (const key in filters[i]) {
-            setTimeout(() => {
-              this.setFilterOption(key,filters[i][key],true);
-            }, 100)
-            
-          }
+      for (const chave in filters) {
+        console.log("Chave:", chave);
+        if (filters.hasOwnProperty(chave)) {
+            for (const item of filters[chave]) {
+                console.log("Text:", item.text);
+                setTimeout(() => {
+                  this.setFilterOption(chave,item.text,true);
+                }, 100)
+    
+            }
         }
     }
+    //   for(let i = 0 ; i < filters.length; i++){     
+    //     console.log(`aaaaa`,filters[i])  
+    //     for (const key in filters[i]) {
+    //       console.log(`keeeey`,key)  
+    //       setTimeout(() => {
+    //           this.setFilterOption(key,filters[i][key],true);
+    //         }, 100)
+            
+    //       }
+    //     }
+     }
     }, 500)
   },
   created () {
