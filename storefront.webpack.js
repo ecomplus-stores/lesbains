@@ -18,6 +18,8 @@ module.exports = () => ({
       './html/InstantSearch.html': path.resolve(__dirname, 'template/js/custom-js/html/InstantSearch.html'),   
       './js/InstantSearch.js': path.resolve(__dirname, 'template/js/custom-js/html/InstantSearch.js'),   
       './html/ItemCustomizations.html': path.resolve(__dirname, 'template/js/custom-js/html/ItemCustomizations.html'),   
+      './html/AccountForm.html': path.resolve(__dirname, 'template/js/custom-js/html/AccountForm.html'),   
+      './js/AccountForm.js': path.resolve(__dirname, 'template/js/custom-js/html/AccountForm.js'),   
     //   './html/APrices.html': path.resolve(__dirname, 'template/js/custom-js/html/APrices.html'),   
     //   './html/CartItem.html': path.resolve(__dirname, 'template/js/custom-js/html/CartItem.html'),   
     //   './html/TheCart.html': path.resolve(__dirname, 'template/js/custom-js/html/TheCart.html'),   

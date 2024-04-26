@@ -10,10 +10,17 @@
         </div>
       </div>
     </transition>
-
     <div :class="$store.state.fluidPage ? 'container-fluid' : 'container'" :data-page-title="$store.state.title">
       <h1 v-show="!$store.state.fluidPage && $store.state.title">
-        {{ $store.state.title }}
+        <span v-if="!$store.state.account.customer.main_email">
+          Identifique-se
+        </span>
+        <span v-else-if="!$store.state.account.customer.display_name">
+          Dados pessoais
+        </span>
+        <span v-else>
+          {{ $store.state.title }}
+        </span>        
       </h1>
       <transition
         enter-active-class="animated fadeIn slow"

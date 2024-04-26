@@ -2929,12 +2929,15 @@ ul.app_contacts{
                 gap: .5rem;
                 align-items: center;
                 justify-content: center;
+                // i{
+                //     background-image: url('../../public/assets/check.svg');
+                //     height: 16px;
+                //     width: 16px;
+                //     display: block;
+                //     font-size: 0;
+                // }
                 i{
-                    background-image: url('../../public/assets/check.svg');
-                    height: 16px;
-                    width: 16px;
-                    display: block;
-                    font-size: 0;
+                    font-size: calc(var(--font-size) * .8);
                 }
             }
             
@@ -3208,7 +3211,7 @@ ul.app_contacts{
 
                     }
                     .badge:after{
-                        content: "x";
+                        content: "un.";
                     }
                     font-size: var(--font-size-sm);
                     color: var(--txt);
@@ -3220,7 +3223,7 @@ ul.app_contacts{
 
                     img{height: auto;width:100%}
                     a > small{
-                        font-size: var(--font-size-sm);
+                        font-size: var(--smallest);
                         font-weight: 600;
                         color: var(--blk);
                         margin-top: .25rem;
