@@ -51,7 +51,8 @@
                 }
               }
             ],
-            "url": "/"
+            "url": "/",
+            "image": ""
           }
         },
         {
@@ -108,7 +109,7 @@
               }
             ],
             "url": "/",
-            "image": "/img/uploads/captura-de-tela-2024-04-18-171309.png"
+            "image": "/img/uploads/menu-novidades.png"
           }
         }
       ]
@@ -260,8 +261,13 @@
                 }
               }
             ],
+<<<<<<< HEAD
             "url": "/oculos-de-sol",
             "image": "/img/uploads/captura-de-tela-2024-04-18-171309.png"
+=======
+            "url": "/",
+            "image": "/img/uploads/menu-oculos-de-sol-1-.png"
+>>>>>>> cad870f76ce904e2ff58d53a7816c772d90e69e0
           }
         }
       ]
@@ -408,7 +414,7 @@
               }
             ],
             "url": "/",
-            "image": "/img/uploads/captura-de-tela-2024-04-18-171309.png"
+            "image": "/img/uploads/menu-oculos-de-grau.png"
           }
         }
       ]
@@ -480,8 +486,8 @@
                 }
               }
             ],
-            "url": "/relogios",
-            "image": "/img/uploads/captura-de-tela-2024-04-18-171309.png"
+            "url": "/",
+            "image": "/img/uploads/menu-relogio-02.png"
           }
         }
       ]
