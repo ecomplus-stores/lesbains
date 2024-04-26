@@ -3498,3 +3498,17 @@ header .term-box-only{display: none!important;}
     margin: 0 0 1rem 0;
     text-transform: uppercase;
 }
+
+.search-engine__filter--tamanho_armacao{
+    .collapse.show{
+        display: flex;
+        gap: .5rem;
+        flex-direction: column;
+        
+    }    
+    [data-value="PP"]{order:-10}
+    [data-value="P"]{order:-9}
+    [data-value="M"]{order:-8}
+    [data-value="G"]{order:-7}
+    [data-value="GG"]{order:-6}
+}

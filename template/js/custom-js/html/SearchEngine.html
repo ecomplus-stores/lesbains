@@ -158,10 +158,11 @@
                   :key="searchFilterId"
               >
               <!-- v-if="!['colors','shape','categories'].includes(filter) && options.length" -->
-                <div class="sticky">
+              
+              <div class="sticky">
                   <div
                   v-for="({ filter, options, isSpec }, i) in filters"
-                  v-if="!['Brands','largura_ponte','largura_lentes','comprimento_hastes','altura_lentes','largura_armacao'].includes(filter) && options.length"
+                  v-if="!['Categories','Brands','largura_ponte','largura_lentes','comprimento_hastes','altura_lentes','largura_armacao'].includes(filter) && options.length"
                   :key="`filters-${filter}`"
                   class="search-engine__filter"
                   :class="`search-engine__filter--${filter}`"
@@ -193,6 +194,7 @@
                       <div
                           class="search-engine__option custom-control custom-checkbox"
                           v-for="(opt, index) in options"
+                          :data-value="opt.key"
                           :key="`${filter}-${index}`"
                       >
                           <input

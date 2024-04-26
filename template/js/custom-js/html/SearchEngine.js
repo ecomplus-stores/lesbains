@@ -287,12 +287,19 @@ export default {
         }
         updatedFilters.push(filterIndex)
       }
-      addFilter('Brands', this.ecomSearch.getBrands())
-      addFilter('Categories', this.ecomSearch.getCategories())
+      //addFilter('Brands', this.ecomSearch.getBrands())
+      //addFilter('Categories', this.ecomSearch.getCategories())
       this.ecomSearch.getSpecs().forEach(({ key, options }, index) => {
         addFilter(key, options, true)
       })
       this.filters = this.filters.filter((_, i) => updatedFilters.includes(i))
+      console.log(`this.filters `,this.filters )
+      let specialItem = "gender";
+      this.filters.sort((a, b) => {
+        if (a.filter === specialItem) return -1;
+        if (b.filter === specialItem) return 1;
+        return 0;
+    });
       this.searchFilterId = Date.now()
     },
 
@@ -494,11 +501,11 @@ export default {
     },
     getFiltersFromURL(url) {
       const urlParams = new URLSearchParams(new URL(url).search);
-      const filtersParam = urlParams.get('filters');
-      console.log(`filtersParam`,filtersParam)
-      const validJsonString = filtersParam.replace(/'/g, '"');
+      const filtersParam = urlParams.get('filters');     
+      
       if (filtersParam) {
-          try {
+        const validJsonString = filtersParam.replace(/'/g, '"');
+        try {
               return JSON.parse(validJsonString);
           } catch (error) {
               console.error(error)
@@ -544,7 +551,7 @@ export default {
     }, 100)
     const url = window.location.href;
     const filters = this.getFiltersFromURL(url);
-
+    
     setTimeout(() => {
     if (filters) {      
       for(let i = 0 ; i < filters.length; i++){     
