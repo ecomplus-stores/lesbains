@@ -72,7 +72,7 @@ let marketingStripeStyle = ''
           </button>
         </div>
         <ul class="level_1">
-          <% apx_header.links.forEach(({ url, title, list })=> {
+          <% if(apx_header.links) { apx_header.links.forEach(({ url, title, list })=> {
             let mega = (list && list.find(el => el.item.image) || list && list.find(el => el.item.list.length > 0)) ? 'max_menu' : '';
             //let mega = images && images.length > 0 ? 'max_menu' : false;
                     
@@ -150,7 +150,7 @@ let marketingStripeStyle = ''
                 <% } %>
               <% } %>
             </li>
-          <% }) %>
+          <% }) } %>
         </ul>        
       </div>      
       

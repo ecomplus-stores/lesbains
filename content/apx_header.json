@@ -62,49 +62,49 @@
               {
                 "item": {
                   "title": "Redondo",
-                  "url": "/novidades?filters={'shape':[{'text':'Redondo'}]}"
+                  "url": "/search?filters={'novidades':[{'text':'Sim'}],'shape':[{'text':'Redondo'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Quadrado",
-                  "url": "/novidades?filters={'shape':[{'text':'Quadrado'}]}"
+                  "url": "/search?filters={'novidades':[{'text':'Sim'}],'shape':[{'text':'Quadrado'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Gatinho",
-                  "url": "/novidades?filters={'shape':[{'text':'Gatinho'}]}"
+                  "url": "/search?filters={'novidades':[{'text':'Sim'}],'shape':[{'text':'Gatinho'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Aviador",
-                  "url": "/novidades?filters={'shape':[{'text':'Aviador'}]}"
+                  "url": "/search?filters={'novidades':[{'text':'Sim'}],'shape':[{'text':'Aviador'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Retangular",
-                  "url": "/novidades?filters={'shape':[{'text':'Retangular'}]}"
+                  "url": "/search?filters={'novidades':[{'text':'Sim'}],'shape':[{'text':'Retangular'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Esportivo",
-                  "url": "/novidades?filters={'shape':[{'text':'Esportivo'}]}"
+                  "url": "/search?filters={'novidades':[{'text':'Sim'}],'shape':[{'text':'Esportivo'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Hexagonal",
-                  "url": "/novidades?filters={'shape':[{'text':'Hexagonal'}]}"
+                  "url": "/search?filters={'novidades':[{'text':'Sim'}],'shape':[{'text':'Hexagonal'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Máscara",
-                  "url": "/novidades?filters={'shape':[{'text':'Máscara'}]}"
+                  "url": "/search?filters={'novidades':[{'text':'Sim'}],'shape':[{'text':'Máscara'}]}"
                 }
               }
             ],
@@ -125,13 +125,13 @@
               {
                 "item": {
                   "title": "Feminino",
-                  "url": "/oculos-de-sol?filters={'gender':[{'text':'Feminino'}]}"
+                  "url": "/oculos-de-sol?filters={'gender':[{'text':'Feminino'},{'text':'Feminino e Masculino'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Masculino",
-                  "url": "/oculos-de-sol?filters={'gender':[{'text':'Masculino'}]}"
+                  "url": "/oculos-de-sol?filters={'gender':[{'text':'Masculino'},{'text':'Feminino e Masculino'}]}"
                 }
               },
               {
@@ -233,18 +233,18 @@
               {
                 "item": {
                   "title": "Polarizada",
-                  "url": "/oculos-de-sol?filters={'tipo_de_lente':[{'text':'Polarizada'}]}"
+                  "url": "/oculos-de-sol?filters={'tratamento_da_lente':[{'text':'Polarizado'},{'text':'UVA400 e Polarizado'}]}"
                 }
               },
               {
                 "item": {
                   "title": "UVA/UVB 400",
-                  "url": "/oculos-de-sol?filters={'tipo_de_lente':[{'text':'UVA/UVB 400'}]}"
+                  "url": "/oculos-de-sol?filters={'tratamento_da_lente':[{'text':'UVA400'},{'text':'UVA400 e Polarizado'}]}"
                 }
               },
               {
                 "item": {
-                  "title": "Fotossensível",
+                  "title": "Fotossensível [SF]",
                   "url": "/oculos-de-sol?filters={'tipo_de_lente':[{'text':'Fotossensível'}]}"
                 }
               },
@@ -261,13 +261,8 @@
                 }
               }
             ],
-<<<<<<< HEAD
-            "url": "/oculos-de-sol",
-            "image": "/img/uploads/captura-de-tela-2024-04-18-171309.png"
-=======
             "url": "/",
             "image": "/img/uploads/menu-oculos-de-sol-1-.png"
->>>>>>> cad870f76ce904e2ff58d53a7816c772d90e69e0
           }
         }
       ]
@@ -283,13 +278,13 @@
               {
                 "item": {
                   "title": "Feminino",
-                  "url": "/oculos-de-grau?filters={'gender':[{'text':'Feminino'}]}"
+                  "url": "/oculos-de-grau?filters={'gender':[{'text':'Feminino'},{'text':'Feminino e Masculino'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Masculino",
-                  "url": "/oculos-de-grau?filters={'gender':[{'text':'Masculino'}]}"
+                  "url": "/oculos-de-grau?filters={'gender':[{'text':'Masculino'},{'text':'Feminino e Masculino'}]}"
                 }
               },
               {
@@ -391,25 +386,25 @@
               {
                 "item": {
                   "title": "Antirreflexo",
-                  "url": "/oculos-de-grau?filters={'tipo_de_lente':[{'text':'Antirreflexo'}]}"
+                  "url": "/oculos-de-grau?utm_source=menu_antireflexo"
                 }
               },
               {
                 "item": {
                   "title": "Luz Azul",
-                  "url": "/oculos-de-grau?filters={'tipo_de_lente':[{'text':'Luz Azul'}]}"
+                  "url": "/oculos-de-grau?utm_source=menu_luzazul"
                 }
               },
               {
                 "item": {
                   "title": "Multifocal",
-                  "url": "/oculos-de-grau?filters={'tipo_de_lente':[{'text':'Multifocal'}]}"
+                  "url": "/oculos-de-grau?utm_source=menu_multifocal"
                 }
               },
               {
                 "item": {
                   "title": "Veja todos os tipos",
-                  "url": "/oculos-de-grau"
+                  "url": "/oculos-de-grau?utm_source=menu_todos"
                 }
               }
             ],
@@ -476,13 +471,13 @@
               {
                 "item": {
                   "title": "Feminino",
-                  "url": "/relogios?filters={'gender':[{'text':'Feminino'}]}"
+                  "url": "/relogios?filters={'gender':[{'text':'Feminino'},{'text':'Feminino e Masculino'}]}"
                 }
               },
               {
                 "item": {
                   "title": "Masculino",
-                  "url": "/relogios?filters={'gender':[{'text':'Masculino'}]}"
+                  "url": "/relogios?filters={'gender':[{'text':'Masculino'},{'text':'Feminino e Masculino'}]}"
                 }
               }
             ],
