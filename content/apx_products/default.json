@@ -23,7 +23,7 @@
           "input_type_required": false,
           "title": "Multifocal",
           "img": "/img/uploads/multifocal.svg",
-          "description": "Lente para perto e longe na mesma lente.",
+          "description": "Com um amplo campo de visão tanto para longe quanto para perto, essas lentes oferecem uma transição suave entre as diferentes zonas de foco, garantindo uma visão nítida e clara em todas as distâncias.<br* 1.50 CR",
           "type": "Fixo",
           "value": 0
         }
@@ -941,7 +941,7 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
@@ -1451,7 +1451,7 @@
           "input_type_required": false,
           "title": "Antirreflexo",
           "img": "/img/uploads/antirreflexo.svg",
-          "description": "",
+          "description": "Com um amplo campo de visão tanto para longe quanto para perto, essas lentes oferecem uma transição suave entre as diferentes zonas de foco, garantindo uma visão nítida e clara em todas as distâncias.<br>* 1.50 CR",
           "type": "Fixo",
           "value": 0
           
@@ -1460,7 +1460,7 @@
           "input_type_required": false,
           "title": "Luz Azul",
           "img": "/img/uploads/luz-azul.svg",
-          "description": "",
+          "description": "As lentes multifocais com filtro azul oferecem uma solução completa para quem busca correção visual em diferentes distâncias, ao mesmo tempo em que proporcionam proteção contra a luz azul nociva emitida por telas de dispositivos digitais.<br><br>* Proteção Ultravioleta (UV)<br>* Antirreflexo",
           "type": "Fixo",
           "value": 100
         },
@@ -1468,7 +1468,7 @@
           "input_type_required": false,
           "title": "Fotossensível",
           "img": "/img/uploads/fotosenssivel.svg",
-          "description": "",
+          "description": "As lentes multifocais com tecnologia fotossensível oferecem uma solução versátil e conveniente para quem precisa de correção visual em diferentes distâncias e também deseja proteção contra a luz solar. Essas lentes se adaptam automaticamente às mudanças de luminosidade, escurecendo ao ar livre e clareando em ambientes internos.<br>*1.50 CR<br>* Proteção Ultravioleta (UV)",
           "type": "Fixo",
           "value": 19
         },
@@ -1476,7 +1476,7 @@
           "input_type_required": false,
           "title": "Solar com Grau",
           "img": "/img/uploads/solar-com-grau.svg",
-          "description": "",
+          "description": "As lentes multifocais solares com grau oferecem uma solução prática e conveniente para quem precisa de correção visual em diferentes distâncias e deseja proteção solar integrada<br>* 1.50 CR",
           "type": "Fixo",
           "value": 349
         }
@@ -1509,14 +1509,14 @@
         {
           "input_type_required": false,
           "title": "Comfort",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Premium",
-          "description":"Lorem ipsum",
+          "description":"As lentes OptSwiss Swiss Pro são conhecidas pela sua rápida e fácil adaptação, especialmente projetadas para novos usuários de lentes progressivas. Essas lentes oferecem uma transição suave entre as diferentes zonas de visão, proporcionando uma experiência visual confortável desde o primeiro uso.<br>* Optswiss Swiss Pro<br>* 1.50 CR",
           "type": "Fixo",
           "value": 999
         }     
@@ -1557,14 +1557,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"* 1.59 Policarbonato",
           "type": "Fixo",
           "value": 369
         }     
@@ -1611,21 +1611,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 319
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 449
         }    
@@ -1672,21 +1672,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 309
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 439
         }    
@@ -1726,14 +1726,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"* 1.56<br>* Proteção Ultravioleta (UV)",
           "type": "Fixo",
           "value": 1199
         }     
@@ -1780,21 +1780,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 419
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 549
         }    
@@ -1841,21 +1841,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 379
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 549
         }    
@@ -1888,14 +1888,14 @@
         {
           "input_type_required": false,
           "title": "Comfort",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Transition",
-          "description":"Lorem ipsum",
+          "description":"Lentes oftálmicas de alta qualidade, que oferecem uma visão nítida e confortável, livres de distorções. Elas são projetadas para se adaptar de acordo com a dioptria do usuário, proporcionando campos visuais amplos em comparação com lentes convencionais.<br>*1.50 CR<br>* Proteção Ultravioleta (UV)",
           "type": "Fixo",
           "value": 399
         }     
@@ -1936,14 +1936,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"* 1.59 <br>* Proteção Ultravioleta (UV)",
           "type": "Fixo",
           "value": 449
         }     
@@ -1990,21 +1990,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 409
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 539
         }    
@@ -2051,21 +2051,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 409
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 539
         }    
@@ -2106,14 +2106,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"* 1.59<br>* Proteção Ultravioleta (UV)",
           "type": "Fixo",
           "value": 1659
         }     
@@ -2160,14 +2160,14 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
 {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 409
         },
@@ -2175,7 +2175,7 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 519
         }    
@@ -2222,21 +2222,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
 {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 409
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 519
         }    
@@ -2270,14 +2270,14 @@
         {
           "input_type_required": false,
           "title": "Comfort",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Premium",
-          "description":"Lorem ipsum",
+          "description":"Adaptação rápida e fácil. Desenho progressivo adaptado para novos usuários<br>* 1.50<br>* Filtro Luz Azul<br>* Proteção Ultravioleta (UV)<br>* Antirreflexo",
           "type": "Fixo",
           "value": 1999
         }     
@@ -2318,14 +2318,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"*1.59<br>* Proteção Ultravioleta (UV)<br>* Antirreflexo",
           "type": "Fixo",
           "value": 420
         }     
@@ -2372,21 +2372,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
 {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 250
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 409
         }    
@@ -2433,7 +2433,7 @@
 {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
@@ -2441,14 +2441,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 369
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 499
         }    
@@ -2489,14 +2489,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"* 1.56",
           "type": "Fixo",
           "value": 159
         }     
@@ -2543,21 +2543,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 409
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 879
         }    
@@ -2604,21 +2604,21 @@
 {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 399
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 539
         }    
@@ -2651,14 +2651,14 @@
         {
           "input_type_required": false,
           "title": "Comfort",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 550
         },
         {
           "input_type_required": false,
           "title": "Premium",
-          "description":"Lorem ipsum",
+          "description":"Adaptação rápida e fácil. Desenho progressivo adaptado para novos usuários<br>* 1.50 CR<br>* Optswiss",
           "type": "Fixo",
           "value": 1490
         }     
@@ -2699,14 +2699,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"* 1.59 Policarbonato",
           "type": "Fixo",
           "value": 270
         }     
@@ -2747,14 +2747,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"* 1.50<br>*Antirreflexo<br>*Antirrisco",
           "type": "Fixo",
           "value": 130
         }    
@@ -2796,14 +2796,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"* 1.56<br>* Proteção Ultravioleta (UV)",
           "type": "Fixo",
           "value": 180
         }     
@@ -2844,14 +2844,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 130
         }    
