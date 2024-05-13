@@ -6,7 +6,7 @@
         {
           "input_type_required": false,
           "title": "Nenhuma",
-          "description": "Somente armação",
+          "description": "Somente armação.",
           "img": "/img/uploads/nenhuma.svg",
           "type": null
         },
@@ -14,7 +14,7 @@
           "input_type_required": false,
           "title": "Visão Simples",
           "img": "/img/uploads/visao-simples.svg",
-          "description": "Lente para perto ou longe",
+          "description": "Lentes clássicas transparentes.",
           "type": "Fixo",
           "value": 0,
           "input_type": "Não"
@@ -23,7 +23,7 @@
           "input_type_required": false,
           "title": "Multifocal",
           "img": "/img/uploads/multifocal.svg",
-          "description": "Lente para perto e longe na mesma lente",
+          "description": "Lente para perto e longe na mesma lente.",
           "type": "Fixo",
           "value": 0
         }
@@ -56,7 +56,7 @@
           "input_type_required": false,
           "title": "Antirreflexo",
           "img": "/img/uploads/antirreflexo.svg",
-          "description": "",
+          "description": "Lentes com revestimento antirreflexo para uma visão clara e sem distrações.<br>*Lentes clássicas transparentes<br>*Revestimento Premium",
           "type": "Fixo",
           "value": 29
           
@@ -65,7 +65,7 @@
           "input_type_required": false,
           "title": "Luz Azul",
           "img": "/img/uploads/luz-azul.svg",
-          "description": "",
+          "description": "Lentes de grau modernos com filtro de luz azul e revestimento antirreflexo para proteção ocular avançada e conforto visual superior.<br>* Filtro de Luz Azul e Revestimento Antirreflexo",
           "type": "Fixo",
           "value": 80
         },
@@ -73,7 +73,7 @@
           "input_type_required": false,
           "title": "Fotossensível",
           "img": "/img/uploads/fotosenssivel.svg",
-          "description": "",
+          "description": "Lentes fotossensíveis que se ajustam automaticamente à luminosidade, proporcionando conforto visual em ambientes internos e externos.<br>*Permite a combinação de óculos de sol e de grau em um único acessório<br>*Escurecem rapidamente quando expostos à luz solar<br>*Filtro de Proteção UV",
           "type": "Fixo",
           "value": 180
         },
@@ -81,7 +81,7 @@
           "input_type_required": false,
           "title": "Solar com Grau",
           "img": "/img/uploads/solar-com-grau.svg",
-          "description": "",
+          "description": "Lentes solares graduadas para uma visão nítida e proteção contra o sol em um único par de óculos.<br>*Permite a combinação de óculos de sol e de grau em um único acessório",
           "type": "Fixo",
           "value": 329
         }
@@ -114,14 +114,14 @@
         {
           "input_type_required": false,
           "title": "Comfort",
-          "description":"Lorem ipsum",
+          "description":"Lentes solares graduadas para uma visão nítida e proteção contra o sol em um único par de óculos.<br>*Permite a combinação de óculos de sol e de grau em um único acessório",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Premium",
-          "description":"Lorem ipsum",
+          "description":"Ao escolher lentes surfassadas, os usuários podem desfrutar de uma experiência visual, sem as distorções que podem causar desconforto e fadiga ocular.",
           "type": "Fixo",
           "value": 209
         }     
@@ -162,14 +162,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"Este material é conhecido por sua leveza e resistência, tornando-o ideal para pessoas que levam um estilo de vida ativo ou que precisam de óculos duráveis para uso diário.<br>* 1.59 Policarbonato",
           "type": "Fixo",
           "value": 209
         }     
@@ -216,21 +216,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 309
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 439
         }    
@@ -277,21 +277,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 149
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 279
         }    
@@ -331,14 +331,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"Este material é conhecido por sua leveza e resistência, tornando-o ideal para pessoas que levam um estilo de vida ativo ou que precisam de óculos duráveis para uso diário.<br>* 1.59 Policarbonato",
           "type": "Fixo",
           "value": 349
         }     
@@ -378,21 +378,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 309
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 399
         }    
@@ -425,14 +425,14 @@
         {
           "input_type_required": false,
           "title": "Comfort",
-          "description":"Lorem ipsum",
+          "description":"Lentes fotossensíveis que se ajustam automaticamente à luminosidade, proporcionando conforto visual em ambientes internos e externos.<br>*Permite a combinação de óculos de sol e de grau em um único acessório<br>*Escurecem rapidamente quando expostos à luz solar<br>*Filtro de Proteção UV",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Transition",
-          "description":"Lorem ipsum",
+          "description":"Lentes fotossensíveis da marca Transition, que se ajustam automaticamente à luminosidade, oferecendo conforto visual em ambientes internos e externos. Com um escurecimento superior em comparação às lentes comuns, garantindo uma visão mais protegida e adaptável<br>*Proteção ultravioleta (UV)<br>*Atendem dioptrias baixas e diâmetros reduzidos",
           "type": "Fixo",
           "value": 270
         }     
@@ -473,14 +473,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"Este material é conhecido por sua leveza e resistência, tornando-o ideal para pessoas que levam um estilo de vida ativo ou que precisam de óculos duráveis para uso diário.<br>*  1.59 Policarbonato",
           "type": "Fixo",
           "value": 520
         }     
@@ -527,21 +527,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 100
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 200
         }    
@@ -588,21 +588,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 600
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 730
         }    
@@ -643,14 +643,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"* 1.59 Lente Cinza<br>*Proteção ultravioleta (UV)<br>*Maior disponibilidade de dioptrias e diâmetros",
           "type": "Fixo",
           "value": 1210
         }     
@@ -697,14 +697,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 130
         }    
@@ -737,14 +737,14 @@
         {
           "input_type_required": false,
           "title": "Comfort",
-          "description":"Lorem ipsum",
+          "description":"Lentes de grau modernos com filtro de luz azul e revestimento antirreflexo para proteção ocular avançada e conforto visual superior<br>* Filtro de Luz Azul e Revestimento Antirreflexo",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Premium",
-          "description":"Lorem ipsum",
+          "description":"Lentes projetadas para oferecer uma experiência visual nítida e sem distorções, atendendo às necessidades daqueles que valorizam a clareza em sua visão<br>*Proteção ultravioleta (UV)<br>*Antirreflexo",
           "type": "Fixo",
           "value": 520
         }     
@@ -785,14 +785,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":" Projetadas para filtrar seletivamente a luz azul de alta energia, essas lentes ajudam a reduzir a fadiga ocular, melhorar o conforto visual e promover um sono mais saudável<br>*Proteção ultravioleta (UV)<br>*Antirreflexo",
           "type": "Fixo",
           "value": 270
         }     
@@ -839,14 +839,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"* 1.59 Policarbonato<br>*Antirreflexo<br>*Filtro Luz Azul<br>* Proteção Ultravioleta (UV)",
           "type": "Fixo",
           "value": 220
         }    
@@ -893,14 +893,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"*1.56 Surfaçada<br>* Antirreflexo *<br>Filtro Luz Azul<br>* Proteção Ultravioleta (UV)<br>* Antirrisco",
           "type": "Fixo",
           "value": 400
         }    
@@ -948,7 +948,7 @@
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":" Projetadas para filtrar seletivamente a luz azul de alta energia, essas lentes ajudam a reduzir a fadiga ocular, melhorar o conforto visual e promover um sono mais saudável<br>* 1.59 <br>*Proteção ultravioleta (UV)<br>*Antirreflexo",
           "type": "Fixo",
           "value": 180
         }     
@@ -995,21 +995,21 @@
         {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 310
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 440
         }    
@@ -1056,21 +1056,21 @@
 {
           "input_type_required": false,
           "title": "Sem tratamento",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 290
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 430
         }    
@@ -1103,14 +1103,14 @@
         {
           "input_type_required": false,
           "title": "Comfort",
-          "description":"Lorem ipsum",
+          "description":"Atendem dioptrias baixas e diâmetros reduzidos<br>Lentes com revestimento antirreflexo para uma visão clara e sem distrações<br>*Lentes clássicas transparentes<br>*Revestimento Premium",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Premium",
-          "description":"Lorem ipsum",
+          "description":"As lentes surfaçadas projetadas para oferecer uma experiência visual de alta qualidade, livre de distorções. Desenvolvidas especialmente para atender às necessidades daqueles que valorizam uma visão nítida e precisa em todas as direções.<br>* 1.50 CR",
           "type": "Fixo",
           "value": 370
         }     
@@ -1151,14 +1151,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"Lentes antirreflexo de policarbonato, mais finas e leves, são até 10 vezes mais resistentes a impactos do que as lentes de plástico ou vidro, garantindo proteção e conforto visual duradouros.<br>* 1.59 Policarbonato<br>* Antirreflexo",
           "type": "Fixo",
           "value": 100
         }     
@@ -1205,14 +1205,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"Oferecem uma solução personalizada e abrangente para atender às necessidades visuais<br>* 1.56<br>*Proteção ultravioleta (UV)<br>* Antirreflexo ",
           "type": "Fixo",
           "value": 280
         }    
@@ -1259,14 +1259,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"Oferecem uma solução personalizada e abrangente para atender às necessidades visuais. Este material é conhecido por sua leveza e resistência<br>* 1.59 Policarbonato<br>* Antirreflexo<br>*Antirrisco",
           "type": "Fixo",
           "value": 360
         }    
@@ -1307,14 +1307,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"Lorem ipsum",
+          "description":"Lentes finas, com material especialmente projetado para proporcionar uma experiência de visão nítida e livre de distorções, garantindo conforto visual excepcional<br>* 1.60<br>*Excelente Nitidez<br>*Ótima adaptação<br>*Conforto Duradouro<br>*Ótima definição visual",
           "type": "Fixo",
           "value": 390
         }     
@@ -1362,14 +1362,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 130
         }    
@@ -1417,14 +1417,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"Lorem ipsum",
+          "description":"",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirreflexo + Antirrisco",
-          "description":"Lorem ipsum",
+          "description":"Oferecem uma solução personalizada e abrangente para atender às necessidades visuais. Este material é conhecido por sua leveza e resistência<br>* 1.50 CR<br>* Antirreflexo",
           "type": "Fixo",
           "value": 220
         }    
