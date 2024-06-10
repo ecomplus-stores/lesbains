@@ -1622,13 +1622,13 @@
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/pages/trocas</loc>
+      <loc>https://lesbains.netlify.app/pages/termos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/pages/termos</loc>
+      <loc>https://lesbains.netlify.app/pages/trocas</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
