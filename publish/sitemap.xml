@@ -1616,12 +1616,6 @@
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/pages/termos-e-condicoes</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
       <loc>https://lesbains.netlify.app/pages/termos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
@@ -1629,6 +1623,12 @@
   
     <url>
       <loc>https://lesbains.netlify.app/pages/trocas</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/pages/termos-e-condicoes</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
