@@ -1568,13 +1568,13 @@
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/pages/faq</loc>
+      <loc>https://lesbains.netlify.app/pages/entrega</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/pages/entrega</loc>
+      <loc>https://lesbains.netlify.app/pages/faq</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1586,13 +1586,13 @@
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/pages/pagamentos</loc>
+      <loc>https://lesbains.netlify.app/pages/politica-de-garantia</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/pages/politica-de-garantia</loc>
+      <loc>https://lesbains.netlify.app/pages/pagamentos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1616,13 +1616,13 @@
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/pages/termos-e-condicoes</loc>
+      <loc>https://lesbains.netlify.app/pages/termos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/pages/termos</loc>
+      <loc>https://lesbains.netlify.app/pages/termos-e-condicoes</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1646,15 +1646,15 @@
     </url>
   
     <url>
-      <loc>https://lesbains.netlify.app/</loc>
-      <changefreq>daily</changefreq>
-      <priority>1</priority>
-    </url>
-  
-    <url>
       <loc>https://lesbains.netlify.app/blog</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://lesbains.netlify.app/</loc>
+      <changefreq>daily</changefreq>
+      <priority>1</priority>
     </url>
   
     <url>
