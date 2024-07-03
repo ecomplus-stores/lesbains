@@ -510,8 +510,8 @@ export default {
       if (file) {
         let formData = new FormData();
         formData.append('files', file);
-        //fetch('http://localhost:1337/api/webhooks/file-upload', {
-        fetch('https://api.storeboost.com.br/api/webhooks/file-upload', {
+        fetch('http://localhost:1337/api/webhooks/file-upload', {
+        //fetch('https://api.storeboost.com.br/api/webhooks/file-upload', {
           method: 'POST',
           body: formData,
           headers: {
