@@ -17,15 +17,15 @@
     "topbar_1": [
       {
         "title": "Frete grátis nas compras acima de R$297",
-        "url": "https://lesbains.netlify.app/pages/entrega"
+        "url": "/pages/entrega"
       },
       {
         "title": "Compre óculos de grau online e receba em casa!",
-        "url": "https://lesbains.netlify.app/oculos-de-grau"
+        "url": "/oculos-de-grau"
       },
       {
         "title": "Pague em até 5x sem juros",
-        "url": "https://lesbains.netlify.app/oculos-de-sol"
+        "url": "/oculos-de-sol"
       }
     ]
   },
@@ -505,11 +505,11 @@
     "topbar_1": [
       {
         "title": "Entega rápida na cidade de São Paulo",
-        "url": "https://lesbains.netlify.app/pages/entrega"
+        "url": "/pages/entrega"
       },
       {
         "title": "Garantia de 12 meses.",
-        "url": "https://lesbains.netlify.app/pages/politica-de-garantia"
+        "url": "/pages/politica-de-garantia"
       }
     ]
   }

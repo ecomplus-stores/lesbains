@@ -13,7 +13,7 @@
           "mask_opacity_m": 0,
           "btn_text_color_2": "#ffffff",
           "content_order": "inside_image",
-          "link_url": "https://lesbains.netlify.app/oculos-de-sol",
+          "link_url": "/oculos-de-sol",
           "btn_url": "",
           "content_position": "center_left",
           "mask_color": "#000000",
@@ -22,7 +22,7 @@
           "btn_text_color": "#ffffff",
           "mask_opacity": 5,
           "title": "",
-          "link": "https://lesbains.netlify.app/oculos-de-sol",
+          "link": "/oculos-de-sol",
           "end": "",
           "title_color": "#ffffff",
           "description": "",
@@ -82,34 +82,34 @@
           "mobile_img": "/img/uploads/mini-banner-feminino-627x770.jpg",
           "mask_opacity_m": 0,
           "content_order": "inside_image",
-          "link_url": "https://lesbains.netlify.app/oculos-de-sol/feminino",
+          "link_url": "/oculos-de-sol/feminino",
           "content_position": "bottom_center",
           "mask_opacity": 3,
           "title": "",
-          "link": "https://lesbains.netlify.app/oculos-de-sol/feminino"
+          "link": "/oculos-de-sol/feminino"
         },
         {
           "img": "/img/uploads/mini-banner_tendance-em-foco_627x770.png",
           "mobile_img": "/img/uploads/mini-banner_tendance-em-foco_627x770.png",
           "mask_opacity_m": 0,
           "content_order": "inside_image",
-          "link_url": "https://lesbains.netlify.app/novidades",
+          "link_url": "/novidades",
           "btn_url": "",
           "content_position": "bottom_center",
           "mask_opacity": 0,
           "title": "",
-          "link": "https://lesbains.netlify.app/novidades"
+          "link": "/novidades"
         },
         {
           "img": "/img/uploads/mini-banner-masculino-627x770.jpg",
           "mobile_img": "/img/uploads/mini-banner-masculino-627x770.jpg",
           "mask_opacity_m": 0,
           "content_order": "inside_image",
-          "link_url": "https://lesbains.netlify.app/oculos-de-sol/masculino",
+          "link_url": "/oculos-de-sol/masculino",
           "content_position": "bottom_center",
           "mask_opacity": 0,
           "title": "",
-          "link": "https://lesbains.netlify.app/oculos-de-sol/masculino",
+          "link": "/oculos-de-sol/masculino",
           "title_color": "#ffffff"
         }
       ],
@@ -124,7 +124,7 @@
       "mask_opacity_m": 0,
       "content_order": "left_image",
       "padding_sm": "px-5",
-      "btn_url": "https://lesbains.netlify.app/colecao-luxury",
+      "btn_url": "/colecao-luxury",
       "content_position": "center_left",
       "btn_text": "Compre",
       "padding": "px-5",
@@ -133,7 +133,7 @@
       "mask_opacity": 0,
       "title": "Designs icônicos e qualidade excepcional",
       "type": "apx_responsive-banner",
-      "link": "https://lesbains.netlify.app/colecao-luxury",
+      "link": "/colecao-luxury",
       "title_color": "#000000",
       "description": "Explore nossa coleção exclusiva e encontre óculos esculpidos em acetato italiano unindo luxo e atitude."
     }
