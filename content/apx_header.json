@@ -486,8 +486,11 @@
           }
         }
       ]
+    },
+    {
+      "title": "Personalize",
+      "url": "/personalize"
     }
-    
   ],
   "topbar_2": {
     "color": "#ffffff",
