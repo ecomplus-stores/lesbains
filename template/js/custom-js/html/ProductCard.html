@@ -79,13 +79,19 @@
           <div>
             <slot name="title">
               <span>
-              <component
-                :is="headingTag"
-                class="product-card__name"
-                v-html="name"
-              >     
-              
-              </component>
+                <a-link
+                  class="product-card__name-link"
+                  :href="`/${body.slug}`"
+                  :title="name"
+                > 
+                  <component
+                    :is="headingTag"
+                    class="product-card__name"
+                    v-html="name"
+                  >     
+                  
+                  </component>
+              </a-link>
               </span>           
             </slot>
 

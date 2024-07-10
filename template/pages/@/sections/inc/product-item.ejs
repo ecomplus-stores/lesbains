@@ -78,9 +78,15 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
       </div>
 
       <div data-slot="title">
+        <a
+          href="/<%= itemData.slug %>"
+          class="product-card__link"
+          title="<%= itemData.name %>"
+        >
         <h3 class="product-card__name">
           <%= itemData.name %>
         </h3>
+        </a>
       </div>
     </a>
 

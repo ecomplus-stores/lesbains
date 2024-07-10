@@ -1,18 +1,15 @@
-<% console.log(opt)
-    if (Array.isArray(opt.products) && opt.products.length) {
-        
-        const search = new _.EcomSearch()
-        await search.setProductIds(opt.products).fetch(true)
-        const items = opt.products[0] && opt.products[0].sku ? opt.products : search.getItems().filter(item => _.ecomUtils.inStock(item))
-    
+<% 
+
+    if (Array.isArray(opt.items)) {
+        const items = opt.items
         opt.num_col_sm = opt.num_col_sm ? opt.num_col_sm : 3
-        opt.carrossel_sm = opt.carrossel_sm ? opt.carrossel_sm : true
+        opt.carrossel_sm = opt.carrossel_sm ? opt.carrossel_sm : "Sim"
         opt.num_col_md = opt.num_col_md  ? opt.num_col_md  : 3
-        opt.carrossel_md = opt.carrossel_md ? opt.carrossel_md : false
-        opt.carrossel_dots_md = opt.carrossel_dots_md ? opt.carrossel_dots_md : false
-        opt.carrossel_arrows_md = opt.carrossel_arrows_md ? opt.carrossel_arrows_md : false
-        opt.carrossel_dots_sm = opt.carrossel_dots_sm ? opt.carrossel_dots_sm : true
-        opt.carrossel_arrows_sm = opt.carrossel_arrows_sm ? opt.carrossel_arrows_sm : true
+        opt.carrossel_md = opt.carrossel_md ? opt.carrossel_md : "Sim"
+        opt.carrossel_dots_md = opt.carrossel_dots_md ? opt.carrossel_dots_md : "Sim"
+        opt.carrossel_arrows_md = opt.carrossel_arrows_md ? opt.carrossel_arrows_md : "Sim"
+        opt.carrossel_dots_sm = opt.carrossel_dots_sm ? opt.carrossel_dots_sm : "Sim"
+        opt.carrossel_arrows_sm = opt.carrossel_arrows_sm ? opt.carrossel_arrows_sm : "Sim"
         opt.padding = opt.padding ? opt.padding : 'px-md-3'
         opt.padding_sm = opt.padding_sm ? opt.padding_sm : 'px-2'
         opt.container = opt.container ? opt.container : 'container_90'
@@ -20,7 +17,7 @@
     %>
     
     <section
-      class="apx_product-list mt-<%= opt.margin_top %> mb-<%= opt.margin_bottom %> pt-<%= opt.padding_top %> pb-<%= opt.padding_bottom %>"
+      class="apx_product-list mt-5 mb-<%= opt.margin_bottom %> pt-5 pb-<%= opt.padding_bottom %>"
       data-num_col_sm="<%= opt.num_col_sm  %>"
       data-carrossel_sm="<%= opt.carrossel_sm %>"
       data-num_col_md="<%= opt.num_col_md %>"

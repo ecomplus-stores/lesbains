@@ -8,7 +8,8 @@ const themeCustom = _.settings.theme.custom || ''
 
 const productProperties = [];
 const productTags = [];
-if(['categories','home','search','brand'].includes(_.pageName)){
+
+if(['categories','home','search','brand','products'].includes(_.pageName)){
   const apx_tags = _.cms('apx_tags')
   if (Array.isArray(apx_tags) && apx_tags.length > 0) {      
     apx_tags.forEach(item => { 
@@ -19,6 +20,8 @@ if(['categories','home','search','brand'].includes(_.pageName)){
 
   
   const apx_products = _.cms('apx_properties')
+  
+  
   if (Array.isArray(apx_products) && apx_products.length > 0) {      
     apx_products.forEach(item => { 
       const lib = (_.cms(`apx_properties/${item}`))

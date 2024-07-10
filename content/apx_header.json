@@ -416,7 +416,7 @@
     },
     {
       "title": "Lentes de Grau",
-      "url": "/lentes-de-grau",
+      "url": "/oculos-de-grau",
       "list": [
         {
           "item": {
@@ -431,11 +431,11 @@
               {
                 "item": {
                   "title": "Veja todas as lentes",
-                  "url": "/lentes-de-grau"
+                  "url": "/oculos-de-grau"
                 }
               }
             ],
-            "url": "/lentes-de-grau"
+            "url": "/oculos-de-grau"
           }
         },
         {
@@ -455,7 +455,7 @@
                 }
               }
             ],
-            "url": "/lentes-de-grau"
+            "url": "/oculos-de-grau"
           }
         }
       ]

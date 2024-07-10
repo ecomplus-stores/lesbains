@@ -161,7 +161,7 @@
               
               <div class="sticky">
                   <div
-                  v-for="({ filter, options, isSpec }, i) in filters"
+                  v-for="({ filter, options, isSpec }, i) in filters.filter(el => el.filter != 'polarizados')"
                   v-if="!['Categories','Brands','largura_ponte','largura_lentes','comprimento_hastes','altura_lentes','largura_armacao'].includes(filter) && options.length"
                   :key="`filters-${filter}`"
                   class="search-engine__filter"

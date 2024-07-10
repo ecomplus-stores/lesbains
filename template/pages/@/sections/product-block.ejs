@@ -30,7 +30,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
         </p>
       </div>
       <div class="row">
-        <div class="col-12 col-md  pr-md-0 gallery-container">
+        <div class="col-12 col-md-7  pr-md-0 gallery-container">
           <!-- Picture(s) gallery will be inserted dynamically within `TheProduct` -->
           <!---->
           <div id="product-gallery"></div>
@@ -92,22 +92,8 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
             <% } %>
           <% } %> -->
           <!-- Custom additional code on bottom of images gallery -->
-          <!-- <div class="extra-content">
-            <%
-            // load page sections and render each one
-            const { sections } = _.state
-            if (Array.isArray(sections)) {
-              for (let i = 0; i < sections.length; i++) {
-                const opt = sections[i]
-                if (opt && opt.enabled !== false && opt.type != "product-block" && opt.type != "breadcrumbs" && opt.type != "product-description") {
-                  %>
-                  <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
-                  <%
-                }
-              }
-            }
-            %>   
-          </div> -->
+          <!--  -->
+          
           <div id="sb-product-testimonials"></div>
         </div>
 
@@ -286,10 +272,29 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
         _, opt: {}, field: 'productSlots'
       }) %>
     </section>
-
+    
+    <div class="extra-content">
+      <%
+      // load page sections and render each one
+      const { sections } = _.state
+      if (Array.isArray(sections)) {
+        for (let i = 0; i < sections.length; i++) {
+          const opt = sections[i]
+          if (opt && opt.enabled !== false && opt.type != "product-block" && opt.type != "breadcrumbs" && opt.type != "product-description") {
+            %>
+            <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
+            <%
+          }
+        }
+      }
+      %>   
+    </div>
+  
     <%- await include('@/helpers/widgets-append', {
       _, opt: {}, field: 'productBlockAppend'
     }) %>
+
+    
   </div>
   <!-- <div class="sections pb-1 pb-sm-2 pb-lg-4 mt-md-5 pt-5"> -->
     <%

@@ -2001,6 +2001,17 @@ header{z-index:3;
         width: calc(25% - var(--spacer-2));
         img{max-width: 100%;height: auto;}
     }
+
+    #apx-footer .apx-newsletter {
+        max-width: 320px;
+    }
+    #apx-footer .apx-newsletter h4{margin: 0;}
+    #apx-footer{
+        .container_90{
+            max-width:100%;
+            padding: 0 2rem;
+        }
+    }
 }
 
 .product-specs{
