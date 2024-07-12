@@ -72,7 +72,7 @@ let marketingStripeStyle = ''
           </button>
         </div>
         <ul class="level_1">
-          <% if(apx_header.links) { apx_header.links.forEach(({ url, title, list })=> {
+          <% if(apx_header.links) { apx_header.links.forEach(({ url, path, title, list })=> {
             let mega = (list && list.find(el => el.item.image) || list && list.find(el => el.item.list.length > 0)) ? 'max_menu' : '';
             //let mega = images && images.length > 0 ? 'max_menu' : false;
                     
@@ -84,7 +84,7 @@ let marketingStripeStyle = ''
             %>
             <li class="<%= list ? 'dropdown' : ''%> <%= mega %>">
               
-              <a href="<%= url %>">
+              <a href="<%= path ? path : url %>">
                 <%= title %>
               </a>
               <% if (list || subcategories.length > 0) { %>
@@ -104,16 +104,17 @@ let marketingStripeStyle = ''
                       <% list.forEach(({ item })=> { 
                         %>
                         <li class="<%= mega ? 'col-auto bordered mx-md-2' : '' %>">
-                          <a href="<%= item.url %>">
+                          <a href="<%= item.path ? item.path : item.url %>">
                             <%= item.title %>
-                            <% let main = item.url %>
+                            <% let main = item.path ? item.path : item.url %>
                           </a>
                           <% if (item.list) { %>
                             <ul>
                             <% item.list.forEach(({ item })=> { %>
                               <li>
-                                <a href="<%= item.url.startsWith('?') ? main + item.url : item.url %>">
-                                  <%= item.title %>
+                                
+                                <a href="<%= item.path ?  item.path : ( item.url.startsWith('?') ? main + item.url : item.url )%>">
+                                  <%= item.title %> 
                                 </a>
                               </li>
                             <% }) %>
@@ -137,10 +138,10 @@ let marketingStripeStyle = ''
                 <% if (subcategories.length > 0) {%>
                   <div class="level_2 <%= mega %>">
                     <ul class="<%= mega %>">
-                      <% subcategories.forEach(({ name, slug })=> { 
+                      <% subcategories.forEach(({ name, slug, path })=> { 
                         %>
                         <li class="">                          
-                          <a href="<%= slug %>">
+                          <a href="<%= path ? path : slug %>">
                             <%= name %>
                           </a>
                         </li>
