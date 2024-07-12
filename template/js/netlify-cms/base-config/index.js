@@ -1522,18 +1522,7 @@ export default (options,state) => {
                                         label: "URL",
                                         name: "url",
                                         widget: "string"
-                                    },
-                                    {
-                                      label: "Categoria/Coleção/Marca",
-                                      name: "path",
-                                      widget: "select",
-                                      options: options.state.routes
-                                      .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
-                                      .map(({ name, path }) => ({
-                                        label: name,
-                                        value: `${path}?${name}`
-                                      }))
-                                  }
+                                    }
                                 ]
                             }
                         ]
@@ -1553,6 +1542,17 @@ export default (options,state) => {
                                 label: "URL do título",
                                 name: "url",
                                 widget: "string"
+                            },
+                            {
+                              label: "Categoria/Coleção/Marca",
+                              name: "path",
+                              widget: "select",
+                              options: options.state.routes
+                              .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
+                              .map(({ name, path }) => ({
+                                label: name,
+                                value: `${path}`
+                              }))
                             },
                             {
                                 label: "Itens do Dropdown",
@@ -1575,6 +1575,17 @@ export default (options,state) => {
                                                 label: "URL do Item",
                                                 name: "url",
                                                 widget: "string"
+                                            },
+                                            {
+                                              label: "Categoria/Coleção/Marca",
+                                              name: "path",
+                                              widget: "select",
+                                              options: options.state.routes
+                                              .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
+                                              .map(({ name, path }) => ({
+                                                label: name,
+                                                value: `${path}`
+                                              }))
                                             },
                                             {
                                                 label: "Imagem",
@@ -1603,6 +1614,17 @@ export default (options,state) => {
                                                                 label: "URL do Item",
                                                                 name: "url",
                                                                 widget: "string"
+                                                            },
+                                                            {
+                                                              label: "Categoria/Coleção/Marca",
+                                                              name: "path",
+                                                              widget: "select",
+                                                              options: options.state.routes
+                                                              .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
+                                                              .map(({ name, path }) => ({
+                                                                label: name,
+                                                                value: `${path}`
+                                                              }))
                                                             }
                                                         ]
                                                     }
@@ -1689,6 +1711,17 @@ export default (options,state) => {
                                                 label: "URL do Item",
                                                 name: "url",
                                                 widget: "string"
+                                            },
+                                            {
+                                              label: "Categoria/Coleção/Marca",
+                                              name: "path",
+                                              widget: "select",
+                                              options: options.state.routes
+                                              .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
+                                              .map(({ name, path }) => ({
+                                                label: name,
+                                                value: `${path}`
+                                              }))
                                             }
                                         ]
                                     }
