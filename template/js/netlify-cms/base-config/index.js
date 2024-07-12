@@ -885,372 +885,6 @@ export default (options,state) => {
     }
 ])
 
-const customizationFields = [
-              
-  {
-    label: "Título do Passo",
-    hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
-    name: "title",
-    widget: "string",
-    required:false,          
-  }, 
-  {
-    label: 'Grid da Personalização',
-    name: 'title_id',
-    widget: 'select',
-    hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione. Personalizações do tipo texto/gravação devem ter somente uma opção cadastrada por bloco",
-    options: window.storefront.data.grids
-      .map(({ grid_id, title }) => ({
-        label: title,
-        value: grid_id
-      }))
-  },  
-  {
-    label: "Descrição do Passo",
-    hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
-    name: "step_description",
-    widget: "string",
-    required:false,          
-  }, 
-  
-  {
-    label: 'Upload',
-    hint:"",
-    name: 'upload',
-    widget: 'object',
-    fields: [
-      {
-        label: "Exibir campo para upload de arquivo?",
-        name:"enable",
-        widget: 'boolean',
-        default: false,
-        required:false,     
-      },
-      {
-        label: "Título",
-        hint:"",
-        name: "title",
-        widget: "string",
-        required:false,          
-      }, 
-      {
-        label: "Descrição",
-        hint:"",
-        name: "description",
-        widget: "string",
-        required:false,          
-      }, 
-      {
-        label: 'Imagem ou ícone',
-        name: 'img',
-        widget: 'image',
-        required:false,
-      },  
-      {
-        label: "Observação",
-        hint:"",
-        name: "description_after",
-        widget: "string",
-        required:false,          
-      }, 
-      {
-        label: "Texto do botão",
-        hint:"",
-        name: "button_text",
-        widget: "string",
-        required:false,          
-      }, 
-    ]
-  },
-  // {
-  //   label: 'Condições',
-  //   hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-  //   name: 'conditions',
-  //   widget: 'list',
-  //   fields: [
-  //     {
-  //       label: 'Condições',
-  //       hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-  //       name: 'condition',
-  //       widget: 'object',
-  //       fields: [
-  //         {
-  //           label: 'Exibir quando a opção da grade...',
-  //           required:false,
-  //           name: 'condition_grid',
-  //           widget: 'select',
-  //           options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
-  //           .map(({ grid_id, title }) => ({
-  //             label: title,
-  //             value: grid_id
-  //           }))]
-  //         },  
-  //         {
-  //           label: "Tiver o valor",
-  //           name:"condition_type",
-  //           hint:">, <, >= e <= devem ser utilizados especificamente para valores numéricos.",
-  //           widget: "select",
-  //           options: ["=",">","<",">=","<=","!="],
-  //           required:false, 
-  //         },
-  //         {
-  //           label: "De",
-  //           hint:"Digite o valor que deverá ser comparado",
-  //           name: "condition_value",
-  //           widget: "string",
-  //           required:false,          
-  //         }, 
-  //       ]
-  //     },
-  //   ]
-  // },
-  {
-    label:"Opções",
-    name:"list",
-    widget:"list",
-    required:false,
-    fields: [
-      {
-        label: "Nome da opção",
-        name: "title",
-        widget: "string"          
-      }, 
-      {
-        label: "Descrição",
-        name: "description",
-        widget: "string",
-        required:false,          
-      }, 
-      {
-        label: 'Imagem ou ícone',
-        name: 'img',
-        widget: 'image',
-        required:false,
-      },     
-      {
-        label: "Tipo de Custo",
-        name:"type",
-        widget: "select",
-        options: ["Fixo","%"],
-        required:false, 
-      },
-      {
-        label: "Valor (Percentual ou Fixo em R$)",
-        name: "value",
-        widget: "number",
-        min:0,
-        value_type:"float",
-        required:false,
-      },
-      {
-        label: "Exibir campo digitável?",
-        name:"input_type",
-        widget: "select",
-        options: ["Não","text","number"],
-        required:false, 
-      },
-      {
-        label: "Quantidade máxima de caracteres ou de valor númerico",
-        name: "input_type_max",
-        widget: "number",
-        min:0,
-        value_type:"float",
-        required:false,
-      },
-      {
-        label: "Campo digitável é obrigatório?",
-        name:"input_type_required",
-        widget: 'boolean',
-        default: false
-      },
-      customizationFields_
-    ]
-  }, 
-];
-
-const customizationFields_ = [
-              
-  {
-    label: "Título do Passo",
-    hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
-    name: "title",
-    widget: "string",
-    required:false,          
-  }, 
-  {
-    label: 'Grid da Personalização',
-    name: 'title_id',
-    widget: 'select',
-    hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione. Personalizações do tipo texto/gravação devem ter somente uma opção cadastrada por bloco",
-    options: window.storefront.data.grids
-      .map(({ grid_id, title }) => ({
-        label: title,
-        value: grid_id
-      }))
-  },  
-  {
-    label: "Descrição do Passo",
-    hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
-    name: "step_description",
-    widget: "string",
-    required:false,          
-  }, 
-  
-  {
-    label: 'Upload',
-    hint:"",
-    name: 'upload',
-    widget: 'object',
-    fields: [
-      {
-        label: "Exibir campo para upload de arquivo?",
-        name:"enable",
-        widget: 'boolean',
-        default: false,
-        required:false,     
-      },
-      {
-        label: "Título",
-        hint:"",
-        name: "title",
-        widget: "string",
-        required:false,          
-      }, 
-      {
-        label: "Descrição",
-        hint:"",
-        name: "description",
-        widget: "string",
-        required:false,          
-      }, 
-      {
-        label: 'Imagem ou ícone',
-        name: 'img',
-        widget: 'image',
-        required:false,
-      },  
-      {
-        label: "Observação",
-        hint:"",
-        name: "description_after",
-        widget: "string",
-        required:false,          
-      }, 
-      {
-        label: "Texto do botão",
-        hint:"",
-        name: "button_text",
-        widget: "string",
-        required:false,          
-      }, 
-    ]
-  },
-  // {
-  //   label: 'Condições',
-  //   hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-  //   name: 'conditions',
-  //   widget: 'list',
-  //   fields: [
-  //     {
-  //       label: 'Condições',
-  //       hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
-  //       name: 'condition',
-  //       widget: 'object',
-  //       fields: [
-  //         {
-  //           label: 'Exibir quando a opção da grade...',
-  //           required:false,
-  //           name: 'condition_grid',
-  //           widget: 'select',
-  //           options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
-  //           .map(({ grid_id, title }) => ({
-  //             label: title,
-  //             value: grid_id
-  //           }))]
-  //         },  
-  //         {
-  //           label: "Tiver o valor",
-  //           name:"condition_type",
-  //           hint:">, <, >= e <= devem ser utilizados especificamente para valores numéricos.",
-  //           widget: "select",
-  //           options: ["=",">","<",">=","<=","!="],
-  //           required:false, 
-  //         },
-  //         {
-  //           label: "De",
-  //           hint:"Digite o valor que deverá ser comparado",
-  //           name: "condition_value",
-  //           widget: "string",
-  //           required:false,          
-  //         }, 
-  //       ]
-  //     },
-  //   ]
-  // },
-  {
-    label:"Opções",
-    name:"list",
-    widget:"list",
-    required:false,
-    fields: [
-      {
-        label: "Nome da opção",
-        name: "title",
-        widget: "string"          
-      }, 
-      {
-        label: "Descrição",
-        name: "description",
-        widget: "string",
-        required:false,          
-      }, 
-      {
-        label: 'Imagem ou ícone',
-        name: 'img',
-        widget: 'image',
-        required:false,
-      },     
-      {
-        label: "Tipo de Custo",
-        name:"type",
-        widget: "select",
-        options: ["Fixo","%"],
-        required:false, 
-      },
-      {
-        label: "Valor (Percentual ou Fixo em R$)",
-        name: "value",
-        widget: "number",
-        min:0,
-        value_type:"float",
-        required:false,
-      },
-      {
-        label: "Exibir campo digitável?",
-        name:"input_type",
-        widget: "select",
-        options: ["Não","text","number"],
-        required:false, 
-      },
-      {
-        label: "Quantidade máxima de caracteres ou de valor númerico",
-        name: "input_type_max",
-        widget: "number",
-        min:0,
-        value_type:"float",
-        required:false,
-      },
-      {
-        label: "Campo digitável é obrigatório?",
-        name:"input_type_required",
-        widget: 'boolean',
-        default: false
-      },
-      customizationFields
-    ]
-  }, 
-];
-
   return {
     backend: {
       name: 'git-gateway',
@@ -1505,7 +1139,185 @@ const customizationFields_ = [
             widget:"list",
             required:false,
             fields: [
-              customizationFields
+              
+              {
+                label: "Título do Passo",
+                hint:"Digite o que deve ser exibido como título. Exemplo: Selecione o grau da sua lente",
+                name: "title",
+                widget: "string",
+                required:false,          
+              }, 
+              {
+                label: 'Grid da Personalização',
+                name: 'title_id',
+                widget: 'select',
+                hint:"Lembre-se que o grid deverá estar atribuido ao produto no painel app.e-com.plus para que a personalização funcione. Personalizações do tipo texto/gravação devem ter somente uma opção cadastrada por bloco",
+                options: window.storefront.data.grids
+                  .map(({ grid_id, title }) => ({
+                    label: title,
+                    value: grid_id
+                  }))
+              },  
+              {
+                label: "Descrição do Passo",
+                hint:"Digite o que deve ser exibido como descrição. Exemplo: Selecione uma das opções de lentes disponíveis abaixo. Cada uma tem uma necessidade específica...",
+                name: "step_description",
+                widget: "string",
+                required:false,          
+              }, 
+              
+              {
+                label: 'Upload',
+                hint:"",
+                name: 'upload',
+                widget: 'object',
+                fields: [
+                  {
+                    label: "Exibir campo para upload de arquivo?",
+                    name:"enable",
+                    widget: 'boolean',
+                    default: false,
+                    required:false,     
+                  },
+                  {
+                    label: "Título",
+                    hint:"",
+                    name: "title",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
+                    label: "Descrição",
+                    hint:"",
+                    name: "description",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
+                    label: 'Imagem ou ícone',
+                    name: 'img',
+                    widget: 'image',
+                    required:false,
+                  },  
+                  {
+                    label: "Observação",
+                    hint:"",
+                    name: "description_after",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
+                    label: "Texto do botão",
+                    hint:"",
+                    name: "button_text",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                ]
+              },
+              {
+                label: 'Condições',
+                hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
+                name: 'conditions',
+                widget: 'list',
+                fields: [
+                  {
+                    label: 'Condições',
+                    hint:"Caso queira que essa grade apareça com uma condição específica, escolha a grade anterior abaixo",
+                    name: 'condition',
+                    widget: 'object',
+                    fields: [
+                      {
+                        label: 'Exibir quando a opção da grade...',
+                        required:false,
+                        name: 'condition_grid',
+                        widget: 'select',
+                        options: [{label:"Sem condição", value:"empty"}, ...window.storefront.data.grids
+                        .map(({ grid_id, title }) => ({
+                          label: title,
+                          value: grid_id
+                        }))]
+                      },  
+                      {
+                        label: "Tiver o valor",
+                        name:"condition_type",
+                        hint:">, <, >= e <= devem ser utilizados especificamente para valores numéricos.",
+                        widget: "select",
+                        options: ["=",">","<",">=","<=","!="],
+                        required:false, 
+                      },
+                      {
+                        label: "De",
+                        hint:"Digite o valor que deverá ser comparado",
+                        name: "condition_value",
+                        widget: "string",
+                        required:false,          
+                      }, 
+                    ]
+                  },
+                ]
+              },
+              {
+                label:"Opções",
+                name:"list",
+                widget:"list",
+                required:false,
+                fields: [
+                  {
+                    label: "Nome da opção",
+                    name: "title",
+                    widget: "string"          
+                  }, 
+                  {
+                    label: "Descrição",
+                    name: "description",
+                    widget: "string",
+                    required:false,          
+                  }, 
+                  {
+                    label: 'Imagem ou ícone',
+                    name: 'img',
+                    widget: 'image',
+                    required:false,
+                  },     
+                  {
+                    label: "Tipo de Custo",
+                    name:"type",
+                    widget: "select",
+                    options: ["Fixo","%"],
+                    required:false, 
+                  },
+                  {
+                    label: "Valor (Percentual ou Fixo em R$)",
+                    name: "value",
+                    widget: "number",
+                    min:0,
+                    value_type:"float",
+                    required:false,
+                  },
+                  {
+                    label: "Exibir campo digitável?",
+                    name:"input_type",
+                    widget: "select",
+                    options: ["Não","text","number"],
+                    required:false, 
+                  },
+                  {
+                    label: "Quantidade máxima de caracteres ou de valor númerico",
+                    name: "input_type_max",
+                    widget: "number",
+                    min:0,
+                    value_type:"float",
+                    required:false,
+                  },
+                  {
+                    label: "Campo digitável é obrigatório?",
+                    name:"input_type_required",
+                    widget: 'boolean',
+                    default: false
+                  },
+                ]
+              }, 
             ]
           },
           {
