@@ -112,7 +112,8 @@
             "image": "/img/uploads/menu-novidades.png"
           }
         }
-      ]
+      ],
+      "path": "/novidades"
     },
     {
       "title": "Óculos de Sol",
@@ -177,7 +178,8 @@
               {
                 "item": {
                   "title": "Redondo",
-                  "url": "/oculos-de-sol?filters={'shape':[{'text':'Redondo'}]}"
+                  "url": "/oculos-de-sol?filters={'shape':[{'text':'Redondo'}]}",
+                  "path": "/oculos-de-sol/redondo"
                 }
               },
               {
