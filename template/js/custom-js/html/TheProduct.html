@@ -90,7 +90,7 @@
                   </div>                        
                 </div>
                 <div class="mt-3" v-if="item_.description">
-                  <p class="option_description">{{item_.description}}</p>
+                  <p class="option_description" v-html="item_.description"></p>
                 </div>
                 <div class="mt-3 input_digitable">
                   <input @keyup="setTextCustomization(index,item.title_id, item_, $event.target.value)"  :type="item_.input_type" :max="item_.input_type_max" :required="item_.input_type_required ? true : false"/>
@@ -121,9 +121,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="mt-1" v-if="item_.description">
-                    <p class="option_description">
-                      {{item_.description}}
+                  <div class="mt-3" v-if="item_.description">
+                    <p class="option_description" v-html="item_.description">
+                      
                     </p>                  
                   </div>
                 </button>              

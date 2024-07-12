@@ -12,9 +12,9 @@
         },
         {
           "input_type_required": false,
-          "title": "Visão Simples",
+          "title": "Monofocal",
           "img": "/img/uploads/visao-simples.svg",
-          "description": "Lentes clássicas transparentes.",
+          "description": "Visão simples para perto ou longe",
           "type": "Fixo",
           "value": 0,
           "input_type": "Não"
@@ -45,7 +45,7 @@
           "condition": {
             "condition_grid": "necessidade_de_visao",
             "condition_type": "=",
-            "condition_value": "Visão Simples"
+            "condition_value": "Monofocal"
           }
         }
       ],
@@ -56,7 +56,7 @@
           "input_type_required": false,
           "title": "Antirreflexo",
           "img": "/img/uploads/antirreflexo.svg",
-          "description": "Lentes com revestimento antirreflexo para uma visão clara e sem distrações.<br>*Lentes clássicas transparentes<br>*Revestimento Premium",
+          "description": "- 1.56 CR<br>- Antirreflexo<br>- Lentes clássicas transparentes<br>- Visão clara e sem distorções",
           "type": "Fixo",
           "value": 29
           
@@ -65,7 +65,7 @@
           "input_type_required": false,
           "title": "Luz Azul",
           "img": "/img/uploads/luz-azul.svg",
-          "description": "Lentes de grau modernos com filtro de luz azul e revestimento antirreflexo para proteção ocular avançada e conforto visual superior.<br>* Filtro de Luz Azul e Revestimento Antirreflexo",
+          "description": "- 1.56 CR<br>- Filtro de Luz Azul<br>- Antirreflexo<br>- Proteção Ultravioleta<br>- Conforto Visual Superior<br>- Reduz a irritação dos olhos, dores de cabeça, visão embaçada, olhos secos, insônia e fadiga visual",
           "type": "Fixo",
           "value": 80
         },
@@ -2887,6 +2887,6 @@
   "upselling": [],
   "title": "DEFAULT",
   "identificador": [
-   
+    "MR0018"
   ]
 }

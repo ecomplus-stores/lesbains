@@ -3523,3 +3523,8 @@ header .term-box-only{display: none!important;}
     [data-value="G"]{order:-7}
     [data-value="GG"]{order:-6}
 }
+
+#custom_customizations .option_options .option_description{
+    font-size: calc(var(--f14)*.8) !important;
+    line-height: calc(var(--f14) * 1.2) !important;
+}
