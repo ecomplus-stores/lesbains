@@ -1528,12 +1528,11 @@ export default (options,state) => {
                                       name: "path",
                                       widget: "select",
                                       options: options.state.routes
-                                        .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
-                                        .map(({ name, path }) => ({
-                                          label: name,
-                                          value: `${path}?${name}`
-                                        }))
-                                    }
+                                      .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
+                                      .map(({ name, path }) => ({
+                                        label: name,
+                                        value: `${path}?${name}`
+                                      }))
                                   }
                                 ]
                             }
