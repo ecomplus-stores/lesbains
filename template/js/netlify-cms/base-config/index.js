@@ -1548,6 +1548,7 @@ export default (options,state) => {
                               name: "path",
                               widget: "select",
                               required: false,
+                              hint: 'Caso preenchido o campo URL DO ITEM será ignorado.',
                               options: options.state.routes
                               .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
                               .map(({ name, path }) => ({
@@ -1582,6 +1583,7 @@ export default (options,state) => {
                                               name: "path",
                                               widget: "select",
                                               required: false,
+                                              hint: 'Caso preenchido o campo URL DO ITEM será ignorado.',
                                               options: options.state.routes
                                               .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
                                               .map(({ name, path }) => ({
@@ -1619,6 +1621,7 @@ export default (options,state) => {
                                                             },
                                                             {
                                                               label: "Categoria/Coleção/Marca",
+                                                              hint: 'Caso preenchido o campo URL DO ITEM será ignorado.',
                                                               name: "path",
                                                               widget: "select",
                                                               required: false,
@@ -1719,6 +1722,7 @@ export default (options,state) => {
                                               label: "Categoria/Coleção/Marca",
                                               name: "path",
                                               widget: "select",
+                                              hint: 'Caso preenchido o campo URL DO ITEM será ignorado.',
                                               required: false,
                                               options: options.state.routes
                                               .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
