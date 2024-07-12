@@ -1547,6 +1547,7 @@ export default (options,state) => {
                               label: "Categoria/Coleção/Marca",
                               name: "path",
                               widget: "select",
+                              required: false,
                               options: options.state.routes
                               .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
                               .map(({ name, path }) => ({
@@ -1580,6 +1581,7 @@ export default (options,state) => {
                                               label: "Categoria/Coleção/Marca",
                                               name: "path",
                                               widget: "select",
+                                              required: false,
                                               options: options.state.routes
                                               .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
                                               .map(({ name, path }) => ({
@@ -1619,6 +1621,7 @@ export default (options,state) => {
                                                               label: "Categoria/Coleção/Marca",
                                                               name: "path",
                                                               widget: "select",
+                                                              required: false,
                                                               options: options.state.routes
                                                               .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
                                                               .map(({ name, path }) => ({
@@ -1716,6 +1719,7 @@ export default (options,state) => {
                                               label: "Categoria/Coleção/Marca",
                                               name: "path",
                                               widget: "select",
+                                              required: false,
                                               options: options.state.routes
                                               .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
                                               .map(({ name, path }) => ({
