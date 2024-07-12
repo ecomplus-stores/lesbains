@@ -1522,7 +1522,19 @@ export default (options,state) => {
                                         label: "URL",
                                         name: "url",
                                         widget: "string"
+                                    },
+                                    {
+                                      label: "Categoria/Coleção/Marca",
+                                      name: "path",
+                                      widget: "select",
+                                      options: options.state.routes
+                                        .filter(({ resource, name }) => Boolean(resource !== 'products' && name))
+                                        .map(({ name, path }) => ({
+                                          label: name,
+                                          value: `${path}?${name}`
+                                        }))
                                     }
+                                  }
                                 ]
                             }
                         ]
