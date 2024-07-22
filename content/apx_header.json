@@ -180,6 +180,13 @@
                   "url": "https://www.lesbains.com.br/colecao-petit",
                   "path": "/colecao-petit"
                 }
+              },
+              {
+                "item": {
+                  "title": "Coleção London",
+                  "url": "https://www.lesbains.com.br/the-london-edition",
+                  "path": "/the-london-edition"
+                }
               }
             ],
             "url": "/oculos-de-sol"
