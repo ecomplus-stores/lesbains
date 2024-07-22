@@ -266,8 +266,16 @@
             "url": "/",
             "image": "/img/uploads/menu-oculos-de-sol-1-.png"
           }
+        },
+        {
+          "item": {
+            "title": "Coelção Luxe",
+            "path": "/colecao-luxe",
+            "url": "https://www.lesbains.com.br/colecao-luxury"
+          }
         }
-      ]
+      ],
+      "path": "/oculos-de-sol"
     },
     {
       "title": "Óculos de Grau",
