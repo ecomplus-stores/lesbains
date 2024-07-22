@@ -166,6 +166,20 @@
                   "title": "Novidades",
                   "url": "/oculos-de-sol?filters={'novidades':[{'text':'Sim'}]}"
                 }
+              },
+              {
+                "item": {
+                  "title": "Coleção Luxe",
+                  "url": "https://www.lesbains.com.br/colecao-luxury",
+                  "path": "/colecao-luxe"
+                }
+              },
+              {
+                "item": {
+                  "title": "Coleção Petit",
+                  "url": "https://www.lesbains.com.br/colecao-petit",
+                  "path": "/colecao-petit"
+                }
               }
             ],
             "url": "/oculos-de-sol"
