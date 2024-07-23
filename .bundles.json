@@ -1,28 +1,28 @@
 {
   "assetsByChunkName": {
-    "vendors~app-account~app-checkout~app-confirmation~app-order": "chunk.4f01ebef92fc34cfa993.js",
-    "vendors~app-account~app-confirmation~app-order": "chunk.7122f28525ad4825e96a.js",
-    "vendors~app-account~app-checkout": "chunk.61b7f085676aad437bf2.js",
-    "vendors~app-cart~app-checkout": "chunk.e4fd706865174448ee11.js",
+    "vendors~app-account~app-checkout~app-confirmation~app-order": "chunk.45a4e5f330c78e5440c6.js",
+    "vendors~app-account~app-confirmation~app-order": "chunk.8665d21304bf33d80a40.js",
+    "vendors~app-account~app-checkout": "chunk.048438871dcaf4569041.js",
+    "vendors~app-cart~app-checkout": "chunk.6d6472486a20035bdd01.js",
     "admin": [
-      "admin.31ec1a7332461b0c5847.js",
-      "admin.31ec1a7332461b0c5847.js.map"
+      "admin.029bc15d4f07deeaab52.js",
+      "admin.029bc15d4f07deeaab52.js.map"
     ],
-    "app-account": "chunk.0d0e72d78a7e319ffb68.js",
-    "app-cart": "chunk.13d19596d6123f877410.js",
-    "app-checkout": "chunk.0daec496464b19705467.js",
-    "app-confirmation": "chunk.413f34387bcc7036e8d3.js",
-    "app-order": "chunk.173f26113395f5b7c3c1.js",
+    "app-account": "chunk.497b95b2ec88f35ae68a.js",
+    "app-cart": "chunk.1c33d374c7b1a85f70c3.js",
+    "app-checkout": "chunk.bacad3e3348307ca98f6.js",
+    "app-confirmation": "chunk.51efe25f54bbf31df8ed.js",
+    "app-order": "chunk.bfb5975cc1fa90b7f25e.js",
     "checkout": [
-      "checkout.55c1d90d6acc006eff37.js",
-      "checkout.55c1d90d6acc006eff37.js.map"
+      "checkout.6e9414be1238eb7e8aca.js",
+      "checkout.6e9414be1238eb7e8aca.js.map"
     ],
     "storefront": [
       "storefront.f4278c9b19f2e696dd57.css",
-      "storefront.9cf804fa5268dee1f1d9.js",
+      "storefront.5ccb4e9a537b71420db2.js",
       "storefront.f4278c9b19f2e696dd57.css.map",
-      "storefront.9cf804fa5268dee1f1d9.js.map"
+      "storefront.5ccb4e9a537b71420db2.js.map"
     ],
-    "vendors~app-cart": "chunk.977b90b148fd79c80134.js"
+    "vendors~app-cart": "chunk.c598943c7bee0ceec90e.js"
   }
 }
