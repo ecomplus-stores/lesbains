@@ -26,6 +26,22 @@
           "description": "Com um amplo campo de visão tanto para longe quanto para perto, essas lentes oferecem uma transição suave entre as diferentes zonas de foco, garantindo uma visão nítida e clara em todas as distâncias.<br* 1.50 CR",
           "type": "Fixo",
           "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Transitions",
+          "img": "/img/uploads/transitions.svg",
+          "description": "",
+          "type": "Fixo",
+          "value": 1099
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar com Grau",
+          "img": "/img/uploads/solar-com-grau.svg",
+          "description": "",
+          "type": "Fixo",
+          "value": 929
         }
       ],
       "title": "Necessidade de Visão",
@@ -35,6 +51,180 @@
       "upload": {
         "enable": false
       }
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Transitions"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Tipo da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "img": "",
+          "description": "- 1.50 CR<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Proteção luz azul<br>- 3 meses de garantia<br>- Visão clara e sem distorções<br>- Graus baixos<br>- Armações pequenas e médias",
+          "type": "Fixo",
+          "value": 0
+          
+        },
+        {
+          "input_type_required": false,
+          "title": "Especial",
+          "img": "",
+          "description": "- 1.56 CR<br>- Sob medida<br>- Fina e leve<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Antirrisco<br>- Visão precisa<br>- Garantia de 12 meses<br>- Graus altos<br>- Armações pequenas, médias e grandes",
+          "type": "Fixo",
+          "value": 2000
+        }   
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Tipo da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "img": "",
+          "description": "- 1.50 CR<br>- Antirreflexo<br>- 3 meses de garantia<br>- Antirreflexo<br>- Clareza<br>- Durabilidade<br>- Graus baixos e médios<br>- Armações pequenas e médias",
+          "type": "Fixo",
+          "value": 0
+          
+        },
+        {
+          "input_type_required": false,
+          "title": "Especial",
+          "img": "",
+          "description": "- 1.56 Policarbonato<br>- Sob medida<br>- Fina e leve<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Antirrisco<br>- Visão precisa<br>- Garantia de 12 meses<br>- Graus altos<br>- Armações pequenas, médias e grandes",
+          "type": "Fixo",
+          "value": 230
+        }   
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Cor da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Cinza",
+          "img": "",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+          
+        },
+        {
+          "input_type_required": false,
+          "title": "Marrom",
+          "img": "",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+          
+        },
+        {
+          "input_type_required": false,
+          "title": "G15 (Verde)",
+          "img": "",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+          
+        }  
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Especial"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Cor da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Cinza",
+          "img": "",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+          
+        },
+        {
+          "input_type_required": false,
+          "title": "Marrom",
+          "img": "",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+          
+        },
+        {
+          "input_type_required": false,
+          "title": "G15 (Verde)",
+          "img": "",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+          
+        }  
+      ]
     },
     {
       "upload": {
