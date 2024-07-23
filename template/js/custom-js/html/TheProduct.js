@@ -430,15 +430,16 @@ export default {
     },
     setStep(step){
       this.cms_customizations_step = step
-      //console.log(this.cms_customizations.length, this.cms_upselling.length, this.cms_customizations_step)
     },
     setDeepCustomizationOption(index,grid_id,item){
-      //console.log(index, grid_id,item)
+      
       //this.current_customization[index] = {[grid_id] : item}
+      
       let q = this.current_customization.find(el => el[grid_id])
       if(q){
         q = item
       }else{
+      console.log(`setDeepCustomizationOption`,index, grid_id,item)
         this.current_customization.push({[grid_id] : item})
       }
       
@@ -500,7 +501,14 @@ export default {
         this.customizations.splice(index, 1)
       }
     },
-
+    async generateHash(input) {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(input);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      return hashHex;
+    },
     setUploadCustomization (index,grid_id) {
       this.customizationLoading = true
       //console.log(`this.customizationLoading`,this.customizationLoading)
@@ -508,66 +516,50 @@ export default {
       let file = fileInput.files[0];
 
       if (file) {
-        let formData = new FormData();
-        formData.append('files', file);
-        fetch('http://localhost:1337/api/webhooks/file-upload', {
-        //fetch('https://api.storeboost.com.br/api/webhooks/file-upload', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'app-id': '7'
-          }
-        })
-        .then(response => {
-          return response.json();
-        })
-        .then(data => {
-            console.log(index, grid_id, data, this.current_customization)
+        this.generateHash(file.name + Date.now().toString()).then(hash => {
+          const fileExt = file.name.split('.').pop();
+          const newFileName = `${hash.slice(0,30)}.${fileExt}`;
+    
+          const renamedFile = new File([file], newFileName, { type: file.type });
+    
+          let formData = new FormData();
+          formData.append('files', renamedFile);
+    
+          fetch('https://api.storeboost.com.br/api/webhooks/file-upload', {
+          //fetch('http://localhost:1337/api/webhooks/file-upload', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'app-id': '7'
+            }
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log(index, grid_id, data, this.current_customization);
             let item = {
-              title : data.response.data.image[0].url,
+              title: data.response.data.image[0].url,
               type: "Fixo",
               value: 0,
-              input_type_required:false,
+              input_type_required: false,
               description: "Arquivo enviado durante o processo de compra"
+            };
+            let q = this.current_customization.find(el => el[grid_id]);
+            if (q) {
+              q[grid_id] = item;
+            } else {
+              this.current_customization.push({ [grid_id]: item });
             }
-            let q = this.current_customization.find(el => el[grid_id])
-            if(q){
-              q = item
-            }else{
-              this.current_customization.push({[grid_id] : item})
-            }
-            
-            
-            console.log(this.current_customization)
-        
-          ////console.log(this.current_customization)
-          //this.cms_customizations_step++
-          // const index = this.customizations.findIndex(({ _id }) => _id === customization._id)
-          // if (text) {
-          //   if (index > -1) {
-          //     this.customizations[index].option = { text }
-          //   } else {
-          //     this.customizations.push({
-          //       _id: customization._id,
-          //       label: customization.label,
-          //       add_to_price: customization.add_to_price,
-          //       option: { text }
-          //     })
-          //   }
-          // } else if (index > -1) {
-          //   this.customizations.splice(index, 1)
-          // }
-          this.customizationLoading = false
-          ////console.log('updated',this.current_customization[index][])
-        })
-        
-        .catch(error => {
-          console.error('Erro:', error);
-          this.customizationLoading = false
+            console.log(this.current_customization);
+            this.customizationLoading = false;
+          })
+          .catch(error => {
+            console.error('Erro:', error);
+            this.customizationLoading = false;
+          });
         });
       } else {
         console.error('Nenhum arquivo selecionado.');
-        this.customizationLoading = false
+        this.customizationLoading = false;
       }
     },
 
@@ -1131,6 +1123,7 @@ export default {
         }, 1000)
       }
     }
+    console.log(`this.body.customization`,this.body.customizations)
   },
 
   destroyed () {

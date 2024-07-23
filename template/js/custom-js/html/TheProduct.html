@@ -134,7 +134,7 @@
                 <h3>{{item.upload.title}}</h3>
                 <p>{{item.upload.description}}</p>
                 <div v-if="item.upload.img && !current_customization.find(el => el[item.title_id])" class="text-center"><img :src="item.upload.img"/></div>
-                <div v-if="current_customization.find(el => el[item.title_id])" clss="text-center">
+                <div v-if="current_customization.find(el => el[item.title_id])" class="text-center">
                   <img :src="current_customization.find(el => el[item.title_id])[item.title_id].title"/>
                 </div>
                 <input type="file" :id="item.title_id + '_file'"/>
@@ -153,7 +153,8 @@
                 <div class="col"><b>Subtotal</b></div>
                 <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
               </div>
-              <button v-if="item.upload.enable" type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+              
+              <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
                 Avançar
               </button>              
             </div>
@@ -308,8 +309,8 @@
         </div>
         
         <div class="step last px-md-3"
-          v-if="cms_customizations_step > cms_customizations.length + cms_upselling.length"
-            :class="cms_customizations_step > cms_customizations.length + cms_upselling.length  ? 'current' : ''"
+          v-if="cms_customizations_step > (cms_customizations.length + cms_upselling.length)"
+            :class="cms_customizations_step > (cms_customizations.length + cms_upselling.length)  ? 'current' : ''"
         >
           <div>
             <div class="option_title text-center mb-md-5 mb-4 mt-5">
