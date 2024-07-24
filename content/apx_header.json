@@ -187,6 +187,13 @@
                   "url": "https://www.lesbains.com.br/the-london-edition",
                   "path": "/the-london-edition"
                 }
+              },
+              {
+                "item": {
+                  "title": "Coleção Vintage",
+                  "url": "https://www.lesbains.com.br/colecao-vintage",
+                  "path": "/colecao-vintage"
+                }
               }
             ],
             "url": "/oculos-de-sol"
