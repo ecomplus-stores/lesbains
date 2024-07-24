@@ -1608,6 +1608,7 @@ header{z-index:3;
         padding: 35px 0;
     }
 }
+
 #apx-menu{
     .level_1 > li{position: relative;}
     .level_2{
@@ -1655,6 +1656,7 @@ header{z-index:3;
         font-weight:600;
     }
 }
+#apx-menu .max_menu.open .level_2{pointer-events: all;}
 @media(min-width:990px){
 #apx-menu .level_1>li:hover .level_2 {
     margin-top: 0;
