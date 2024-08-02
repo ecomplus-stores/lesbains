@@ -1,0 +1,10 @@
+{
+  "type": "bottom_right",
+  "title": "Frete Grátis",
+  "description": "Produto com frete gratis selecionados",
+  "color": "#a21111",
+  "border": "#a21111",
+  "identificador": [
+    "TR0009"
+  ]
+}
