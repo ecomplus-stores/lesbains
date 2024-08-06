@@ -14,7 +14,7 @@
           "input_type_required": false,
           "title": "Monofocal",
           "img": "/img/uploads/visao-simples.svg",
-          "description": "- 1.50 CR<br>- Lentes clássicas transparentes<br>- Visão simples para perto ou longe",
+          "description": "Lentes de prescrição única, ideais para corrigir miopia, hipermetropia ou astigmatismo, proporcionando visão clara e nítida em uma única distância.<br>Perfeitas para óculos de leitura, de uso geral ou atividades específicas.",
           "type": "Fixo",
           "value": 59,
           "input_type": "Não"
@@ -25,21 +25,21 @@
           "img": "/img/uploads/multifocal.svg",
           "description": "Com um amplo campo de visão tanto para longe quanto para perto, essas lentes oferecem uma transição suave entre as diferentes zonas de foco, garantindo uma visão nítida e clara em todas as distâncias.<br* 1.50 CR",
           "type": "Fixo",
-          "value": 0
+          "value": 390
         },
         {
           "input_type_required": false,
           "title": "Transitions",
           "img": "/img/uploads/transitions.svg",
-          "description": "",
+          "description": "Lentes fotossensíveis que se adaptam automaticamente às mudanças de luz, proporcionando conforto visual e proteção UV em ambientes internos e externos. Ideais para quem busca praticidade e conveniência no dia a dia.",
           "type": "Fixo",
-          "value": 1099
+          "value": 899
         },
         {
           "input_type_required": false,
           "title": "Solar com Grau",
           "img": "/img/uploads/solar-com-grau.svg",
-          "description": "",
+          "description": "Lentes de sol personalizadas com sua prescrição, oferecendo proteção UV e conforto visual, combinando correção de visão e estilo em ambientes ensolarados. Perfeiras para quem busca visão clara e proteção solar",
           "type": "Fixo",
           "value": 929
         }
@@ -83,7 +83,7 @@
           "img": "",
           "description": "- 1.56 CR<br>- Sob medida<br>- Fina e leve<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Antirrisco<br>- Visão precisa<br>- Garantia de 12 meses<br>- Graus altos<br>- Armações pequenas, médias e grandes",
           "type": "Fixo",
-          "value": 2000
+          "value": 2799
         }   
       ]
     },
@@ -118,7 +118,7 @@
           "img": "",
           "description": "- 1.56 Policarbonato<br>- Sob medida<br>- Fina e leve<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Antirrisco<br>- Visão precisa<br>- Garantia de 12 meses<br>- Graus altos<br>- Armações pequenas, médias e grandes",
           "type": "Fixo",
-          "value": 230
+          "value": 309
         }   
       ]
     },
@@ -148,7 +148,7 @@
         {
           "input_type_required": false,
           "title": "Cinza",
-          "img": "",
+          "img": "/img/uploads/lente_cinza.png",
           "description": "",
           "type": "Fixo",
           "value": 0
@@ -157,7 +157,7 @@
         {
           "input_type_required": false,
           "title": "Marrom",
-          "img": "",
+          "img": "/img/uploads/lente_marrom.png",
           "description": "",
           "type": "Fixo",
           "value": 0
@@ -166,7 +166,7 @@
         {
           "input_type_required": false,
           "title": "G15 (Verde)",
-          "img": "",
+          "img": "/img/uploads/lente_verde.png",
           "description": "",
           "type": "Fixo",
           "value": 0
@@ -485,14 +485,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"- 1.59 Policarbonato<br>- Garantia de 3 meses das lentes",
+          "description":"- 1.59 Policarbonato<br>- Antirreflexo<br>- Garantia de 3 meses das lentes",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Proteção completa",
-          "description":"- 1.59 Policarbonato<br>- Solução personalizada e abrangente para atender ãs necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
+          "description":"- 1.59 Policarbonato<br>- Filtro de Luz Azul<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 199
         }    
@@ -533,7 +533,7 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"- 1.56 CR",
+          "description":"- 1.56 CR<br>- Filtro de Luz Azul<br>- Antirreflexo<br>- Proteção Ultravioleta (UV)",
           "type": "Fixo",
           "value": 0
         },
@@ -587,14 +587,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"- 1.56 CR<br>- Garantia de 3 meses das lentes",
+          "description":"- 1.56 CR<br>- Filtro de Luz Azul<br>- Antirreflexo<br>- Proteção Ultravioleta(UV)<br>- Garantia de 3 meses das lentes",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Proteção Completa",
-          "description":"- 1.59 CR<br>- Antirreflexo com tecnologia avançada<br>- Filtro azul<br>- Antirrisco<br>- Oleofóbicas<br>- Antiestéticas<br>- Visão mais nítida e alta transparência<br>- Proteção ultravioleta (UV)<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
+          "description":"- 1.56 CR<br>- Antirreflexo com tecnologia avançada<br>- Filtro azul<br>- Antirrisco<br>- Oleofóbicas<br>- Antiestéticas<br>- Visão mais nítida e alta transparência<br>- Proteção ultravioleta (UV)<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 299
         }   
@@ -641,7 +641,7 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"",
+          "description":"- 1.61 CR<br>- Filtro de Luz Azul<br>- Antirreflexo<br>- Proteção Ultravioleta (UV)<br>- Garantia de 3 meses",
           "type": "Fixo",
           "value": 0
         },
@@ -777,7 +777,7 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"- 1.56 CR",
+          "description":"- 1.56 CR<br>- Antirreflex",
           "type": "Fixo",
           "value": 0
         },
@@ -831,7 +831,7 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"- 1.56 CR<br>- Garantia de 3 meses das lentes",
+          "description":"- 1.56 CR<br>- Antirreflexo<br>- Garantia de 3 meses das lentes",
           "type": "Fixo",
           "value": 0
         },
@@ -840,7 +840,7 @@
           "title": "Antirrisco",
           "description":"- 1.56 CR<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Antirreflexo<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
-          "value": 280
+          "value": 199
         }    
       ]
     },
@@ -885,14 +885,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"- 1.59 Policarbonato<br>- Garantia de 3 meses das lentes",
+          "description":"- 1.59 Policarbonato<br>- Antirreflexo<br>- Garantia de 3 meses das lentes",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirrisco",
-          "description":"- 1.59 Policarbonato<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta (UV)",
+          "description":"- 1.59 Policarbonato<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 199
         }    
@@ -933,7 +933,7 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"- 1.56 CR",
+          "description":"- 1.56 CR<br>- Antirreflexo<br>- Proteção Ultravioleta (UV)",
           "type": "Fixo",
           "value": 0
         },
@@ -988,7 +988,7 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"- 1.59 Policarbonato<br>- Garantia de 3 meses das lentes",
+          "description":"- 1.59 Policarbonato<br>- Antirreflexo<br>- Proteção Ultravioleta (UV)<br>- Garantia de 3 meses das lentes",
           "type": "Fixo",
           "value": 0
         },
@@ -1043,7 +1043,7 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description":"- 1.56 CR<br>- Garantia de 3 meses das lentes",
+          "description":"- 1.56 CR<br>- Antirreflexo<br>- Proteção ultravioleta (UV)<br>- Garantia de 3 meses das lentes",
           "type": "Fixo",
           "value": 0
         },
@@ -1079,7 +1079,7 @@
           "img": "",
           "description": "- Design básico e funcional<br>- 1.50 CR<br>- Amplo campo de longe e perto<br>- Boa visão intermediária e fácil adaptação<br>- Antirreflexo exclusivo",
           "type": "Fixo",
-          "value": 390
+          "value": 0
           
         },
         {
@@ -1213,7 +1213,7 @@
           "title": "Filtro Azul",
           "description":"- 1.50 CR<br>- Filtro luz azul<br>- Antirreflexo com tecnologia avançada<br>- Ajuda a reduzir irritação dos olhos, dores de cabeça, visão embaçada, olhos secos, insônia e fadiga visual<br>- Sob medida<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Óleofóbicas<br>- Antiestéticas<br>- Hidrofóbico<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida",
           "type": "Fixo",
-          "value": 0
+          "value": 139
         }   
       ]
     },
@@ -1252,7 +1252,7 @@
 {
           "input_type_required": false,
           "title": "Normal",
-          "description":"- 1.50 CR<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias",
+          "description":"- 1.50 CR<br>-Antirreflexo<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias",
           "type": "Fixo",
           "value": 0
         },
@@ -1260,7 +1260,7 @@
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"- 1.59 Policarbonato<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes",
+          "description":"- 1.59 Policarbonato<br>-Antirreflexo<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 299
         }  
@@ -1300,7 +1300,7 @@
 {
           "input_type_required": false,
           "title": "Normal",
-          "description":"- 1.50 CR<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias",
+          "description":"- 1.50 CR<br>-Filtro azul<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias",
           "type": "Fixo",
           "value": 139
         },
@@ -1308,7 +1308,7 @@
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"- 1.59 CR<br>- Fina e leve<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes",
+          "description":"- 1.59 CR<br>-Filtro azul<br>- Fina e leve<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 299
         }  
@@ -1351,7 +1351,7 @@
           "title": "Filtro Azul",
           "description":"- 1.50 CR<br>- Luz azul<br>- Tecnologia Optiswiss<br>- Alta performance<br>- Total personalização<br>- Antirreflexo<br>- Hidrofóbico<br>- Óleofóbico<br>- Antiestático<br>- Antirrisco<br>- Adaptação rápida e fácil<br>- Desenho progressivo adaptado para novos usuários",
           "type": "Fixo",
-          "value": 0
+          "value": 649
         }     
       ]
     },
@@ -1389,14 +1389,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"- 1.50 CR<br>- Graus baixos<br>- Armações pequenas e médias<br>- Garantia de 3 meses",
+          "description":"- 1.50 CR<br>-Antirreflexo<br>- Graus baixos<br>- Armações pequenas e médias<br>- Garantia de 3 meses",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"- 1.59 Policarbonato<br>- Mais fina<br>- Mais leves e resistentes<br>- Durabilidade e conforto<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses",
+          "description":"- 1.59 Policarbonato<br>-Antirreflexo<br>- Mais fina<br>- Mais leves e resistentes<br>- Durabilidade e conforto<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses",
           "type": "Fixo",
           "value": 709
         }  
@@ -1436,14 +1436,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description":"- 1.50 CR<br>- Graus baixos<br>- Armações pequenas e médias<br>- Garantia de 3 meses",
+          "description":"- 1.50 CR<br>-Filtro azul<br>- Graus baixos<br>- Armações pequenas e médias<br>- Garantia de 3 meses",
           "type": "Fixo",
           "value": 649
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description":"- 1.59 CR<br>- Mais fina<br>- Mais leves e resistentes<br>- Durabilidade e conforto<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses",
+          "description":"- 1.59 CR<br>-Filtro azul<br>- Mais fina<br>- Mais leves e resistentes<br>- Durabilidade e conforto<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses",
           "type": "Fixo",
           "value": 859
         }  

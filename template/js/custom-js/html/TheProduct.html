@@ -80,10 +80,10 @@
                       </div>
                       <div class="col-auto">
                         <strong v-if="item_.type == 'Fixo'" class="option_price">
-                          {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                          {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : '+R$ 0,00'}}
                         </strong>
                         <strong v-else class="option_price">
-                          {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                          {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : '+R$ 0,00'}}
                         </strong>
                       </div>
                     </div>                          
@@ -112,10 +112,10 @@
                         </div>
                         <div class="col-auto">
                           <strong v-if="item_.type == 'Fixo'" class="option_price">
-                            {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                            {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : '+R$ 0,00'}}
                           </strong>
                           <strong v-else class="option_price">
-                            {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                            {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : '+R$ 0,00'}}
                           </strong>
                         </div>
                       </div>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="col-auto">
                               <strong class="option_price">
-                                {{ upsellProduct(item_).price > 0 ? upsellProduct(item_).price.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : '' }}
+                                {{ upsellProduct(item_).price > 0 ? upsellProduct(item_).price.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : '+R$ 0,00' }}
                               </strong>
                             </div>
                           </div>
