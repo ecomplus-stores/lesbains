@@ -820,7 +820,7 @@
         {
           "input_type_required": false,
           "title": "Antirrisco",
-          "description": "- 1.56 CR<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Antirreflexo<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
+          "description": "- 1.56 CR<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Antirreflexo<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 199
         }
@@ -873,7 +873,7 @@
         {
           "input_type_required": false,
           "title": "Antirrisco",
-          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Garantia de 12 meses das lentes",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta UVA/UVB<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 199
         }
