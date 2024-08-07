@@ -573,14 +573,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description": "- 1.56 CR<br>- Filtro de Luz Azul<br>- Antirreflexo<br>- Proteção Ultravioleta(UV)<br>- Garantia de 3 meses das lentes",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Garantia de 3 meses das lentes",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Proteção Completa",
-          "description": "- 1.56 CR<br>- Antirreflexo com tecnologia avançada<br>- Filtro azul<br>- Antirrisco<br>- Oleofóbicas<br>- Antiestéticas<br>- Visão mais nítida e alta transparência<br>- Proteção ultravioleta (UV)<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
+          "description": "- 1.56 CR<br>- Antirreflexo com tecnologia avançada<br>- Filtro de luz azul<br>- Antirrisco<br>- Oleofóbico<br>- Antiestético<br>- Visão mais nítida e alta transparência<br>- Proteção UVA/UVB<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 299
         }
