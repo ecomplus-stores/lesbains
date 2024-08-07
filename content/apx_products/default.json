@@ -320,14 +320,14 @@
         {
           "input_type_required": false,
           "title": "Comfort",
-          "description": "- 1.56 CR<br>- Filtro de Luz Azul<br>- Revestimento Antirreflexo<br>- Ótima definição visual<br>- Proteção ocular avançada<br>- Conforto visual superior<br>- Graus baixos<br>- Armações pequenas e médias",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Revestimento antirreflexo<br>- Ótima definição visual<br>- Proteção ocular avançada<br>- Conforto visual superior<br>- Graus baixos<br>- Armações pequenas e médias",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Premium",
-          "description": "- 1.56 CR<br>- Filtro de Luz Azul<br>- Antirreflexo<br>- Proteção Ultravioleta (UV)<br>- Experiência visual nítica e sem distorçòes<br>- Graus baixos e médios<br>- Armações pequenas e médias",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Antirreflexo<br>- Proteção ultravioleta (UV)<br>- Experiência visual nítica e sem distorções<br>- Graus baixos e médios<br>- Armações pequenas e médias",
           "type": "Fixo",
           "value": 689
         }
