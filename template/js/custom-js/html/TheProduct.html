@@ -154,7 +154,7 @@
                 <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
               </div>
               
-              <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+              <button v-if="item.upload.enable" type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
                 Avançar
               </button>              
             </div>

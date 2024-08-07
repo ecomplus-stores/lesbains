@@ -429,22 +429,23 @@ export default {
       //console.log(this.current_customization[index])
     },
     setStep(step){
+      //console.log(step,this.current_customization)
       this.cms_customizations_step = step
     },
     setDeepCustomizationOption(index,grid_id,item){
-      
-      //this.current_customization[index] = {[grid_id] : item}
-      
+      this.isBackButtonPressed = false
+      if(this.cms_customizations_step < 1){
+        this.current_customization = []
+      }
       let q = this.current_customization.find(el => el[grid_id])
       if(q){
         q = item
       }else{
-      console.log(`setDeepCustomizationOption`,index, grid_id,item)
         this.current_customization.push({[grid_id] : item})
       }
       
-      //console.log(this.current_customization)
       this.cms_customizations_step++
+      
     },
     totalWithCustomization(){
       let variationId
@@ -586,12 +587,13 @@ export default {
         }
       })
       
-      if(!flag){
+      if(!flag){        
         if(this.isBackButtonPressed){
           this.setStep(this.cms_customizations_step - 1)
         }else{
           this.setStep(this.cms_customizations_step + 1)
         }        
+        //console.log(this.cms_customizations_step)
         return false
       }else{
         this.isBackButtonPressed = false
