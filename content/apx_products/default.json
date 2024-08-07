@@ -1174,7 +1174,7 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description": "- 1.50 CR<br>- Antirreflexo com tecnologia avançada<br>- Visão mais clara e confortável<br>- Sob medida<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Óleofóbico<br>- Antiestéticas<br>- Hidrofóbico<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida",
+          "description": "- 1.50 CR<br>- Antirreflexo com tecnologia avançada<br>- Visão mais clara e confortável<br>- Sob medida<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Óleofóbico<br>- Antiestético<br>- Hidrofóbico<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida",
           "type": "Fixo",
           "value": 0
         },
