@@ -246,7 +246,7 @@
           "input_type_required": false,
           "title": "Luz Azul",
           "img": "/img/uploads/luz-azul.svg",
-          "description": "- 1.56 CR<br>- Filtro de Luz Azul<br>- Antirreflexo<br>- Proteção Ultravioleta<br>- Conforto Visual Superior<br>- Reduz a irritação dos olhos, dores de cabeça, visão embaçada, olhos secos, insônia e fadiga visual",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Conforto visual superior<br>- Reduz a irritação dos olhos, dores de cabeça, visão embaçada, olhos secos, insônia e fadiga visual",
           "type": "Fixo",
           "value": 79
         },
