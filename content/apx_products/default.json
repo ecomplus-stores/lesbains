@@ -427,7 +427,7 @@
         {
           "input_type_required": false,
           "title": "Proteção Completa",
-          "description": "<br>- 1.56 CR<br>- Antirreflexo com tecnologia avançada<br>- Antirrisco<br>- Oleofóbicas<br>- Antiestéticas<br>- Visão mais nítida e alta transparência<br>- Proteção ultravioleta(UV)<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
+          "description": "<br>- 1.56 CR<br>- Antirreflexo com tecnologia avançada<br>- Antirrisco<br>- Oleofóbicas<br>- Antiestéticas<br>- Visão mais nítida e alta transparência<br>- Proteção UVA/UVB<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 199
         }
@@ -480,7 +480,7 @@
         {
           "input_type_required": false,
           "title": "Proteção completa",
-          "description": "- 1.59 Policarbonato<br>- Filtro de Luz Azul<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
+          "description": "- 1.59 Policarbonato<br>- Filtro de luz azul<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 199
         }
