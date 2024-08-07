@@ -1267,14 +1267,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description": "- 1.50 CR<br>-Filtro azul<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias",
+          "description": "- 1.50 CR<br>-Filtro de luz azul<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias",
           "type": "Fixo",
           "value": 139
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description": "- 1.59 CR<br>-Filtro azul<br>- Fina e leve<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes",
+          "description": "- 1.59 CR<br>-Filtro de luz azul<br>- Fina e leve<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 299
         }
