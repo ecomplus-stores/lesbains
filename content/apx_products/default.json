@@ -913,7 +913,7 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description": "- 1.56 CR<br>- Antirreflexo<br>- Proteção Ultravioleta (UV)",
+          "description": "- 1.56 CR<br>- Antirreflexo<br>- Proteção UVA/UVB",
           "type": "Fixo",
           "value": 0
         },
