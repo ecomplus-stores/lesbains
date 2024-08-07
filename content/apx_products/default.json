@@ -520,14 +520,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description": "- 1.56 CR<br>- Filtro de Luz Azul<br>- Antirreflexo<br>- Proteção Ultravioleta (UV)",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Antirreflexo<br>- Proteção UVA/UVB",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description": "- 1.61 CR<br>- Proteção ultravioleta (UV)<br>- Antirreflexo<br>- Ajudam a reduzir a fadiga ocular<br>- Filtram a luz azul nociva emitida por dispositivos eletrônicos e digitais<br>- Conforto visual e promovem um sono mais saudável",
+          "description": "- 1.61 CR<br>- Proteção UVA/UVB<br>- Antirreflexo<br>- Ajudam a reduzir a fadiga ocular<br>- Filtro de luz azul<br>- Conforto visual e promovem um sono mais saudável",
           "type": "Fixo",
           "value": 199
         }
