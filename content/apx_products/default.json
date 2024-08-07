@@ -1307,7 +1307,7 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description": "- 1.50 CR<br>- Proteção ultravioleta (UV)<br>- Tecnologia Optiswiss<br>- Alta performance<br>- Total personalização<br>- Antirreflexo<br>- Hidrofóbico<br>- Óleofóbico<br>- Antiestático<br>- Antirrisco<br>- Adaptação rápida e fácil<br>- Desenho progressivo adaptado para novos usuários.",
+          "description": "- 1.50 CR<br>- Proteção UVA/UVB<br>- Tecnologia Optiswiss<br>- Alta performance<br>- Total personalização<br>- Antirreflexo<br>- Hidrofóbico<br>- Óleofóbico<br>- Antiestático<br>- Antirrisco<br>- Adaptação rápida e fácil<br>- Desenho progressivo adaptado para novos usuários",
           "type": "Fixo",
           "value": 0
         },
@@ -1399,14 +1399,14 @@
         {
           "input_type_required": false,
           "title": "Normal",
-          "description": "- 1.50 CR<br>-Filtro azul<br>- Graus baixos<br>- Armações pequenas e médias<br>- Garantia de 3 meses",
+          "description": "- 1.50 CR<br>-Filtro de luz azul<br>- Graus baixos<br>- Armações pequenas e médias<br>- Garantia de 3 meses",
           "type": "Fixo",
           "value": 649
         },
         {
           "input_type_required": false,
           "title": "Fina",
-          "description": "- 1.59 CR<br>-Filtro azul<br>- Mais fina<br>- Mais leves e resistentes<br>- Durabilidade e conforto<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses",
+          "description": "- 1.59 CR<br>-Filtro de luz azul<br>- Mais fina<br>- Mais leves e resistentes<br>- Durabilidade e conforto<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses",
           "type": "Fixo",
           "value": 859
         }
