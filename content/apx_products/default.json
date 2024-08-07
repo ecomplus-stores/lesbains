@@ -1111,7 +1111,7 @@
       "upload": {
         "enable": false
       },
-      "title": "BASIC",
+      "title": "Basic",
       "step_description": "Selecione o parâmetro da sua lente",
       "title_id": "parametros_da_lente",
       "conditions": [
