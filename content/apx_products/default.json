@@ -287,7 +287,7 @@
         {
           "input_type_required": false,
           "title": "Lente Sob Medida",
-          "description": "- 1.59 Policarbonato<br>- Lentes digitais de alta performance<br>- Filtro azul<br>- Antirreflexo<br>- Antirrisco<br>- Total proteção contra raios ultravioleta UVA e UVB<br>- Visão clara, nítida e com contraste otimizado<br>- Garantia de 12 meses das lentes.",
+          "description": "- 1.59 Policarbonato<br>- Lentes digitais de alta performance<br>- Filtro azul<br>- Antirreflexo<br>- Antirrisco<br>- Total proteção contra raios UVA/UVB<br>- Visão clara, nítida e com contraste otimizado<br>- Garantia de 12 meses das lentes",
           "type": "Fixo",
           "value": 0
         }
