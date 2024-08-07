@@ -673,14 +673,14 @@
         {
           "input_type_required": false,
           "title": "Premium",
-          "description": "- 1.56 CR<br>- Antirreflexo superior<br>- Total proteção contra raios ultravioleta UVA e UVB<br>- Alta performance e nitidez<br>- Graus médios<br>- Armações pequenas e médias",
+          "description": "- 1.56 CR<br>- Antirreflexo superior<br>- Proteção UVA/UVB<br>- Alta performance e nitidez<br>- Graus médios<br>- Armações pequenas e médias",
           "type": "Fixo",
           "value": 1219
         },
         {
           "input_type_required": false,
           "title": "Especial",
-          "description": "- 1.59 Policarbonato<br>- Sob medida para atender às necessidades visuais específicas do usuário<br>- Alta performance e nitidez<br>- Menor distorções e aberrações<br>- Mais finas e leves<br>- Graus altos<br>- Armações pequenas, médias e grandes",
+          "description": "- 1.59 Policarbonato<br>- Sob medida para atender às necessidades visuais específicas do usuário<br>- Alta performance e nitidez<br>- Visão nítida e livre de distorções<br>- Mais finas e leves<br>- Graus altos<br>- Armações pequenas, médias e grandes",
           "type": "Fixo",
           "value": 1999
         }
