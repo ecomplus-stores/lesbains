@@ -45,10 +45,10 @@
       "carrossel_sm": "Sim",
       "container": "container_90",
       "products": [
-        "668fe538f4e6d85ab2cdc21b",
         "66b3916786679971c63a309c",
         "66b38f4186679971c63a2bff",
-        "65b8160d2cd6b6595918ead0"
+        "65b8160d2cd6b6595918ead0",
+        "668fe538f4e6d85ab2cdc21b"
       ],
       "margin_top": "0",
       "carrossel_dots_md": "Sim",
