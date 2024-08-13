@@ -468,8 +468,10 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                   </ul>
                 </div>
               </section>
-            <% } %>          
+            <% } %>       
+            <% if (_.ecomUtils.name(_.state).toLowerCase().includes(`óculos`)){%>
             <img src="/img/medidas2.jpg"/>
+            <% } %>
         </div>
         
       </div>
