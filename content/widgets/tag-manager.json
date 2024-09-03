@@ -4,10 +4,10 @@
   "desktopOnly": false,
   "enableCheckout": true,
   "options": {
-    "gtmContainerId": "GTM-MSH8KZKK",
+    "gtmContainerId": "GTM-PSMJ535M",
     "dataLayerVar": "dataLayer",
     "partytown": false,
-    "isDebug": false
+    "isDebug": true
   },
   "headAppend": "src/append/head",
   "bodyAppend": "src/append/body"
