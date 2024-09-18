@@ -813,14 +813,14 @@
         {
           "input_type_required": false,
           "title": "Antirreflexo",
-          "description": "- 1.56 CR<br>- Antirreflexo<br>- Garantia de 3 meses das lentes",
+          "description": "- 1.56 CR<br>- Antirreflexo<br>- Garantia de 3 meses das lentes<br>Cod: 279<br>",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
           "title": "Antirrisco",
-          "description": "- 1.56 CR<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Antirreflexo<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
+          "description": "- 1.56 CR<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Antirreflexo<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes<br>Cod: 279<br>",
           "type": "Fixo",
           "value": 199
         }
