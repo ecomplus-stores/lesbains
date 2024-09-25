@@ -1266,15 +1266,15 @@
       "list": [
         {
           "input_type_required": false,
-          "title": "Normal",
-          "description": "- 1.50 CR<br>-Filtro de luz azul<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias<br>Cod: 19703<br>",
+          "title": "19703 - Normal",
+          "description": "- 1.50 CR<br>-Filtro de luz azul<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias<br>",
           "type": "Fixo",
           "value": 139
         },
         {
           "input_type_required": false,
-          "title": "Fina",
-          "description": "- 1.59 CR<br>-Filtro de luz azul<br>- Fina e leve<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes<br>Cod: 19704<br>",
+          "title": "19704 - Fina",
+          "description": "- 1.59 CR<br>-Filtro de luz azul<br>- Fina e leve<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes<br>",
           "type": "Fixo",
           "value": 299
         }
