@@ -965,15 +965,15 @@
       "list": [
         {
           "input_type_required": false,
-          "title": "Antirreflexo",
-          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Garantia de 3 meses das lentes<br>Cod: 13497<br>",
+          "title": "13497 - Antirreflexo",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Garantia de 3 meses das lentes<br>",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
-          "title": "Proteção Completa",
-          "description": "- 1.59 Policarbonato<br>- Antirreflexo com tecnologia avançada<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Oleofóbico<br>- Antiestético<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes<br>Cod: 13497<br>",
+          "title": "13497 - Proteção Completa",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo com tecnologia avançada<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Oleofóbico<br>- Antiestético<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes<br>",
           "type": "Fixo",
           "value": 299
         }
