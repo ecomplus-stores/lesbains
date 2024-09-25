@@ -865,15 +865,15 @@
       "list": [
         {
           "input_type_required": false,
-          "title": "Antirreflexo",
-          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Garantia de 3 meses das lentes<br>Cod: 527<br>",
+          "title": "527 - Antirreflexo",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Garantia de 3 meses das lentes<br>",
           "type": "Fixo",
           "value": 0
         },
         {
           "input_type_required": false,
-          "title": "Antirrisco",
-          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta UVA/UVB<br>- Garantia de 12 meses das lentes<br>Cod: 527<br>",
+          "title": "527 - Antirrisco",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta UVA/UVB<br>- Garantia de 12 meses das lentes<br>",
           "type": "Fixo",
           "value": 199
         }
