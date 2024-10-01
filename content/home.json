@@ -120,22 +120,25 @@
       "description_color": "#000000",
       "container": "container_90",
       "btn_text_2": "Ver Catálogo",
-      "img": "/img/uploads/banner-luxe.png",
+      "img": "/img/uploads/design-sem-nome-15-.jpg",
       "mask_opacity_m": 0,
       "content_order": "left_image",
       "padding_sm": "px-5",
-      "btn_url": "/colecao-luxury",
+      "link_url": "/colecao-plajta-gran",
+      "btn_url": "",
       "content_position": "center_left",
       "btn_text": "Compre",
       "padding": "px-5",
       "btn_background": "#000000",
+      "link_text": "",
       "btn_text_color": "#ffffff",
       "mask_opacity": 0,
-      "title": "Designs icônicos e qualidade excepcional",
+      "title": "Coleção Plajta Gran",
       "type": "apx_responsive-banner",
-      "link": "/colecao-luxury",
+      "link": "/colecao-plajta-gran",
       "title_color": "#000000",
-      "description": "Explore nossa coleção exclusiva e encontre óculos esculpidos em acetato italiano unindo luxo e atitude."
+      "description": "Os óculos dessa coleção tem linhas arredondadas, assim como o movimento do balanço dos barcos ao ritmo das ondas, é nossa linha mais colorida como um dia de sol em Cadaqués.",
+      "btn_url_2": "/colecao-plajta-gran"
     }
   ]
 }
