@@ -1730,13 +1730,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/pagamentos</loc>
+      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
+      <loc>https://www.lesbains.com.br/pages/pagamentos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
