@@ -16,7 +16,7 @@
     ],
     "topbar_1": [
       {
-        "title": "Frete grátis nas compras acima de R$297",
+        "title": "Frete grátis nas compras acima de R$199",
         "url": "/pages/entrega"
       },
       {
@@ -26,6 +26,10 @@
       {
         "title": "Pague em até 5x sem juros",
         "url": "/oculos-de-sol"
+      },
+      {
+        "title": "Óculos com 12 meses de garantia!",
+        "url": "https://www.lesbains.com.br/pages/politica-de-garantia"
       }
     ]
   },
