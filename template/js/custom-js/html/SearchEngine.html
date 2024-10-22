@@ -162,7 +162,7 @@
               <div class="sticky">
                   <div
                   v-for="({ filter, options, isSpec }, i) in filters.filter(el => el.filter != 'polarizados')"
-                  v-if="!['Categories','Brands','largura_ponte','largura_lentes','comprimento_hastes','altura_lentes','largura_armacao'].includes(filter) && options.length"
+                  v-if="!['Categories','Brands','largura_ponte','largura_lentes','comprimento_hastes','altura_lentes','largura_armacao','comprimento_da_haste','tamanho_da_lente','personalizavel','edicoes_especiais','receita','colecoes_especiais','novidades','tipo_de_lente'].includes(filter) && options.length"
                   :key="`filters-${filter}`"
                   class="search-engine__filter"
                   :class="`search-engine__filter--${filter}`"

@@ -532,7 +532,8 @@ export default {
             method: 'POST',
             body: formData,
             headers: {
-              'app-id': '7'
+              'app-id': '7',
+              'store-id': '25'
             }
           })
           .then(response => response.json())
