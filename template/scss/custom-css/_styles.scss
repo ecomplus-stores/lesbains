@@ -3531,3 +3531,83 @@ header .term-box-only{display: none!important;}
     font-size: calc(var(--f14)*.8) !important;
     line-height: calc(var(--f14) * 1.2) !important;
 }
+
+
+
+/* STOREBOOST TESTIMONIALS */
+#sb-product-testimonials{
+    #sb-product-testimonials-header{
+        border-bottom: 1px solid #f2f2f2;
+        .sb-product-testimonials-rating{
+            font-size: var(--h3);
+            font-weight: bold;
+        }
+        .sb-product-testimonials-stars{
+            .sbStar{
+                display: inline-block;
+                height: 22px;
+                width: 22px;
+                background-size: contain;
+            }
+        }
+        button{
+            border: 0;
+            background: transparent;
+            font-size: var(--font-size-sm);
+            text-transform: uppercase;
+            color: var(--blk);
+            padding: 0;
+            margin-left: 1rem;
+        }
+    }
+}
+#sb-product-testimonials-body{
+    > [data-testimonial-id]{
+        border-bottom: 1px solid #f2f2f2;
+        b{
+            font-weight: bold;
+        }
+        span{
+            font-size: var(--font-size-sm);
+        }
+        .testimonial-gallery{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            a{
+                display: block;
+                height: 50px;
+                width: 50px;
+                border: 2px solid #fff;
+                box-shadow: 0px 0px 0px 1px #f2f2f2;
+                img{
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                    width: 100%;
+
+                }
+            }
+            // a:hover{
+            //     box-shadow: 0px 0px 0px 1px #000;
+            // }
+        }
+    }
+}
+
+.sb-product-testimonials-stars{
+    font-size: 0;
+    .sbStar{
+        display: inline-block;
+        background-size: contain;
+    }
+    .star-empty{
+        background-image: url('../../public/img/uploads/star-empty.svg');
+    }
+    .star-half{
+        background-image: url('../../public/img/uploads/star-half.svg');
+    }
+    .star-full{
+        background-image: url('../../public/img/uploads/star-full.svg');
+    }
+    
+}

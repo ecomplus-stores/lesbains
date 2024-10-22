@@ -416,7 +416,8 @@ export default {
             customizationPrice+= (product_price * (customization_.params.value / 100))
           }              
         }
-        customizationContent+= `${customization_.params.title_id}: ${customization_.value}\n`
+        console.log(customization_)
+        customizationContent+= `${customization_.params.title_id ? customization_.params.title_id : customization_.params.title}: ${customization_.value}\n`
       });
       ////console.log(obj, key)
 
@@ -429,7 +430,7 @@ export default {
       //console.log(this.current_customization[index])
     },
     setStep(step){
-      //console.log(step,this.current_customization)
+      console.log(step,this.current_customization)
       this.cms_customizations_step = step
     },
     setDeepCustomizationOption(index,grid_id,item){
@@ -684,7 +685,7 @@ export default {
       let upsellProductAdd = this.pickedUpsellProduct
       let upsellProductCustomizations = []
       //let kitId = genRandomObjectId()
-      let kitId = "654be9262cd6b659599dcf7d"
+      let kitId = "6700b13d9e4b2e07f5277eed"
       if(upsellProductAdd){
         let kit_product = {
           _id: kitId,
@@ -729,6 +730,7 @@ export default {
           ////console.log('upsellProductAdd.customizations',upsellProductAdd.customizations, key)
           ////console.log('customizationContent',customizationContent)
           let customizationFromBody = upsellProductAdd.customizations.find(el => el.grid_id == key)
+          console.log('customizationFromBody',upsellProductAdd, key, this.upsellCustomizations)
           upsellProductCustomizations.push({
             _id: customizationFromBody._id,
             label: customizationFromBody.label,
@@ -771,7 +773,7 @@ export default {
 
       }else{
         
-        if(this.cms_customizations.length > 0 && option != "customized"){
+        if((this.cms_customizations.length > 0 || this.cms_upselling.length > 0) && option != "customized"){
           this.customizationPanel = true;
           $('body').addClass('customizationVisible');
           console.log(this.cms_customizations)
@@ -968,6 +970,7 @@ export default {
     this.cms_upselling = window.apx_lib.upselling ? window.apx_lib.upselling : []
     //console.log('this.cms_upselling',this.cms_upselling)
     if(this.cms_upselling){
+      console.log(`cms_upselling`,this.cms_upselling)
       this.cms_upselling.forEach(item => {
         ////console.log('upselling_item',item)
         if(item.upselling_skus.length > 0){
@@ -987,8 +990,9 @@ export default {
                   }
                 })
                 .then(({ data }) => {
+                  
                   this.hasLoadError = false
-                  ////console.log('data',data)
+                  console.log('data',data)
                   
                   product.customizations = data.customizations
                   const addUpsellItem = variationId => {

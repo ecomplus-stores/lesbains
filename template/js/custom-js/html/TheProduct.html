@@ -154,7 +154,7 @@
                 <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
               </div>
               
-              <button v-if="item.upload.enable" type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+              <button v-if="item.upload.enable || item.title_id == 'gravacao' || item.title_id.includes('ponteira_')" type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
                 Avançar
               </button>              
             </div>
@@ -241,7 +241,7 @@
                             <p class="option_description">{{item__.description}}</p>
                           </div>
                           <div class="mt-3 input_digitable">
-                            <input :value="upsellCustomizations[item_.title] && upsellCustomizations[item_.title][item__.title] && upsellCustomizations[item_.title][item__.title].value" @keyup="setUpsellCustomization(item_.title, item__, $event.target.value)" :type="item__.input_type" :max="item__.input_type_max" :required="item__.input_type_required ? true : false"/>
+                            <input :value="upsellCustomizations[item_.title] && upsellCustomizations[item_.title][item__.title] && upsellCustomizations[item_.title][item__.title].value" @keyup="setUpsellCustomization(item_.title_id ? item_.title_id : item_.title, item__, $event.target.value)" :type="item__.input_type" :max="item__.input_type_max" :required="item__.input_type_required ? true : false"/>
                           </div>
                         </div>
                       </div>
@@ -677,8 +677,7 @@
                           <slot name="buy-button-content">
                             Adicionar ao Carrinho
                           </slot>
-                        </button>
-                        
+                        </button>                        
                       </slot>
                     </span>                
                   </component>
