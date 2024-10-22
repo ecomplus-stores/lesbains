@@ -1,0 +1,21 @@
+{
+  "title": "Nossas Lentes ",
+  "sections": [
+    {
+      "type": "apx_banner-slider",
+      "autoplay": 9000,
+      "slides": [
+        {
+          "mask_opacity": 0,
+          "mask_opacity_m": 0,
+          "start": "2024-10-22T15:29:39.026Z",
+          "end": "2024-10-22T15:29:39.049Z",
+          "img": "/img/uploads/banner2.webp",
+          "content_position": "top_left",
+          "content_order": "before_image"
+        }
+      ]
+    }
+  ],
+  "body": "Trabalhamos com lentes de alta qualidade comprovada, assegurando correção precisa e conforto incomparável para sua prescrição. Tudo isso com um excelente custo-benefício, para que você desfrute do melhor em usabilidade e preço."
+}
