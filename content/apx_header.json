@@ -4,17 +4,8 @@
   "topbar_1": {
     "color": "#fff",
     "background": "#611f31",
+    
     "list": [
-      {
-        "title": "<u>NOVIDADE!</u> COMPRE ÓCULOS DE GRAU ONLINE E RECEBA EM CASA!",
-        "url": "/"
-      },
-      {
-        "title": "PAGUE EM ATÉ <b>5x SEM JUROS</b>",
-        "url": "/"
-      }
-    ],
-    "topbar_1": [
       {
         "title": "Frete grátis nas compras acima de R$199",
         "url": "/pages/entrega"
@@ -526,19 +517,10 @@
   "topbar_2": {
     "color": "#ffffff",
     "background": "#000000",
+
     "list": [
       {
-        "title": "<b>FRETE GRÁTIS</b> PARA PEDIDOS ACIMA DE R$ 297!",
-        "url": "/"
-      },
-      {
-        "title": "ENTREGA RÁPIDA PARA CIDADE DE SÃO PAULO! CONFIRA!",
-        "url": "/"
-      }
-    ],
-    "topbar_1": [
-      {
-        "title": "Entega rápida na cidade de São Paulo",
+        "title": "Entrega rápida na cidade de São Paulo",
         "url": "/pages/entrega"
       },
       {

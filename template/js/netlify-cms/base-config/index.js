@@ -1509,7 +1509,7 @@ export default (options,state) => {
                             },
                             {
                                 label: "Itens",
-                                name: "topbar_1",
+                                name: "list",
                                 widget: "list",
                                 required: false,
                                 fields: [
@@ -1660,7 +1660,7 @@ export default (options,state) => {
                             },
                             {
                                 label: "Itens",
-                                name: "topbar_1",
+                                name: "list",
                                 widget: "list",
                                 required: false,
                                 fields: [
