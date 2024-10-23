@@ -522,7 +522,6 @@
         }
       ]
     }
-   
   ],
   "topbar_2": {
     "color": "#ffffff",
@@ -545,6 +544,10 @@
       {
         "title": "Garantia de 12 meses.",
         "url": "/pages/politica-de-garantia"
+      },
+      {
+        "title": "Frete grátis nas compras acima de R$199",
+        "url": "https://www.lesbains.com.br/pages/entrega"
       }
     ]
   }
