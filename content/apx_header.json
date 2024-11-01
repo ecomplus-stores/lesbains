@@ -4,12 +4,7 @@
   "topbar_1": {
     "color": "#fff",
     "background": "#611f31",
-    
     "list": [
-      {
-        "title": "Frete grátis nas compras acima de R$199",
-        "url": "/pages/entrega"
-      },
       {
         "title": "Compre óculos de grau online e receba em casa!",
         "url": "/oculos-de-grau"
@@ -517,7 +512,6 @@
   "topbar_2": {
     "color": "#ffffff",
     "background": "#000000",
-
     "list": [
       {
         "title": "Entrega rápida na cidade de São Paulo",
@@ -526,10 +520,6 @@
       {
         "title": "Garantia de 12 meses.",
         "url": "/pages/politica-de-garantia"
-      },
-      {
-        "title": "Frete grátis nas compras acima de R$199",
-        "url": "https://www.lesbains.com.br/pages/entrega"
       }
     ]
   }
