@@ -135,7 +135,7 @@
                 <p>{{item.upload.description}}</p>
                 <div v-if="item.upload.img && !current_customization.find(el => el[item.title_id])" class="text-center"><img :src="item.upload.img"/></div>
                 <div v-if="current_customization.find(el => el[item.title_id])" class="text-center">
-                  <img :src="current_customization.find(el => el[item.title_id])[item.title_id].title"/>
+                  <img :src="`https://storage.googleapis.com/alpix-dd540.appspot.com/Image/${current_customization.find(el => el[item.title_id])[item.title_id].title.split('.')[0]}/${current_customization.find(el => el[item.title_id])[item.title_id].title}`"/>
                 </div>
                 <input type="file" :id="item.title_id + '_file'"/>
                 <button type="button" @click="setUploadCustomization(index,item.title_id)">
@@ -333,7 +333,7 @@
                       <div class="col">
                         <small>{{body.customizations.find(el => el.grid_id == Object.keys(item_)[0]) ? body.customizations.find(el => el.grid_id == Object.keys(item_)[0]).label : 'Err.'}}</small>
                         <span class="option_title">
-                          <a target="_blank" style="border-bottom: 1px solid #000;" :href="item_[Object.keys(item_)[0]].title" v-if="item_[Object.keys(item_)[0]].title.includes('http')">
+                          <a target="_blank" style="border-bottom: 1px solid #000;" :href="`https://storage.googleapis.com/alpix-dd540.appspot.com/Image/${item_[Object.keys(item_)[0]].title.split('.')[0]}/${item_[Object.keys(item_)[0]].title}`" v-if="/\.(doc|jpg|jpeg|png)$/i.test(item_[Object.keys(item_)[0]].title)">
                             Abrir Arquivo 
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M5.33333 7.99998H10.6667M6 5.33331H4.66667C3.19391 5.33331 2 6.52722 2 7.99998C2 9.47274 3.19391 10.6666 4.66667 10.6666H6M10 10.6666H11.3333C12.8061 10.6666 14 9.47274 14 7.99998C14 6.52722 12.8061 5.33331 11.3333 5.33331L10 5.33331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

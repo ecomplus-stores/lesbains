@@ -540,7 +540,7 @@ export default {
           .then(data => {
             console.log(index, grid_id, data, this.current_customization);
             let item = {
-              title: data.response.data.image[0].url,
+              title: data.response.data.image[0].hash + data.response.data.image[0].ext,
               type: "Fixo",
               value: 0,
               input_type_required: false,
