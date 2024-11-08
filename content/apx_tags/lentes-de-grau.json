@@ -1,8 +1,12 @@
 {
   "identificador": [
-    "MR0044"
+    "MR0044",
+    "MR0276",
+    "MR0321",
+    "MR0421"
   ],
   "img": "/img/uploads/texto-do-seu-paragrafo.png",
   "title": "Lentes de grau",
-  "type": "top_left"
+  "type": "top_left",
+  "border": "#ffffff"
 }
