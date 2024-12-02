@@ -436,50 +436,10 @@
       ]
     },
     {
-      "title": "Lentes de Grau",
-      "url": "/oculos-de-grau",
-      "list": [
-        {
-          "item": {
-            "title": "LES BAINS com Lentes de Grau",
-            "list": [
-              {
-                "item": {
-                  "title": "Saiba mais",
-                  "url": "/"
-                }
-              },
-              {
-                "item": {
-                  "title": "Veja todas as lentes",
-                  "url": "/oculos-de-grau"
-                }
-              }
-            ],
-            "url": "/oculos-de-grau"
-          }
-        },
-        {
-          "item": {
-            "title": "Comprar",
-            "list": [
-              {
-                "item": {
-                  "title": "Óculos de Sol com Grau",
-                  "url": "/oculos-de-sol?filters={'receita':[{'text':'Sim'}]}"
-                }
-              },
-              {
-                "item": {
-                  "title": "Óculos com Grau",
-                  "url": "/oculos-de-grau"
-                }
-              }
-            ],
-            "url": "/oculos-de-grau"
-          }
-        }
-      ]
+      "title": "Sale",
+      "url": "/sale",
+      "list": [],
+      "path": "/sale"
     },
     {
       "title": "Relógios",
