@@ -28,6 +28,24 @@
           "title_color": "#ffffff",
           "description": "",
           "btn_url_2": ""
+        },
+        {
+          "description_color": "#ffffff",
+          "start": "2024-12-04T14:38:35.084Z",
+          "img": "/img/uploads/banner_entrega-rapida.jpg",
+          "mobile_img": "/img/uploads/banner_entrega-rapida.jpg",
+          "mask_opacity_m": 0,
+          "btn_text_color_2": "#ffffff",
+          "content_order": "inside_image",
+          "link_url": "/pages/entrega",
+          "content_position": "center_left",
+          "mask_color": "#000000",
+          "btn_background": "#000000",
+          "link_text": "/pages/entrega",
+          "mask_opacity": 5,
+          "link": "/pages/entrega",
+          "end": "2024-12-12T14:38:35.109Z",
+          "title_color": "#ffffff"
         }
       ],
       "autoplay": 9000,
