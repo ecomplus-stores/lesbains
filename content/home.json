@@ -6,6 +6,7 @@
       "slides": [
         {
           "description_color": "#ffffff",
+          "animate": "backInDown",
           "start": "2023-10-26T00:52:35.099Z",
           "btn_text_2": "",
           "img": "/img/uploads/banner-supresa-compre1-leve-2.jpg",
@@ -31,6 +32,7 @@
         },
         {
           "description_color": "#ffffff",
+          "animate": "backInDown",
           "start": "2024-12-04T14:38:35.084Z",
           "img": "/img/uploads/banner_entrega-rapida.jpg",
           "mobile_img": "/img/uploads/banner_entrega-rapida.jpg",
