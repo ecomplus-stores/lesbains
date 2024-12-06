@@ -1844,13 +1844,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/nossas-lentes</loc>
+      <loc>https://www.lesbains.com.br/pages/pagamentos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/pagamentos</loc>
+      <loc>https://www.lesbains.com.br/pages/nossas-lentes</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
