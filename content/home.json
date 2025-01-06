@@ -32,17 +32,6 @@
         },
         {
           "animate": "backInDown",
-          "start": "2025-01-06T18:46:32.273Z",
-          "img": "/img/uploads/banner-supresa-compre1-leve-2-janeiro.jpg",
-          "mobile_img": "/img/uploads/banner-supresa-compre1-leve-2-janeiro.jpg",
-          "mask_opacity_m": 0,
-          "content_order": "inside_image",
-          "content_position": "top_center",
-          "mask_opacity": 0,
-          "end": "2025-01-06T18:46:32.311Z"
-        },
-        {
-          "animate": "backInDown",
           "start": "2025-01-06T19:08:46.501Z",
           "img": "/img/uploads/banner_recesso.jpg",
           "mobile_img": "/img/uploads/banner_recesso.jpg",
