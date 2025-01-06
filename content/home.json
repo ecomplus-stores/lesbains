@@ -29,6 +29,16 @@
           "title_color": "#ffffff",
           "description": "",
           "btn_url_2": ""
+        },
+        {
+          "mask_opacity": 0,
+          "mask_opacity_m": 0,
+          "start": "2025-01-06T18:46:32.273Z",
+          "end": "2025-01-06T18:46:32.311Z",
+          "img": "/img/uploads/banner-supresa-compre1-leve-2-janeiro.jpg",
+          "content_position": "top_center",
+          "content_order": "inside_image",
+          "animate": "backInDown"
         }
       ],
       "autoplay": 9000,
