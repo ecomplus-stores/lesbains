@@ -31,14 +31,15 @@
           "btn_url_2": ""
         },
         {
-          "mask_opacity": 0,
-          "mask_opacity_m": 0,
+          "animate": "backInDown",
           "start": "2025-01-06T18:46:32.273Z",
-          "end": "2025-01-06T18:46:32.311Z",
           "img": "/img/uploads/banner-supresa-compre1-leve-2-janeiro.jpg",
-          "content_position": "top_center",
+          "mobile_img": "/img/uploads/banner-supresa-compre1-leve-2-janeiro.jpg",
+          "mask_opacity_m": 0,
           "content_order": "inside_image",
-          "animate": "backInDown"
+          "content_position": "top_center",
+          "mask_opacity": 0,
+          "end": "2025-01-06T18:46:32.311Z"
         }
       ],
       "autoplay": 9000,
