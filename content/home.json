@@ -9,8 +9,8 @@
           "animate": "backInDown",
           "start": "2024-10-26T00:52:00.000Z",
           "btn_text_2": "",
-          "img": "/img/uploads/imagem-do-whatsapp-de-2025-01-06-a-s-16.13.32_4151171d.jpg",
-          "mobile_img": "/img/uploads/imagem-do-whatsapp-de-2025-01-06-a-s-16.13.32_4151171d.jpg",
+          "img": "/img/uploads/banner_entrega-rapida.jpg",
+          "mobile_img": "/img/uploads/banner_entrega-rapida.jpg",
           "mask_opacity_m": 0,
           "btn_text_color_2": "#ffffff",
           "content_order": "inside_image",
@@ -29,17 +29,6 @@
           "title_color": "#ffffff",
           "description": "",
           "btn_url_2": ""
-        },
-        {
-          "animate": "backInDown",
-          "start": "2025-01-06T19:08:46.501Z",
-          "img": "/img/uploads/banner_recesso.jpg",
-          "mobile_img": "/img/uploads/banner_recesso.jpg",
-          "mask_opacity_m": 0,
-          "content_order": "inside_image",
-          "content_position": "top_center",
-          "mask_opacity": 0,
-          "end": "2025-01-06T19:08:46.557Z"
         }
       ],
       "autoplay": 9000,
