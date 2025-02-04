@@ -1004,12 +1004,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/oculos-de-grau-quadrado-serbie</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/oculos-de-sol-esportivo-agassi</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
@@ -1058,12 +1052,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/oculos-de-sol-gatinho-borniol</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/oculos-de-sol-gatinho-bogateli</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
@@ -1095,12 +1083,6 @@
   
     <url>
       <loc>https://www.lesbains.com.br/oculos-de-sol-gatinho-maxy</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/oculos-de-sol-gatinho-talaya</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
     </url>
@@ -1166,12 +1148,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/oculos-de-sol-redondo-beri</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/oculos-de-sol-gatinho-ciel</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
@@ -1208,19 +1184,7 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/oculos-de-sol-retangular-jay</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/oculos-de-sol-quadrado-simbat</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/oculos-de-sol-hexagonal-tudela</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
     </url>
@@ -1245,12 +1209,6 @@
   
     <url>
       <loc>https://www.lesbains.com.br/oculos-de-sol-aviador-margot</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/oculos-de-sol-quadrado-sylvie</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
     </url>
@@ -1376,12 +1334,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/relogio-de-couro-marrom-aristeu</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/oculos-de-sol-gatinho-tallis</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
@@ -1395,12 +1347,6 @@
   
     <url>
       <loc>https://www.lesbains.com.br/estojo-marrom</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/oculos-de-grau-gatinho-belloy</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
     </url>
@@ -1562,12 +1508,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/oculos-de-sol</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/culos-de-sol-infantil-polarizado-redondo-moll-c480</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
@@ -1587,12 +1527,6 @@
   
     <url>
       <loc>https://www.lesbains.com.br/culos-de-sol-infantil-polarizado-redondo-lilou-c408-c927-c167</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/culos-de-sol-quadrado-minube-c486</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
     </url>
@@ -1839,6 +1773,12 @@
   
     <url>
       <loc>https://www.lesbains.com.br/oculos-de-sol/infantil/retangular</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/oculos-de-sol</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
