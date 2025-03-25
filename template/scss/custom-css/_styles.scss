@@ -4001,3 +4001,15 @@ header .term-box-only{display: none!important;}
     }
     
   }
+
+  @media(max-width:990px){
+    #sb-product-testimonials-set{
+        h3{text-align: center;}
+        .row.align-items-center{
+            justify-content: center;
+            text-align: center;
+        }
+        button[type=submit]{font-size: 16px;}
+    }
+    .product-card__favorite{opacity: 1;}
+  }

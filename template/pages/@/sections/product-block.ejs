@@ -101,7 +101,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
           <!-- Custom additional code on bottom of images gallery -->
           <!--  -->
           
-          <div id="sb-product-testimonials" class="m-5">
+          <div id="sb-product-testimonials" class="m-md-5 m-t3">
             <div class="container">
               <div class="row" style="align-items:flex-start">
                 <div id="sb-product-testimonials-set" class="col-md-12 mb-4 d-none">
@@ -110,7 +110,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                       <div class="col-12"><h3 class="d-block mb-4">Você já comprou este item!</h3></div>
                     </div>
                     <div class="row align-items-center">
-                      <div class="col-md-auto col-12 mb-md-0 mb-3">
+                      <div class="col-md-auto col-12 mb-md-0 mb-0">
                         <label for="textimonial">Deixe sua avaliação</label>
                       </div>
                       <div class="col-md-auto col-12">
@@ -1019,6 +1019,9 @@ const sb_Testimonial = {
     }             
   }
   document.addEventListener('DOMContentLoaded', (event) => {
+    if(window.innerWidth < 990){
+      $('#sb-product-testimonials').insertBefore('.extra-content')
+    }
     sb_Testimonial.getProductRating()
     sb_Testimonial.getTestimonials('',0)
     sb_Testimonial.canSetTestimonial()

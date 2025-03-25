@@ -246,6 +246,7 @@ $(`body`).on(`click`,`[href="/app/#/account/favorites"], #favorites-toggle`, asy
           $(`.favorite-count`).text(result.hits.hits.length)
         })
       }else{
+        $(`.favorites__body`).html('<p class="m-4 text-center h5 font-small d-block">Ops... você não adicionou nenhum produto a sua lista de favoritos</p>');
         $(`.favorite-count`).text(0)
       }
       
