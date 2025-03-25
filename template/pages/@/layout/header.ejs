@@ -53,7 +53,7 @@ let marketingStripeStyle = ''
   <%  } %>
   <div class="container-fluid px-md-5 px-md-0 px-3 py-3">    
     <div class="row row-header align-items-center py-md-2 py-1 px-0 px-md-0 ">
-      <div class="col col-logo d-block d-md-none">
+      <div class="col-md col-auto col-logo d-block d-md-none">
         <button type="button" class="menu-trigger" onclick="$('#apx-menu').toggleClass('visible');">                       
           <span></span>
           <span></span>
@@ -82,12 +82,12 @@ let marketingStripeStyle = ''
             
             
             %>
-            <li class="<%= list ? 'dropdown' : ''%> <%= mega %>">
+            <li class="<%= list && list.length ? 'dropdown' : ''%> <%= mega %>">
               
               <a href="<%= path ? path : url %>">
                 <%= title %>
               </a>
-              <% if (list || subcategories.length > 0) { %>
+              <% if (list && list.length  || subcategories.length > 0) { %>
                 <button type="button" class="d-md-none" onclick="$(this).closest('li').toggleClass('open')">                    
                     <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="0.353553" y1="0.646447" x2="3.35355" y2="3.64645" stroke="black"/>
@@ -96,7 +96,7 @@ let marketingStripeStyle = ''
                 </button>
               <% } %>
               
-              <% if (list) { 
+              <% if (list && list.length > 0) { 
                 %>
                 <div class="level_2 <%= mega ? mega : 'normal'%>">                          
                   <% if (mega) { %><div class="container-fluid py-4"><% } %>
@@ -122,7 +122,7 @@ let marketingStripeStyle = ''
                           <% } %>                               
                         </li>
                         <% if (mega && item.image) { %>  
-                          <li class="col-auto col-md-3 d-none d-md-block">
+                          <li class="col-auto col-md-2 d-none d-md-block">
                             <a href="<%= item.url %>">
                               <img class="img-responsive w-100" src="<%= item.image %>"/>
                             </a> 
@@ -174,12 +174,14 @@ let marketingStripeStyle = ''
             <img src="/assets/search.svg"/>
           </button>
 
-          <button
-            type="button"
-            class="apx_bookmark d-md-block d-none"
+          <a
+            class="apx_bookmark d-md-block"
+            href="/app/#/account/favorites"
+            title="Favoritos"
           >
             <img src="/assets/bookmark.svg"/>
-          </button>
+            <span class="favorite-count badge-primary">0</span>
+          </a>
           
           <a
             id="user-button"
@@ -253,7 +255,17 @@ let marketingStripeStyle = ''
     -->
   </div>  
 </form> 
-  <% if(apx_header?.topbar_2?.list?.length > 0){ %>
+  
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      
+    </div>
+  </div>
+  
+  
+
+</header>
+<% if(apx_header?.topbar_2?.list?.length > 0){ %>
     <div class="apx_topbar py-md-3 py-2" style="--color:<%= apx_header.topbar_2.color %>; --background:<%= apx_header.topbar_2.background %>;">
       <div class="container">
         <div class="row">
@@ -276,15 +288,6 @@ let marketingStripeStyle = ''
       </div>           
     </div>
   <%  } %>
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      
-    </div>
-  </div>
-  
-  
-
-</header>
 <!--
 <div class="top-bar">
   <% if (header.marketing_stripe) { %>

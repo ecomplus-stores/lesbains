@@ -199,7 +199,8 @@
         <a 
           class="btn product-card__favorite fade"
           @click="toggleFavorite"
-          :href="isLogged ? null : accountUrl"
+          :href="null"
+          :style="isFavorite ? 'opacity:1' : null"
         >
           <span
 

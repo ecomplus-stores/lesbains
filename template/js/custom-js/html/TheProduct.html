@@ -545,7 +545,7 @@
               <hr class="mt-4 mb-0"></hr>
               
               <div class="apx_tabs ">
-                <div class="item py-3" v-if="body.body_html">
+                <div class="item py-3" v-if="body.body_html && body.body_html.replace(/<[^>]*>/g, '').trim().length > 0">
                   <button type="button" class="w-100 d-flex align-items-center justify-content-between" data-tab="details">
                     Detalhes do Produto
                     <span>                            
