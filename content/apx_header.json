@@ -440,10 +440,10 @@
       ]
     },
     {
-      "title": "Sale",
-      "url": "/sale",
+      "title": "Edição com Condições Especiais",
+      "url": "/Edição com Condições Especiais",
       "list": [],
-      "path": "/sale"
+      "path": null
     },
     {
       "title": "Relógios",
