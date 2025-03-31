@@ -1520,36 +1520,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/colecao-luxe</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/the-london-edition</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/colecao-petit</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/colecao-vintage</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/colecao-plajta-gran</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/teste</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -1832,6 +1802,36 @@
     </url>
   
     <url>
+      <loc>https://www.lesbains.com.br/colecao-luxe</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/the-london-edition</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/colecao-petit</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/colecao-vintage</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/colecao-plajta-gran</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
       <loc>https://www.lesbains.com.br/pages/contato</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
@@ -1844,12 +1844,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/faq</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/pages/manifesto</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
@@ -1857,6 +1851,12 @@
   
     <url>
       <loc>https://www.lesbains.com.br/pages/nossas-lentes</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/pages/faq</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1898,13 +1898,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/trocas</loc>
+      <loc>https://www.lesbains.com.br/pages/termos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/termos</loc>
+      <loc>https://www.lesbains.com.br/pages/trocas</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
