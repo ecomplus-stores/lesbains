@@ -1520,6 +1520,36 @@
     </url>
   
     <url>
+      <loc>https://www.lesbains.com.br/colecao-luxe</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/the-london-edition</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/colecao-petit</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/colecao-vintage</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/colecao-plajta-gran</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
       <loc>https://www.lesbains.com.br/teste</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -1802,36 +1832,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/colecao-luxe</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/the-london-edition</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/colecao-petit</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/colecao-vintage</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/colecao-plajta-gran</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/pages/contato</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
@@ -1940,12 +1940,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/app/index</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/admin/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
@@ -1955,6 +1949,12 @@
       <loc>https://www.lesbains.com.br/maintenance/index</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/app/index</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
     </url>
   
 </urlset>
