@@ -34,6 +34,47 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
   window.apx_properties = JSON.parse(<%- JSON.stringify(JSON.stringify(productProperties)) %>);  
   window.apx_tags = JSON.parse(<%- JSON.stringify(JSON.stringify(productTags)) %>);  
 </script>
+<div id="lgpd" class="lgpd d-none">
+  <div class="container-fluid px-0">
+      <div class="row align-items-center justify-content-center">
+          <div class="col-12 col-md text-center">
+              <div class="text">
+                  Utilizamos cookies para melhorar a sua experiência em nosso site. Ao continuar navegando você concorda com a nossa <a href="/pages/privacidade">política de privacidade</a>.
+              </div>
+          </div>
+          <div class="col-12 col-md-auto mt-3 mt-md-0 text-center">
+              <button id="lgpd-btn" class="btn product-buy-button" style="background-color: #000; color: #ffffff;">
+                  Entendi
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+<script>
+  var mobileScreen = 960;
+  var lgpd = document.getElementById('lgpd');
+  lgpd.style.maxWidth = screen.width <= mobileScreen ? '85%' : lgpd.style.maxWidth;
+  var isPreview = new URLSearchParams(window.location.search).get('preview');
+  if (!localStorage.getItem('lgpd')) {
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        ad_personalization: "denied",
+        ad_user_data: "denied",
+      }) 
+      lgpd.classList.remove("d-none");
+  }
+  document.getElementById('lgpd-btn').onclick = function() {
+    gtag("consent", "update", {
+      ad_storage: "granted",
+      analytics_storage: "granted",
+      ad_personalization: "granted",
+      ad_user_data: "granted",
+    })  
+    localStorage.setItem('lgpd', true);
+      lgpd.classList.add('d-none');
+  };
+</script>
 <div id="message-container"></div>
 <div id="favorites-quickview">
   <div class="backdrop"></div>

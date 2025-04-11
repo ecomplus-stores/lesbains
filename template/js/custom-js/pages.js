@@ -99,6 +99,9 @@ window.initSliders = function(){
             //     sm.settings.nextArrow= '<button type="button" class="apx_arrow next">' + nArrow + '</button>';
             // }
         }
+        if($(this).find('.product-item').length < 0){
+
+        }
         $(this).find('.row.list').slick({
             lazyLoad: 'ondemand',
             prevArrow:
@@ -123,14 +126,19 @@ window.imageResize = function () {
 };
 
 window.addEventListener('load', function () {
+  setTimeout(() => {
     window.imageResize();
+  }, 500);
+    
     window.initSliders();
     headerHeight();
     
 }, false);
 
 window.addEventListener('resize', function () {
+  setTimeout(() => {
     window.imageResize();
+  }, 500);
     headerHeight();
 }, false);
 
