@@ -7,7 +7,7 @@
         {
           "description_color": "#ffffff",
           "animate": "backInDown",
-          "start": "2025-03-17T14:59:17.082Z",
+          "start": "2025-03-17T14:26:17.082Z",
           "btn_text_2": "",
           "img": "/img/uploads/fullbanner-home-.jpg",
           "mobile_img": "/img/uploads/fullbanner-home-.jpg",
@@ -25,7 +25,7 @@
           "mask_opacity": 5,
           "title": "",
           "link": "/sale",
-          "end": "2025-03-31T03:00:00.000Z",
+          "end": "",
           "title_color": "#ffffff",
           "description": "",
           "btn_url_2": ""
