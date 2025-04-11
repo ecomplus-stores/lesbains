@@ -4065,3 +4065,7 @@ header .term-box-only{display: none!important;}
         .slick-list{width: 100%!important;}
     }
 }
+
+@media(max-width:990px){
+    .list_bg.d-hidden{margin-bottom: 1rem;}
+}
