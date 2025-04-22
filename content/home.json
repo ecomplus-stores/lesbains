@@ -80,8 +80,8 @@
       "type": "apx_banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/mini-banner-feminino-627x770.jpg",
-          "mobile_img": "/img/uploads/mini-banner-feminino-627x770.jpg",
+          "img": "/img/uploads/para-elas.png",
+          "mobile_img": "/img/uploads/para-elas.png",
           "mask_opacity_m": 0,
           "content_order": "inside_image",
           "link_url": "/oculos-de-sol/feminino",
