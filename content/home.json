@@ -91,16 +91,17 @@
           "link": "/oculos-de-sol/feminino"
         },
         {
-          "img": "/img/uploads/tendencias.png",
-          "mobile_img": "/img/uploads/tendencias.png",
+          "img": "/img/uploads/tendencias-1-.png",
+          "mobile_img": "/img/uploads/tendencias-1-.png",
           "mask_opacity_m": 0,
           "content_order": "inside_image",
           "link_url": "/novidades",
           "btn_url": "",
           "content_position": "bottom_center",
           "mask_opacity": 0,
-          "title": "",
-          "link": "/novidades"
+          "title": "Tedência de óculos escuros para outono e inverno. Vamos Les Bains",
+          "link": "/novidades",
+          "description": "Tendência de óculos escuros para outono e inverno. A marca parisiense mais desejada pelos brasileiros."
         },
         {
           "img": "/img/uploads/mini-banner-masculino-627x770.jpg",
