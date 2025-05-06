@@ -57,7 +57,6 @@
             "url": "https://rastreamento.correios.com.br/app/index.php"
           }
         }
-        
       ]
     },
     {
@@ -75,7 +74,6 @@
             "url": "/pages/manifesto"
           }
         }
-        
       ]
     },
     {
@@ -101,16 +99,10 @@
         },
         {
           "item": {
-            "title": "Personalize",
-            "url": "/oculos-de-sol/personalize"
-          }
-        },
-        {
-          "item": {
             "title": "Lentes de Grau",
             "url": "/lentes-de-grau"
           }
-        }        
+        }
       ]
     }
   ]
