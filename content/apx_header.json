@@ -34,13 +34,13 @@
             "list": [
               {
                 "item": {
-                  "title": "Novos Óculos de Sol",
+                  "title": " Óculos de Sol",
                   "url": "/oculos-de-sol?filters={'novidades':[{'text':'Sim'}]}"
                 }
               },
               {
                 "item": {
-                  "title": "Novos Óculos de Grau",
+                  "title": " Óculos de Grau",
                   "url": "/oculos-de-grau?filters={'novidades':[{'text':'Sim'}]}"
                 }
               }
