@@ -30,6 +30,7 @@ if(['categories','home','search','brand','products'].includes(_.pageName)){
   }
 }
 %>
+ <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>
   window.apx_properties = JSON.parse(<%- JSON.stringify(JSON.stringify(productProperties)) %>);  
   window.apx_tags = JSON.parse(<%- JSON.stringify(JSON.stringify(productTags)) %>);  

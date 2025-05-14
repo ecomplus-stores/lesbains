@@ -177,6 +177,17 @@ export default {
         })
 
         this.apx_productTags = {...this.apx_productTags}
+        
+        if(this.body.quantity < 10){
+          this.apx_productTags['top_left'] = []  // Array
+        }
+        if(this.apx_productTags['top_left']){  // Acesso pelo índice 0
+          this.apx_productTags['top_left'].push({"identificador":[this.body.sku],type:"top_left",title:"Últimas Unidades",description:"",color:"red",border:"red"})
+        }
+
+       // {"top_left":[{"identificador":["LBS0060","MGI0052","MGI0055","POL0126","TR0032","LBS0036","LBS0050","LBS0058","LBS0099","LBS0110","LBS0112","LBS0108","MGI0066","MGI0054","MGI0053","POL0115","POL0111","MGI0064","LBS0042","MG1731","MGI0044","MGI0050","MGI0057","POL0217","POL0183","POL0182","POL0181","POL0176","POL0159","POL0149","POL0160","POL0201","POL0162","LBS0116-C1","LBS0115","LBS0114","LBS0103","LBS0061","LBS0023","TR0031","TR0009"],"type":"top_left","title":"Polarizado","description":"Texto explicativo aqui, não aparece na lista","color":"#000000","border":"#000000"}]}
+
+        console.log('tags', JSON.stringify(this.apx_productTags))
       }
 
     },
