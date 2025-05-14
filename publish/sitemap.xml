@@ -1964,19 +1964,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/pages/faq</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/nossas-lentes</loc>
+      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1989,6 +1983,12 @@
   
     <url>
       <loc>https://www.lesbains.com.br/pages/politica-de-garantia</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/pages/nossas-lentes</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -2018,13 +2018,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/trocas</loc>
+      <loc>https://www.lesbains.com.br/pages/termos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/termos</loc>
+      <loc>https://www.lesbains.com.br/pages/trocas</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
