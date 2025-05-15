@@ -1700,6 +1700,12 @@
     </url>
   
     <url>
+      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
       <loc>https://www.lesbains.com.br/pages/nossas-lentes</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
@@ -1718,12 +1724,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/pages/privacidade</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
@@ -1736,13 +1736,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/sobre-nos</loc>
+      <loc>https://www.lesbains.com.br/pages/termos-e-condicoes</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/termos-e-condicoes</loc>
+      <loc>https://www.lesbains.com.br/pages/sobre-nos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
