@@ -1688,13 +1688,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/faq</loc>
+      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
+      <loc>https://www.lesbains.com.br/pages/faq</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1718,19 +1718,25 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/privacidade</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/pages/politica-de-troca-e-devolucao</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
+      <loc>https://www.lesbains.com.br/pages/privacidade</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
       <loc>https://www.lesbains.com.br/pages/sobre-nos</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/pages/termos-e-condicoes</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1743,12 +1749,6 @@
   
     <url>
       <loc>https://www.lesbains.com.br/pages/trocas</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.lesbains.com.br/pages/termos-e-condicoes</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
