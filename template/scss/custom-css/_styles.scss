@@ -4205,3 +4205,8 @@ header .term-box-only{display: none!important;}
     }
 
     body{top: 0!important;}
+
+
+    #header.menu-visible{
+        .apx_topbar.first{z-index:1}
+    }

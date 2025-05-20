@@ -165,7 +165,7 @@ let marketingStripeStyle = ''
   <div class="container-fluid px-md-5 px-md-0 px-3 py-3">    
     <div class="row row-header align-items-center py-md-2 py-1 px-0 px-md-0 ">
       <div class="col-md col-auto col-logo d-block d-md-none">
-        <button type="button" class="menu-trigger" onclick="$('#apx-menu').toggleClass('visible');">                       
+        <button type="button" class="menu-trigger" onclick="$('#apx-menu').toggleClass('visible');$('#header').toggleClass('menu-visible');">                       
           <span></span>
           <span></span>
           <b>MENU</b>
@@ -178,7 +178,7 @@ let marketingStripeStyle = ''
       </div>
       <div class="col-12 col-lg-8 col-md-auto" id="apx-menu">
         <div class="d-block d-md-none">
-          <button type="button" class="apx_close" onclick="$('#apx-menu').toggleClass('visible');">                       
+          <button type="button" class="apx_close" onclick="$('#apx-menu').toggleClass('visible');$('#header').toggleClass('menu-visible');">                       
 
           </button>
         </div>
