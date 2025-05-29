@@ -124,13 +124,13 @@
       "description_color": "#000000",
       "container": "container_90",
       "btn_text_2": "Ver Catálogo",
-      "img": "/img/uploads/lesbains1096-copia2.jpg",
-      "mobile_img": "/img/uploads/lesbains1096-copia2.jpg",
+      "img": "/img/uploads/mg3323-c3-e-mg3344-c2-1-.jpeg",
+      "mobile_img": "/img/uploads/mg3323-c3-e-mg3344-c2-1-.jpeg",
       "mask_opacity_m": 0,
       "content_order": "left_image",
       "padding_sm": "px-5",
-      "link_url": "/colecao-veja-com-estilo ",
-      "btn_url": "/colecao-veja-com-estilo ",
+      "link_url": "/colecao-dia-dos-namorados",
+      "btn_url": "/colecao-dia-dos-namorados",
       "content_position": "center_left",
       "btn_text": "Compre",
       "padding": "px-5",
@@ -138,12 +138,12 @@
       "link_text": "",
       "btn_text_color": "#ffffff",
       "mask_opacity": 0,
-      "title": "Veja com Estilo ",
+      "title": "Dia dos Namorados",
       "type": "apx_responsive-banner",
-      "link": "/colecao-veja-com-estilo ",
+      "link": "/colecao-dia-dos-namorados",
       "title_color": "#000000",
-      "description": "Uma curadoria para quem enxerga o mundo com charme, coragem e autenticidade. Estilo com atitude e leveza, em cada detalhe.",
-      "btn_url_2": "/colecao-veja-com-estilo "
+      "description": "Para celebrar o amor que vê além, criamos uma curadoria especial para o Dia dos Namorados — pensada para pares que se refletem. Dois olhares. Uma sintonia. A Coleção Les Bains revela o brilho de ver o mundo junto e dividir a vida",
+      "btn_url_2": "/colecao-dia-dos-namorados"
     }
   ]
 }
