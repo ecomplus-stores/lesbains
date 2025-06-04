@@ -475,7 +475,21 @@
     {
       "title": "Acessórios",
       "path": "/acessorios",
-      "url": "/acessorios"
+      "url": "/acessorios",
+      "list": [
+        {
+          "item": {
+            "title": "Comprar",
+            "url": "/acessorios"
+          }
+        },
+        {
+          "item": {
+            "title": "Explorar",
+            "url": "/"
+          }
+        }
+      ]
     }
   ],
   "topbar_2": {
