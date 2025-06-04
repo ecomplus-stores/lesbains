@@ -440,7 +440,7 @@
       ]
     },
     {
-      "title": "Edição com Condições Especiais",
+      "title": "Condições Especiais",
       "url": "/Edição com Condições Especiais",
       "list": [],
       "path": "/sale"
@@ -471,6 +471,11 @@
           }
         }
       ]
+    },
+    {
+      "title": "Acessórios",
+      "path": "/acessorios",
+      "url": "/acessorios"
     }
   ],
   "topbar_2": {
