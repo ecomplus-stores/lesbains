@@ -286,7 +286,7 @@
               }
             ],
             "url": "/",
-            "image": "/img/uploads/mini-banner-novidades-menu-principal-01.jpg"
+            "image": "/img/uploads/oculos-de-sol_site.png"
           }
         }
       ],
@@ -441,9 +441,9 @@
     },
     {
       "title": "Condições Especiais",
-      "url": "/condicoes-especiais",
+      "url": "/Edição com Condições Especiais",
       "list": [],
-      "path": "/condicoes-especiais"
+      "path": "/sale"
     },
     {
       "title": "Relógios",
@@ -475,21 +475,7 @@
     {
       "title": "Acessórios",
       "path": "/acessorios",
-      "url": "/acessorios",
-      "list": [
-        {
-          "item": {
-            "title": "Comprar",
-            "url": "/acessorios"
-          }
-        },
-        {
-          "item": {
-            "title": "Explorar",
-            "url": "/"
-          }
-        }
-      ]
+      "url": "/acessorios"
     }
   ],
   "topbar_2": {
