@@ -286,7 +286,7 @@
               }
             ],
             "url": "/",
-            "image": "/img/uploads/oculos-de-sol_site.png"
+            "image": "/img/uploads/mini-banner-sol-menu-principal-03.jpg"
           }
         }
       ],
@@ -434,7 +434,7 @@
               }
             ],
             "url": "/",
-            "image": "/img/uploads/oculos-de-grau.png"
+            "image": "/img/uploads/mini-banner-grau-menu-principal-03.jpg"
           }
         }
       ]
@@ -447,7 +447,7 @@
           "item": {
             "title": "Comprar",
             "url": "/condicoes-especiais",
-            "image": "/img/uploads/menu-relogio-02.png"
+            "image": "/img/uploads/mini-banner-condicoes-especiais-menu-principal-03.jpg"
           }
         }
       ]
@@ -474,7 +474,7 @@
               }
             ],
             "url": "/",
-            "image": "/img/uploads/menu-relogio-02.png"
+            "image": "/img/uploads/mini-banner-relogios-menu-principal-03.jpg"
           }
         }
       ]
@@ -494,7 +494,8 @@
                   "url": "/acessorios/mini-ecobag"
                 }
               }
-            ]
+            ],
+            "image": "/img/uploads/mini-banner-acessorios-menu-principal-03.jpg"
           }
         }
       ]
