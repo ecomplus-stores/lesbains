@@ -469,8 +469,59 @@
               }
             ]
           }
+        },
+        {
+          "item": {
+            "title": "Formatos",
+            "url": "/",
+            "list": [
+              {
+                "item": {
+                  "title": "Redondo",
+                  "url": "/condicoes-especiais?filters={'shape':[{'text':'Redondo'}]}"
+                }
+              },
+              {
+                "item": {
+                  "title": "Quadrado",
+                  "url": "/condicoes-especiais?filters={'shape':[{'text':'Quadrado'}]}"
+                }
+              },
+              {
+                "item": {
+                  "title": "Gatinho",
+                  "url": "/condicoes-especiais?filters={'shape':[{'text':'Gatinho'}]}"
+                }
+              },
+              {
+                "item": {
+                  "title": "Aviador",
+                  "url": "/condicoes-especiais?filters={'shape':[{'text':'Aviador'}]}"
+                }
+              },
+              {
+                "item": {
+                  "title": "Retangular",
+                  "url": "/condicoes-especiais?filters={'shape':[{'text':'Retangular'}]}"
+                }
+              },
+              {
+                "item": {
+                  "title": "Esportivo",
+                  "url": "/condicoes-especiais?filters={'shape':[{'text':'Esportivo'}]}"
+                }
+              },
+              {
+                "item": {
+                  "title": "Hexagonal",
+                  "url": "/condicoes-especiais?filters={'shape':[{'text':'Hexagonal'}]}"
+                }
+              }
+            ]
+          }
         }
-      ]
+      ],
+      "path": "/condicoes-especiais"
     },
     {
       "title": "Relógios",
