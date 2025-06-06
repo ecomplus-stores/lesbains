@@ -447,7 +447,27 @@
           "item": {
             "title": "Comprar",
             "url": "/condicoes-especiais",
-            "image": "/img/uploads/mini-banner-condicoes-especiais-menu-principal-03.jpg"
+            "image": "/img/uploads/mini-banner-condicoes-especiais-menu-principal-03.jpg",
+            "list": [
+              {
+                "item": {
+                  "title": "Feminino",
+                  "url": "/condicoes-especiais?filters={'gender':[{'text':'Feminino'},{'text':'Feminino e Masculino'}]}"
+                }
+              },
+              {
+                "item": {
+                  "title": "Masculino",
+                  "url": "/condicoes-especiais?filters={'gender':[{'text':'Masculino'},{'text':'Feminino e Masculino'}]}"
+                }
+              },
+              {
+                "item": {
+                  "title": "Infantil",
+                  "url": "/condicoes-especiais?filters={'gender':[{'text':'Infantil'}]}"
+                }
+              }
+            ]
           }
         }
       ]
