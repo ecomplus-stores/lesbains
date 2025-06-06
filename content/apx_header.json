@@ -103,7 +103,7 @@
               }
             ],
             "url": "/",
-            "image": "/img/uploads/novidades_site.png"
+            "image": "/img/uploads/mini-banner-novidades-menu-principal-01.jpg"
           }
         }
       ],
@@ -440,18 +440,18 @@
       ]
     },
     {
-  "title": "Condições Especiais",
-  "url": "/condicoes-especiais",
-  "list": [
-    {
-      "item": {
-        "title": "Comprar",
-        "url": "/condicoes-especiais",
-        "image": "/img/uploads/menu-relogio-02.png"
-      }
-    }
-  ]
-},
+      "title": "Condições Especiais",
+      "url": "/condicoes-especiais",
+      "list": [
+        {
+          "item": {
+            "title": "Comprar",
+            "url": "/condicoes-especiais",
+            "image": "/img/uploads/menu-relogio-02.png"
+          }
+        }
+      ]
+    },
     {
       "title": "Relógios",
       "url": "/relogios",
