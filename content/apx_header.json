@@ -103,7 +103,7 @@
               }
             ],
             "url": "/",
-            "image": "/img/uploads/mini-banner-novidades-menu-principal-01.jpg"
+            "image": "/img/uploads/mini-banner-novidades-menu-principal-03-03.jpg"
           }
         }
       ],
@@ -480,25 +480,25 @@
       ]
     },
     {
-  "title": "Acessórios",
-  "url": "/acessorios",
-  "list": [
-    {
-      "item": {
-        "title": "Explorar",
-        "url": "/",
-        "list": [
-          {
-            "item": {
-              "title": "Mini Ecobag",
-              "url": "/acessorios/mini-ecobag"
-            }
+      "title": "Acessórios",
+      "url": "/acessorios",
+      "list": [
+        {
+          "item": {
+            "title": "Explorar",
+            "url": "/",
+            "list": [
+              {
+                "item": {
+                  "title": "Mini Ecobag",
+                  "url": "/acessorios/mini-ecobag"
+                }
+              }
+            ]
           }
-        ]
-      }
+        }
+      ]
     }
-  ]
-}
   ],
   "topbar_2": {
     "color": "#ffffff",
