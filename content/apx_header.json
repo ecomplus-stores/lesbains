@@ -447,7 +447,7 @@
           "item": {
             "title": "Comprar",
             "url": "/condicoes-especiais",
-            "image": "/img/uploads/mini-banner-condicoes-especiais-menu-principal-03.jpg",
+            "image": "",
             "list": [
               {
                 "item": {
@@ -517,7 +517,8 @@
                   "url": "/condicoes-especiais?filters={'shape':[{'text':'Hexagonal'}]}"
                 }
               }
-            ]
+            ],
+            "image": "/img/uploads/mini-banner-condicoes-especiais-menu-principal-03.jpg"
           }
         }
       ],
