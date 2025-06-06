@@ -480,10 +480,25 @@
       ]
     },
     {
-      "title": "Acessórios",
-      "path": "/acessorios",
-      "url": "/acessorios"
+  "title": "Acessórios",
+  "url": "/acessorios",
+  "list": [
+    {
+      "item": {
+        "title": "Explorar",
+        "url": "/",
+        "list": [
+          {
+            "item": {
+              "title": "Mini Ecobag",
+              "url": "/acessorios/mini-ecobag"
+            }
+          }
+        ]
+      }
     }
+  ]
+}
   ],
   "topbar_2": {
     "color": "#ffffff",
