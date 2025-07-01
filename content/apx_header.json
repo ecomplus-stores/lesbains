@@ -571,6 +571,58 @@
           }
         }
       ]
+    },
+    {
+      "title": "Lentes de Grau",
+      "url": "lentes-de-grau",
+      "list": [
+        {
+          "item": {
+            "title": "Lentes de Grau",
+            "list": [
+              {
+                "item": {
+                  "title": "Antirreflexo",
+                  "url": "lentes-de-grau/antirreflexo"
+                }
+              },
+              {
+                "item": {
+                  "title": "Filtro de Luz Azul",
+                  "url": " lentes-de-grau/filtro-azul"
+                }
+              },
+              {
+                "item": {
+                  "title": "Multifocal",
+                  "url": " lentes-de-grau/multifocal"
+                }
+              }
+            ],
+            "url": "lentes-de-grau"
+          }
+        },
+        {
+          "item": {
+            "title": "Lentes Solar com Grau",
+            "url": " lentes-de-grau/lente-de-sol-com-grau",
+            "list": [
+              {
+                "item": {
+                  "title": "Fotossensível",
+                  "url": "lentes-de-grau/fotossensivel"
+                }
+              },
+              {
+                "item": {
+                  "title": " Lente de Sol com Grau",
+                  "url": "lentes-de-grau/lente-de-sol-com-grau"
+                }
+              }
+            ]
+          }
+        }
+      ]
     }
   ],
   "topbar_2": {
