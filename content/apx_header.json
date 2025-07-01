@@ -578,7 +578,7 @@
       "list": [
         {
           "item": {
-            "title": "Lentes de Grau",
+            "title": "Comprar",
             "list": [
               {
                 "item": {
@@ -597,16 +597,7 @@
                   "title": "Multifocal",
                   "url": " lentes-de-grau/multifocal"
                 }
-              }
-            ],
-            "url": "lentes-de-grau"
-          }
-        },
-        {
-          "item": {
-            "title": "Lentes Solar com Grau",
-            "url": " lentes-de-grau/lente-de-sol-com-grau",
-            "list": [
+              },
               {
                 "item": {
                   "title": "Fotossensível",
@@ -619,7 +610,8 @@
                   "url": "lentes-de-grau/lente-de-sol-com-grau"
                 }
               }
-            ]
+            ],
+            "url": "lentes-de-grau"
           }
         }
       ]
