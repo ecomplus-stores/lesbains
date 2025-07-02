@@ -1226,12 +1226,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/lentes-de-grau-solares</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/lente-antirreflexo</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
@@ -1269,6 +1263,12 @@
   
     <url>
       <loc>https://www.lesbains.com.br/lentes-multifocal-de-alta-performace</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.lesbains.com.br/lentes-de-grau-solares</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
     </url>
@@ -1586,13 +1586,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/entrega</loc>
+      <loc>https://www.lesbains.com.br/pages/contato</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/contato</loc>
+      <loc>https://www.lesbains.com.br/pages/entrega</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
