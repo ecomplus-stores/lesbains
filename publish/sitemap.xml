@@ -602,12 +602,6 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/oculos-de-sol-gatinho-maxy</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-    </url>
-  
-    <url>
       <loc>https://www.lesbains.com.br/oculos-de-sol-gatinho-valent</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
@@ -1652,13 +1646,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/faq</loc>
+      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/manifesto</loc>
+      <loc>https://www.lesbains.com.br/pages/faq</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1682,13 +1676,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/politica-de-troca-e-devolucao</loc>
+      <loc>https://www.lesbains.com.br/pages/privacidade</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/privacidade</loc>
+      <loc>https://www.lesbains.com.br/pages/politica-de-troca-e-devolucao</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1748,13 +1742,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/app/index</loc>
+      <loc>https://www.lesbains.com.br/admin/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/admin/index</loc>
+      <loc>https://www.lesbains.com.br/app/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
     </url>
