@@ -1,0 +1,1443 @@
+{
+  "customizations": [
+    {
+      "multi_option": false,
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Nenhuma",
+          "description": "Somente armação.",
+          "img": "/img/uploads/nenhuma.svg",
+          "type": null
+        },
+        {
+          "input_type_required": false,
+          "title": "Monofocal",
+          "img": "/img/uploads/visao-simples.svg",
+          "description": "Lentes de prescrição única, ideais para corrigir miopia, hipermetropia ou astigmatismo, proporcionando visão clara e nítida em uma única distância.<br>Perfeitas para óculos de leitura, de uso geral ou atividades específicas.",
+          "type": "Fixo",
+          "value": 59,
+          "input_type": "Não"
+        },
+        {
+          "input_type_required": false,
+          "title": "Multifocal",
+          "img": "/img/uploads/multifocal.svg",
+          "description": "Conhecidas também como lentes progressivas, têm um amplo campo de visão tanto para longe quanto para perto. Essas lentes oferecem uma transição suave entre as diferentes zonas de foco, garantindo amplitude visual e nitidez em todas as distâncias.<br* 1.50 CR",
+          "type": "Fixo",
+          "value": 390
+        },
+        {
+          "input_type_required": false,
+          "title": "Transitions",
+          "img": "/img/uploads/transitions.svg",
+          "description": "Lentes fotossensíveis que se adaptam automaticamente às mudanças de luz, proporcionando conforto visual e proteção contra raios ultravioleta em ambientes internos e externos. Ideais para quem busca praticidade e conveniência no dia a dia.",
+          "type": "Fixo",
+          "value": 899
+        },
+        {
+          "input_type_required": false,
+          "title": "Solar com Grau",
+          "img": "/img/uploads/solar-com-grau.svg",
+          "description": "Lentes de sol personalizadas com sua prescrição, oferecendo proteção contra raios ultravioleta e conforto visual, combinando correção de visão e estilo em ambientes ensolarados. Perfeitas para quem busca uma visão clara e proteção solar.",
+          "type": "Fixo",
+          "value": 929
+        }
+      ],
+      "title": "Necessidade de Visão",
+      "step_title": "Selecione sua necessidade de visão",
+      "step_description": "No passo abaixo você deve escolher se tem algum problema de visão. Dessa forma podemos indicar a lente correta para o seu caso.",
+      "title_id": "necessidade_de_visao",
+      "upload": {
+        "enable": false
+      }
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Transitions"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Tipo da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "img": "",
+          "description": "- 1.50 CR<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Proteção luz azul<br>- 3 meses de garantia<br>- Visão clara e sem distorções<br>- Graus baixos<br>- Armações pequenas e médias<br>Cod: 18547<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Especial",
+          "img": "",
+          "description": "- 1.56 CR<br>- Sob medida<br>- Fina e leve<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Antirrisco<br>- Visão precisa<br>- Garantia de 12 meses<br>- Graus altos<br>- Armações pequenas, médias e grandes<br>Cod: 16903<br>",
+          "type": "Fixo",
+          "value": 2799
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Tipo da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "img": "",
+          "description": "- 1.50 CR<br>- Antirreflexo<br>- 3 meses de garantia<br>- Antirreflexo<br>- Clareza<br>- Durabilidade<br>- Graus baixos e médios<br>- Armações pequenas e médias<br>Cod: 5982 / 5984<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Especial",
+          "img": "",
+          "description": "- 1.56 Policarbonato<br>- Sob medida<br>- Fina e leve<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Antirrisco<br>- Visão precisa<br>- Garantia de 12 meses<br>- Graus altos<br>- Armações pequenas, médias e grandes<br> Cod: 1774<br>-",
+          "type": "Fixo",
+          "value": 309
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Cor da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Cinza",
+          "img": "/img/uploads/lente_cinza.png",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Marrom",
+          "img": "/img/uploads/lente_marrom.png",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "G15 (Verde)",
+          "img": "/img/uploads/lente_verde.png",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Solar com Grau"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Especial"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Cor da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Cinza",
+          "img": "",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Marrom",
+          "img": "",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "G15 (Verde)",
+          "img": "",
+          "description": "",
+          "type": "Fixo",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Tipo da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "img": "/img/uploads/antirreflexo.svg",
+          "description": "- 1.56 CR<br>- Antirreflexo<br>- Lentes clássicas transparentes<br>- Visão clara e sem distorções<br>Cod: 279<br>",
+          "type": "Fixo",
+          "value": 29
+        },
+        {
+          "input_type_required": false,
+          "title": "Luz Azul",
+          "img": "/img/uploads/luz-azul.svg",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Conforto visual superior<br>- Reduz a irritação dos olhos, dores de cabeça, visão embaçada, olhos secos, insônia e fadiga visual<br>Cod: <br>",
+          "type": "Fixo",
+          "value": 79
+        },
+        {
+          "input_type_required": false,
+          "title": "Especial",
+          "img": "/img/uploads/fotosenssivel.svg",
+          "description": "- 1.59 Policarbonato<br>- Filtro de luz azul<br>- Antirreflexo<br>- Sob medida para atender às necessidades visuais específicas do usuário<br>- Mais finas e leves<br>- Visão nítida e livre de distorções<br>- Graus altos<br>- Armações pequenas, médias e grandes",
+          "type": "Fixo",
+          "value": 1519
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Especial",
+      "step_description": "Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Especial"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Lente Sob Medida",
+          "description": "- 1.59 Policarbonato<br>- Lentes digitais de alta performance<br>- Filtro azul<br>- Antirreflexo<br>- Antirrisco<br>- Total proteção contra raios UVA/UVB<br>- Visão clara, nítida e com contraste otimizado<br>- Garantia de 12 meses das lentes<br>Cod: 7444<br>",
+          "type": "Fixo",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "step_description": "Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Revestimento antirreflexo<br>- Ótima definição visual<br>- Proteção ocular avançada<br>- Conforto visual superior<br>- Graus baixos<br>- Armações pequenas e médias<br>Cod: 17592<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Premium",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Antirreflexo<br>- Proteção ultravioleta (UV)<br>- Experiência visual nítica e sem distorções<br>- Graus baixos e médios<br>- Armações pequenas e médias<br>Cod: 10077<br>",
+          "type": "Fixo",
+          "value": 689
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "step_description": "Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description": "- 1.56CR",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description": "- 1.59 Policarbonato<br>- Filtro de luz azul<br>- Lentes finas<br>- Excelente nitidez<br>- Ótima adaptação<br>- Conforto duradouro<br>- Até 10x mais resistente a impactos<br>- Proteção e conforto visual duradouros",
+          "type": "Fixo",
+          "value": 249
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "17592 - Antirreflexo",
+          "description": "- 1.56 CR<br>- Garantia de 3 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "17592 - Proteção Completa",
+          "description": "<br>- 1.56 CR<br>- Antirreflexo com tecnologia avançada<br>- Antirrisco<br>- Oleofóbicas<br>- Antiestéticas<br>- Visão mais nítida e alta transparência<br>- Proteção UVA/UVB<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 199
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "19370 - Antirreflexo",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Garantia de 3 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "19370 - Proteção completa",
+          "description": "- 1.59 Policarbonato<br>- Filtro de luz azul<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 199
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Luz Azul",
+      "step_description": "Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Antirreflexo<br>- Proteção UVA/UVB",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description": "- 1.61 CR<br>- Proteção UVA/UVB<br>- Antirreflexo<br>- Ajudam a reduzir a fadiga ocular<br>- Filtro de luz azul<br>- Conforto visual e promovem um sono mais saudável",
+          "type": "Fixo",
+          "value": 199
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "10077 - Antirreflexo",
+          "description": "- 1.56 CR<br>- Filtro de luz azul<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Garantia de 3 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "10077 - Proteção Completa",
+          "description": "- 1.56 CR<br>- Antirreflexo com tecnologia avançada<br>- Filtro de luz azul<br><br>Cod: 10077<br>- Antirrisco<br>- Oleofóbico<br>- Antiestético<br>- Visão mais nítida e alta transparência<br>- Proteção UVA/UVB<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
+          "type": "Fixo",
+          "value": 299
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Luz Azul"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "14688 - Antirreflexo",
+          "description": "- 1.61 CR<br>- Filtro de luz azul<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Garantia de 3 meses<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "14688 - Proteção Completa",
+          "description": "- 1.61 CR<br>- Antirreflexo com tecnologia avançada<br>- Filtro de luz azul<br>- Antirrisco<br>- Oleofóbico<br>- Antiestético<br>- Visão mais nítida e alta transparência<br>- Proteção UVA/UVB<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 299
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description": "Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Comfort",
+          "description": "- 1.56CR<br>- Graus baixos<br>- Armações pequenas e médias",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Premium",
+          "description": "- 1.56 CR<br>- Antirreflexo superior<br>- Proteção UVA/UVB<br>- Alta performance e nitidez<br>- Graus médios<br>- Armações pequenas e médias",
+          "type": "Fixo",
+          "value": 1219
+        },
+        {
+          "input_type_required": false,
+          "title": "Especial",
+          "description": "- 1.59 Policarbonato<br>- Sob medida para atender às necessidades visuais específicas do usuário<br>- Alta performance e nitidez<br>- Visão nítida e livre de distorções<br>- Mais finas e leves<br>- Graus altos<br>- Armações pequenas, médias e grandes",
+          "type": "Fixo",
+          "value": 1999
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description": "Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Especial"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description": "- 1.59 Policarbonato<br>- Antirrisco<br>- Tecnologia suiça<br>- Antirreflexo com tecnologia avançada<br>- Oleofóbico<br>- Antiestético<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes",
+          "type": "Fixo",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description": "Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description": "- 1.56 CR<br>- Antirreflexo",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description": "- 1.59 Policarbonato<br>- Mais finas e leves<br>- Antirreflexo<br>- Até 10x mais resistentes a impactos<br>- Proteção e conforto visual duradouros",
+          "type": "Fixo",
+          "value": 159
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "279 - Antirreflexo",
+          "description": "- 1.56 CR<br>- Antirreflexo<br>- Garantia de 3 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "279 - Antirrisco",
+          "description": "- 1.56 CR<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Antirreflexo<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 199
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Comfort"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "527 - Antirreflexo",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Garantia de 3 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "527 - Antirrisco",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Leveza e resistência<br>- Durabilidade garantida<br>- Solução personalizada e abrangente para atender às necessidades visuais<br>- Antirrisco<br>- Proteção ultravioleta UVA/UVB<br>- Garantia de 12 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 199
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Antirreflexo",
+      "step_description": "Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description": "- 1.56 CR<br>- Antirreflexo<br>- Proteção UVA/UVB",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Fina",
+          "description": "- 1.59 Policarbonato<br>- Lentes finas<br>- Excelente nitidez<br>- Ótima adaptação<br>- Conforto duradouro<br>- Até 10x mais resistentes a impactos<br>- Proteção e conforto visual duradouros",
+          "type": "Fixo",
+          "value": 390
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Fina"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "13497 - Antirreflexo",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Garantia de 3 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "13497 - Proteção Completa",
+          "description": "- 1.59 Policarbonato<br>- Antirreflexo com tecnologia avançada<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Oleofóbico<br>- Antiestético<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 299
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Monofocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Premium"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "parametros_da_lente",
+            "condition_type": "=",
+            "condition_value": "Normal"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "11697 - Antirreflexo",
+          "description": "- 1.56 CR<br>- Antirreflexo<br>- Proteção UVA/UVB<br>- Garantia de 3 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "11697 - Proteção Completa",
+          "description": "- 1.56 CR<br>- Antirreflexo com tecnologia avançada<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Oleofóbico<br>- Antiestético<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida<br>- Garantia de 12 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 299
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        }
+      ],
+      "title_id": "tipo_de_lente",
+      "title": "Tipo da Lente",
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Basic",
+          "img": "",
+          "description": "- Design básico e funcional<br>- 1.50 CR<br>- Amplo campo de longe e perto<br>- Boa visão intermediária e fácil adaptação<br>- Antirreflexo exclusivo",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Les Bains",
+          "img": "",
+          "description": "- 1.50 CR<br>- Tecnologia digital<br>- Ótimo desempenho entre os campos de visão<br>- Progressão suave<br>- Conforto visual e ótima adaptação<br>- Tecnologia antirreflexos exclusiva, que elimina completamente reflexos indesejados em sua visão<br>- Certificado Les Bains",
+          "type": "Fixo",
+          "value": 790
+        },
+        {
+          "input_type_required": false,
+          "title": "Optiswiss",
+          "img": "",
+          "description": "- 1.50 CR<br>- Tecnologia suiça<br>- Alta performance e qualidade<br>- Total personalização<br>- Maior precisão, nitidez e contraste de cores<br>- Campos visuais mais amplos<br>- Rápida adaptação<br>- Qualidade superior<br>- Conforto visual<br>- Durabilidade garantida",
+          "type": "Fixo",
+          "value": 1490
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Basic",
+      "step_description": "Selecione a propriedade da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Basic"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo + Hidrofóbico",
+          "description": "- 1.50 CR<br>- Antirreflexo exclusivo<br>- Hidrofóbico<br>- Garantia de 3 meses<br>- Graus baixos<br>- Armações pequenas e médias<br>1816<br>",
+          "type": "Fixo",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Basic",
+      "step_description": "Selecione o parâmetro da sua lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Basic"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo + Hidrofóbico"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Normal",
+          "description": "- 1.50 CR<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias",
+          "type": "Fixo",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Les Bains",
+      "title_id": "propriedade_da_lente",
+      "step_description": "Selecione a propriedade da sua lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "LES BAINS"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description": "- 1.50 CR<br>- Antirreflexo com tecnologia avançada<br>- Visão mais clara e confortável<br>- Sob medida<br>- Antirrisco<br>- Proteção UVA/UVB<br>- Óleofóbico<br>- Antiestético<br>- Hidrofóbico<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Filtro Azul",
+          "description": "- 1.50 CR<br>- Filtro luz azul<br>- Antirreflexo com tecnologia avançada<br>- Ajuda a reduzir irritação dos olhos, dores de cabeça, visão embaçada, olhos secos, insônia e fadiga visual<br>- Sob medida<br>- Antirrisco<br>- Proteção ultravioleta (UV)<br>- Óleofóbicas<br>- Antiestéticas<br>- Hidrofóbico<br>- Visão mais nítida e alta transparência<br>- Durabilidade garantida",
+          "type": "Fixo",
+          "value": 139
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "step_description": "Selecione o parâmetro da sua lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "LES BAINS"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "5431 - Normal",
+          "description": "- 1.50 CR<br>-Antirreflexo<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "5443 - Fina",
+          "description": "- 1.59 Policarbonato<br>-Antirreflexo<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 299
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "tratamento_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "LES BAINS"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Filtro Azul"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "19703 - Normal",
+          "description": "- 1.50 CR<br>-Filtro de luz azul<br>- 3 meses de garantia<br>- Graus baixos<br>- Armações pequenas e médias<br>",
+          "type": "Fixo",
+          "value": 139
+        },
+        {
+          "input_type_required": false,
+          "title": "19704 - Fina",
+          "description": "- 1.59 CR<br>-Filtro de luz azul<br>- Fina e leve<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses das lentes<br>",
+          "type": "Fixo",
+          "value": 299
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Optiswiss",
+      "step_description": "Selecione o parâmetro da sua lente",
+      "title_id": "propriedade_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Optiswiss"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "Antirreflexo",
+          "description": "- 1.50 CR<br>- Proteção UVA/UVB<br>- Tecnologia Optiswiss<br>- Alta performance<br>- Total personalização<br>- Antirreflexo<br>- Hidrofóbico<br>- Óleofóbico<br>- Antiestático<br>- Antirrisco<br>- Adaptação rápida e fácil<br>- Desenho progressivo adaptado para novos usuários",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "Filtro Azul",
+          "description": "- 1.50 CR<br>- Filtro de luz azul<br>- Tecnologia Optiswiss<br>- Alta performance<br>- Total personalização<br>- Antirreflexo<br>- Hidrofóbico<br>- Óleofóbico<br>- Antiestático<br>- Antirrisco<br>- Adaptação rápida e fácil<br>- Desenho progressivo adaptado para novos usuários",
+          "type": "Fixo",
+          "value": 649
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Optiswiss"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Antirreflexo"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "13514 - Normal",
+          "description": "- 1.50 CR<br>-Antirreflexo<br>- Graus baixos<br>- Armações pequenas e médias<br>- Garantia de 3 meses<br>",
+          "type": "Fixo",
+          "value": 0
+        },
+        {
+          "input_type_required": false,
+          "title": "13529 - Fina",
+          "description": "- 1.59 Policarbonato<br>-Antirreflexo<br>- Mais fina<br>- Mais leves e resistentes<br>- Durabilidade e conforto<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses<br>",
+          "type": "Fixo",
+          "value": 709
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": false
+      },
+      "title": "Tratamento da Lente",
+      "title_id": "parametros_da_lente",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "=",
+            "condition_value": "Multifocal"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "tipo_de_lente",
+            "condition_type": "=",
+            "condition_value": "Optiswiss"
+          }
+        },
+        {
+          "condition": {
+            "condition_grid": "propriedade_da_lente",
+            "condition_type": "=",
+            "condition_value": "Filtro Azul"
+          }
+        }
+      ],
+      "list": [
+        {
+          "input_type_required": false,
+          "title": "13528 - Normal",
+          "description": "- 1.50 CR<br>-Filtro de luz azul<br>- Graus baixos<br>- Armações pequenas e médias<br>- Garantia de 3 meses<br>",
+          "type": "Fixo",
+          "value": 649
+        },
+        {
+          "input_type_required": false,
+          "title": "13530 - Fina",
+          "description": "- 1.59 CR<br>-Filtro de luz azul<br>- Mais fina<br>- Mais leves e resistentes<br>- Durabilidade e conforto<br>- Graus baixos, médios e altos<br>- Armações pequenas, médias e grandes<br>- Garantia de 12 meses<br>",
+          "type": "Fixo",
+          "value": 859
+        }
+      ]
+    },
+    {
+      "upload": {
+        "enable": true,
+        "title": "Envie aqui sua receita médica!",
+        "description": "Tire ou selecione uma foto da sua receita médica, lembrando de deixar visível o CRM do médico e a data do exame.",
+        "button_text": "Clique aqui para enviar",
+        "img": "/img/uploads/icon_receita_medica.png",
+        "description_after": "Se quiser enviar depois, não se preocupe, você receberá as instruções por e-mail após finalizar o pedido. Envie sua receita para receita@lesbains.com.br"
+      },
+      "title_id": "receita_medica",
+      "title": "Receita Médica",
+      "step_description": "Faça o envio de sua receita",
+      "conditions": [
+        {
+          "condition": {
+            "condition_grid": "necessidade_de_visao",
+            "condition_type": "!=",
+            "condition_value": "Nenhuma"
+          }
+        }
+      ]
+    }
+  ],
+  "upselling": [],
+  "title": "DEFAULT",
+  "identificador": [
+    "OBS"
+  ]
+}
