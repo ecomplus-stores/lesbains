@@ -70,7 +70,7 @@
         },
         {
           "input_type_required": false,
-          "title": "Fotossensível (Transitions)",
+          "title": "Fotossensível",
           "img": "/img/uploads/fotosenssivel.svg",
           "description": "Lentes que escurecem automaticamente no sol e clareiam em ambientes internos, com proteção contra raios UV.<br>Perfeitas para quem busca praticidade, proteção e estilo em todas as condições de luz.<br>Recomendadas para miopia, hipermetropia ou astigmatismo com grau até ±4.00.",
           "type": "Fixo",
@@ -120,7 +120,7 @@
         },
         {
           "input_type_required": false,
-          "title": "Multifocal Fotossensível (Transitions)",
+          "title": "Multifocal Fotossensível",
           "img": "/img/uploads/fotosenssivel.svg",
           "description": "Lentes multifocais que escurecem automaticamente no sol e clareiam em ambientes internos, com proteção UV.<br>Oferecem transições suaves entre perto e longe, com praticidade para rotinas com variação de luz.<br>Recomendadas para miopia ou hipermetropia até ±6.00 e adição entre +1.00 e +3.50.",
           "type": "Fixo",
