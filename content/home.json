@@ -124,8 +124,8 @@
       "description_color": "#000000",
       "container": "container_90",
       "btn_text_2": "Ver Catálogo",
-      "img": "/img/uploads/lesbains0966_-1-.jpg",
-      "mobile_img": "/img/uploads/lesbains0966_-1-.jpg",
+      "img": "/img/uploads/banner-colecao-inverno-xxxx_artboard-3.jpg",
+      "mobile_img": "/img/uploads/banner-colecao-inverno-xxxx_artboard-3.jpg",
       "mask_opacity_m": 0,
       "content_order": "left_image",
       "padding_sm": "px-5",
@@ -138,11 +138,11 @@
       "link_text": "",
       "btn_text_color": "#ffffff",
       "mask_opacity": 0,
-      "title": "Amor Próprio ",
+      "title": "Coleção Couchervel",
       "type": "apx_responsive-banner",
       "link": "/colecao-amor-proprio",
       "title_color": "#000000",
-      "description": "Uma coleção para quem se escolhe primeiro. Amor Próprio é sobre olhar com mais gentileza, vestir beleza com calma e celebrar o que existe de mais íntimo: você. A Les Bains convida a tornar esse momento seu — com presença, com intenção e com estilo. Porque amor próprio também merece moldura.",
+      "description": "Uma coleção que entende o inverno como mais do que uma estação, mas um estado de espírito. Couchervel nasce da fusão entre aconchego e expressão, para quem sabe que o estilo não hiberna com o frio. Com armações envolventes, tons profundos e design que valoriza a essência de cada traço, esta coleção foi criada para vestir olhares que não se apagam com a estação. Na Les Bains, acreditamos que presença se constrói no detalhe e que sofisticação também é saber escolher com intenção. Couchervel é para quem transforma o silêncio dos dias frios em elegância, e encontra beleza mesmo sob o céu nublado.",
       "btn_url_2": "/colecao-amor-proprio"
     }
   ]
