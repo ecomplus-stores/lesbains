@@ -808,7 +808,7 @@ header#header{
                         border: 1px solid #ccc;
                     }
                     .option_title{
-                        font-size: var(--f14);
+                        font-size: calc(var(--f14) * 1.1);
                         font-weight: bold;
                         display: block;
                         text-align: left;
@@ -829,6 +829,7 @@ header#header{
                     }
                     .option_image{
                         max-width: 100%;
+                        width: 100%;
                     }
                     .input_digitable{
                         input{
@@ -3534,8 +3535,8 @@ header .term-box-only{display: none!important;}
 }
 
 #custom_customizations .option_options .option_description{
-    font-size: calc(var(--f14)*.8) !important;
-    line-height: calc(var(--f14) * 1.2) !important;
+    font-size: calc(var(--f14)*1) !important;
+    line-height: calc(var(--f14) * 1.4) !important;
 }
 
 
