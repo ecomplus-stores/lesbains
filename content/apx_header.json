@@ -610,6 +610,30 @@
                   "title": "Mini Ecobag",
                   "url": "/acessorios/mini-ecobag"
                 }
+              },
+              {
+                "item": {
+                  "title": "Cordinha para óculos",
+                  "url": "/cordinha-les-bains"
+                }
+              },
+              {
+                "item": {
+                  "title": "Porta Cartão",
+                  "url": "/novo-produto"
+                }
+              },
+              {
+                "item": {
+                  "title": "Estojo para óculos",
+                  "url": "/estojo-marrom"
+                }
+              },
+              {
+                "item": {
+                  "title": "Necessaire",
+                  "url": "/necessaire-les-bains"
+                }
               }
             ],
             "image": "/img/uploads/mini-banner-acessorios-menu-principal-01.jpg"
