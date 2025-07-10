@@ -163,6 +163,13 @@
               },
               {
                 "item": {
+                  "title": "Coleção Couchervel",
+                  "url": "https://www.lesbains.com.br//colecao-couchervel",
+                  "path": "/the-london-edition"
+                }
+              },
+              {
+                "item": {
                   "title": "Coleção Luxe",
                   "url": "https://www.lesbains.com.br/colecao-luxury",
                   "path": "/colecao-luxe"
@@ -173,13 +180,6 @@
                   "title": "Coleção Petit",
                   "url": "https://www.lesbains.com.br/colecao-petit",
                   "path": "/colecao-petit"
-                }
-              },
-              {
-                "item": {
-                  "title": "Coleção Couchervel",
-                  "url": "https://www.lesbains.com.br//colecao-couchervel",
-                  "path": "/the-london-edition"
                 }
               },
               {
