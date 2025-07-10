@@ -1,5 +1,5 @@
 {
-  "meta_title": "Les Bains Paris | Óculos de Sol Luxury – Envio para Todo Brasil.",
+  "meta_title": "Les Bains Paris | Óculos de Sol The London Edition – Envio para Todo Brasil.",
   "meta_description": "Compre óculos de sol da marca francesa mais desejada. Envio rápido para todo Brasil. Coleções exclusivas de óculos de luxo com proteção UV 100%.",
   "sections": [
     {
@@ -129,8 +129,8 @@
       "mask_opacity_m": 0,
       "content_order": "left_image",
       "padding_sm": "px-5",
-      "link_url": "/colecao-amor-proprio",
-      "btn_url": "/colecao-amor-proprio",
+      "link_url": "/colecao-couchervel",
+      "btn_url": "/colecao-couchervel",
       "content_position": "bottom_left",
       "btn_text": "Compre",
       "padding": "px-5",
@@ -140,10 +140,10 @@
       "mask_opacity": 0,
       "title": "Coleção Couchervel",
       "type": "apx_responsive-banner",
-      "link": "/colecao-amor-proprio",
+      "link": "/colecao-couchervel",
       "title_color": "#000000",
       "description": "Uma coleção que entende o inverno como mais do que uma estação, mas um estado de espírito. Couchervel nasce da fusão entre aconchego e expressão, para quem sabe que o estilo não hiberna com o frio. Com armações envolventes, tons profundos e design que valoriza a essência de cada traço, esta coleção foi criada para vestir olhares que não se apagam com a estação. Na Les Bains, acreditamos que presença se constrói no detalhe e que sofisticação também é saber escolher com intenção. Couchervel é para quem transforma o silêncio dos dias frios em elegância, e encontra beleza mesmo sob o céu nublado.",
-      "btn_url_2": "/colecao-amor-proprio"
+      "btn_url_2": "/colecao-couchervel"
     }
   ]
 }
