@@ -1892,13 +1892,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/privacidade</loc>
+      <loc>https://www.lesbains.com.br/pages/politica-de-troca-e-devolucao</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/pages/politica-de-troca-e-devolucao</loc>
+      <loc>https://www.lesbains.com.br/pages/privacidade</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -1958,13 +1958,13 @@
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/admin/index</loc>
+      <loc>https://www.lesbains.com.br/app/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
     </url>
   
     <url>
-      <loc>https://www.lesbains.com.br/app/index</loc>
+      <loc>https://www.lesbains.com.br/admin/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
     </url>
