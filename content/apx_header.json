@@ -185,8 +185,8 @@
               {
                 "item": {
                   "title": "Dia dos Pais",
-                  "url": "https://www.lesbains.com.br/dia-dos-pais",
-                  "path": "/colecao-vintage"
+                  "url": "/dia-dos-pais",
+                  "path": "/dia-dos-pais"
                 }
               }
             ],
