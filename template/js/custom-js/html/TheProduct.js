@@ -430,14 +430,16 @@ export default {
       //console.log(this.current_customization[index])
     },
     setStep(step){
-      console.log(step,this.current_customization)
+      
       this.cms_customizations_step = step
     },
     setDeepCustomizationOption(index,grid_id,item){
+      console.log('body',this.body,index,grid_id,item,this.current_customization)
       this.isBackButtonPressed = false
       if(this.cms_customizations_step < 1){
         this.current_customization = []
       }
+      console.log(grid_id,index,item,this.current_customization)
       let q = this.current_customization.find(el => el[grid_id])
       if(q){
         q = item

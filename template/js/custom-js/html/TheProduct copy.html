@@ -1,0 +1,902 @@
+<section
+  class="product"
+  :data-product-id="body._id"
+  :data-sku="body.sku"
+  :data-selected-variation="selectedVariationId"
+>
+
+  <a-alert
+    :can-show="hasLoadError"
+    variant="danger"
+  >
+    {{ i19loadProductErrorMsg }}
+    <a
+      href="#"
+      class="alert-link"
+      @click.prevent="fetchProduct"
+    >
+      {{ i19retry }}
+    </a>
+  </a-alert>
+
+    <div 
+      id="custom_customizations"
+      :class="customizationPanel ? 'visible' : ''"
+      v-if="cms_customizations"
+    >
+    
+    <div class="lds-dual-ring" v-if="customizationLoading"></div>
+    <button type="button"
+    class="custom_back" 
+    v-if="cms_customizations_step > 1"
+    @click="customizationStepBack"
+    >      
+      <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.8672 21.0938L5.27344 13.5L12.8672 5.90625M6.32813 13.5L21.7266 13.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+  
+    </button>
+      <button type="button"
+      class="custom_close" 
+      @click="closeCustomizations"
+      >
+      </button>
+      <div class="customizations_header mt-md-4 mt-0 mb-md-5 mb-5 px-5"
+        v-if="1 != 1 && cms_customizations_step <= (cms_customizations.length + cms_upselling.length)"
+      >
+        <div class="button_cover"
+        v-for="index in (cms_customizations.length + cms_upselling.length )"
+        :key="index">
+          <button
+          :class="cms_customizations_step == index   ? 'active' : ''">
+            {{ index }}
+          </button>
+        </div>
+      </div>
+      
+      <div class="customizations_body px-md-3">
+        <div class="step px-md-3"
+        v-for="(item, index) in cms_customizations"
+        :key="'main_'+index"
+        :class="cms_customizations_step == index + 1  ? 'current' : ''"
+        > 
+        
+        <div v-if="cms_customizations_step == index + 1 && (item.conditions ? hasCondition(item.conditions) : true)">
+          <div class="option_title mt-5 text-center mb-4 mb-md-5">
+            <h4>{{item.title || body.customizations.find(el => el.grid_id == item.title_id).label}}</h4>
+            <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
+          </div>
+            <div class="option_options">            
+              <div class="option mb-md-4 mb-4"
+              v-for="(item_,index_) in item.list"
+              :key="'customizations_'+index_"
+              >
+              <div v-if="item_.input_type && item_.input_type != 'Não'" class="button_box_style">
+                <div class="row justify-content-between align-items-start">
+                  <div class="col">
+                    <div class="row justify-content-between align-items-start">
+                      <div class="col">
+                        <div class="option_title"><b>{{item_.title}}</b></div>
+                      </div>
+                      <div class="col-auto">
+                        <strong v-if="item_.type == 'Fixo'" class="option_price">
+                          {{item_.value > 0 ? '' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : '+R$ 0,00'}}
+                        </strong>
+                        <strong v-else class="option_price">
+                          {{item_.value > 0 ? '' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                        </strong>
+                      </div>
+                    </div>                          
+                  </div>                        
+                </div>
+                <div class="mt-3" v-if="item_.description">
+                  <p class="option_description" v-html="item_.description"></p>
+                </div>
+                <div class="mt-3 input_digitable">
+                  <input @keyup="setTextCustomization(index,item.title_id, item_, $event.target.value)"  :type="item_.input_type" :max="item_.input_type_max" :required="item_.input_type_required ? true : false"/>
+                </div>              
+              </div>
+              <div v-else>
+                
+                <button 
+                :class="current_customization[index] && current_customization[index][item.title_id].title == item_.title ? 'active' : ''"
+                @click="setDeepCustomizationOption(index,item.title_id,item_)" class="w-100" type="button">
+                  <div class="row justify-content-between align-items-center">
+                    <div class="col-2 pr-0" v-if="item_.img">
+                        <img class="option_image" :src="item_.img" alt="">
+                    </div>
+                    <div class="col">
+                      <div class="row justify-content-between align-items-start">
+                        <div class="col">
+                          <span class="option_title">{{item_.title}}</span>
+                        </div>
+                        <div class="col-auto">
+                          <strong v-if="item_.type == 'Fixo'" class="option_price">
+                            {{item_.value > 0 ? '' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                          </strong>
+                          <strong v-else class="option_price">
+                            {{item_.value > 0 ? '' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                          </strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-3" v-if="item_.description">
+                    <p class="option_description" v-html="item_.description">
+                      
+                    </p>                  
+                  </div>
+                </button>              
+              </div>
+              
+              </div>
+              <div v-if="item.upload.enable" class="upload-option">
+                <h3>{{item.upload.title}}</h3>
+                <p>{{item.upload.description}}</p>
+                <div v-if="item.upload.img && !current_customization.find(el => el[item.title_id])" class="text-center"><img :src="item.upload.img"/></div>
+                <div v-if="current_customization.find(el => el[item.title_id])" class="text-center">
+                  <img :src="`https://storage.googleapis.com/alpix-dd540.appspot.com/Image/${current_customization.find(el => el[item.title_id])[item.title_id].title.split('.')[0]}/${current_customization.find(el => el[item.title_id])[item.title_id].title}`"/>
+                </div>
+                <input type="file" :id="item.title_id + '_file'"/>
+                <button type="button" @click="setUploadCustomization(index,item.title_id)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 11V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V11M12 3L12 15M12 3L16 7M12 3L8 7" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                    <span>{{item.upload.button_text}}</span>
+                </button>
+                <p>{{item.upload.description_after}}</p>
+              </div>
+            </div>  
+            <div class="customization_functions d-flex flex-column">
+              <hr></hr>
+              <div class="row">
+                <div class="col"><b>Subtotal</b></div>
+                <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
+              </div>
+              
+              <button v-if="item.upload.enable || item.title_id == 'gravacao' || item.title_id.includes('ponteira_')" type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+                Avançar
+              </button>              
+            </div>
+          </div>
+        </div>
+        <div class="step upsell px-md-3"
+        v-for="(item, index) in cms_upselling"
+        :key="index"
+        :class="cms_customizations_step == (cms_customizations.length + cms_upselling.length + index)  ? 'current' : ''"
+        > 
+          <div>
+            <div class="option_title text-center mb-5">
+              <h4>{{item.step_title}}</h4>
+              <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
+            </div>
+
+            <div class="option_options">
+              <div class="option mb-md-4 mb-4"
+                v-for="(item_,index_) in item.upselling_skus"
+                :key="index_"
+                >              
+                  <div v-if="upsellProduct(item_)">
+                    <button 
+                      type="button"
+                      @click="chooseUpsellProduct(item_)"
+                      :class="pickedUpsellProduct && pickedUpsellProduct.sku == item_ ? 'active' : ''"
+                    >
+                      <div class="row justify-content-between align-items-start">
+                        <div class="col-2 pr-0" v-if="upsellProduct(item_).picture">
+                          <img class="option_image"
+                            :src="upsellProduct(item_).picture && upsellProduct(item_).picture.normal && upsellProduct(item_).picture.normal.url"
+                          />
+                        </div>
+                        <div class="col pr-0">
+                          <div class="row justify-content-between align-items-start">
+                            <div class="col">
+                              <span class="option_title">
+                                {{ upsellProduct(item_).name }}
+                              </span>                          
+                            </div>
+                            <div class="col-auto">
+                              <strong class="option_price">
+                                {{ upsellProduct(item_).price > 0 ? upsellProduct(item_).price.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : '+R$ 0,00' }}
+                              </strong>
+                            </div>
+                          </div>
+                          <div class="mt-3" v-if="upsellProduct(item_).short_description">
+                            <p class="option_description">
+                              {{upsellProduct(item_).short_description}}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+              </div>
+              
+              <div v-if="item.customizations">
+                <div class="option_options upselling_customizations">
+                  <div v-for="(item_, index_) in item.customizations" :key="index_">
+                    <strong class="upselling_customizations-title" v-if="item_.title">{{item_.title}}</strong>
+                    <p class="upselling_customizations-description" v-if="item_.step_description">{{item_.step_description}}</p>
+                    <div v-for="(item__, index__) in item_.list" :key="index__">                  
+                      <div class="option mb-md-4 mb-4">
+                        <div v-if="item__.input_type != 'Não'" class="button_box_style">
+                          <div class="row justify-content-between align-items-start">
+                            <div class="col">
+                              <div class="row justify-content-between align-items-start">
+                                <div class="col">
+                                  <div class="option_title">{{item__.title}}</div>
+                                </div>
+                                <div class="col-auto">
+                                  <strong v-if="item__.type == 'Fixo'" class="option_price">
+                                    {{item__.value > 0 ? '+' + item__.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                                  </strong>
+                                  <strong v-else class="option_price">
+                                    {{item__.value > 0 ? '+' + (ghostProductForPrices.price * (item__.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                                  </strong>
+                                </div>
+                              </div>                          
+                            </div>                        
+                          </div>
+                          <div class="mt-3" v-if="item__.description">
+                            <p class="option_description">{{item__.description}}</p>
+                          </div>
+                          <div class="mt-3 input_digitable">
+                            <input :value="upsellCustomizations[item_.title] && upsellCustomizations[item_.title][item__.title] && upsellCustomizations[item_.title][item__.title].value" @keyup="setUpsellCustomization(item_.title_id ? item_.title_id : item_.title, item__, $event.target.value)" :type="item__.input_type" :max="item__.input_type_max" :required="item__.input_type_required ? true : false"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div v-if="item_.customizations.multi_option" class="option multi">
+                  
+                </div>
+                <div v-else>
+
+                </div> -->
+              </div>
+              <div class="customization_functions d-flex flex-column">
+                <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+                  Avançar
+                </button>            
+              </div>
+            </div>
+          <!--
+            <div class="option_options">            
+              <div class="option mb-md-4 mb-4"
+              v-for="(item_,index_) in item.list"
+              :key="index_"
+              >
+              <div>
+                <button 
+                :class="current_customization[index] && current_customization[index][item.title].title == item_.title ? 'active' : ''"
+                @click="setDeepCustomizationOption(index,item.title,item_)" class="w-100" type="button">
+                  <div class="row justify-content-between align-items-start">
+                    <div class="col-2 pr-0" v-if="item_.img">
+                        <img class="option_image" :src="item_.img" alt="">
+                    </div>
+                    <div class="col">
+                      <div class="row justify-content-between align-items-start">
+                        <div class="col">
+                          <span class="option_title">{{item_.title}}</span>
+                        </div>
+                        <div class="col-auto">
+                          <strong v-if="item_.type == 'Fixo'" class="option_price">
+                            {{item_.value > 0 ? '+' + item_.value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                          </strong>
+                          <strong v-else class="option_price">
+                            {{item_.value > 0 ? '+' + (ghostProductForPrices.price * (item_.value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                          </strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3" v-if="item_.description">
+                    <div class="col-12">
+                      <p class="option_description">
+                        {{item_.description}}
+                      </p>
+                    </div>
+                  </div>
+                </button>
+                
+              </div>
+              
+              </div>
+            </div>  
+            -->
+          </div>
+        </div>
+        
+        <div class="step last px-md-3"
+          v-if="cms_customizations_step > (cms_customizations.length + cms_upselling.length)"
+            :class="cms_customizations_step > (cms_customizations.length + cms_upselling.length)  ? 'current' : ''"
+        >
+          <div>
+            <div class="option_title text-center mb-md-5 mb-4 mt-5">
+              <small></small>
+              <h4>Confira seu produto</h4>
+            </div>
+            <div class="option_options">
+              <div class=""
+                :class="'selected_option ' + (current_customization.length == index_ + 1 ? 'mb-3' : 'mb-4')"
+                v-for="(item_, index_) in current_customization"  
+                :key="index_"
+              >
+              
+                <div class="row option_box justify-content-between align-items-start">
+                  <div class="col-2 pr-0" v-if="item_[Object.keys(item_)[0]].img">
+                      <img class="option_image" :src="item_[Object.keys(item_)[0]].img" alt="">
+                  </div>
+                  <div class="col">
+                    <div class="row justify-content-between align-items-start">
+                      <div class="col">
+                        <small>{{body.customizations.find(el => el.grid_id == Object.keys(item_)[0]) ? body.customizations.find(el => el.grid_id == Object.keys(item_)[0]).label : 'Err.'}}</small>
+                        <span class="option_title">
+                          <a target="_blank" style="border-bottom: 1px solid #000;" :href="`https://storage.googleapis.com/alpix-dd540.appspot.com/Image/${item_[Object.keys(item_)[0]].title.split('.')[0]}/${item_[Object.keys(item_)[0]].title}`" v-if="/\.(doc|jpg|jpeg|png)$/i.test(item_[Object.keys(item_)[0]].title)">
+                            Abrir Arquivo 
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.33333 7.99998H10.6667M6 5.33331H4.66667C3.19391 5.33331 2 6.52722 2 7.99998C2 9.47274 3.19391 10.6666 4.66667 10.6666H6M10 10.6666H11.3333C12.8061 10.6666 14 9.47274 14 7.99998C14 6.52722 12.8061 5.33331 11.3333 5.33331L10 5.33331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                          </a>
+                          <span v-else>
+                            {{item_[Object.keys(item_)[0]].title}}  
+                          </span>
+                          
+                        </span>
+                      </div>
+                      <div class="col-auto">
+                        <strong v-if="item_[Object.keys(item_)[0]].type == 'Fixo'" class="option_price">
+                          {{item_[Object.keys(item_)[0]].value > 0 ? '+' + item_[Object.keys(item_)[0]].value.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                        </strong>
+                        <strong v-else class="option_price">
+                          {{item_[Object.keys(item_)[0]].value > 0 ? '+' + (ghostProductForPrices.price * (item_[Object.keys(item_)[0]].value / 100)).toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) : ''}}
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-3" v-if="item_.description">
+                  <div class="col-12">
+                    <p class="option_description">
+                      {{item_[Object.keys(item_)[0]].description}}
+                    </p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="customization_functions d-flex flex-column">
+              <div class="subtotal pt-3">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-auto">
+                    <b>Subtotal:</b>
+                  </div>
+                  <div class="col-auto">
+                    <b>
+                      {{totalWithCustomization()}}
+                    </b>
+                  </div>
+                </div>
+              </div>
+              <div class="customization_functions d-flex flex-column">
+                <button type="button" class="btn btn-primary" @click="buy('customized')">
+                  Adicionar ao Carrinho
+                </button>
+                <button
+                  class="btn-back"
+                  @click="customizationStepBack"
+                >
+                  Editar minhas escolhas
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  <transition enter-active-class="animated fadeIn slower">
+    <div
+      v-if="body._id"
+      class="row align-items-center"
+    >
+      <slot name="gallery-col">
+        <div :class="galleryColClassName">
+          <component
+            :is="isSSR ? 'portal' : 'div'"
+            selector="#product-gallery"
+          > 
+            <slot name="stamps"/>
+            <product-gallery
+              :key="variationImagesKey"
+              :product="productToGallery"
+              :can-add-to-cart="canAddToCart && body.available && isInStock"
+              :current-slide.sync="currentGalleyImg"
+              :is-s-s-r="isSSR"
+              
+            >
+              <slot name="first-picture"/>
+            </product-gallery>
+            <slot name="gallery-footer"/>
+          </component>
+        </div>
+      </slot>
+
+      <div
+        class="col pl-2 pl-md-5"
+        ref="actions"
+      >
+        <slot
+          v-if="!isSSR"
+          name="heading"
+        >
+          <component
+            :is="headingTag"
+            class="product__name"
+          >
+            {{ name }}
+          </component>
+          <p class="product__sku d-none">
+            COD: {{ body.sku }}
+          </p>
+        </slot>
+        
+        <component
+          :is="isSSR ? 'portal' : 'div'"
+          selector="#product-actions"
+        >
+          <slot name="rating">
+            <div
+              v-once
+              class="product__rating"
+              :data-sku="body.sku"
+            ></div>
+          </slot>
+
+          <div
+            v-if="!body.available"
+            class="product__unavailable"
+          >
+            <slot name="unavailable">
+              {{ i19unavailable }}
+            </slot>
+          </div>
+
+          <div
+            v-else-if="!isInStock"
+            class="product__out-of-stock"
+          >
+            <slot name="out-of-stock">
+              {{ i19outOfStock }}
+            </slot>
+          </div>
+
+          <div
+            v-else-if="isWithoutPrice"
+            class="product__without-price"
+          >
+            <slot name="without-price">
+              <a 
+                v-if="quoteLink"
+                target="_blank"
+                rel="noopener"
+                :href="quoteLink"
+              >
+                {{ i19quoteProduct }}
+              </a>
+            </slot>
+          </div>
+
+          <template v-else>
+            
+
+            <slot
+              name="variations"
+              v-if="hasVariations"
+            >
+              <div class="mt-2 pt-3">
+                <product-variations
+                  :product="body"
+                  :selected-id.sync="selectedVariationId"
+                  :max-options-btns="maxVariationOptionsBtns"
+                  @select-option="handleGridOption"
+                />
+                <a-alert :can-show="hasClickedBuy && !selectedVariationId">
+                  {{ i19selectVariationMsg }}
+                </a-alert>
+
+                <slot name="variations-info"/>
+              </div>
+            </slot>
+
+            <slot
+              name="customizations"
+              v-if="body.customizations"
+            >
+              <div
+                v-for="custom in body.customizations"
+                v-if="custom.custom_value && 1 != 1"
+                :key="custom._id"
+                class="product__customization form-group"
+                :class="custom.grid_id ? `product__customization--${custom.grid_id}` : null"
+              >
+                <label :for="`c-${custom._id}`">
+                  {{ custom.label }}
+                  <span
+                    v-if="custom.add_to_price"
+                    class="badge badge-secondary"
+                  >
+                    {{ formatAdditionalPrice(custom.add_to_price) }}
+                  </span>
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  :id="`c-${custom._id}`"
+                  @keyup="ev => setCustomizationOption(custom, ev.target.value)"
+                >
+              </div>
+            </slot>
+
+            <div>
+              <hr class="mt-4 mb-0"></hr>
+              
+              <div class="apx_tabs ">
+                <div class="item py-3" v-if="body.body_html && body.body_html.replace(/<[^>]*>/g, '').trim().length > 0">
+                  <button type="button" class="w-100 d-flex align-items-center justify-content-between" data-tab="details">
+                    Detalhes do Produto
+                    <span>                            
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    </span>
+                  </button>
+                </div>
+                <div class="item py-3" v-if="body.specifications">
+                  <button type="button" class="w-100 d-flex align-items-center justify-content-between" data-tab="properties">
+                    Características
+                    <span>                            
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    </span>
+                  </button>
+                </div>
+                <div class="item py-3" v-for="(item, key) in cms_currentLib.list">
+                  <button type="button" class="w-100 d-flex align-items-center justify-content-between" :data-tab="key">
+                    {{item.title}}
+                    <span>                            
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 7V17M7 12L17 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="align-items-center justify-content-between d-flex py-3 box">
+              <slot name="prices">
+                <p class="product__prices col-md col-7 m-0">
+                  <a-prices
+                    :product="ghostProductForPrices"
+                    :is-literal="true"
+                    :is-big="true"
+                    @fix-price="price => fixedPrice = price"
+                  />
+                  <slot
+                    name="discount-tag"
+                    v-bind="{ discount }"
+                    v-if="1 != 1"
+                  >
+                    <span
+                      v-if="discount > 0"
+                      class="product__discount"
+                    >
+                      {{ i19discountOf }}
+                      <strong>{{ discount }}%</strong>
+                    </span>
+                  </slot>
+                </p>
+              </slot>
+
+              <div
+                v-if="isKit"
+                class="product__kit"
+              >
+                <slot
+                  name="kit"
+                  v-bind="{ kitItems }"
+                >
+                  <transition enter-active-class="animated fadeInUp">
+                    <quantity-selector
+                      v-if="kitItems.length"
+                      :items="kitItems"
+                      :min="body.min_quantity"
+                      :max="body.quantity"
+                      :slug="body.slug"
+                      :kit-product-id="body._id"
+                      :kit-name="name"
+                      :kit-price="fixedPrice"
+                      @buy="d => $emit('buy', d)"
+                    >
+                      <template #buy-button-content>
+                        <slot name="buy-button-content"/>
+                      </template>
+                    </quantity-selector>
+                  </transition>
+
+                  <span
+                    v-if="!kitItems.length"
+                    class="product__kit-loading spinner-border"
+                    role="status"
+                  >
+                    <span class="sr-only">Loading...</span>
+                  </span>
+                </slot>
+              </div>
+
+              <template v-else>
+                <div
+                  v-if="!isVariationInStock"
+                  class="product__out-of-stock"
+                >
+                  <slot name="out-of-stock">
+                    {{ i19outOfStock }}
+                  </slot>
+                </div>
+
+                <div
+                  v-else-if="hasBuyButton"
+                  class="product__buy mt-md-0 pt-md-0 col-md-7 col-5 "
+                  ref="buy"
+                >
+                  <component
+                    :is="hasQuantitySelector ? 'quantity-selector' : 'div'"
+                    :items="hasQuantitySelector ? [{ _id: body._id, quantity: body.min_quantity || 1 }] : null"
+                    :min="body.min_quantity"
+                    :max="body.quantity"
+                    :has-buy-button="false"
+                    @set-quantity="({ quantity }) => qntToBuy = quantity"
+                  >
+                    <span @click="buy('normal')">
+                      <slot
+                        name="buy"
+                        v-bind="{ hasClickedBuy, isOnCart }"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-lg btn-primary"
+                          :disabled="hasClickedBuy && !isOnCart"
+                        >
+                          <slot name="buy-button-content">
+                            Adicionar ao Carrinho
+                          </slot>
+                        </button>                        
+                      </slot>
+                    </span>                
+                  </component>
+                </div>
+
+                <p
+                  class="product__short-stock"
+                  v-if="isLowQuantity && 1 != 1"
+                >
+                  <i class="i-forward mr-1"></i>
+                  {{ i19only }}
+                  <strong>{{ productQuantity }}</strong>
+                  {{ i19unitsInStock }}
+                </p>
+              </template>
+            </div>
+
+            <slot name="sale-timer">
+              <div
+                v-if="isOnSale"
+                class="product__sale-timer mb-3"
+              >
+                <div>
+                  {{ i19offer }}
+                  <br><small>{{ i19endsIn }}</small>
+                </div>
+                <div
+                  class="h1 ml-3 mb-0"
+                  ref="timer"
+                >
+                  00:00:00
+                </div>
+              </div>
+            </slot>
+
+            <slot name="favorite"  v-if="1 != 1">
+              <div>
+                <a
+                  class="btn btn-sm product__favorite"
+                  @click="toggleFavorite"
+                  :href="isLogged ? null : accountUrl"
+                >
+                  <i 
+                    class="i-heart mr-1"
+                    :class="isFavorite ? 'active' : null"
+                  >
+                  </i>
+                  <span>
+                    {{ isFavorite ? i19removeFromFavorites : i19addToFavorites }}
+                  </span>
+                </a>
+              </div>
+            </slot>
+
+            <slot name="share" v-if="1 != 1">
+              <a-share
+                v-if="body.slug"
+                class="mb-3"
+                :url="`/${body.slug}`"
+                :title="body.name"
+                :description="body.short_description"
+              />
+            </slot>
+
+            <transition enter-active-class="animated fadeInUp"
+              v-if="true != true"
+            >
+              <slot
+                name="payment-gateways"
+                v-bind="{ paymentOptions }"
+                v-if="!isQuickview && paymentOptions.length"
+              >
+                <article>
+                  <div class="product__payment card mb-3">
+                    <a
+                      id="product-payment-header"
+                      class="card-header"
+                      role="button"
+                      href="#product-payment"
+                      data-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="product-payment"
+                    >
+                      <span>{{ i19paymentOptions }}</span>
+                      <i class="i-chevron-down"></i>
+                    </a>
+
+                    <div
+                      id="product-payment"
+                      class="collapse"
+                      aria-labelledby="product-payment-header"
+                    >
+                      <div class="card-body pb-0">
+                        <div
+                          v-for="paymentOption in paymentOptions"
+                          :key="paymentOption.app_id"
+                          :id="`product-payment-${paymentOption.app_id}`"
+                          class="mb-3"
+                        >
+                          <slot :name="`payment-${paymentOption.app_id}`">
+                            <payment-option
+                              v-for="(gateway, i) in paymentOption.payment_gateways"
+                              :key="`${paymentOption.app_id}-${i}`"
+                              :payment-gateway="gateway"
+                              :installments-option="paymentOption.installments_option"
+                              :price="fixedPrice"
+                            />
+                          </slot>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </slot>
+            </transition>
+
+            <p
+              v-if="body.production_time && body.production_time.days && 1 != 1"
+              class="product__production"
+            >
+              <i class="i-info-circle mr-1"></i>
+              {{ i19productionDeadline }}:
+              <strong>
+                {{ body.production_time.days }}
+                {{ body.production_time.working_days ? i19workingDays : i19days }}
+                <template v-if="body.production_time.cumulative">
+                  {{ i19perUnit }}
+                </template>
+              </strong>
+            </p>
+
+            <slot
+              v-if="!isQuickview && (!isKit || kitItems.length) && 1 != 1"
+              name="shipping"
+            >
+              <shipping-calculator
+                :shippedItems="isKit ? kitItems : [{
+                  ...body,
+                  ...selectedVariation,
+                  product_id: body._id,
+                  quantity: qntToBuy || body.min_quantity || 1
+                }]"
+              >
+                <template v-slot:free-from-value="{ amountSubtotal, freeFromValue }">
+                  <div class="product__free-shipping-from">
+                    {{ i19freeShippingFrom }}
+                    <strong>
+                      {{ Math.ceil(freeFromValue / amountSubtotal) }}
+                      {{ i19units }}
+                    </strong>
+                  </div>
+                </template>
+              </shipping-calculator>
+            </slot>
+
+            <slot name="track-price">
+              <div
+                v-once
+                class="product__track-price"
+                :data-sku="body.sku"
+              ></div>
+            </slot>
+          </template>
+        </component>
+
+        <slot
+          v-if="!isSSR && body.short_description"
+          name="short-description"
+        >
+          <p class="product__info lead">
+            {{ body.short_description }}
+          </p>
+        </slot>
+      </div>
+    </div>
+    
+
+  </transition>
+  
+
+  <template v-if="!isQuickview && hasStickyBuyButton && body.available && isInStock">
+    <transition
+      enter-active-class="animated fadeIn"
+      leave-active-class="animated fadeOut fast" 
+    >
+      <div
+        v-show="isStickyBuyVisible && 1 != 1"
+        ref="sticky" 
+        class="product__sticky"
+      >
+        <div class="product__sticky-container container">
+          <div class="product__sticky-info">
+            <a-picture
+              :can-calc-height="false"
+              :src="thumbnail"
+              class="product__sticky-picture"
+            />
+            <h5>{{ name }}</h5>
+          </div>
+
+          <div class="product__sticky-buy">
+            <a-prices
+              :product="ghostProductForPrices"
+              :is-literal="false"
+              :can-show-price-options="true"
+            />
+            <a
+              class="btn btn-lg btn-primary"
+              href="#"
+              @click.prevent="buyOrScroll"
+            >
+              <i class="i-shopping-bag mr-1"></i>
+              {{ strBuy }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </template>
+
+  <slot v-if="!body._id"/>
+</section>
