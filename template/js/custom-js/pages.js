@@ -306,3 +306,38 @@ window.apx.loading = function(state){
     loader.hide()
   }
 }
+
+$('body').on('submit', '.apx-newsletter form', function(e) {
+  e.preventDefault();
+  const email = $(this).find('input[type="email"]').val();
+  if (!email) {
+    window.messageBullet('Por favor, insira um e-mail válido.');
+    return;
+  }
+  window.apx.loading(true);
+  
+  fetch('https://api.embluemail.com/v2.3/integrations/5297/execute', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization' : 'Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ2IjoiMiIsInR5cGUiOiJhcHAtc2Vzc2lvbiIsInRva2VuSWQiOiI2ZDQ0MTI0ZS01ODI2LTQ3MjItOWY0OS1iMjFkNDU2ODdhMzkiLCJhY2NvdW50SWQiOiIzMTc1OCIsImluYm94IjpmYWxzZSwidXNlcklkIjoiNDQwODIiLCJlbWFpbCI6ImFuYUBsZXNiYWlucy5jb20uYnIiLCJjb250cmFjdElkIjoiMzExMjYiLCJnaXZlbl9uYW1lIjoiQW5hIiwiZmFtaWx5X25hbWUiOiJMYXViYWNoIiwiYWNjb3VudE5hbWUiOiJNR00gQ09NRVJDSU8gREUgQUNFU1NPUklPUyBERSBNT0RBIExUREEiLCJhZ2VuY3lOYW1lIjoiTUdNIENPTUVSQ0lPIERFIEFDRVNTT1JJT1MgREUgTU9EQSBMVERBIiwiaXNTU08iOiJGYWxzZSIsImFnZW5jeUlkIjoiMjU5MTQiLCJvcmdhbml6YXRpb24iOiIiLCJhcHAiOiJhcHAiLCJyb2xlIjoiRW1wcmVzYSBhZG1pbiIsImlzSW5ib3hBZ2VudCI6IkZhbHNlIiwibGFuZ3VhZ2UiOiJQVCIsImF1ZCI6WyJhcHAtdjIuZW1ibHVlbWFpbC5jb20iLCJmbG93cy5lbWJsdWVtYWlsLmNvbSJdLCJpc3MiOiJhcHAuZW1ibHVlbWFpbC5jb20iLCJpYXQiOjE3NTQwNjEyODN9.k4VXpaszsZhEh3L2tQJR4pJ7qrZL5kAff4K6EMy76AFlZEEA-9uK647cIXBpfRSeXc4tUb_xeoRZFh-_uMVQ8w'
+    },
+    body: JSON.stringify({email: email})
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    window.apx.loading(false);
+    window.messageBullet('E-mail cadastrado com sucesso!');
+    $('.apx-newsletter form')[0].reset();
+  })
+  .catch(error => {
+    window.apx.loading(false);
+    window.messageBullet('Erro ao cadastrar e-mail. Tente novamente.');
+    console.error('Error:', error);
+  });
+});
