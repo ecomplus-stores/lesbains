@@ -26,7 +26,7 @@
           "description": "Lentes para quem precisa enxergar bem de perto e de longe sem trocar de óculos. Conforto, fluidez visual e sofisticação em um só olhar.",
           "type": "Fixo",
           "value": null
-        }        
+        }
       ],
       "title": "Necessidade de Visão",
       "step_title": "Selecione sua necessidade de visão",
@@ -64,7 +64,7 @@
           "input_type_required": false,
           "title": "Proteção para Telas (Digital Blue)",
           "img": "/img/uploads/luz-azul.svg",
-          "description": "Lentes com filtro de luz azul e antirreflexo, ideais para quem passa longas horas no digital.<br>Reduzem o cansaço visual, protegem contra a luz artificial e são indicadas para grau leve até ±4.00.",
+          "description": "Lentes com filtro de luz azul e antirreflexo, ideais para quem passa longas horas no digital.Reduzem o cansaço visual, protegem contra a luz artificial e são compatível apenas até ±4.00 (esférico) e cilíndrico até -2.00.",
           "type": "Fixo",
           "value": 98
         },
