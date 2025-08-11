@@ -72,7 +72,7 @@
           "input_type_required": false,
           "title": "Fotossensível",
           "img": "/img/uploads/fotosenssivel.svg",
-          "description": "Lentes que escurecem automaticamente no sol e clareiam em ambientes internos, com proteção contra raios UV.<br>Perfeitas para quem busca praticidade, proteção e estilo em todas as condições de luz.<br>Recomendadas para miopia, hipermetropia ou astigmatismo com grau até ±4.00.",
+          "description": "Lentes que escurecem automaticamente no sol e clareiam em ambientes internos, com proteção contra raios UV.Compatível para miopia, hipermetropia ou astigmatismo com grau até ±4.00 (esférico) e cilíndrico até -2.00.",
           "type": "Fixo",
           "value": 179
         },
