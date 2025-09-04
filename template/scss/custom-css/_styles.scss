@@ -4212,9 +4212,9 @@ header .term-box-only{display: none!important;}
     }
 .shipping-calculator__option small {
   display: block;
-  max-width: 140px; 
-  white-space: normal; 
-  word-break: break-word; 
-  overflow-wrap: break-word; 
+  max-width: 160px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-wrap: balance;      
   line-height: 1.3;
 }
