@@ -4210,3 +4210,11 @@ header .term-box-only{display: none!important;}
     #header.menu-visible{
         .apx_topbar.first{z-index:1}
     }
+.shipping-calculator__option small {
+  display: block;
+  max-width: 140px; 
+  white-space: normal; 
+  word-break: break-word; 
+  overflow-wrap: break-word; 
+  line-height: 1.3;
+}
