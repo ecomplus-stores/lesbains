@@ -4211,10 +4211,12 @@ header .term-box-only{display: none!important;}
         .apx_topbar.first{z-index:1}
     }
 .shipping-calculator__option small {
-  display: block;
-  max-width: 160px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  max-width: 160px;        
   white-space: normal;
-  overflow-wrap: anywhere;
-  text-wrap: balance;      
   line-height: 1.3;
 }
