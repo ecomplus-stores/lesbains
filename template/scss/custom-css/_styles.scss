@@ -4220,3 +4220,9 @@ header .term-box-only{display: none!important;}
   white-space: normal;
   line-height: 1.3;
 }
+
+.list_bg{
+    picture{
+        img{max-width: 100%;}
+    }
+}
