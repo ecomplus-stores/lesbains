@@ -131,12 +131,6 @@
               },
               {
                 "item": {
-                  "title": "Infantil",
-                  "url": "/oculos-de-sol?filters={'gender':[{'text':'Infantil'}]}"
-                }
-              },
-              {
-                "item": {
                   "title": "Acessórios",
                   "url": "/acessorios"
                 }
