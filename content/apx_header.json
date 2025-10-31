@@ -308,12 +308,6 @@
               },
               {
                 "item": {
-                  "title": "Infantil",
-                  "url": "/oculos-de-grau?filters={'gender':[{'text':'Infantil'}]}"
-                }
-              },
-              {
-                "item": {
                   "title": "Acessórios",
                   "url": "/acessorios"
                 }
@@ -453,12 +447,6 @@
                 "item": {
                   "title": "Masculino",
                   "url": "/condicoes-especiais?filters={'gender':[{'text':'Masculino'},{'text':'Feminino e Masculino'}]}"
-                }
-              },
-              {
-                "item": {
-                  "title": "Infantil",
-                  "url": "/condicoes-especiais?filters={'gender':[{'text':'Infantil'}]}"
                 }
               }
             ]
