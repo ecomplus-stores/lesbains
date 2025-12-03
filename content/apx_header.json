@@ -439,32 +439,32 @@
             "list": [
               {
                 "item": {
-                  "title": "Lentes de Grau",
+                  "title": "Lentes Digital Blue",
                   "url": "lentes-de-grau/filtro-azul"
                 }
               },
               {
                 "item": {
-                  "url": "lentes-de-grau/multifocal",
-                  "title": "Lentes de Grau"
+                  "url": "lentes-de-grau/antirreflexo",
+                  "title": "Lentes Antirreflexo"
                 }
               },
               {
                 "item": {
-                  "url": "lentes-de-grau/antirreflexo",
-                  "title": "Lentes de Grau"
+                  "url": "lentes-de-grau/multifocal",
+                  "title": "Lentes Multifocal"
                 }
               },
               {
                 "item": {
                   "url": "lentes-de-grau/fotossensivel",
-                  "title": "Lentes de Grau"
+                  "title": "Lentes Fotossensível"
                 }
               },
               {
                 "item": {
                   "url": "lentes-de-grau/lente-de-sol-com-grau",
-                  "title": "Lentes de Grau",
+                  "title": "Lentes de Grau Solares",
                   "path": "/lentes-de-grau"
                 }
               }
