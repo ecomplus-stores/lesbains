@@ -428,6 +428,42 @@
       ]
     },
     {
+      "title": "Lentes de Grau",
+      "url": "lentes-de-grau",
+      "list": [
+        {
+          "item": {
+            "url": "lentes-de-grau/lente-de-sol-com-grau",
+            "title": "Lentes de Grau"
+          }
+        },
+        {
+          "item": {
+            "url": "lentes-de-grau/multifoca",
+            "title": "Lentes de Grau"
+          }
+        },
+        {
+          "item": {
+            "url": "lentes-de-grau/filtro-azul",
+            "title": "Lentes de Grau"
+          }
+        },
+        {
+          "item": {
+            "url": "lentes-de-grau/fotossensivel",
+            "title": "Lentes de Grau"
+          }
+        },
+        {
+          "item": {
+            "url": "lentes-de-grau/antirreflexo",
+            "title": "Lentes de Grau"
+          }
+        }
+      ]
+    },
+    {
       "title": "Relógios",
       "url": "/relogios",
       "list": [
@@ -495,42 +531,6 @@
               }
             ],
             "image": "/img/uploads/mini-banner-acessorios-menu-principal-01.jpg"
-          }
-        }
-      ]
-    },
-    {
-      "title": "Lentes de Grau",
-      "url": "lentes-de-grau",
-      "list": [
-        {
-          "item": {
-            "url": "lentes-de-grau/lente-de-sol-com-grau",
-            "title": "Lentes de Grau"
-          }
-        },
-        {
-          "item": {
-            "url": "lentes-de-grau/multifoca",
-            "title": "Lentes de Grau"
-          }
-        },
-        {
-          "item": {
-            "url": "lentes-de-grau/filtro-azul",
-            "title": "Lentes de Grau"
-          }
-        },
-        {
-          "item": {
-            "url": "lentes-de-grau/fotossensivel",
-            "title": "Lentes de Grau"
-          }
-        },
-        {
-          "item": {
-            "url": "lentes-de-grau/antirreflexo",
-            "title": "Lentes de Grau"
           }
         }
       ]
