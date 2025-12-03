@@ -434,31 +434,7 @@
         {
           "item": {
             "url": "lentes-de-grau/lente-de-sol-com-grau",
-            "title": "Lentes de Grau"
-          }
-        },
-        {
-          "item": {
-            "url": "lentes-de-grau/multifoca",
-            "title": "Lentes de Grau"
-          }
-        },
-        {
-          "item": {
-            "url": "lentes-de-grau/filtro-azul",
-            "title": "Lentes de Grau"
-          }
-        },
-        {
-          "item": {
-            "url": "lentes-de-grau/fotossensivel",
-            "title": "Lentes de Grau"
-          }
-        },
-        {
-          "item": {
-            "url": "lentes-de-grau/antirreflexo",
-            "title": "Lentes de Grau"
+            "title": "lentes-de-grau"
           }
         }
       ]
