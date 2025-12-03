@@ -445,14 +445,13 @@
               },
               {
                 "item": {
-                  "url": "lentes-de-grau/lente-de-sol-com-grau",
-                  "title": "Lentes de Grau",
-                  "path": "/lentes-de-grau"
+                  "url": "lentes-de-grau/multifocal",
+                  "title": "Lentes de Grau"
                 }
               },
               {
                 "item": {
-                  "url": "lentes-de-grau/multifocal",
+                  "url": "lentes-de-grau/antirreflexo",
                   "title": "Lentes de Grau"
                 }
               },
@@ -464,8 +463,9 @@
               },
               {
                 "item": {
-                  "url": "lentes-de-grau/antirreflexo",
-                  "title": "Lentes de Grau"
+                  "url": "lentes-de-grau/lente-de-sol-com-grau",
+                  "title": "Lentes de Grau",
+                  "path": "/lentes-de-grau"
                 }
               }
             ]
