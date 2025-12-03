@@ -434,7 +434,16 @@
         {
           "item": {
             "title": "Lentes de Grau",
-            "url": "lentes-de-grau/lente-de-sol-com-grau"
+            "url": "lentes-de-grau/lente-de-sol-com-grau",
+            "image": "/img/uploads/minibanner-lentes-com-grau-01-01.jpg",
+            "list": [
+              {
+                "item": {
+                  "title": "Lentes de Grau",
+                  "url": "lentes-de-grau/filtro-azul"
+                }
+              }
+            ]
           }
         }
       ]
