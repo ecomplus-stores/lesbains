@@ -430,7 +430,14 @@
     {
       "title": "Lentes de Grau",
       "url": "lentes-de-grau",
-      "list": []
+      "list": [
+        {
+          "item": {
+            "title": "Lentes de Grau",
+            "url": "lentes-de-grau/lente-de-sol-com-grau"
+          }
+        }
+      ]
     },
     {
       "title": "Relógios",
