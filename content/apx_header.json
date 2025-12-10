@@ -105,6 +105,12 @@
             "url": "/novidades",
             "image": "/img/uploads/mini-banner-novidades-menu-principal-01.jpg"
           }
+        },
+        {
+          "item": {
+            "title": "Cartão-Presente",
+            "url": "cartao-presente"
+          }
         }
       ],
       "path": "/novidades"
