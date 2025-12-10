@@ -46,7 +46,7 @@
               },
               {
                 "item": {
-                  "title": "Cartão-Presente",
+                  "title": "Cartão-Presente?filters={'novidades':[{'text':'Sim'}]}",
                   "url": "cartao-presente"
                 }
               }
