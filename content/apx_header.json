@@ -43,6 +43,12 @@
                   "title": " Óculos de Grau",
                   "url": "/oculos-de-grau?filters={'novidades':[{'text':'Sim'}]}"
                 }
+              },
+              {
+                "item": {
+                  "title": "Cartão-Presente",
+                  "url": "cartao-presente"
+                }
               }
             ],
             "url": "/",
@@ -104,12 +110,6 @@
             ],
             "url": "/novidades",
             "image": "/img/uploads/mini-banner-novidades-menu-principal-01.jpg"
-          }
-        },
-        {
-          "item": {
-            "title": "Cartão-Presente",
-            "url": "cartao-presente"
           }
         }
       ],
