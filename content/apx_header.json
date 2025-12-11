@@ -553,8 +553,17 @@
     },
     {
       "title": "Cartão-Presente",
-      "url": "cartao-presente",
-      "list": []
+      "url": "/cartao-presente",
+      "list": [
+        {
+          "item": {
+            "title": "Cartão-Presente",
+            "image": "/img/uploads/grift-card-redimencionado-copiar.jpg",
+            "url": "/cartao-presente"
+          }
+        }
+      ],
+      "path": "/acessorios/caixa-de-presente"
     }
   ],
   "topbar_2": {
