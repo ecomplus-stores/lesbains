@@ -7,10 +7,10 @@
         {
           "description_color": "#ffffff",
           "animate": "backInDown",
-          "start": "",
+          "start": "2025-12-19T17:17:18.663Z",
           "btn_text_2": "",
-          "img": "/img/uploads/banner-natal-.png",
-          "mobile_img": "/img/uploads/banner-natal-.png",
+          "img": "/img/uploads/banner-de-recesso-.png",
+          "mobile_img": "/img/uploads/banner-de-recesso-.png",
           "mask_opacity_m": 0,
           "btn_text_color_2": "#ffffff",
           "content_order": "inside_image",
@@ -25,7 +25,7 @@
           "mask_opacity": 0,
           "title": "",
           "link": "/oculos-de-sol",
-          "end": "",
+          "end": "2026-01-05T03:00:52.323Z",
           "title_color": "#ffffff",
           "description": "",
           "btn_url_2": ""
