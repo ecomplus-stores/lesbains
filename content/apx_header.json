@@ -567,7 +567,8 @@
     },
     {
       "title": "Condições Especiais",
-      "url": "condicoes-especiais"
+      "url": "condicoes-especiais",
+      "path": "/condicoes-especiais"
     }
   ],
   "topbar_2": {
