@@ -564,6 +564,10 @@
         }
       ],
       "path": "/acessorios/caixa-de-presente"
+    },
+    {
+      "title": "Condições Especiais",
+      "url": "condicoes-especiais"
     }
   ],
   "topbar_2": {
