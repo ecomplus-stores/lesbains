@@ -123,7 +123,7 @@
     {
       "description_color": "#000000",
       "container": "container_90",
-      "btn_text_2": "Ver Catálogo",
+      "btn_text_2": "",
       "img": "/img/uploads/banner-colecao-plajta-gran_artboard-3.jpg",
       "mobile_img": "/img/uploads/banner-colecao-plajta-gran_artboard-4.jpg",
       "mask_opacity_m": 0,
@@ -132,7 +132,7 @@
       "link_url": "/colecao-plajta-gran",
       "btn_url": "/colecao-plajta-gran",
       "content_position": "bottom_left",
-      "btn_text": "Compre",
+      "btn_text": "Ver Catálogo",
       "padding": "px-5",
       "btn_background": "#000000",
       "link_text": "",
