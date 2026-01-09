@@ -552,20 +552,6 @@
       ]
     },
     {
-      "title": "Cartão-Presente",
-      "url": "/cartao-presente",
-      "list": [
-        {
-          "item": {
-            "title": "Cartão-Presente",
-            "image": "/img/uploads/grift-card-redimencionado-copiar.jpg",
-            "url": "/cartao-presente"
-          }
-        }
-      ],
-      "path": "/acessorios/caixa-de-presente"
-    },
-    {
       "title": "Condições Especiais",
       "url": "condicoes-especiais",
       "path": "/condicoes-especiais"
