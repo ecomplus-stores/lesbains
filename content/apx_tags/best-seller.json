@@ -1,0 +1,12 @@
+{
+  "title": "Best seller",
+  "description": "Mais vendido no site",
+  "type": "bottom_right",
+  "color": "#a21111",
+  "border": "#a21111",
+  "identificador": [
+    "MG3367",
+    "MG3333",
+    "MG3013"
+  ]
+}
