@@ -4226,3 +4226,11 @@ header .term-box-only{display: none!important;}
         img{max-width: 100%;}
     }
 }
+@media (max-width: 990px) {
+  .apx_tabs_content .content,
+  .apx_tabs_content .container-fluid,
+  .apx_tabs_content .markdown {
+    height: auto !important;
+    min-height: auto !important;
+  }
+}
