@@ -122,9 +122,9 @@
     },
     {
       "description_color": "#000000",
-      "container": "container-fluid",
+      "container": "container_90",
       "btn_text_2": "",
-      "img": "/img/uploads/sem-nome-1300-x-800-px-.png",
+      "img": "/img/uploads/sem-nome-1300-x-800-px-900-x-600-px-.png",
       "mobile_img": "/img/uploads/sem-nome-1300-x-800-px-.png",
       "mask_opacity_m": 0,
       "content_order": "left_image",
