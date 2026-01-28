@@ -2833,7 +2833,7 @@ ul.app_contacts{
             border-radius: 0rem;
             padding: 0;
 
-            img{height: 80px;}
+            img{height: 80px;object-fit: contain;}
             a > small{
                 font-size: var(--font-size-sm);
                 font-weight: 600;
