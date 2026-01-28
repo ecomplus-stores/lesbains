@@ -324,7 +324,7 @@ export default {
       
       this.body = {
         ...data,
-        customizations: getContextBody().customizations || data.customizations || [],
+        
         //body_html: '',
         body_text: '',
         inventory_records: []
