@@ -4116,10 +4116,10 @@ header .term-box-only{display: none!important;}
     text-decoration: underline
   }
 @media(min-width:990px){
-    .recommended-products{
-        .slick-track,
-        .slick-list{width: 100%!important;}
-    }
+    // .recommended-products{
+    //     .slick-track,
+    //     .slick-list{width: 100%!important;}
+    // }
 }
 
 @media(max-width:990px){
@@ -4355,5 +4355,9 @@ header .term-box-only{display: none!important;}
 
 .extra-content{
     position: relative;
-    z-index: -1;
+    z-index: 0;
+}
+#product{
+    position: relative;
+    z-index: 2;
 }
