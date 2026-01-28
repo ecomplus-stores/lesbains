@@ -58,16 +58,16 @@
         <div class="step px-md-3"
         v-for="(item, index) in cms_customizations"
         :key="'main_'+index"
-        :class="cms_customizations_step == index + 1  ? 'current' : ''"
+        :class="cms_customizations_step == index + 1  ? `current step_${cms_customizations_step} index_${index}`: ''"
         > 
         
         <div v-if="cms_customizations_step == index + 1 && (item.conditions ? hasCondition(item.conditions) : true)">
-          <div class="option_title mt-5 text-center mb-4 mb-md-5">
+          <div class="option_title mt-5 text-center mb-2">
             <h4>{{item.title || body.customizations.find(el => el.grid_id == item.title_id).label}}</h4>
             <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
           </div>
             <div class="option_options">            
-              <div class="option mb-md-4 mb-4"
+              <div class="option mb-md-4 mb-2"
               v-for="(item_,index_) in item.list"
               :key="'customizations_'+index_"
               >
@@ -89,7 +89,7 @@
                     </div>                          
                   </div>                        
                 </div>
-                <div class="mt-3" v-if="item_.description">
+                <div class="mt-2" v-if="item_.description">
                   <p class="option_description" v-html="item_.description"></p>
                 </div>
                 <div class="mt-3 input_digitable">
@@ -99,10 +99,10 @@
               <div v-else>
                 
                 <button 
-                :class="current_customization[index] && current_customization[index][item.title_id].title == item_.title ? 'active' : ''"
+                :class="current_customization.find(el => el[item.title_id] && el[item.title_id].title == item_.title) ? 'active' : ''"
                 @click="setDeepCustomizationOption(index,item.title_id,item_)" class="w-100" type="button">
                   <div class="row justify-content-between align-items-center">
-                    <div class="col-2 pr-0" v-if="item_.img">
+                    <div class="col-auto pr-0" v-if="item_.img">
                         <img class="option_image" :src="item_.img" alt="">
                     </div>
                     <div class="col">
@@ -121,7 +121,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="mt-3" v-if="item_.description">
+                  <div class="mt-2" v-if="item_.description">
                     <p class="option_description" v-html="item_.description">
                       
                     </p>                  
@@ -137,24 +137,38 @@
                 <div v-if="current_customization.find(el => el[item.title_id])" class="text-center">
                   <img :src="`https://storage.googleapis.com/alpix-dd540.appspot.com/Image/${current_customization.find(el => el[item.title_id])[item.title_id].title.split('.')[0]}/${current_customization.find(el => el[item.title_id])[item.title_id].title}`"/>
                 </div>
-                <input type="file" :id="item.title_id + '_file'"/>
-                <button type="button" @click="setUploadCustomization(index,item.title_id)">
+                <input 
+                  type="file" 
+                  :id="item.title_id + '_file'"
+                  style="display: none;"
+                  @change="setUploadCustomization(index,item.title_id)"
+                />
+                <label :for="item.title_id + '_file'" class="custom-file-upload">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 11V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V11M12 3L12 15M12 3L16 7M12 3L8 7" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg> 
                     <span>{{item.upload.button_text}}</span>
-                </button>
+                </label>
+                <div v-if="!current_customization.find(el => el[item.title_id])" class="text-center mt-3 custom-without-file-upload">
+                  <span>ou</span>
+                  <button type="button" class="btn btn-outline-secondary" @click="setStep(cms_customizations_step + 1)">
+                    Avançar sem enviar
+                  </button>
+                </div>
                 <p>{{item.upload.description_after}}</p>
               </div>
             </div>  
-            <div class="customization_functions d-flex flex-column">
-              <hr></hr>
-              <div class="row">
-                <div class="col"><b>Subtotal</b></div>
-                <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
+            <div class="customization_functions d-flex flex-column" >
+              <p v-if="cms_customizations_step < cms_customizations.length" class="p-2 m-0 mt-3" style="    background: #f2f2f2;
+    font-size: 12px;">Nossa equipe confere se a lente escolhida é compatível com seu grau antes da produção.</p>
+              <div v-if="customizationsWithValue()">
+                <hr class="mt-0"></hr>
+                <div class="row">
+                  <div class="col"><b>Subtotal</b></div>
+                  <div class="col-auto"><b>{{totalWithCustomization()}}</b></div>
+                </div>
               </div>
-              
-              <button v-if="item.upload.enable || item.title_id == 'gravacao' || item.title_id.includes('ponteira_')" type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
+              <button v-if="(item.upload.enable && current_customization.find(el => el[item.title_id])) || item.title_id == 'gravacao' || item.title_id.includes('ponteira_')" type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
                 Avançar
               </button>              
             </div>
@@ -166,13 +180,13 @@
         :class="cms_customizations_step == (cms_customizations.length + cms_upselling.length + index)  ? 'current' : ''"
         > 
           <div>
-            <div class="option_title text-center mb-5">
+            <div class="option_title text-center mb-2">
               <h4>{{item.step_title}}</h4>
               <p v-if="item.step_description" class="mt-2">{{item.step_description}}</p>
             </div>
 
             <div class="option_options">
-              <div class="option mb-md-4 mb-4"
+              <div class="option mb-md-4 mb-2"
                 v-for="(item_,index_) in item.upselling_skus"
                 :key="index_"
                 >              
@@ -183,7 +197,7 @@
                       :class="pickedUpsellProduct && pickedUpsellProduct.sku == item_ ? 'active' : ''"
                     >
                       <div class="row justify-content-between align-items-start">
-                        <div class="col-2 pr-0" v-if="upsellProduct(item_).picture">
+                        <div class="col-auto pr-0" v-if="upsellProduct(item_).picture">
                           <img class="option_image"
                             :src="upsellProduct(item_).picture && upsellProduct(item_).picture.normal && upsellProduct(item_).picture.normal.url"
                           />
@@ -201,7 +215,7 @@
                               </strong>
                             </div>
                           </div>
-                          <div class="mt-3" v-if="upsellProduct(item_).short_description">
+                          <div class="mt-2" v-if="upsellProduct(item_).short_description">
                             <p class="option_description">
                               {{upsellProduct(item_).short_description}}
                             </p>
@@ -218,7 +232,7 @@
                     <strong class="upselling_customizations-title" v-if="item_.title">{{item_.title}}</strong>
                     <p class="upselling_customizations-description" v-if="item_.step_description">{{item_.step_description}}</p>
                     <div v-for="(item__, index__) in item_.list" :key="index__">                  
-                      <div class="option mb-md-4 mb-4">
+                      <div class="option mb-md-4 mb-2">
                         <div v-if="item__.input_type != 'Não'" class="button_box_style">
                           <div class="row justify-content-between align-items-start">
                             <div class="col">
@@ -237,7 +251,7 @@
                               </div>                          
                             </div>                        
                           </div>
-                          <div class="mt-3" v-if="item__.description">
+                          <div class="mt-2" v-if="item__.description">
                             <p class="option_description">{{item__.description}}</p>
                           </div>
                           <div class="mt-3 input_digitable">
@@ -255,12 +269,15 @@
 
                 </div> -->
               </div>
+              
               <div class="customization_functions d-flex flex-column">
+                
                 <button type="button" class="btn btn-primary" @click="setStep(cms_customizations_step + 1)">
                   Avançar
                 </button>            
               </div>
             </div>
+            
           <!--
             <div class="option_options">            
               <div class="option mb-md-4 mb-4"
@@ -313,11 +330,30 @@
             :class="cms_customizations_step > (cms_customizations.length + cms_upselling.length)  ? 'current' : ''"
         >
           <div>
-            <div class="option_title text-center mb-md-5 mb-4 mt-5">
+            <div class="option_title text-center mb-2 mt-5">
               <small></small>
               <h4>Confira seu produto</h4>
             </div>
+            
             <div class="option_options">
+              <div class="selected_option mb-4">
+                <div class="row option_box justify-content-between align-items-start">
+                  
+                  <div class="col">
+                    <div class="row justify-content-between align-items-start">
+                      <div class="col">
+                        
+                        <span class="option_title">{{ body.name }}</span>
+                      </div>
+                      <div class="col-auto">
+                        <strong class="option_price">
+                          {{ body.price.toLocaleString('pt-br', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2}) }}
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class=""
                 :class="'selected_option ' + (current_customization.length == index_ + 1 ? 'mb-3' : 'mb-4')"
                 v-for="(item_, index_) in current_customization"  
@@ -325,7 +361,7 @@
               >
               
                 <div class="row option_box justify-content-between align-items-start">
-                  <div class="col-2 pr-0" v-if="item_[Object.keys(item_)[0]].img">
+                  <div class="col-auto pr-0" v-if="item_[Object.keys(item_)[0]].img && 1 != 1">
                       <img class="option_image" :src="item_[Object.keys(item_)[0]].img" alt="">
                   </div>
                   <div class="col">
@@ -333,7 +369,7 @@
                       <div class="col">
                         <small>{{body.customizations.find(el => el.grid_id == Object.keys(item_)[0]) ? body.customizations.find(el => el.grid_id == Object.keys(item_)[0]).label : 'Err.'}}</small>
                         <span class="option_title">
-                          <a target="_blank" style="border-bottom: 1px solid #000;" :href="`https://storage.googleapis.com/alpix-dd540.appspot.com/Image/${item_[Object.keys(item_)[0]].title.split('.')[0]}/${item_[Object.keys(item_)[0]].title}`" v-if="/\.(doc|jpg|jpeg|png)$/i.test(item_[Object.keys(item_)[0]].title)">
+                          <a target="_blank" style="border-bottom: 1px solid #000;" :href="`https://storage.googleapis.com/alpix-dd540.appspot.com/Image/${item_[Object.keys(item_)[0]].title.split('.')[0]}/${item_[Object.keys(item_)[0]].title}`" v-if="/\.(pdf|doc|jpg|jpeg|png)$/i.test(item_[Object.keys(item_)[0]].title)">
                             Abrir Arquivo 
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M5.33333 7.99998H10.6667M6 5.33331H4.66667C3.19391 5.33331 2 6.52722 2 7.99998C2 9.47274 3.19391 10.6666 4.66667 10.6666H6M10 10.6666H11.3333C12.8061 10.6666 14 9.47274 14 7.99998C14 6.52722 12.8061 5.33331 11.3333 5.33331L10 5.33331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -356,7 +392,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="row mt-3" v-if="item_.description">
+                <div class="row mt-2" v-if="item_.description">
                   <div class="col-12">
                     <p class="option_description">
                       {{item_[Object.keys(item_)[0]].description}}
@@ -366,7 +402,10 @@
                 
               </div>
             </div>
+            
             <div class="customization_functions d-flex flex-column">
+              <p class="p-2 m-0 mt-3" style="    background: #f2f2f2;
+    font-size: 12px;">Nossa equipe confere se a lente escolhida é compatível com seu grau antes da produção.</p>
               <div class="subtotal pt-3">
                 <div class="row justify-content-between align-items-center">
                   <div class="col-auto">
@@ -383,11 +422,12 @@
                 <button type="button" class="btn btn-primary" @click="buy('customized')">
                   Adicionar ao Carrinho
                 </button>
+                
                 <button
                   class="btn-back"
-                  @click="customizationStepBack"
+                  @click="resetCustomizations"
                 >
-                  Editar minhas escolhas
+                  Editar escolhas de lentes
                 </button>
               </div>
             </div>

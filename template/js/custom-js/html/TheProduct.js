@@ -321,8 +321,10 @@ export default {
     getSpecValueByText,
 
     setBody (data) {
+      
       this.body = {
         ...data,
+        customizations: getContextBody().customizations || data.customizations || [],
         //body_html: '',
         body_text: '',
         inventory_records: []
@@ -430,25 +432,36 @@ export default {
       //console.log(this.current_customization[index])
     },
     setStep(step){
-      
+      console.log('setStep called', step, 'body.customizations:', this.body.customizations)
       this.cms_customizations_step = step
     },
-    setDeepCustomizationOption(index,grid_id,item){
-      console.log('body',this.body,index,grid_id,item,this.current_customization)
+    resetCustomizations(){
+      this.current_customization = []
+      this.cms_customizations_step = 1
+      this.pickedUpsellProduct = null
+      this.upsellCustomizations = []
+      this.textCustomizations = []
       this.isBackButtonPressed = false
-      if(this.cms_customizations_step < 1){
-        this.current_customization = []
-      }
-      console.log(grid_id,index,item,this.current_customization)
-      let q = this.current_customization.find(el => el[grid_id])
-      if(q){
-        q = item
-      }else{
-        this.current_customization.push({[grid_id] : item})
-      }
+    },
+    setDeepCustomizationOption(index,grid_id,item){
       
-      this.cms_customizations_step++
-      
+        console.log('body',this.body,index,grid_id,item,this.current_customization)
+        this.isBackButtonPressed = false
+        if(this.cms_customizations_step < 1){
+          this.current_customization = []
+        }
+        console.log(grid_id,index,item,this.current_customization)
+        let q = this.current_customization.find(el => el[grid_id])
+        if(q){
+          q[grid_id] = item
+        }else{
+          this.current_customization.push({[grid_id] : item})
+        }
+
+      setTimeout(() => {  
+        this.cms_customizations_step++
+        console.log('after',this.current_customization)
+      }, 1000);
     },
     totalWithCustomization(){
       let variationId
@@ -467,6 +480,14 @@ export default {
       }
       ////console.log(`pppp`,price)
      return price.toLocaleString('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}) 
+    },
+    customizationsWithValue(){
+      let price = 0
+      for (const item of this.current_customization) {
+        const value = Object.values(item)[0].value;
+        price += (value || 0);
+      }
+     return price != 0 
     },
     setCustomizationOption (customization, text) {
       
@@ -780,6 +801,7 @@ export default {
           this.customizationPanel = true;
           $('body').addClass('customizationVisible');
           console.log(this.cms_customizations)
+          console.log(`body`,this.body.customizations)
           console.log(option)
           //alert('Selecione as opções para prosseguir')
         }else{

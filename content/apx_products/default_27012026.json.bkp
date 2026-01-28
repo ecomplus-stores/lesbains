@@ -6,7 +6,7 @@
         {
           "input_type_required": false,
           "title": "Sem correção",
-          "description": "Somente a armação, sem lentes corretivas.",
+          "description": "Somente armação.",
           "img": "/img/uploads/nenhuma.svg",
           "type": null
         },
@@ -14,7 +14,7 @@
           "input_type_required": false,
           "title": "Visão Simples",
           "img": "/img/uploads/visao-simples.svg",
-          "description": "Para corrigir visão de perto ou de longe.",
+          "description": "Lentes para corrigir a visão de longe ou perto — ideais para o dia a dia, leitura ou direção",
           "type": "Fixo",
           "value": null,
           "input_type": "Não"
@@ -23,7 +23,7 @@
           "input_type_required": false,
           "title": "Multifocal",
           "img": "/img/uploads/multifocal.svg",
-          "description": "Para enxergar bem perto, longe e em distâncias intermediárias com um único óculos.",
+          "description": "Lentes para quem precisa enxergar bem de perto e de longe sem trocar de óculos. Conforto, fluidez visual e sofisticação em um só olhar.",
           "type": "Fixo",
           "value": null
         }
@@ -54,9 +54,9 @@
       "list": [
         {
           "input_type_required": false,
-          "title": "Uso Diário",
+          "title": "Uso Diário (miopia, hipermetropia ou astigmatismo)",
           "img": "/img/uploads/antirreflexo.svg",
-          "description": "Correção confortável para o dia a dia.<br>Antirreflexo. Grau até ±4.00.",
+          "description": "Lentes com antirreflexo, ideais para quem precisa corrigir a visão de longe ou perto com conforto.Compatível apenas para grau leve  até ±4.00 (esférico) e cilíndrico até -2.00.Leves, discretas e prontas para o dia a dia.",
           "type": "Fixo",
           "value": 80
         },
@@ -64,7 +64,7 @@
           "input_type_required": false,
           "title": "Proteção para Telas (Digital Blue)",
           "img": "/img/uploads/luz-azul.svg",
-          "description": "Ideal para quem passa horas em frente a telas.<br>Filtro de luz azul + antirreflexo. Grau até ±4.00.",
+          "description": "Lentes com filtro de luz azul e antirreflexo, ideais para quem passa longas horas no digital.Reduzem o cansaço visual, protegem contra a luz artificial e são compatível apenas até ±4.00 (esférico) e cilíndrico até -2.00.",
           "type": "Fixo",
           "value": 98
         },
@@ -72,7 +72,7 @@
           "input_type_required": false,
           "title": "Fotossensível",
           "img": "/img/uploads/fotosenssivel.svg",
-          "description": "Escurece no sol e clareia em ambientes internos.<br>Proteção UV. Grau até ±4.00.",
+          "description": "Lentes que escurecem automaticamente no sol e clareiam em ambientes internos, com proteção contra raios UV.Compatível para miopia, hipermetropia ou astigmatismo com grau até ±4.00 (esférico) e cilíndrico até -2.00.",
           "type": "Fixo",
           "value": 179
         },
@@ -80,7 +80,7 @@
           "input_type_required": false,
           "title": "Solar com Grau",
           "img": "/img/uploads/solar-com-grau.svg",
-          "description": "Proteção solar com correção visual.<br>Grau até ±4.00.<br>",
+          "description": "Lentes solares com proteção UV e correção visual, ideais para dias ensolarados.<br>Combinam conforto, nitidez e elegância sob o sol — com a assinatura Les Bains.<br>Recomendadas para miopia, hipermetropia ou astigmatismo com grau até ±4.00.",
           "type": "Fixo",
           "value": 188
         }
@@ -106,7 +106,7 @@
           "input_type_required": false,
           "title": "Multifocal Básico",
           "img": "/img/uploads/antirreflexo.svg",
-          "description": "Um único óculos para perto, longe e intermediário.<br>Uso prático no dia a dia.",
+          "description": "Lentes com antirreflexo e transição suave entre perto, longe e distâncias intermediárias — ideais para quem deseja praticidade no dia a dia sem trocar de óculos.<br>Recomendadas para miopia ou hipermetropia até ±6.00 e adição entre +1.00 e +3.50.",
           "type": "Fixo",
           "value": 359
         },
@@ -114,7 +114,7 @@
           "input_type_required": false,
           "title": "Multifocal com Proteção (Digital Blue)",
           "img": "/img/uploads/luz-azul.svg",
-          "description": "Conforto visual para quem usa telas diariamente.<br>Filtro de luz azul + proteção UV.",
+          "description": "Lentes multifocais com filtro de luz azul, antirreflexo e proteção UV — perfeitas para quem precisa enxergar em todas as distâncias e passa horas em frente a telas.<br>Recomendadas para miopia ou hipermetropia até ±6.00 e adição entre +1.00 e +3.50.",
           "type": "Fixo",
           "value": 449
         },
@@ -122,7 +122,7 @@
           "input_type_required": false,
           "title": "Multifocal Fotossensível",
           "img": "/img/uploads/fotosenssivel.svg",
-          "description": "Adapta à luz automaticamente.<br>Escurece no sol e clareia em ambientes internos.",
+          "description": "Lentes multifocais que escurecem automaticamente no sol e clareiam em ambientes internos, com proteção UV.<br>Oferecem transições suaves entre perto e longe, com praticidade para rotinas com variação de luz.<br>Recomendadas para miopia ou hipermetropia até ±6.00 e adição entre +1.00 e +3.50.",
           "type": "Fixo",
           "value": 530
         },
@@ -130,7 +130,7 @@
           "input_type_required": false,
           "title": "Multifocal Alta Performance",
           "img": "/img/uploads/performance.svg",
-          "description": "Máximo conforto e tecnologia.Lentes mais finas e visão mais precisa.<br>",
+          "description": "Lentes multifocais mais finas, com antirreflexo premium, filtro de luz azul, proteção UV e transições suaves entre todas as distâncias.<br>Perfeitas para quem busca o máximo em conforto visual, proteção contra luz artificial e sofisticação em cada detalhe.<br>Recomendadas para miopia ou hipermetropia até ±10.00 e adição entre +1.00 e +3.50.",
           "type": "Fixo",
           "value": 890
         }
@@ -140,14 +140,14 @@
       "upload": {
         "enable": true,
         "title": "Envie aqui sua receita médica!",
-        "description": "Você pode enviar agora ou depois.Se preferir, finalize seu pedido e nossa equipe entrará em contato.Também é possível enviar para receita@lesbains.com.br",
-        "button_text": "ENVIAR MINHA RECEITA",
+        "description": "Tire ou selecione uma foto da sua receita médica, lembrando de deixar visível o CRM do médico e a data do exame.",
+        "button_text": "Clique aqui para enviar",
         "img": "/img/uploads/icon_receita_medica.png",
-        "description_after": ""
+        "description_after": "Se quiser enviar depois, não se preocupe, você receberá as instruções por e-mail após finalizar o pedido. Envie sua receita para receita@lesbains.com.br"
       },
       "title_id": "receita_medica",
       "title": "Receita Médica",
-      "step_description": "",
+      "step_description": "Faça o envio de sua receita",
       "conditions": [
         {
           "condition": {
