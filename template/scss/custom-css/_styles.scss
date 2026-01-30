@@ -633,7 +633,7 @@ header#header{
     right: 0;
     top: 0;
     width: 400px;
-    z-index: 999;
+    z-index: 100000;
     background: #fff;
     padding: 2rem 1rem;
     box-shadow: 0px 0px 20px rgba(0,0,0,.3);
@@ -1001,6 +1001,18 @@ background: #111;
     
 }
 @media(min-width:990px){
+    #content.page--products{
+            position: inherit;
+        #product-block{
+                position: inherit;
+            .container-fluid{
+                    position: inherit;
+                #product{
+                        position: inherit;
+                }
+            }
+        }
+    }
     .apx_gallery .slicked{
         display: flex;
         flex-wrap: wrap;
