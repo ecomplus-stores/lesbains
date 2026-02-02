@@ -544,6 +544,13 @@
                   "title": "Necessaire",
                   "url": "/necessaire-les-bains"
                 }
+              },
+              {
+                "item": {
+                  "url": "https://app.e-com.plus/#/resources/categories/6936efa8c650040a8c576013",
+                  "title": "cordinha",
+                  "path": "/cordinha-les-bains"
+                }
               }
             ],
             "image": "/img/uploads/mini-banner-acessorios-menu-principal-01.jpg"
